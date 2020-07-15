@@ -1,0 +1,318 @@
+
+
+@media screen and (max-width:1250px){
+    body{
+        border: 5px solid red;
+        main{
+            .seccion-galeria{
+                .galeria{
+                    .imagenes-galeria{  
+                        grid-template-columns: repeat(auto-fit, minmax(30%,1fr));
+                        max-height: 1476px;                    }
+                }
+            }
+            .frases-contenedor{
+                .contenedor-principal{
+                    .flecha-derecha{
+                        right: 2rem;
+                    }
+                    .flecha-izquierda{
+                        left: 2rem;
+                    }
+                    .contenedor-carousel{
+                        .carousel{
+                            .frase-contenedor{
+                                min-width: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+            // .seccion-kaiosamas-ghibli{
+            //     .contenedor-kaiosamas-ghibli{
+
+            //         .kaiosamsas{
+            //             // background: red;
+            //         }
+            //     }
+            // }
+        }
+    }
+}
+@media screen and (max-width:1024px){
+    body{
+        border: 5px solid blue;
+        header{
+            background-position: center;
+        }
+        main{
+            .contenedor{
+                width: 95%;
+                max-width: 95%;
+                // padding: 2rem;
+            }
+            .seccion-sobre-ghibli{
+                .contenedor-sobre-ghibli{
+                    .sobre-ghibli{
+                        display: flex;  
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        .contenedor-imagen-sobre-ghibli{
+                            max-width: 85%;
+                            img{
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                width: 100%;;
+                            }
+                        }
+                        .contenido-textos{
+                            width: 85%;
+                            margin-top: 2rem;
+                        }
+                    }
+                }
+            }
+            .seccion-galeria{
+                .galeria{
+                    .imagenes-galeria{  
+                        grid-template-columns: repeat(auto-fit, minmax(31%,1fr));
+                        height: 392px;
+                        min-height: 392px;
+                        max-height: 1176px;
+                        .imagen-galeria{
+                            height: 180px;
+                            transition: height 1s;
+                        }
+                    }
+                }
+            }
+            .frases-contenedor{
+                .contenedor-principal{
+                    .flecha-derecha{
+                        right: 1rem;
+                    }
+                    .flecha-izquierda{
+                        left: 1rem;
+                    }
+                    .contenedor-carousel{
+                        .carousel{
+                            .frase-contenedor{
+                                min-width: calc((100% / 1) - 7px);
+                                justify-content: center;
+                            }
+                        }
+                    }
+                }
+            }
+            .ver-pelis{
+                .contenedor{
+                    .pelis-cont{
+                        justify-content: center;
+                        flex-direction: column;
+                        .peli{
+                            width: 100%;
+                            text-align: center;
+                            img{
+                                width: 90%;
+                            }
+                        }
+                        .peli:nth-child(1), .peli:nth-child(2){
+                            margin-bottom: 60px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+@media screen and (max-width:768px){
+    // border: 5pc solid red;
+    body{
+        header{
+            // background-position: center;
+            .menu{
+                padding: 0 10px;
+                .enlaces{
+                    position: fixed;
+                    // // background: #FF0099;  /* fallback for old browsers */
+                    background: white;
+                    // background: red;
+                    top: 0;
+                    right: 0;
+                    height: 100vh;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    // // background: -webkit-linear-gradient(to right, #493240, #FF0099);  /* Chrome 10-25, Safari 5.1-6 */
+                    // background: linear-gradient(to right, #493240, #FF0099); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                    clip-path: circle(0.0% at 100% 0);
+                    padding: 5rem 0;
+                    transition: ease-in-out 0.5s;
+                    width: 70%;
+                    box-shadow: -15px 0px 10px rgba(0, 0, 0, .2);
+                    .enlace{
+                        color: black;
+                        background: white;
+                        display: inline-block;
+                        line-height: 2.5em;
+                        padding: 0 1.25em;
+                        text-decoration: none;
+                        border-radius: 1.25em;
+                        // box-shadow: 0 0 9px 0 rgba(0,0,0,.5);
+                        outline: none;
+                        cursor:pointer;
+                        &:hover{
+                            transition: all 0.4s linear;
+                            background: $color1;
+                            color: white;
+                        }
+                        &:active{
+                            transform: scale(.95);
+                        }
+                        &:after{
+                            display: none;
+                        }
+                    }
+                }
+                .menudos {
+                    -webkit-clip-path: circle(150% at 100% 0);
+                    clip-path: circle(150% at 100% 0);
+                }
+                .contenedor-hamburguer{
+                    display: block;
+                    cursor: pointer;
+                    transition: color 0.5s ease-in;
+                    position: absolute;
+                    top: 2rem;
+                    right: 2rem;
+                    &:active{
+                        transform: scale(1.05);
+                    }
+                }
+                .contenedor-hamburguer-scroll{
+                    background: white;
+                    box-shadow: 0 0 9px 0 rgba(0,0,0,.5);
+                }
+                .contenedor-hamburguer-dos{
+                    background: none;
+                    box-shadow: none;
+                }
+            }
+            .menu-scroll{
+                .enlaces{
+                    margin-right: 0;
+                }
+            }
+            .textos-header{
+                h1{
+                    font-size: 35px;
+                }
+                h2{
+                    font-size: 20px;
+                }
+            }
+        }
+        main{
+            .seccion-galeria{
+                .galeria{
+                    .imagenes-galeria{  
+                        grid-template-columns: repeat(auto-fit, minmax(48%,1fr));
+                        max-height: 1568px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:480px){
+    body{
+        border: 5px solid rgb(0, 255, 42);
+    
+        main{
+            .contenedor{
+                width: 95%;
+                padding: 0 1rem; 
+            }
+            .seccion-sobre-ghibli{
+                .contenedor-sobre-ghibli{
+                    .sobre-ghibli{
+                        .contenedor-imagen-sobre-ghibli{
+                            max-width: 100%;
+                            height: auto;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        .contenido-textos{
+                            width: 95%;
+                        }
+                    }
+                }
+            }
+            .seccion-galeria{
+                .galeria{
+                    .imagenes-galeria{  
+                        grid-template-columns: repeat(auto-fit, minmax(85%,1fr));
+                        max-height: 1968px;
+                        .imagen-galeria{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .frases-contenedor{
+                .contenedor-principal{
+                    .flecha-izquierda, .flecha-derecha{
+                        z-index: auto;
+                    }
+                    .flecha-derecha{
+                        right: 1rem;
+                    }
+                    .flecha-izquierda{
+                        left: 1rem;
+                    }
+                    .contenedor-carousel{
+                        .carousel{
+                            height: 350px;
+                            .frase-contenedor{
+                                height: 350px;
+                                min-width: calc((100% / 1) - 7px);
+                                justify-content: center;
+                                align-items: center;
+                                text-align: center;
+                                .frase{
+                                    flex-direction: column;
+                                    img{
+                                        margin-bottom: 1rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            footer{
+                .contenedor-footer{
+                    flex-direction: column;
+                    border: none;
+                    .content-foo{
+                        margin-bottom: 20px;
+                        text-align: center;
+                        h4{
+                            border: none;
+                        }
+                        p{
+                            color: #ccc;
+                            border-bottom: 1px solid #f2f2f2;
+                            padding-bottom: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
