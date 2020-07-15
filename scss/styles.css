@@ -1403,6 +1403,7 @@ body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli {
   width: 28%;
   text-align: center;
   height: 400px;
+  border: 1px solid darkcyan;
   border-radius: 15px;
   background-color: #fff;
   -webkit-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.5);
@@ -1435,6 +1436,9 @@ body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver
   background-size: cover;
   color: #fff;
   padding: 1rem;
+  border: 1px solid red;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis .textos-ver-pelis h3 {
@@ -1442,29 +1446,20 @@ body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver
 }
 
 body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis-hover {
-  height: 30%;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.85)), to(rgba(0, 0, 0, 0.85))), url(../galeria/ghibli1.png);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../galeria/ghibli1.png);
+  background-size: cover;
+  height: 20%;
   overflow: hidden;
   position: relative;
 }
 
 body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis-hover .textos-ver-pelis {
-  -webkit-transition: all .7s;
-  transition: all .7s;
-}
-
-body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis-hover .textos-ver-pelis h3 {
-  -webkit-transition: all .7s;
-  transition: all .7s;
-  position: relative;
-  font-size: 25px;
-  top: -15px;
-}
-
-body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis-hover .textos-ver-pelis p {
-  -webkit-transition: all .7s;
-  transition: all .7s;
-  position: absolute;
-  top: -100px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  opacity: 0;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
 }
 
 body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-imagen-ver-pelis {
@@ -1480,9 +1475,8 @@ body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-imagen-ver
   border-radius: 50%;
   -webkit-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.5);
-  -webkit-transition: all .5s;
-  transition: all .5s;
-  background: red;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-imagen-ver-pelis .imagen-ver-pelis {
@@ -1491,9 +1485,32 @@ body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-imagen-ver
 }
 
 body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-imagen-ver-pelis-hover {
-  top: calc(-100% + 200px);
+  top: calc(-100% + 100px);
   -webkit-transform: scale(0.5);
           transform: scale(0.5);
+}
+
+body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .enlaces-ver-pelis {
+  margin-top: 80px;
+  opacity: 0;
+  height: 55%;
+  overflow: auto;
+  visibility: hidden;
+}
+
+body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .enlaces-ver-pelis::-webkit-scrollbar {
+  display: none;
+}
+
+body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .enlaces-ver-pelis .enlace-ver-peli {
+  margin: .5rem 0;
+}
+
+body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .enlaces-ver-pelis-hover {
+  -webkit-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
+  opacity: 1;
+  visibility: visible;
 }
 
 body main .seccion-ver-pelis .ver-pelis .pelis-cont .animeflv img {

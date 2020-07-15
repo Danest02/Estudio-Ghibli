@@ -331,11 +331,12 @@ imagen.forEach((elemento) => {
   elemento.addEventListener("mouseover", (evento) => {
     // evento.preventDefault();
     evento.toElement.parentElement.classList.toggle("contenedor-imagen-ver-pelis-hover")
+    evento.toElement.parentElement.previousElementSibling.classList.toggle("contenedor-textos-ver-pelis-hover")
     setTimeout(() => {
-      evento.toElement.parentElement.previousElementSibling.classList.toggle("contenedor-textos-ver-pelis-hover")
+      evento.toElement.parentElement.nextElementSibling.classList.toggle("enlaces-ver-pelis-hover")
       
     }, 00);
     // evento.classList.add("contenedor-imagen-ver-pelis-hover")
-    console.log (evento.toElement.parentElement.previousElementSibling)
+    console.log (evento.toElement.parentElement.nextElementSibling)
   });
 });
