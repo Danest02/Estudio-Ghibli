@@ -877,14 +877,13 @@ body {
                         .contenedor-textos-ver-pelis {
                             display: flex;
                             flex-direction: column;
-                            justify-content: center;
+                            // justify-content: start;
                             align-items: center;
                             position: absolute;
-                            top: 0;
                             left: 0;
                             right: 0;
                             border-radius: 15px 15px 0 0;
-                            height: 50%;
+                            height: 100%;
                             background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../galeria/ghibli1.png);
                             background-size: cover;
                             color: #fff;
@@ -892,7 +891,8 @@ body {
                             border: 1px solid red;
                             transition: all .5s ease-in-out;
                             .textos-ver-pelis {
-
+                                position: relative;
+                                top: 25%;
                                 h3 {
                                     font-size: 35px;
                                 }
@@ -919,12 +919,13 @@ body {
                         .contenedor-imagen-ver-pelis {
                             position: absolute;
                             bottom: -60px;
-                            top: calc(100% - 200px);
+                            top: calc(100% - 240px);
+                            // bottom: 0;
                             left: 0;
                             right: 0;
                             margin: auto;
-                            height: 200px;
-                            width: 200px;
+                            height: 150px;
+                            width: 150px;
                             overflow: hidden;
                             border-radius: 50%;
                             box-shadow: 0 0 9px 0 rgba(0, 0, 0, .5);
@@ -943,7 +944,7 @@ body {
                         
                         .contenedor-imagen-ver-pelis-hover {
                             top: calc(-100% + 100px);
-                            transform: scale(.5);
+                            transform: scale(.6);
                         }
                         .enlaces-ver-pelis{
                             margin-top: 80px;

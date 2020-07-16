@@ -1419,18 +1419,14 @@ body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  top: 0;
   left: 0;
   right: 0;
   border-radius: 15px 15px 0 0;
-  height: 50%;
+  height: 100%;
   background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../galeria/ghibli1.png);
   background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../galeria/ghibli1.png);
   background-size: cover;
@@ -1439,6 +1435,11 @@ body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver
   border: 1px solid red;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
+}
+
+body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis .textos-ver-pelis {
+  position: relative;
+  top: 25%;
 }
 
 body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis .textos-ver-pelis h3 {
@@ -1465,12 +1466,12 @@ body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver
 body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-imagen-ver-pelis {
   position: absolute;
   bottom: -60px;
-  top: calc(100% - 200px);
+  top: calc(100% - 240px);
   left: 0;
   right: 0;
   margin: auto;
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
   overflow: hidden;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.5);
@@ -1486,8 +1487,8 @@ body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-imagen-ver
 
 body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-imagen-ver-pelis-hover {
   top: calc(-100% + 100px);
-  -webkit-transform: scale(0.5);
-          transform: scale(0.5);
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
 }
 
 body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .enlaces-ver-pelis {
