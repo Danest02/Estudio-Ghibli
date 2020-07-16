@@ -871,7 +871,7 @@ body {
                         border-radius: 15px;
                         background-color: #fff;
                         box-shadow: 0 0 9px 0 rgba(0, 0, 0, .5);
-                        // overflow: hidden;
+                        overflow: hidden;
                         position: relative;
 
                         .contenedor-textos-ver-pelis {
@@ -884,7 +884,7 @@ body {
                             right: 0;
                             border-radius: 15px 15px 0 0;
                             height: 100%;
-                            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../galeria/fondo3.png);
+                            background: linear-gradient( rgba(0, 0, 0, .7), rgba(0, 0, 0, 0.5)), url(../galeria/fondo3.png);
                             background-size: cover;
                             background-position: 60%;
                             color: #fff;
@@ -949,11 +949,11 @@ body {
                             transform: scale(.6);
                         }
                         .enlaces-ver-pelis{
+                            visibility: hidden;
                             margin-top: 80px;
                             opacity: 0;
                             height: 55%;
                             overflow: auto;
-                            visibility: hidden;
                             &::-webkit-scrollbar{
                                 display: none;
                             }
@@ -962,7 +962,7 @@ body {
                             }
                         }
                         .enlaces-ver-pelis-hover{
-                            transition: all 1.5s ease-in-out;
+                            transition: all .8s ease-in-out;
                             opacity: 1;
                             visibility: visible;
                         }
