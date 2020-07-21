@@ -1410,6 +1410,7 @@ body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli {
           box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.5);
   overflow: hidden;
   position: relative;
+  border: 2px solid red;
 }
 
 body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis {
@@ -1423,13 +1424,13 @@ body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
+  position: relative;
   left: 0;
   right: 0;
   border-radius: 15px 15px 0 0;
   height: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.5))), url(../galeria/fondo3.png);
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(../galeria/fondo3.png);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.5))), url(../galeria/fondo4.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(../galeria/fondo4.png);
   background-size: cover;
   background-position: 60%;
   color: #fff;
@@ -1448,11 +1449,35 @@ body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver
   font-size: 35px;
 }
 
+body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis .cursor-hover-ver-pelis {
+  -webkit-transition: .5s;
+  transition: .5s;
+  position: absolute;
+  top: 100%;
+  left: 45%;
+  z-index: 200;
+}
+
+body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis .cursor-hover-ver-pelis i {
+  color: white;
+  font-size: 2rem;
+}
+
+body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis .cursor-hover-ver-pelis p {
+  background-color: white;
+  color: #357fb0;
+  line-height: 2rem;
+}
+
+body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis:hover .cursor-hover-ver-pelis {
+  top: 85%;
+}
+
 body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis-hover {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../galeria/fondo3.png);
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../galeria/fondo3.png);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.95)), to(rgba(0, 0, 0, 0.8))), url(../galeria/fondo4.png);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.8)), url(../galeria/fondo4.png);
   background-size: cover;
-  background-position: center;
+  background-position: top;
   height: 20%;
   overflow: hidden;
   position: relative;

@@ -873,18 +873,18 @@ body {
                         box-shadow: 0 0 9px 0 rgba(0, 0, 0, .5);
                         overflow: hidden;
                         position: relative;
-
+                        border: 2px solid red;
                         .contenedor-textos-ver-pelis {
                             display: flex;
                             flex-direction: column;
                             // justify-content: start;
                             align-items: center;
-                            position: absolute;
+                            position: relative;
                             left: 0;
                             right: 0;
                             border-radius: 15px 15px 0 0;
                             height: 100%;
-                            background: linear-gradient( rgba(0, 0, 0, .7), rgba(0, 0, 0, 0.5)), url(../galeria/fondo3.png);
+                            background: linear-gradient( rgba(0, 0, 0, .7), rgba(0, 0, 0, 0.5)), url(../galeria/fondo4.png);
                             background-size: cover;
                             background-position: 60%;
                             color: #fff;
@@ -898,12 +898,33 @@ body {
                                     font-size: 35px;
                                 }
                             }
+                            .cursor-hover-ver-pelis{
+                                transition: .5s;
+                                position: absolute;
+                                top: 100%;
+                                left: 45%;
+                                z-index: 200;
+                                
+                                i{
+                                    color: white;
+                                    font-size: 2rem;
+                                }
+                                p{
+                                    background-color: white;
+                                    color: $color1;
+                                    line-height: 2rem;
+                                }
+                            }
+                            &:hover .cursor-hover-ver-pelis{
+                                top: 85%;
+                            }
+    
                         }
 
                         .contenedor-textos-ver-pelis-hover {
-                            background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../galeria/fondo3.png);
+                            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.8)), url(../galeria/fondo4.png);
                             background-size: cover;
-                            background-position: center;
+                            background-position: top ;
                             height: 20%;
                             overflow: hidden;
                             position: relative;
