@@ -329,14 +329,16 @@ let imagenVerPelis = document.getElementsByClassName("contenedor-imagen-ver-peli
 let imagen = Array.from(imagenVerPelis)
 imagen.forEach((elemento) => {
   elemento.addEventListener("mouseover", (evento) => {
-    // evento.preventDefault();
+    sema = false
+    if (sema) {
+      return
+    }
     evento.toElement.parentElement.classList.toggle("contenedor-imagen-ver-pelis-hover")
     evento.toElement.parentElement.previousElementSibling.classList.toggle("contenedor-textos-ver-pelis-hover")
+    evento.toElement.parentElement.nextElementSibling.classList.toggle("enlaces-ver-pelis-hover")
     setTimeout(() => {
-      evento.toElement.parentElement.nextElementSibling.classList.toggle("enlaces-ver-pelis-hover")
-      
-    }, 00);
-    // evento.classList.add("contenedor-imagen-ver-pelis-hover")
+      sema = true
+    }, 300);
     console.log (evento.toElement.parentElement.nextElementSibling)
   });
 });

@@ -903,6 +903,7 @@ body {
                                 position: absolute;
                                 top: 100%;
                                 left: 45%;
+                                opacity: 1;
                                 z-index: 200;
                                 
                                 i{
@@ -935,6 +936,10 @@ body {
                                 transition: all .5s;
                                 opacity: 0;
                                 transform: translateY(100px);
+                            }
+                            .cursor-hover-ver-pelis{
+                                transform: scale(.5);
+                                opacity: 0;
                             }
 
                         }

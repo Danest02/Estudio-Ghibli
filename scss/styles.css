@@ -1455,6 +1455,7 @@ body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver
   position: absolute;
   top: 100%;
   left: 45%;
+  opacity: 1;
   z-index: 200;
 }
 
@@ -1489,6 +1490,12 @@ body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver
   opacity: 0;
   -webkit-transform: translateY(100px);
           transform: translateY(100px);
+}
+
+body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis-hover .cursor-hover-ver-pelis {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  opacity: 0;
 }
 
 body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-imagen-ver-pelis {
