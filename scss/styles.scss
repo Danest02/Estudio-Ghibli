@@ -7,7 +7,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    // border: none !important
+    border: none !important
 }
 
 // Inicialización
@@ -395,7 +395,7 @@ body {
                     border: 1px solid darkcyan;
                     display: flex;
                     display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(240px, 240px));
+                    grid-template-columns: repeat(auto-fill, minmax(240px, 240px));
                     width: 100%;
                     grid-gap: 1rem;
                     // flex-grow: 1;
@@ -405,6 +405,7 @@ body {
                     transition: height 2s;
                     align-content: flex-start;
                     justify-content: center;
+                    // overflow: auto;
 
                     .imagen-galeria {
                         height: 230px;
@@ -807,9 +808,16 @@ body {
                     .contenedor-frases {
                         width: 85%;
                         overflow: hidden;
-
+                        .frases::-webkit-scrollbar{
+                            display: none;
+                        }
                         .frases {
+                            scroll-behavior: smooth;
+                            overflow: scroll;
                             display: flex;
+                            // overflow: hidden;
+                            // scroll-snap-type: x proximity;
+                            scroll-snap-type: x mandatory;
 
                             // width: calc(100% / 3);
                             .contenedor-frase {
@@ -819,6 +827,7 @@ body {
                                 overflow: hidden;
                                 width: 100%;
                                 flex-shrink: 0;
+                                scroll-snap-align: center;
 
                                 .frase {
                                     display: flex;
@@ -884,13 +893,17 @@ body {
             .ver-pelis {
                 .pelis-cont {
                     display: flex;
+                    // width: 100%;
                     justify-content: space-evenly;
-                    align-items: center;
+                    flex-wrap: wrap;
+                    // align-items: center;
                     margin-bottom: 7.5rem;
                     margin-top: 100px;
                     // border: 1px solid red;
 
                     .peli {
+                        margin: 1rem;
+                        min-width: 280px;
                         width: 28%;
                         text-align: center;
                         height: 400px;

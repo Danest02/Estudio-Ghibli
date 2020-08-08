@@ -170,10 +170,13 @@ window.addEventListener("load", () => {
         return '<span class="' + className + '">' + (index + 1) + "</span>";
       },
     },
+    // cssMode: true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    // mousewheel: true,
+      keyboard: true,
   });
 
   // Scroll
@@ -237,24 +240,25 @@ window.addEventListener("load", () => {
   flechaDerecha.addEventListener("click", () => {
     if (contador >= frase.length - 1) return;
     contador++;
-    // slider.scrollLeft += slider.offsetWidth;
-    transform();
+    contenedor.scrollLeft += contenedor.offsetWidth;
+    // transform();
     transition();
   });
   flechaIzquierda.addEventListener("click", () => {
     if (frase[contador].firstElementChild.id === "last-clone") {
       contenedor.style.transition = "none";
       contador = frase.length - 2;
-      transform();
+      // transform();
       setTimeout(() => {
         contador--
         transition()
-        transform()
+        // transform()
         
       }, 10);
     }else{
+      contenedor.scrollLeft -= contenedor.offsetWidth;
       contador--;
-      transform();
+      // transform();
       transition();
 
     }
@@ -264,12 +268,12 @@ window.addEventListener("load", () => {
     if (frase[contador].firstElementChild.id === "last-clone") {
       contenedor.style.transition = "none";
       contador = frase.length - 2;
-      transform();
+      // transform();
     }
     if (frase[contador].lastElementChild.id === "first-clone") {
       contenedor.style.transition = "none";
       contador = frase.length - contador;
-      transform()
+      // transform()
     }
   });
 

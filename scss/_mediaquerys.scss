@@ -218,7 +218,26 @@
         }
     }
 }
-
+@media screen and (max-width:790px){
+    body{
+        main{
+            .seccion-ver-pelis{
+                // display: none;
+                .ver-pelis{
+                    .pelis-cont{
+                        .peli{
+                            .contenedor-textos-ver-pelis{
+                                .cursor-hover-ver-pelis{
+                                    top: 85%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 @media screen and (max-width:720px){
     body{
         border: 5px solid red;
@@ -334,6 +353,7 @@
                     }
                 }
             }
+
         }
     }
 }
@@ -505,6 +525,20 @@
                                     img{
                                         margin-bottom: 1rem;
                                     }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .seccion-ver-pelis{
+                display: none;
+                .ver-pelis{
+                    .pelis-cont{
+                        .peli{
+                            .contenedor-textos-ver-pelis{
+                                .cursor-hover-ver-pelis{
+                                    top: 85%;
                                 }
                             }
                         }

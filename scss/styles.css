@@ -369,6 +369,7 @@ template {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  border: none !important;
 }
 
 a {
@@ -825,8 +826,8 @@ body main .seccion-galeria .galeria .imagenes-galeria {
   display: flex;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(240px, 240px))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(240px, 240px));
+  -ms-grid-columns: (minmax(240px, 240px))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(240px, 240px));
   width: 100%;
   grid-gap: 1rem;
   max-height: 980px;
@@ -1304,10 +1305,18 @@ body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contened
   overflow: hidden;
 }
 
+body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases::-webkit-scrollbar {
+  display: none;
+}
+
 body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases {
+  scroll-behavior: smooth;
+  overflow: scroll;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
 }
 
 body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases .contenedor-frase {
@@ -1324,6 +1333,7 @@ body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contened
   width: 100%;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  scroll-snap-align: center;
 }
 
 body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases .contenedor-frase .frase {
@@ -1400,14 +1410,15 @@ body main .seccion-ver-pelis .ver-pelis .pelis-cont {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 7.5rem;
   margin-top: 100px;
 }
 
 body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli {
+  margin: 1rem;
+  min-width: 280px;
   width: 28%;
   text-align: center;
   height: 400px;
@@ -1785,6 +1796,12 @@ body main footer .titulo-final {
   }
 }
 
+@media screen and (max-width: 790px) {
+  body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis .cursor-hover-ver-pelis {
+    top: 85%;
+  }
+}
+
 @media screen and (max-width: 720px) {
   body {
     border: 5px solid red;
@@ -2084,6 +2101,12 @@ body main footer .titulo-final {
   }
   body main .frases-contenedor .contenedor-principal .contenedor-carousel .carousel .frase-contenedor .frase img {
     margin-bottom: 1rem;
+  }
+  body main .seccion-ver-pelis {
+    display: none;
+  }
+  body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis .cursor-hover-ver-pelis {
+    top: 85%;
   }
   body main footer .contenedor-footer {
     -webkit-box-orient: vertical;
