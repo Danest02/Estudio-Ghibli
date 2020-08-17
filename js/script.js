@@ -225,6 +225,7 @@ window.addEventListener("load", () => {
   contenedor = document.querySelector(".frases"),
   frase = document.querySelectorAll(".contenedor-frase"),
   tamañoWidht = frase[0].clientWidth,
+  scroll = contenedor.offsetWidth
   flechaIzquierda = document.getElementById("flecha-izquierda"),
   flechaDerecha = document.getElementById("flecha-derecha");
   intervalo = 5000;
@@ -233,33 +234,64 @@ window.addEventListener("load", () => {
     contenedor.style.transform = "translate(" + -tamañoWidht * contador + "px"
   })
   
-  const transform = () => contenedor.style.transform = "translate(" + -tamañoWidht * contador + "px"
+  // const transform = () => contenedor.style.transform = "translate(" + -tamañoWidht * contador + "px"
+  const transform = () => {
+  }
+  
+  const transformRight = () => {
+    contenedor.classList.add("frases-transition-none")
+    contenedor.scrollLeft = scroll
+    // contenedor.scrollLeft -= scroll
+    contenedor.classList.remove("frases-transition-none")
+    contenedor.scrollLeft += scroll
+    contador = 1
+  }
+  const transformLeft = () => {
+    contenedor.classList.add("frases-transition-none")
+    contenedor.scrollLeft = scroll * 6
+    // contenedor.scrollLeft -= scroll
+    contenedor.classList.remove("frases-transition-none")
+    // contenedor.scrollLeft += scroll
+    contador = 6
+    contador--;
+    contenedor.scrollLeft -= scroll
+  }
+  // const transform = () => contenedor.scrollLeft += tamañoWidht
+
   
   const transition = () => contenedor.style.transition = "transform 0.5s ease-in-out";
   
   flechaDerecha.addEventListener("click", () => {
-    if (contador >= frase.length - 1) return;
+    if (frase[contador].firstElementChild.id === "first-clone") {
+      transformRight()
+
+      
+    }
+    console.log (contador)
+    // contenedor.scrollLeft += scroll;
     contador++;
-    contenedor.scrollLeft += contenedor.offsetWidth;
-    // transform();
-    transition();
+    contenedor.scrollLeft += scroll
+    // transition();
   });
+
   flechaIzquierda.addEventListener("click", () => {
     if (frase[contador].firstElementChild.id === "last-clone") {
-      contenedor.style.transition = "none";
-      contador = frase.length - 2;
-      // transform();
-      setTimeout(() => {
-        contador--
-        transition()
-        // transform()
+      transformLeft()
+      // contenedor.style.transition = "none";
+      // alert ("hola")
+      // contador = frase.length - 2;
+      // // transform();
+      // setTimeout(() => {
+      //   contador--
+      //   transition()
+      //   // transform()
         
-      }, 10);
+      // }, 10);
     }else{
-      contenedor.scrollLeft -= contenedor.offsetWidth;
+      // contenedor.scrollLeft -= scroll;
       contador--;
-      // transform();
-      transition();
+      contenedor.scrollLeft -= scroll
+      // transition();
 
     }
     // contenedor.scrollLeft -= slider.offsetWidth;
