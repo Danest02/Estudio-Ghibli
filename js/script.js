@@ -145,6 +145,8 @@ $("#enlace-ver-pelis").on("click", function (e) {
 });
 
 // Vanilla
+
+// Slider Peliculas
 window.addEventListener("load", () => {
   var swiper = new Swiper(".swiper-container", {
     effect: "coverflow",
@@ -221,7 +223,7 @@ window.addEventListener("load", () => {
     });
 
   // Caroulse Frases
-  let contador = 0,
+  let contador = 1,
   contenedor = document.querySelector(".frases"),
   frase = document.querySelectorAll(".contenedor-frase"),
   tamañoWidht = frase[0].clientWidth,
@@ -233,28 +235,51 @@ window.addEventListener("load", () => {
     tamañoWidht = frase[0].clientWidth;
     contenedor.style.transform = "translate(" + -tamañoWidht * contador + "px"
   })
+  contenedor.scrollLeft = scroll
   
   // const transform = () => contenedor.style.transform = "translate(" + -tamañoWidht * contador + "px"
   const transform = () => {
+    semaforo = false
+    if (semaforo) {
+      return
+    }
+    setTimeout(() => {
+      semaforo = true
+    }, 300);
+
   }
   
   const transformRight = () => {
+    semaforo = false
+    if (semaforo) {
+      return
+    }
     contenedor.classList.add("frases-transition-none")
     contenedor.scrollLeft = scroll
     // contenedor.scrollLeft -= scroll
     contenedor.classList.remove("frases-transition-none")
     contenedor.scrollLeft += scroll
     contador = 1
+    setTimeout(() => {
+      semaforo = true
+    }, 300);
   }
   const transformLeft = () => {
+    semaforo = false
+    if (semaforo) {
+      return
+    }
     contenedor.classList.add("frases-transition-none")
     contenedor.scrollLeft = scroll * 6
-    // contenedor.scrollLeft -= scroll
     contenedor.classList.remove("frases-transition-none")
-    // contenedor.scrollLeft += scroll
-    contador = 6
-    contador--;
     contenedor.scrollLeft -= scroll
+    // // contenedor.scrollLeft += scroll
+    contador = 5
+    // // contador--;
+    contenedor.scrollLeft -= scroll
+    setTimeout(() => {
+      semaforo = true
+    }, 300);
   }
   // const transform = () => contenedor.scrollLeft += tamañoWidht
 
@@ -264,38 +289,40 @@ window.addEventListener("load", () => {
   flechaDerecha.addEventListener("click", () => {
     if (frase[contador].firstElementChild.id === "first-clone") {
       transformRight()
-
+      
       
     }
-    console.log (contador)
     // contenedor.scrollLeft += scroll;
     contador++;
     contenedor.scrollLeft += scroll
     // transition();
+    console.log (contador)
   });
 
   flechaIzquierda.addEventListener("click", () => {
     if (frase[contador].firstElementChild.id === "last-clone") {
+      
       transformLeft()
       // contenedor.style.transition = "none";
       // alert ("hola")
       // contador = frase.length - 2;
       // // transform();
       // setTimeout(() => {
-      //   contador--
-      //   transition()
-      //   // transform()
+        //   contador--
+        //   transition()
+        //   // transform()
         
-      // }, 10);
-    }else{
-      // contenedor.scrollLeft -= scroll;
-      contador--;
-      contenedor.scrollLeft -= scroll
-      // transition();
-
-    }
-    // contenedor.scrollLeft -= slider.offsetWidth;
-  });
+        // }, 10);
+      }else{
+        // contenedor.scrollLeft -= scroll;
+        contador--;
+        contenedor.scrollLeft -= scroll
+        // transition();
+        
+      }
+      // contenedor.scrollLeft -= slider.offsetWidth;
+      console.log (contador)
+    });
   contenedor.addEventListener("transitionend", () => {
     if (frase[contador].firstElementChild.id === "last-clone") {
       contenedor.style.transition = "none";
@@ -360,6 +387,8 @@ window.addEventListener("load", () => {
     });
   });
 });
+
+// Ver Pelis
 let imagenVerPelis = document.getElementsByClassName("contenedor-imagen-ver-pelis");
 // imagenVerPelis.classList.add("contenedor-imagen-ver-pelis-hover");
 let imagen = Array.from(imagenVerPelis)
@@ -368,13 +397,12 @@ imagen.forEach((elemento) => {
     sema = false
     if (sema) {
       return
-    }
-    evento.toElement.parentElement.classList.toggle("contenedor-imagen-ver-pelis-hover")
-    evento.toElement.parentElement.previousElementSibling.classList.toggle("contenedor-textos-ver-pelis-hover")
-    evento.toElement.parentElement.nextElementSibling.classList.toggle("enlaces-ver-pelis-hover")
-    setTimeout(() => {
+    }else{
+      evento.toElement.parentElement.classList.toggle("contenedor-imagen-ver-pelis-hover")
+      evento.toElement.parentElement.previousElementSibling.classList.toggle("contenedor-textos-ver-pelis-hover")
+      evento.toElement.parentElement.nextElementSibling.classList.toggle("enlaces-ver-pelis-hover")
       sema = true
-    }, 300);
+    }
     console.log (evento.toElement.parentElement.nextElementSibling)
   });
 });

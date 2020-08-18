@@ -1479,7 +1479,7 @@ body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver
   top: 100%;
   left: 45%;
   opacity: 1;
-  z-index: 200;
+  z-index: 50;
 }
 
 body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis .cursor-hover-ver-pelis i {
