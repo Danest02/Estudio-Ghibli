@@ -404,28 +404,38 @@ body header .menu {
   z-index: 100;
 }
 
+body header .menu .enlaces {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 body header .menu .enlaces .enlace {
   -webkit-animation: opacity_scale 3s ease;
           animation: opacity_scale 3s ease;
-  display: inline-block;
   margin-left: 10px;
   position: relative;
+  padding: .5rem 0;
   color: #fff;
   cursor: pointer;
   font-weight: 500;
+  list-style: none;
 }
 
 body header .menu .enlaces .enlace:after {
-  margin-top: 3px;
   content: "";
+  margin-top: 3px;
   display: block;
+  position: absolute;
   width: 0;
   height: 3px;
   left: 50%;
   background: #fff;
-  -webkit-transition: all .3s;
-  transition: all .3s;
-  position: absolute;
+  -webkit-transition: width .3s ease-in-out, left .3s ease-in-out;
+  transition: width .3s ease-in-out, left .3s ease-in-out;
 }
 
 body header .menu .enlaces .enlace:hover:after {
