@@ -1,8 +1,3 @@
-@import "normalize";
-@import "variables";
-@import "mystyles";
-
-
 * {
     margin: 0;
     padding: 0;
@@ -25,10 +20,9 @@ body {
     header {
         width: 100%;
         height: 98vh;
-        background: #48aef0 url(../galeria/ghibli1.png);
-        background: -webkit-linear-gradient(to right, rgba(72, 173, 240, 0.1), rgba(53, 127, 176, 0.2)), url(../galeria/ghibli1.png);
+        background: #48aef0 url(../../galeria/ghibli1.png);
         /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, rgba(72, 173, 240, 0.1), rgba(53, 127, 176, 0.2)), url(../galeria/ghibli1.png);
+        background: linear-gradient(to right, rgba(72, 173, 240, 0.1), rgba(53, 127, 176, 0.2)), url(../../galeria/ghibli1.png);
         /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         background-size: cover;
         background-attachment: fixed;
@@ -44,10 +38,11 @@ body {
                 display: flex;
                 justify-content: flex-end;
                 .enlace {
-                    animation: opacity_scale 3s ease;
+                    -webkit-animation: opacity_scale 3s ease;
+                            animation: opacity_scale 3s ease;
                     margin-left: 10px;
                     position: relative;
-                    padding: .5rem 0;
+                    // padding: .5rem 0; es necesario
                     color: #fff;
                     cursor: pointer;
                     font-weight: 500;
@@ -124,7 +119,8 @@ body {
             justify-content: center;
             flex-direction: column;
             text-align: center;
-            animation: opacity_scale 3s ease;
+            -webkit-animation: opacity_scale 3s ease;
+                    animation: opacity_scale 3s ease;
 
             h1 {
                 font-size: 50px;
@@ -182,7 +178,8 @@ body {
 
                         img {
                             height: 120%;
-                            animation: ease-out img1Totoro 1s;
+                            -webkit-animation: ease-out img1Totoro 1s;
+                                    animation: ease-out img1Totoro 1s;
                             border: 1px solid red;
                         }
                     }
@@ -415,7 +412,8 @@ body {
 
                     .imagen-galeria {
                         height: 230px;
-                        object-fit: cover;
+                        -o-object-fit: cover;
+                           object-fit: cover;
                         overflow: hidden;
                         position: relative;
                         cursor: pointer;
@@ -426,7 +424,8 @@ body {
                         >img {
                             width: 100%;
                             height: 100%;
-                            object-fit: cover;
+                            -o-object-fit: cover;
+                               object-fit: cover;
                         }
 
                         .hover-imagen-galeria {
@@ -455,8 +454,11 @@ body {
                     }
 
                     .imagen-galeria:hover>img {
+                        transition: -webkit-filter .5s;
                         transition: filter .5s;
-                        filter: blur(2px);
+                        transition: filter .5s, -webkit-filter .5s;
+                        -webkit-filter: blur(2px);
+                                filter: blur(2px);
                     }
 
                     .imagen-galeria:hover .hover-imagen-galeria {
@@ -554,7 +556,7 @@ body {
         }
 
         .seccion-kaiosamas-ghibli {
-            background: url(../galeria/fondo2.png) no-repeat fixed;
+            background: url(../../galeria/fondo2.png) no-repeat fixed;
             width: 100%;
             background-size: cover;
             position: relative;
@@ -622,8 +624,10 @@ body {
                             img {
                                 width: 100%;
                                 height: 100%;
-                                object-position: 30%;
-                                object-fit: cover;
+                                -o-object-position: 30%;
+                                   object-position: 30%;
+                                -o-object-fit: cover;
+                                   object-fit: cover;
                                 transition: 1s;
 
                                 &:hover {
@@ -716,7 +720,8 @@ body {
 
                         .contenedor-imagen-kaiosama {
                             img {
-                                object-position: 20%;
+                                -o-object-position: 20%;
+                                   object-position: 20%;
                             }
                         }
 
@@ -823,7 +828,8 @@ body {
                             display: flex;
                             // overflow: hidden;
                             // scroll-snap-type: x proximity;
-                            scroll-snap-type: x mandatory;
+                            -ms-scroll-snap-type: x mandatory;
+                                scroll-snap-type: x mandatory;
 
                             // width: calc(100% / 3);
                             .contenedor-frase {
@@ -851,7 +857,8 @@ body {
                                         .img-frase {
                                             width: 120px;
                                             height: 120px;
-                                            object-fit: cover;
+                                            -o-object-fit: cover;
+                                               object-fit: cover;
                                             border: 3px solid #fff;
                                             border-radius: 50%;
                                             display: block;
@@ -934,7 +941,7 @@ body {
                             right: 0;
                             border-radius: 15px 15px 0 0;
                             height: 100%;
-                            background: linear-gradient( rgba(0, 0, 0, .7), rgba(0, 0, 0, 0.5)), url(../galeria/fondo4.png);
+                            background: linear-gradient( rgba(0, 0, 0, .7), rgba(0, 0, 0, 0.5)), url(../../galeria/fondo4.png);
                             background-size: cover;
                             background-position: 60%;
                             color: #fff;
@@ -973,7 +980,7 @@ body {
                         }
 
                         .contenedor-textos-ver-pelis-hover {
-                            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.8)), url(../galeria/fondo4.png);
+                            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.8)), url(../../galeria/fondo4.png);
                             background-size: cover;
                             background-position: top ;
                             height: 20%;
@@ -1101,5 +1108,3 @@ body {
     }
 
 }
-@import "mediaquerys";
-@import "keyframes";
