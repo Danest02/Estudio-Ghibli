@@ -690,10 +690,9 @@ body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .pelicula
 }
 
 body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .pelicula .portada .img-pelicula {
-  max-height: 408px;
-  max-width: 288px;
-  -webkit-transform: scale(1.05, 1.1);
-          transform: scale(1.05, 1.1);
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .pelicula .informacion {

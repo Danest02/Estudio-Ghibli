@@ -290,9 +290,11 @@ body {
 
                             .portada {
                                 .img-pelicula {
-                                    max-height: 408px;
-                                    max-width: 288px;
-                                    transform: scale(1.05, 1.1);
+                                    // max-height: 408px;
+                                    // max-width: 288px;
+                                    width: 100%;
+                                    // transform: scale(1.05, 1.1);
+                                    object-fit: cover;
                                 }
                             }
 
