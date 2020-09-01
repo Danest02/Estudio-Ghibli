@@ -2,7 +2,21 @@
     animation: escalar .8s;
 }
 
-
+// * animacion para imagenes de rombo a circulo
+.rombo{
+	-webkit-clip-path: polygon(50% 0% , 100% 50%, 50% 100%, 0% 50%);
+	-o-clip-path: polygon(50% 0% , 100% 50%, 50% 100%, 0% 50%);
+    clip-path: polygon(50% 0% , 100% 50%, 50% 100%, 0% 50%);
+    border-radius: 50%;
+	@extend .t1s;
+	&:hover{
+		clip-path: polygon(100% 0% , 100% 100%, 0% 100% , 0% 0%);
+    }
+}
+.t1s{
+    transition-duration: 1s;
+    -moz-transition-timing-function: ease-in-out;
+}
 
 @keyframes img1Totoro {
     0% {

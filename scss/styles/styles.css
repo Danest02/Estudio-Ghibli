@@ -21,7 +21,7 @@
           transform: scale(0.95);
 }
 
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
 /**
@@ -415,7 +415,7 @@ body header .menu .enlaces {
 
 body header .menu .enlaces .enlace {
   -webkit-animation: opacity_scale 3s ease;
-          animation: opacity_scale 3s ease;
+  animation: opacity_scale 3s ease;
   margin-left: 10px;
   position: relative;
   color: #fff;
@@ -500,7 +500,7 @@ body header .textos-header {
           flex-direction: column;
   text-align: center;
   -webkit-animation: opacity_scale 3s ease;
-          animation: opacity_scale 3s ease;
+  animation: opacity_scale 3s ease;
 }
 
 body header .textos-header h1 {
@@ -567,7 +567,7 @@ body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .contened
 body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .contenedor-imagen-sobre-ghibli img {
   height: 120%;
   -webkit-animation: ease-out img1Totoro 1s;
-          animation: ease-out img1Totoro 1s;
+  animation: ease-out img1Totoro 1s;
   border: 1px solid red;
 }
 
@@ -854,7 +854,7 @@ body main .seccion-galeria .galeria .imagenes-galeria {
 body main .seccion-galeria .galeria .imagenes-galeria .imagen-galeria {
   height: 230px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   overflow: hidden;
   position: relative;
   cursor: pointer;
@@ -868,7 +868,7 @@ body main .seccion-galeria .galeria .imagenes-galeria .imagen-galeria > img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 body main .seccion-galeria .galeria .imagenes-galeria .imagen-galeria .hover-imagen-galeria {
@@ -909,12 +909,12 @@ body main .seccion-galeria .galeria .imagenes-galeria .imagen-galeria .hover-ima
 }
 
 body main .seccion-galeria .galeria .imagenes-galeria .imagen-galeria:hover > img {
-  -webkit-transition: -webkit-filter .5s;
   transition: -webkit-filter .5s;
+  -webkit-transition: -webkit-filter .5s;
   transition: filter .5s;
   transition: filter .5s, -webkit-filter .5s;
   -webkit-filter: blur(2px);
-          filter: blur(2px);
+  filter: blur(2px);
 }
 
 body main .seccion-galeria .galeria .imagenes-galeria .imagen-galeria:hover .hover-imagen-galeria {
@@ -1075,11 +1075,9 @@ body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas {
   display: grid;
   -ms-grid-columns: 1.5fr 2fr 1.5fr;
       grid-template-columns: 1.5fr 2fr 1.5fr;
-  -ms-grid-rows: ()3;
+  -ms-grid-rows: ()[3];
       grid-template-rows: repeat(3);
-      grid-template-areas: "k1 k1 ."
- ". k2 k2"
- "k3 k3 .";
+      grid-template-areas: "k1 k1 ." ". k2 k2" "k3 k3 .";
   grid-gap: 1.5rem 0;
 }
 
@@ -1107,9 +1105,9 @@ body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kai
   width: 100%;
   height: 100%;
   -o-object-position: 30%;
-     object-position: 30%;
+  object-position: 30%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -1217,7 +1215,7 @@ body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .k2 
 
 body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .k2 .contenedor-imagen-kaiosama img {
   -o-object-position: 20%;
-     object-position: 20%;
+  object-position: 20%;
 }
 
 body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .k2 .contenido-textos-kaiosama {
@@ -1327,7 +1325,7 @@ body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contened
   display: -ms-flexbox;
   display: flex;
   -ms-scroll-snap-type: x mandatory;
-      scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory;
 }
 
 body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases .contenedor-frase {
@@ -1373,7 +1371,7 @@ body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contened
   width: 120px;
   height: 120px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border: 3px solid #fff;
   border-radius: 50%;
   display: block;
@@ -1566,6 +1564,7 @@ body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .enlaces-ver-pelis {
   opacity: 0;
   height: 55%;
   overflow: auto;
+  padding: 0.3rem;
 }
 
 body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .enlaces-ver-pelis::-webkit-scrollbar {
@@ -1574,6 +1573,9 @@ body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .enlaces-ver-pelis::-w
 
 body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .enlaces-ver-pelis .enlace-ver-peli {
   margin: .5rem 0;
+  line-height: 1rem;
+  padding: .7rem;
+  font-size: .9rem;
 }
 
 body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .enlaces-ver-pelis-hover {
@@ -2147,6 +2149,24 @@ body main footer .titulo-final {
 .escalar {
   -webkit-animation: escalar .8s;
           animation: escalar .8s;
+}
+
+.rombo {
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  -o-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  border-radius: 50%;
+}
+
+.rombo:hover {
+  -webkit-clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%);
+          clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%);
+}
+
+.t1s, .rombo {
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -moz-transition-timing-function: ease-in-out;
 }
 
 @-webkit-keyframes img1Totoro {

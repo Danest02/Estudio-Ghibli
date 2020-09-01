@@ -5,6 +5,14 @@
     border: none !important
 }
 
+//  NOTE usar @extend de sass para reutlizar en clases los estilos que se repiten
+// .transitionejemplo{
+//     transition: none;
+// }
+// .ejemplo{
+//     @extend transitionejemplo
+// }
+
 // Inicialización
 a {
     text-decoration: none;
@@ -1037,11 +1045,15 @@ body {
                             opacity: 0;
                             height: 55%;
                             overflow: auto;
+                            padding: 0.3rem;
                             &::-webkit-scrollbar{
                                 display: none;
                             }
                             .enlace-ver-peli{
                                 margin: .5rem 0;
+                                line-height: 1rem;
+                                padding: .7rem;
+                                font-size: .9rem;
                             }
                         }
                         .enlaces-ver-pelis-hover{
