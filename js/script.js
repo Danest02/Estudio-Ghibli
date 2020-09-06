@@ -1,5 +1,6 @@
-// JQuery
-// Boton ver mas
+// ANCHOR  JQuery
+
+// TODO:STUB Boton ver mas
 $(".boton-ver-mas").on("click", function (evt) {
   evt.preventDefault();
   let max = $(".imagenes-galeria").css("max-height"),
@@ -15,7 +16,7 @@ $(".boton-ver-mas").on("click", function (evt) {
   }
 });
 
-// Categoria galeria - JQuery
+// TODO:STUB Categoria galeria - JQuery
 const categoriaGaleria = document.querySelectorAll(".categoria-galeria");
 $(".categoria-galeria").click(function () {
   $(this).addClass("activo").siblings().removeClass("activo");
@@ -32,7 +33,7 @@ $(".categoria-galeria").click(function () {
   }
 });
 
-// Desplazarse enlaces menu
+// TODO:STUB Desplazarse enlaces menu
 let sobreGhibli = $("#seccion-sobre-ghibli").offset().top,
   peliculas = $("#seccion-peliculas").offset().top,
   galeria = $("#seccion-galeria").offset().top,
@@ -144,9 +145,10 @@ $("#enlace-ver-pelis").on("click", function (e) {
   );
 });
 
-// Vanilla
+// ANCHOR Vanilla
 
-// Slider Peliculas
+// TODO:STUB SLIDER PELICULAS
+
 window.addEventListener("load", () => {
   var swiper = new Swiper(".swiper-container", {
     effect: "coverflow",
@@ -181,7 +183,8 @@ window.addEventListener("load", () => {
       keyboard: true,
   });
 
-  // Scroll
+  // TODO:STUB SCROLL
+
   let ubicacionPrincipal = window.pageYOffset;
   window.addEventListener("scroll", function () {
     let desplazamientoActual = window.pageYOffset;
@@ -222,7 +225,8 @@ window.addEventListener("load", () => {
       enlaces.classList.toggle("menudos");
     });
 
-  // Caroulse Frases
+  // TODO:STUB CAROUSEL FRASES
+
   let contador = 1,
   contenedor = document.querySelector(".frases"),
   frase = document.querySelectorAll(".contenedor-frase"),
@@ -336,7 +340,7 @@ window.addEventListener("load", () => {
     }
   });
 
-  // overlay galeria
+  // TODO:STUB OVERLAY GALERIA
 
   const overlay = document.getElementById("overlay"),
     y = document.querySelectorAll(".hover-imagen-galeria"),
@@ -370,7 +374,8 @@ window.addEventListener("load", () => {
       "";
   });
 
-  // Leer mas
+  // TODO:STUB LEER MAS
+
   const leer = document.querySelectorAll(".boton-leer-mas");
   leer.forEach((elemento) => {
     elemento.addEventListener("click", (evento) => {
@@ -388,7 +393,8 @@ window.addEventListener("load", () => {
   });
 });
 
-// Ver Pelis
+// TODO:STUB VER PELIS
+
 let imagenVerPelis = document.getElementsByClassName("contenedor-imagen-ver-pelis");
 // imagenVerPelis.classList.add("contenedor-imagen-ver-pelis-hover");
 let imagen = Array.from(imagenVerPelis)
@@ -405,4 +411,22 @@ imagen.forEach((elemento) => {
     }
     console.log (evento.toElement.parentElement.nextElementSibling)
   });
+});
+
+// TODO:STUB ANIMACION SOBRE GHIBLI
+botonSiguiente = document.getElementById("boton-siguiente-sobre-ghibli");
+contenedorSobreGhibli1 = document.getElementById("contenedor-sobre-ghibli-1");
+contenedorSobreGhibli2 = document.getElementById("contenedor-sobre-ghibli-2");
+// let semaforo = true;
+botonSiguiente.addEventListener("click", (evento) => {
+  contenedorSobreGhibli1.classList.toggle("translate-sobre-ghibli-1");
+  contenedorSobreGhibli2.classList.toggle("translate-sobre-ghibli-2");
+  botonSiguiente.parentElement.classList.toggle("translate-boton-sobre-ghibli");
+  // botonSiguiente.innerHTML = "Siguiente";
+  if (botonSiguiente.innerHTML == "Siguiente") {
+    botonSiguiente.innerHTML = "Anterior";
+    // semaforo = false;
+  }else{
+      botonSiguiente.innerHTML = "Siguiente";
+  }
 });

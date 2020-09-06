@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: none !important
+    border: none !important;
+
 }
 
 //  NOTE usar @extend de sass para reutlizar en clases los estilos que se repiten
@@ -18,12 +19,17 @@ a {
     text-decoration: none;
 }
 
+p {
+    font-family: $lato;
+}
+
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: $roboto;
 
     header {
         width: 100%;
@@ -45,9 +51,10 @@ body {
             .enlaces {
                 display: flex;
                 justify-content: flex-end;
+
                 .enlace {
                     -webkit-animation: opacity_scale 3s ease;
-                            animation: opacity_scale 3s ease;
+                    animation: opacity_scale 3s ease;
                     margin-left: 10px;
                     position: relative;
                     // padding: .5rem 0; es necesario
@@ -56,25 +63,25 @@ body {
                     font-weight: 500;
                     list-style: none;
 
-                    &:after {
-                        content: "";
-                        margin-top: 3px;
-                        display: block;
-                        position: absolute;
-                        width: 0;
-                        height: 3px;
-                        left: 50%;
-                        background: #fff;
-                        transition: width .3s ease-in-out, left .3s ease-in-out;
-                        // * width en 100% se elimina left se usa transform
-                        // transform: translateX(-100%);
-                    }
-                    
-                    &:hover:after {
-                        width: 100%;
-                        // transform: translateX(0);
-                        left: 0;
-                    }
+                    // &:after {
+                    //     content: "";
+                    //     margin-top: 3px;
+                    //     display: block;
+                    //     position: absolute;
+                    //     width: 0;
+                    //     height: 3px;
+                    //     left: 50%;
+                    //     background: #fff;
+                    //     transition: width .3s ease-in-out, left .3s ease-in-out;
+                    //     // * width en 100% se elimina left se usa transform
+                    //     // transform: translateX(-100%);
+                    // }
+
+                    // &:hover:after {
+                    //     width: 100%;
+                    //     // transform: translateX(0);
+                    //     left: 0;
+                    // }
                 }
             }
 
@@ -128,7 +135,7 @@ body {
             flex-direction: column;
             text-align: center;
             -webkit-animation: opacity_scale 3s ease;
-                    animation: opacity_scale 3s ease;
+            animation: opacity_scale 3s ease;
 
             h1 {
                 font-size: 50px;
@@ -169,47 +176,179 @@ body {
         .seccion-sobre-ghibli {
             .contenedor-sobre-ghibli {
                 border: 2px solid darkmagenta;
+                position: relative;
+
+                .contenedor-boton-sobre-ghibli {
+                    display: flex;
+                    align-items: flex-end;
+                    transform: translateY(-5%);
+                    width: 100%;
+                    // justify-content: flex-end;
+                    transform: translate(90%);
+                    transition: .9s .1s transform ease-in-out;
+                    // background-color: red;
+
+                    .boton-sobre-ghibli {
+                        background-color: transparent;
+                        color: $color1;
+                        outline: none;
+                    }
+                }
+
+                .translate-boton-sobre-ghibli {
+                    transform: translate(0%);
+
+                }
+
 
                 .sobre-ghibli {
-                    margin-bottom: 3.5rem;
                     display: flex;
-                    justify-content: center;
-                    border: 1px solid darkcyan;
+                    flex-wrap: nowrap;
+                    overflow: hidden;
+                    // position: relative;
 
-                    .contenedor-imagen-sobre-ghibli {
+
+                    .contenedor-sobre-ghibli-1,
+                    .contenedor-sobre-ghibli-2 {
+                        margin-bottom: 3.5rem;
                         display: flex;
-                        justify-content: center;
-                        max-width: 58%;
-                        height: 500px;
+                        // flex-wrap: wrap;
                         overflow: hidden;
-                        border: 1px solid deeppink;
+                        border: 1px solid darkcyan;
+                        // min-width: 100%;
+                        // position: rela
 
-                        img {
-                            height: 120%;
-                            -webkit-animation: ease-out img1Totoro 1s;
-                                    animation: ease-out img1Totoro 1s;
+                        .contenedor-imagen-sobre-ghibli {
+                            display: flex;
+                            justify-content: center;
+                            max-width: 55%;
+                            min-width: 50%;
+                            height: 500px;
+                            overflow: hidden;
+                            border: 1px solid deeppink;
+                            transition: .6s all ease-out;
+                            // background: blue;
+
+
+
+                            .imagen-sobre-ghibli-1 {
+                                height: 120%;
+                                -webkit-animation: ease-out img1Totoro 1s;
+                                animation: ease-out img1Totoro 1s;
+                                border: 1px solid red;
+                                min-width: 50%;
+
+                            }
+
+                            .imagen-sobre-ghibli-2 {
+                                // height: 120%;
+                                width: 100%;
+                                -webkit-animation: ease-out img1Totoro 1s;
+                                animation: ease-out img1Totoro 1s;
+                                border: 1px solid red;
+                                min-width: 50%;
+
+                            }
+                        }
+
+                        .contenido-textos {
+                            width: 35%;
+                            min-height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            flex-direction: column;
                             border: 1px solid red;
+
+                            .texto-1,
+                            .texto-2,
+                            .texto-3 {
+                                transition: .6s all ease-out;
+
+
+                                p {
+                                    padding: 0 0 30px 10px;
+                                    text-align: justify;
+                                }
+
+                                h3 {
+                                    margin-bottom: 15px;
+
+                                    i {
+                                        color: $color2;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                    .contenedor-sobre-ghibli-1{
+                        justify-content: space-between;
+                    }
+                    
+                    
+                    .contenedor-sobre-ghibli-2 {
+                        justify-content: space-evenly;
+                        transition: 1s transform ease-out;
+                        position: absolute;
+                        // right: 100%;
+                        transform: translateX(100%);
+                        opacity: 0.3;
+                        .contenedor-imagen-sobre-ghibli{
+                            min-width: 40%;
+                            width: 48%;
+                        }
+                        .contenido-textos{
+                            transform: translateX(-10px);
+                            transform: translateY(60px);
+                            .texto-3{
+                                transition: .7s .6s all ease-out;
+                                transform: translateX(200%);
+                                opacity: 0.5;
+                            }
+                            // background-color: red;
+                        }
+
+                    }
+
+                    .translate-sobre-ghibli-2 {
+                        transform: translateX(0%);
+                        opacity: 1;
+                        .contenido-textos{
+                            .texto-3{
+                                opacity: 1;
+                                transform: translateX(0px);
+
+                            }
                         }
                     }
 
-                    .contenido-textos {
-                        width: 38%;
-                        min-height: 100%;
-                        display: flex;
-                        justify-content: center;
-                        flex-direction: column;
-                        border: 1px solid red;
+                    .translate-sobre-ghibli-1 {
+                        transition: 1s all ease-in;
 
-                        p {
-                            padding: 0 0 30px 10px;
-                            text-align: justify;
+                        // position: relative;
+                        .contenedor-imagen-sobre-ghibli {
+                            transition: 1s all ease-out;
+                            transform: translateX(-100%);
+                            opacity: .5;
+                            // position: relative;
+                            // top: -100px;
                         }
 
-                        h3 {
-                            margin-bottom: 15px;
+                        .contenido-textos {
+                            .texto-1 {
+                                transition: 1s all ease-out;
+                                transform: translateY(-150%);
+                                opacity: .5;
 
-                            i {
-                                color: $color2;
+
+                            }
+
+                            .texto-2 {
+                                transition: .6s all ease-out;
+                                transform: translateY(150%);
+                                opacity: .5;
+
+
                             }
                         }
                     }
@@ -309,6 +448,7 @@ body {
                                 background: #48aef0e6;
                                 top: 90%;
                                 color: #fff;
+                                transition: top .7s;
 
                                 .contenedor-nombre {
                                     display: flex;
@@ -317,6 +457,7 @@ body {
                                     justify-content: center;
                                     height: 10%;
                                     width: 100%;
+                                    transition: margin 0.7s;
 
                                     .nombre {
                                         font-size: 1.1rem;
@@ -325,23 +466,15 @@ body {
 
                                 &:hover {
                                     top: 0;
-                                    transition: top .7s;
+                                }
+
+                                &:hover .contenedor-nombre {
+                                    margin-top: 2rem;
                                 }
 
                                 .ver-peliculas {
-                                    background: #fff;
-                                    color: $color2;
                                     display: block;
                                     margin: 2.5rem;
-                                    transition: transform 0.4s linear;
-
-                                    &:hover {
-                                        transform: scale(1.1);
-                                    }
-
-                                    &:active {
-                                        transform: scale(.95);
-                                    }
                                 }
 
                                 .sipnosis {
@@ -423,7 +556,7 @@ body {
                     .imagen-galeria {
                         height: 230px;
                         -o-object-fit: cover;
-                           object-fit: cover;
+                        object-fit: cover;
                         overflow: hidden;
                         position: relative;
                         cursor: pointer;
@@ -435,7 +568,7 @@ body {
                             width: 100%;
                             height: 100%;
                             -o-object-fit: cover;
-                               object-fit: cover;
+                            object-fit: cover;
                         }
 
                         .hover-imagen-galeria {
@@ -468,7 +601,7 @@ body {
                         transition: filter .5s;
                         transition: filter .5s, -webkit-filter .5s;
                         -webkit-filter: blur(2px);
-                                filter: blur(2px);
+                        filter: blur(2px);
                     }
 
                     .imagen-galeria:hover .hover-imagen-galeria {
@@ -585,10 +718,10 @@ body {
 
                 width: 100%;
                 display: flex;
-                align-items : center;
+                align-items: center;
                 flex-direction: column;
 
-                .contenedor-titulo-kaiosama{
+                .contenedor-titulo-kaiosama {
                     position: relative;
                     margin-top: 3.5rem;
                     // background-color: #c3c3c3;
@@ -603,10 +736,10 @@ body {
                     grid-template-columns: 1.5fr 2fr 1.5fr;
                     // grid-template-columns: repeat(2, 50%);
                     grid-template-rows: repeat(3);
-                    grid-template-areas: 
-                                        "k1 k1 ."
-                                        ". k2 k2"
-                                        "k3 k3 .";
+                    grid-template-areas:
+                        "k1 k1 ."
+                        ". k2 k2"
+                        "k3 k3 .";
                     grid-gap: 1.5rem 0;
                     // grid-template-columns: 
                     // [line-start] 1fr
@@ -635,9 +768,9 @@ body {
                                 width: 100%;
                                 height: 100%;
                                 -o-object-position: 30%;
-                                   object-position: 30%;
+                                object-position: 30%;
                                 -o-object-fit: cover;
-                                   object-fit: cover;
+                                object-fit: cover;
                                 transition: 1s;
 
                                 &:hover {
@@ -645,34 +778,35 @@ body {
                                 }
                             }
                         }
-                            .contenido-textos-kaiosama {
-                                    display: flex;
-                                    flex-direction: column;
-                                    padding: 3rem 2rem 1.5rem;
-                                    overflow: hidden;
-                                    transition: padding 1s;
-                                    position: relative;
-        
-                                    // background:  blue;
-                                    h3 {
-                                        margin-bottom: .5rem;
-                                        position: relative;
-                                        // background:green;
-                                        color: black;
-                                        top: 0;
-                                        transition: top 1s;
-                                    }
-        
-                                    .contenedor-p {
-                                        overflow: hidden;
-                                        position: relative;
-        
-                                        // background: red;
-                                        p {
-                                            font-size: 1rem;
-                                        }
-                                    }
-                                
+
+                        .contenido-textos-kaiosama {
+                            display: flex;
+                            flex-direction: column;
+                            padding: 3rem 2rem 1.5rem;
+                            overflow: hidden;
+                            transition: padding 1s;
+                            position: relative;
+
+                            // background:  blue;
+                            h3 {
+                                margin-bottom: .5rem;
+                                position: relative;
+                                // background:green;
+                                color: black;
+                                top: 0;
+                                transition: top 1s;
+                            }
+
+                            .contenedor-p {
+                                overflow: hidden;
+                                position: relative;
+
+                                // background: red;
+                                p {
+                                    font-size: 1rem;
+                                }
+                            }
+
 
                             .contenedor-boton-leer-mas {
                                 display: flex;
@@ -718,20 +852,20 @@ body {
                     }
 
                     .k2 {
-                            grid-column: span 2 / -1;
-                            grid-row: 2;
-                            grid-area: k2;
-                            // grid-column: line-end;
-                            // grid-row: fila-center / span 1;
+                        grid-column: span 2 / -1;
+                        grid-row: 2;
+                        grid-area: k2;
+                        // grid-column: line-end;
+                        // grid-row: fila-center / span 1;
 
-                            display: flex;
-                            flex-direction: row-reverse;
-                            text-align: end;
+                        display: flex;
+                        flex-direction: row-reverse;
+                        text-align: end;
 
                         .contenedor-imagen-kaiosama {
                             img {
                                 -o-object-position: 20%;
-                                   object-position: 20%;
+                                object-position: 20%;
                             }
                         }
 
@@ -829,9 +963,11 @@ body {
                     .contenedor-frases {
                         width: 85%;
                         overflow: hidden;
-                        .frases::-webkit-scrollbar{
+
+                        .frases::-webkit-scrollbar {
                             display: none;
                         }
+
                         .frases {
                             scroll-behavior: smooth;
                             overflow: scroll;
@@ -839,7 +975,7 @@ body {
                             // overflow: hidden;
                             // scroll-snap-type: x proximity;
                             -ms-scroll-snap-type: x mandatory;
-                                scroll-snap-type: x mandatory;
+                            scroll-snap-type: x mandatory;
 
                             // width: calc(100% / 3);
                             .contenedor-frase {
@@ -868,7 +1004,7 @@ body {
                                             width: 120px;
                                             height: 120px;
                                             -o-object-fit: cover;
-                                               object-fit: cover;
+                                            object-fit: cover;
                                             border: 3px solid #fff;
                                             border-radius: 50%;
                                             display: block;
@@ -904,7 +1040,8 @@ body {
                                 }
                             }
                         }
-                        .frases-transition-none{
+
+                        .frases-transition-none {
                             scroll-behavior: inherit;
                         }
 
@@ -941,6 +1078,7 @@ body {
                         overflow: hidden;
                         position: relative;
                         border: 2px solid red;
+
                         .contenedor-textos-ver-pelis {
                             display: flex;
                             flex-direction: column;
@@ -951,48 +1089,53 @@ body {
                             right: 0;
                             border-radius: 15px 15px 0 0;
                             height: 100%;
-                            background: linear-gradient( rgba(0, 0, 0, .7), rgba(0, 0, 0, 0.5)), url(../../galeria/fondo4.png);
+                            background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, 0.5)), url(../../galeria/fondo4.png);
                             background-size: cover;
                             background-position: 60%;
                             color: #fff;
                             padding: 1rem;
                             border: 1px solid red;
                             transition: all .5s ease-in-out;
+
                             .textos-ver-pelis {
                                 position: relative;
                                 top: 25%;
+
                                 h3 {
                                     font-size: 35px;
                                 }
                             }
-                            .cursor-hover-ver-pelis{
+
+                            .cursor-hover-ver-pelis {
                                 transition: .5s;
                                 position: absolute;
                                 top: 100%;
                                 left: 45%;
                                 opacity: 1;
                                 z-index: 50;
-                                
-                                i{
+
+                                i {
                                     color: white;
                                     font-size: 2rem;
                                 }
-                                p{
+
+                                p {
                                     background-color: white;
                                     color: $color1;
                                     line-height: 2rem;
                                 }
                             }
-                            &:hover .cursor-hover-ver-pelis{
+
+                            &:hover .cursor-hover-ver-pelis {
                                 top: 85%;
                             }
-    
+
                         }
 
                         .contenedor-textos-ver-pelis-hover {
                             background: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.8)), url(../../galeria/fondo4.png);
                             background-size: cover;
-                            background-position: top ;
+                            background-position: top;
                             height: 20%;
                             overflow: hidden;
                             position: relative;
@@ -1004,7 +1147,8 @@ body {
                                 opacity: 0;
                                 transform: translateY(100px);
                             }
-                            .cursor-hover-ver-pelis{
+
+                            .cursor-hover-ver-pelis {
                                 transform: scale(.5);
                                 opacity: 0;
                             }
@@ -1025,40 +1169,45 @@ body {
                             border-radius: 50%;
                             box-shadow: 0 0 9px 0 rgba(0, 0, 0, .5);
                             transition: all .5s ease-in-out;
+
                             .imagen-ver-pelis {
                                 height: 100%;
                                 width: 100%;
                                 // position: absolute;
                                 // left: 50%;
                                 // transform: translatex(-50%);
-                                
-                                
+
+
                             }
-                            
+
                         }
-                        
+
                         .contenedor-imagen-ver-pelis-hover {
                             top: calc(-100% + 100px);
                             transform: scale(.6);
                         }
-                        .enlaces-ver-pelis{
+
+                        .enlaces-ver-pelis {
                             visibility: hidden;
                             margin-top: 80px;
                             opacity: 0;
                             height: 55%;
                             overflow: auto;
                             padding: 0.3rem;
-                            &::-webkit-scrollbar{
+
+                            &::-webkit-scrollbar {
                                 display: none;
                             }
-                            .enlace-ver-peli{
+
+                            .enlace-ver-peli {
                                 margin: .5rem 0;
                                 line-height: 1rem;
                                 padding: .7rem;
                                 font-size: .9rem;
                             }
                         }
-                        .enlaces-ver-pelis-hover{
+
+                        .enlaces-ver-pelis-hover {
                             transition: all .8s ease-in-out;
                             opacity: 1;
                             visibility: visible;

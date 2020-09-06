@@ -1,6 +1,9 @@
 @import "variables";
 
-.mybtn{
+
+// TODO:STUB BOTONES
+
+.mybtn {
     background: $color2;
     display: inline-block;
     line-height: 2.5em;
@@ -8,13 +11,147 @@
     color: #fff;
     text-decoration: none;
     border-radius: 1.25em;
-    border: 1px solid rgba(#000,.2);
-    cursor:pointer;
-    &:hover{
+    border: 1px solid rgba(#000, .2);
+    cursor: pointer;
+
+    &:hover {
         transition: all 0.4s linear;
         background: $color1;
     }
-    &:active{
+
+    &:active {
         transform: scale(.95);
+    }
+}
+
+.mybtn-borde {
+    background: #fff;
+    display: inline-block;
+    line-height: 2.5em;
+    padding: 0 1.25em;
+    color: $color2;
+    text-decoration: none;
+    border-radius: 1.25em;
+    border: 1px solid $color2;
+    cursor: pointer;
+
+    &:hover {
+        transition: all 0.4s linear;
+        background: $color2;
+        color: #fff;
+    }
+
+    &:active {
+        transform: scale(.95);
+    }
+}
+
+.mybtn-zoon {
+    background: #fff;
+    display: inline-block;
+    line-height: 2.5em;
+    padding: 0 1.25em;
+    color: $color2;
+    text-decoration: none;
+    border-radius: 1.25em;
+    cursor: pointer;
+    transition: all 0.4s linear;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &:active {
+        transform: scale(.95);
+    }
+}
+
+// TODO:STUB BORDES ANIMADOS
+
+.borde-animado-centro {
+    &:after {
+        content: "";
+        margin-top: 3px;
+        display: block;
+        position: absolute;
+        width: 0;
+        height: 3px;
+        left: 50%;
+        background: #fff;
+        transition: width .3s ease-in-out, left .3s ease-in-out;
+        // * width en 100% se elimina left se usa transform
+        // transform: translateX(-100%);
+    }
+
+    &:hover:after {
+        width: 100%;
+        // transform: translateX(0);
+        left: 0;
+    }
+}
+
+.borde-animado-right {
+    overflow: hidden;
+    padding: .5rem 0;
+
+    &:after {
+        content: "";
+        margin-top: 3px;
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: #fff;
+        transition: transform .3s linear, left .3s linear;
+        // * width en 100% se elimina left se usa transform
+        transform: translateX(-100%);
+    }
+
+    &:hover:after {
+        transform: translateX(0);
+        left: 0;
+    }
+}
+
+
+.borde-animado-doble {
+    // padding: .5rem 0;
+
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -2px;
+        width: 100%;
+        background-color: transparent;
+        height: 2px;
+        transition: all 0.5s ease-in-out;
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0px;
+        width: 0%;
+        background-color: transparent;
+        height: 2px;
+        transition: all 0.5s ease-in-out;
+    }
+
+    &:hover {
+        text-decoration: none;
+        color: $color2;
+
+        &:before {
+            width: 0%;
+            background: #fff;
+        }
+
+        &:after {
+            width: 100%;
+            background: #fff;
+        }
     }
 }

@@ -12,11 +12,11 @@
 
     <!-- * Indexar de los buscadores -->
     <meta name="robots" content="index, follow"> <!-- * no es necesaria si esta en index-->
-    
+
     <!-- * Favicon -->
     <link rel="shortcut icon" href="galeria/totoro.png" type="image/x-icon">
     <link rel="icon" href="galeria/totoro.png" type="image/x-icon"> <!-- NOTE 64px X 64px recomendado -->
-    
+
     <!-- * Estilos CSS -->
     <link rel="stylesheet" type="text/css" href="scss/styles/styles.css">
     <!-- * Fuentes de Google -->
@@ -31,31 +31,32 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
     <!-- <link rel="stylesheet" href="materialize/materialize.css"> -->
     <!-- <script src="materialize/materialize.js"></script>
-    <script src="js/index.js"></script> --> 
+    <script src="js/index.js"></script> -->
 
     <!--  * Swiper.js -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    
-    <!-- * Social Cards -->
-    <meta property="og:url"           content="http://www.blackparadox.com" />
-	<meta property="og:type"          content="website" />
-	<meta property="og:title"         content="Pelicuals Estudio Ghibli" />
-	<meta property="og:description"   content="Viviendo al maravillosos mundo de Ghibli. Todas las peliculs del estudio ghibli y más" />
-	<meta property="og:image"         content="http://www.blackparadox.com/images/logo.svg" />
 
-    
+    <!-- * Social Cards -->
+    <meta property="og:url" content="http://www.blackparadox.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Pelicuals Estudio Ghibli" />
+    <meta property="og:description"
+        content="Viviendo al maravillosos mundo de Ghibli. Todas las peliculs del estudio ghibli y más" />
+    <meta property="og:image" content="http://www.blackparadox.com/images/logo.svg" />
+
+
 </head>
 
 <body>
     <header>
         <nav class="menu">
             <ul class="enlaces">
-                <li class="enlace" id="enlace-sobre-ghibli">Sobre Ghibli</li>
-                <li class="enlace" id="enlace-peliculas">Peliculas</li>
-                <li class="enlace" id="enlace-galeria">Imagenes</li>
-                <li class="enlace" id="enlace-kaiosamas">Creadores</li>
-                <li class="enlace" id="enlace-frases">Frases</li>
-                <li class="enlace" id="enlace-ver-pelis">Ver peliculas</li>
+                <li class="enlace borde-animado-centro" id="enlace-sobre-ghibli">Sobre Ghibli</li>
+                <li class="enlace borde-animado-centro" id="enlace-peliculas">Peliculas</li>
+                <li class="enlace borde-animado-centro" id="enlace-galeria">Imagenes</li>
+                <li class="enlace borde-animado-centro" id="enlace-kaiosamas">Creadores</li>
+                <li class="enlace borde-animado-centro" id="enlace-frases">Frases</li>
+                <li class="enlace borde-animado-centro" id="enlace-ver-pelis">Ver peliculas</li>
             </ul>
             <div class="contenedor-hamburguer" id="contenedor-hamburguer">
                 <i class="fas fa-bars hamburguer"></i>
@@ -72,23 +73,60 @@
             </svg></div>
     </header>
     <main>
-        <article class= "seccion-sobre-ghibli" id="seccion-sobre-ghibli">
+        <article class="seccion-sobre-ghibli" id="seccion-sobre-ghibli">
             <div class="contenedor-sobre-ghibli contenedor">
                 <h2 class="titulo">Estudio Ghibli</h2>
+
                 <div class="sobre-ghibli">
-                    <div class="contenedor-imagen-sobre-ghibli">
-                        <img src="galeria/ghibli2.1.jpg" class="imagen-sobre-ghibli" alt="logo del estudio ghibli">
+                    <div class="contenedor-sobre-ghibli-1" id="contenedor-sobre-ghibli-1">
+                        <div class="contenedor-imagen-sobre-ghibli">
+                            <img src="galeria/ghibli2.1.jpg" class="imagen-sobre-ghibli-1 "
+                                alt="logo del estudio ghibli">
+                        </div>
+                        <div class="contenido-textos">
+                            <div class="texto-1">
+                                <h3><i class="fas fa-check-circle"></i> El mejor estudio</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam commodi incidunt
+                                    eius iure
+                                    necessitatibus unde repudiandae pariatur nobis, possimus aliquam, hic harum illum
+                                    consectetur animi quisquam facilis voluptatum tenetur facere.</p>
+
+                            </div>
+                            <div class="texto-2">
+                                <h3><i class="fas fa-check-circle"></i> El mejor estudio</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam commodi incidunt
+                                    eius iure
+                                    necessitatibus unde repudiandae pariatur nobis, possimus aliquam, hic harum illum
+                                    consectetur animi quisquam facilis voluptatum tenetur facere.</p>
+
+                            </div>
+                        </div>
                     </div>
-                    <div class="contenido-textos">
-                        <h3><i class="fas fa-check-circle"></i> El mejor estudio</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam commodi incidunt eius iure
-                            necessitatibus unde repudiandae pariatur nobis, possimus aliquam, hic harum illum
-                            consectetur animi quisquam facilis voluptatum tenetur facere.</p>
-                        <h3><i class="fas fa-check-circle"></i> El mejor estudio</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam commodi incidunt eius iure
-                            necessitatibus unde repudiandae pariatur nobis, possimus aliquam, hic harum illum
-                            consectetur animi quisquam facilis voluptatum tenetur facere.</p>
+                    <div class="contenedor-sobre-ghibli-2" id="contenedor-sobre-ghibli-2">
+                        <div class="contenedor-imagen-sobre-ghibli">
+                            <img src="galeria/ghibli2.2.svg" class="imagen-sobre-ghibli-2"
+                                alt="logo del estudio ghibli">
+                        </div>
+                        <div class="contenido-textos">
+                            <div class="texto-3">
+                                <h3><i class="fas fa-check-circle"></i> El mejor estudio</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam commodi incidunt
+                                    eius iure
+                                    necessitatibus unde repudiandae pariatur nobis, possimus aliquam, hic harum illum
+                                    consectetur animi quisquam facilis voluptatum tenetur facere.
+                                </p>
+                            </div>
+                            <!-- <h3><i class="fas fa-check-circle"></i> El mejor estudio</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam commodi incidunt eius iure
+                                necessitatibus unde repudiandae pariatur nobis, possimus aliquam, hic harum illum
+                                consectetur animi quisquam facilis voluptatum tenetur facere.</p> -->
+                        </div>
                     </div>
+
+
+                </div>
+                <div class="contenedor-boton-sobre-ghibli">
+                    <button class="boton-sobre-ghibli mybtn-zoon" id="boton-siguiente-sobre-ghibli">Siguiente</button>
                 </div>
             </div>
         </article>
@@ -100,16 +138,18 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide pelicula">
                                 <div class="portada">
-                                    <img src="galeria/Nausicaa del Valle del Viento portada.jpg" alt="" class="img-pelicula">
+                                    <img src="galeria/Nausicaa del Valle del Viento portada.jpg" alt=""
+                                        class="img-pelicula">
                                 </div>
                                 <div class="informacion">
                                     <div class="contenedor-nombre">
                                         <h3 class="nombre">Nausicaä del Valle del Viento</h3>
                                     </div>
-                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita
+                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        Expedita
                                         voluptatem possimus suscipit, nesciunt dolorem dolor excepturi incidunt adipisci
                                         vero! Animi!</p>
-                                    <a href="" class="ver-peliculas mybtn">Ver</a>
+                                    <a href="" class="ver-peliculas mybtn-zoon">Ver</a>
                                 </div>
                             </div>
                             <div class="swiper-slide pelicula">
@@ -120,24 +160,27 @@
                                     <div class="contenedor-nombre">
                                         <h3 class="nombre">Laputa, El Castillo en el Cielo</h3>
                                     </div>
-                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita
+                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        Expedita
                                         voluptatem possimus suscipit, nesciunt dolorem dolor excepturi incidunt adipisci
                                         vero! Animi!</p>
-                                    <a href="" class="ver-peliculas mybtn">Ver</a>
+                                    <a href="" class="ver-peliculas mybtn-zoon">Ver</a>
                                 </div>
                             </div>
                             <div class="swiper-slide pelicula">
                                 <div class="portada">
-                                    <img src="galeria/La tumba de las luciernagas portada.jpg" alt="" class="img-pelicula">
+                                    <img src="galeria/La tumba de las luciernagas portada.jpg" alt=""
+                                        class="img-pelicula">
                                 </div>
                                 <div class="informacion">
                                     <div class="contenedor-nombre">
                                         <h3 class="nombre">La Tumba de las Luciérnagas</h3>
                                     </div>
-                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita
+                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        Expedita
                                         voluptatem possimus suscipit, nesciunt dolorem dolor excepturi incidunt adipisci
                                         vero! Animi!</p>
-                                    <a href="" class="ver-peliculas mybtn">Ver</a>
+                                    <a href="" class="ver-peliculas mybtn-zoon">Ver</a>
                                 </div>
                             </div>
                             <div class="swiper-slide pelicula">
@@ -148,24 +191,27 @@
                                     <div class="contenedor-nombre">
                                         <h3 class="nombre">Mi Vecino Totoro</h3>
                                     </div>
-                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita
+                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        Expedita
                                         voluptatem possimus suscipit, nesciunt dolorem dolor excepturi incidunt adipisci
                                         vero! Animi!</p>
-                                    <a href="" class="ver-peliculas mybtn">Ver</a>
+                                    <a href="" class="ver-peliculas mybtn-zoon">Ver</a>
                                 </div>
                             </div>
                             <div class="swiper-slide pelicula">
                                 <div class="portada">
-                                    <img src="galeria/Nicky, la aprendiz de bruja portada.jpg" alt="" class="img-pelicula">
+                                    <img src="galeria/Nicky, la aprendiz de bruja portada.jpg" alt=""
+                                        class="img-pelicula">
                                 </div>
                                 <div class="informacion">
                                     <div class="contenedor-nombre">
                                         <h3 class="nombre">Nicky, la Aprendiz de Bruja</h3>
                                     </div>
-                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita
+                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        Expedita
                                         voluptatem possimus suscipit, nesciunt dolorem dolor excepturi incidunt adipisci
                                         vero! Animi!</p>
-                                    <a href="" class="ver-peliculas mybtn">Ver</a>
+                                    <a href="" class="ver-peliculas mybtn-zoon">Ver</a>
                                 </div>
                             </div>
                             <div class="swiper-slide pelicula">
@@ -176,10 +222,11 @@
                                     <div class="contenedor-nombre">
                                         <h3 class="nombre">Recuerdos del Ayer</h3>
                                     </div>
-                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita
+                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        Expedita
                                         voluptatem possimus suscipit, nesciunt dolorem dolor excepturi incidunt adipisci
                                         vero! Animi!</p>
-                                    <a href="" class="ver-peliculas mybtn">Ver</a>
+                                    <a href="" class="ver-peliculas mybtn-zoon">Ver</a>
                                 </div>
                             </div>
 
@@ -191,10 +238,11 @@
                                     <div class="contenedor-nombre">
                                         <h3 class="nombre">Porco Rosso</h3>
                                     </div>
-                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita
+                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        Expedita
                                         voluptatem possimus suscipit, nesciunt dolorem dolor excepturi incidunt adipisci
                                         vero! Animi!</p>
-                                    <a href="" class="ver-peliculas mybtn">Ver</a>
+                                    <a href="" class="ver-peliculas mybtn-zoon">Ver</a>
                                 </div>
                             </div>
                             <div class="swiper-slide pelicula">
@@ -205,24 +253,27 @@
                                     <div class="contenedor-nombre">
                                         <h3 class="nombre">Puedo Escuchar el Mar</h3>
                                     </div>
-                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita
+                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        Expedita
                                         voluptatem possimus suscipit, nesciunt dolorem dolor excepturi incidunt adipisci
                                         vero! Animi!</p>
-                                    <a href="" class="ver-peliculas mybtn">Ver</a>
+                                    <a href="" class="ver-peliculas mybtn-zoon">Ver</a>
                                 </div>
                             </div>
                             <div class="swiper-slide pelicula">
                                 <div class="portada">
-                                    <img src="galeria/Pompoko, La Guerra de los Mapaches portada.jpg" alt="" class="img-pelicula">
+                                    <img src="galeria/Pompoko, La Guerra de los Mapaches portada.jpg" alt=""
+                                        class="img-pelicula">
                                 </div>
                                 <div class="informacion">
                                     <div class="contenedor-nombre">
                                         <h3 class="nombre">Pompoko</h3>
                                     </div>
-                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita
+                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        Expedita
                                         voluptatem possimus suscipit, nesciunt dolorem dolor excepturi incidunt adipisci
                                         vero! Animi!</p>
-                                    <a href="" class="ver-peliculas mybtn">Ver</a>
+                                    <a href="" class="ver-peliculas mybtn-zoon">Ver</a>
                                 </div>
                             </div>
                             <div class="swiper-slide pelicula">
@@ -233,10 +284,11 @@
                                     <div class="contenedor-nombre">
                                         <h3 class="nombre">Susurros del Corazón</h3>
                                     </div>
-                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita
+                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        Expedita
                                         voluptatem possimus suscipit, nesciunt dolorem dolor excepturi incidunt adipisci
                                         vero! Animi!</p>
-                                    <a href="" class="ver-peliculas mybtn">Ver</a>
+                                    <a href="" class="ver-peliculas mybtn-zoon">Ver</a>
                                 </div>
                             </div>
                             <div class="swiper-slide pelicula">
@@ -247,10 +299,11 @@
                                     <div class="contenedor-nombre">
                                         <h3 class="nombre">La Princesa Mononoke</h3>
                                     </div>
-                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita
+                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        Expedita
                                         voluptatem possimus suscipit, nesciunt dolorem dolor excepturi incidunt adipisci
                                         vero! Animi!</p>
-                                    <a href="" class="ver-peliculas mybtn">Ver</a>
+                                    <a href="" class="ver-peliculas mybtn-zoon">Ver</a>
                                 </div>
                             </div>
                             <div class="swiper-slide pelicula">
@@ -261,38 +314,43 @@
                                     <div class="contenedor-nombre">
                                         <h3 class="nombre">Mis Vecinos los Yamada</h3>
                                     </div>
-                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita
+                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        Expedita
                                         voluptatem possimus suscipit, nesciunt dolorem dolor excepturi incidunt adipisci
                                         vero! Animi!</p>
-                                    <a href="" class="ver-peliculas mybtn">Ver</a>
+                                    <a href="" class="ver-peliculas mybtn-zoon">Ver</a>
                                 </div>
                             </div>
                             <div class="swiper-slide pelicula">
                                 <div class="portada">
-                                    <img src="galeria/Haru en el Reino de los Gatos portada.jpg" alt="" class="img-pelicula">
+                                    <img src="galeria/Haru en el Reino de los Gatos portada.jpg" alt=""
+                                        class="img-pelicula">
                                 </div>
                                 <div class="informacion">
                                     <div class="contenedor-nombre">
                                         <h3 class="nombre">Haru en el Reino de los Gatos</h3>
                                     </div>
-                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita
+                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        Expedita
                                         voluptatem possimus suscipit, nesciunt dolorem dolor excepturi incidunt adipisci
                                         vero! Animi!</p>
-                                    <a href="" class="ver-peliculas mybtn">Ver</a>
+                                    <a href="" class="ver-peliculas mybtn-zoon">Ver</a>
                                 </div>
                             </div>
                             <div class="swiper-slide pelicula">
                                 <div class="portada">
-                                    <img src="galeria/El Increíble Castillo Vagabundo portada.jpg" alt="" class="img-pelicula">
+                                    <img src="galeria/El Increíble Castillo Vagabundo portada.jpg" alt=""
+                                        class="img-pelicula">
                                 </div>
                                 <div class="informacion">
                                     <div class="contenedor-nombre">
                                         <h3 class="nombre">El Increíble Castillo Vagabundo</h3>
                                     </div>
-                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita
+                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        Expedita
                                         voluptatem possimus suscipit, nesciunt dolorem dolor excepturi incidunt adipisci
                                         vero! Animi!</p>
-                                    <a href="" class="ver-peliculas mybtn">Ver</a>
+                                    <a href="" class="ver-peliculas mybtn-zoon">Ver</a>
                                 </div>
                             </div>
                             <div class="swiper-slide pelicula">
@@ -303,52 +361,59 @@
                                     <div class="contenedor-nombre">
                                         <h3 class="nombre">Cuentos de Terramar</h3>
                                     </div>
-                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita
+                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        Expedita
                                         voluptatem possimus suscipit, nesciunt dolorem dolor excepturi incidunt adipisci
                                         vero! Animi!</p>
-                                    <a href="" class="ver-peliculas mybtn">Ver</a>
+                                    <a href="" class="ver-peliculas mybtn-zoon">Ver</a>
                                 </div>
                             </div>
                             <div class="swiper-slide pelicula">
                                 <div class="portada">
-                                    <img src="galeria/Ponyo y el Secreto de la Sirenita portada.jpg" alt="" class="img-pelicula">
+                                    <img src="galeria/Ponyo y el Secreto de la Sirenita portada.jpg" alt=""
+                                        class="img-pelicula">
                                 </div>
                                 <div class="informacion">
                                     <div class="contenedor-nombre">
                                         <h3 class="nombre">Ponyo y el Secreto de la Sirenita</h3>
                                     </div>
-                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita
+                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        Expedita
                                         voluptatem possimus suscipit, nesciunt dolorem dolor excepturi incidunt adipisci
                                         vero! Animi!</p>
-                                    <a href="" class="ver-peliculas mybtn">Ver</a>
+                                    <a href="" class="ver-peliculas mybtn-zoon">Ver</a>
                                 </div>
                             </div>
                             <div class="swiper-slide pelicula">
                                 <div class="portada">
-                                    <img src="galeria/Arriety y el Mundo de los Diminutos portada.jpg" alt="" class="img-pelicula">
+                                    <img src="galeria/Arriety y el Mundo de los Diminutos portada.jpg" alt=""
+                                        class="img-pelicula">
                                 </div>
                                 <div class="informacion">
                                     <div class="contenedor-nombre">
                                         <h3 class="nombre">Arriety y el Mundo de los...</h3>
                                     </div>
-                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita
+                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        Expedita
                                         voluptatem possimus suscipit, nesciunt dolorem dolor excepturi incidunt adipisci
                                         vero! Animi!</p>
-                                    <a href="" class="ver-peliculas mybtn">Ver</a>
+                                    <a href="" class="ver-peliculas mybtn-zoon">Ver</a>
                                 </div>
                             </div>
                             <div class="swiper-slide pelicula">
                                 <div class="portada">
-                                    <img src="galeria/La Colina de las Amapolas portada.jpg" alt="" class="img-pelicula">
+                                    <img src="galeria/La Colina de las Amapolas portada.jpg" alt=""
+                                        class="img-pelicula">
                                 </div>
                                 <div class="informacion">
                                     <div class="contenedor-nombre">
                                         <h3 class="nombre">La Colina de las Amapolas</h3>
                                     </div>
-                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita
+                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        Expedita
                                         voluptatem possimus suscipit, nesciunt dolorem dolor excepturi incidunt adipisci
                                         vero! Animi!</p>
-                                    <a href="" class="ver-peliculas mybtn">Ver</a>
+                                    <a href="" class="ver-peliculas mybtn-zoon">Ver</a>
                                 </div>
                             </div>
                             <div class="swiper-slide pelicula">
@@ -359,24 +424,27 @@
                                     <div class="contenedor-nombre">
                                         <h3 class="nombre">El Viento se Levanta</h3>
                                     </div>
-                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita
+                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        Expedita
                                         voluptatem possimus suscipit, nesciunt dolorem dolor excepturi incidunt adipisci
                                         vero! Animi!</p>
-                                    <a href="" class="ver-peliculas mybtn">Ver</a>
+                                    <a href="" class="ver-peliculas mybtn-zoon">Ver</a>
                                 </div>
                             </div>
                             <div class="swiper-slide pelicula">
                                 <div class="portada">
-                                    <img src="galeria/El Cuento de la Princesa Kaguya portada.jpg" alt="" class="img-pelicula">
+                                    <img src="galeria/El Cuento de la Princesa Kaguya portada.jpg" alt=""
+                                        class="img-pelicula">
                                 </div>
                                 <div class="informacion">
                                     <div class="contenedor-nombre">
                                         <h3 class="nombre">El Cuento de la Princesa Kaguya/h3>
                                     </div>
-                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita
+                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        Expedita
                                         voluptatem possimus suscipit, nesciunt dolorem dolor excepturi incidunt adipisci
                                         vero! Animi!</p>
-                                    <a href="" class="ver-peliculas mybtn">Ver</a>
+                                    <a href="" class="ver-peliculas mybtn-zoon">Ver</a>
                                 </div>
                             </div>
                             <div class="swiper-slide pelicula">
@@ -387,21 +455,22 @@
                                     <div class="contenedor-nombre">
                                         <h3 class="nombre">El Recuerdo de Marnie</h3>
                                     </div>
-                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita
+                                    <p class="sipnosis">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        Expedita
                                         voluptatem possimus suscipit, nesciunt dolorem dolor excepturi incidunt adipisci
                                         vero! Animi!</p>
-                                    <a href="" class="ver-peliculas mybtn">Ver</a>
+                                    <a href="" class="ver-peliculas mybtn-zoon">Ver</a>
                                 </div>
                             </div>
                         </div>
                         <!-- Add Pagination -->
                         <div class="swiper-pagination"></div>
                     </div>
-                            <div class="arrows-peliculas">
-                                <!-- Add Arrows -->
-                                <div class="swiper-button-next flecha-derecha"></div>
-                                <div class="swiper-button-prev flecha-izquierda"></div>
-                            </div>
+                    <div class="arrows-peliculas">
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next flecha-derecha"></div>
+                        <div class="swiper-button-prev flecha-izquierda"></div>
+                    </div>
                 </div class="carousel-peliculas">
             </div>
         </article>
@@ -636,7 +705,7 @@
                             <p>Click para ver</p>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
             <div class="overlay" id="overlay">
@@ -718,102 +787,107 @@
                             class="fas fa-angle-left"></i></button>
                     <div class="contenedor-frases">
                         <div class="frases">
-                                <div class="contenedor-frase">
-                                    <div class="frase" id="last-clone">
-                                        <div class="contenedor-img-frase">
-                                            <img class="img-frase" src="galeria/ghibli4.3.jpg" alt="">
-                                        </div>
-                                        <div class="contenido-texto">
-                                            <p class="parrafo-frase"><span>"</span> 000Un cerdo que no vuela es sólo un
-                                                cerdo<span>"</span></p>
-                                            <h3 class="titulo-frase">Porco Rosso</h3>
-                                        </div>
+                            <div class="contenedor-frase">
+                                <div class="frase" id="last-clone">
+                                    <div class="contenedor-img-frase">
+                                        <img class="img-frase" src="galeria/ghibli4.3.jpg" alt="">
+                                    </div>
+                                    <div class="contenido-texto">
+                                        <p class="parrafo-frase"><span>"</span> 000Un cerdo que no vuela es sólo un
+                                            cerdo<span>"</span></p>
+                                        <h3 class="titulo-frase">Porco Rosso</h3>
                                     </div>
                                 </div>
-                                <div class="contenedor-frase">
-                                    <div class="frase">
-                                        <div class="contenedor-img-frase">
-                                            <img class="img-frase" src="galeria/ghibli4.1.png" alt="">
-                                        </div>
-                                        <div class="contenido-texto">
-                                            <p class="parrafo-frase"><span>“</span>111 Una vez que conoces a alguien, nunca lo olvidas
-                                                realmente<span>”</span></p>
-                                            <h3 class="titulo-frase">El viaje de Chihiero</h3>
-                                        </div>
+                            </div>
+                            <div class="contenedor-frase">
+                                <div class="frase">
+                                    <div class="contenedor-img-frase">
+                                        <img class="img-frase" src="galeria/ghibli4.1.png" alt="">
+                                    </div>
+                                    <div class="contenido-texto">
+                                        <p class="parrafo-frase"><span>“</span>111 Una vez que conoces a alguien, nunca
+                                            lo olvidas
+                                            realmente<span>”</span></p>
+                                        <h3 class="titulo-frase">El viaje de Chihiero</h3>
                                     </div>
                                 </div>
-                                <div class="contenedor-frase">
-                                    <div class="frase">
-                                        <div class="contenedor-img-frase">
-                                            <img class="img-frase" src="galeria/ghibli4.2.jpg" alt="">
-                                        </div>
-                                        <div class="contenido-texto">
-                                            <p class="parrafo-frase"><span>“</span>222 Es divertido despertarse cada día sin saber si
-                                                será uno de esos que cambian tu vida para siempre<span>”</span></p>
-                                            <h3 class="titulo-frase">Arrietty y el mundo de los diminutos</h3>
-                                        </div>
+                            </div>
+                            <div class="contenedor-frase">
+                                <div class="frase">
+                                    <div class="contenedor-img-frase">
+                                        <img class="img-frase" src="galeria/ghibli4.2.jpg" alt="">
+                                    </div>
+                                    <div class="contenido-texto">
+                                        <p class="parrafo-frase"><span>“</span>222 Es divertido despertarse cada día sin
+                                            saber si
+                                            será uno de esos que cambian tu vida para siempre<span>”</span></p>
+                                        <h3 class="titulo-frase">Arrietty y el mundo de los diminutos</h3>
                                     </div>
                                 </div>
-                                <div class="contenedor-frase">
-                                    <div class="frase">
-                                        <div class="contenedor-img-frase">
-                                            <img class="img-frase" src="galeria/ghibli4.3.jpg" alt="">
-                                        </div>
-                                        <div class="contenido-texto">
-                                            <p class="parrafo-frase"><span>"</span>333 Un cerdo que no vuela es sólo un
-                                                cerdo<span>"</span></p>
-                                            <h3 class="titulo-frase">Porco Rosso</h3>
-                                        </div>
+                            </div>
+                            <div class="contenedor-frase">
+                                <div class="frase">
+                                    <div class="contenedor-img-frase">
+                                        <img class="img-frase" src="galeria/ghibli4.3.jpg" alt="">
+                                    </div>
+                                    <div class="contenido-texto">
+                                        <p class="parrafo-frase"><span>"</span>333 Un cerdo que no vuela es sólo un
+                                            cerdo<span>"</span></p>
+                                        <h3 class="titulo-frase">Porco Rosso</h3>
                                     </div>
                                 </div>
-                                <div class="contenedor-frase">
-                                    <div class="frase">
-                                        <div class="contenedor-img-frase">
-                                            <img class="img-frase" src="galeria/ghibli4.1.png" alt="">
-                                        </div>
-                                        <div class="contenido-texto">
-                                            <p class="parrafo-frase"><span>“</span>444 Una vez que conoces a alguien, nunca lo olvidas
-                                                realmente<span>”</span></p>
-                                            <h3 class="titulo-frase">El viaje de Chihiero</h3>
-                                        </div>
+                            </div>
+                            <div class="contenedor-frase">
+                                <div class="frase">
+                                    <div class="contenedor-img-frase">
+                                        <img class="img-frase" src="galeria/ghibli4.1.png" alt="">
+                                    </div>
+                                    <div class="contenido-texto">
+                                        <p class="parrafo-frase"><span>“</span>444 Una vez que conoces a alguien, nunca
+                                            lo olvidas
+                                            realmente<span>”</span></p>
+                                        <h3 class="titulo-frase">El viaje de Chihiero</h3>
                                     </div>
                                 </div>
-                                <div class="contenedor-frase">
-                                    <div class="frase">
-                                        <div class="contenedor-img-frase">
-                                            <img class="img-frase" src="galeria/ghibli4.2.jpg" alt="">
-                                        </div>
-                                        <div class="contenido-texto">
-                                            <p class="parrafo-frase"><span>“</span>555 Es divertido despertarse cada día sin saber si
-                                                será uno de esos que cambian tu vida para siempre<span>”</span></p>
-                                            <h3 class="titulo-frase">Arrietty y el mundo de los diminutos</h3>
-                                        </div>
+                            </div>
+                            <div class="contenedor-frase">
+                                <div class="frase">
+                                    <div class="contenedor-img-frase">
+                                        <img class="img-frase" src="galeria/ghibli4.2.jpg" alt="">
+                                    </div>
+                                    <div class="contenido-texto">
+                                        <p class="parrafo-frase"><span>“</span>555 Es divertido despertarse cada día sin
+                                            saber si
+                                            será uno de esos que cambian tu vida para siempre<span>”</span></p>
+                                        <h3 class="titulo-frase">Arrietty y el mundo de los diminutos</h3>
                                     </div>
                                 </div>
-                                <div class="contenedor-frase">
-                                    <div class="frase">
-                                        <div class="contenedor-img-frase">
-                                            <img class="img-frase" src="galeria/ghibli4.3.jpg" alt="">
-                                        </div>
-                                        <div class="contenido-texto">
-                                            <p class="parrafo-frase"><span>"</span>666 Un cerdo que no vuela es sólo un
-                                                cerdo<span>"</span></p>
-                                            <h3 class="titulo-frase">Porco Rosso</h3>
-                                        </div>
+                            </div>
+                            <div class="contenedor-frase">
+                                <div class="frase">
+                                    <div class="contenedor-img-frase">
+                                        <img class="img-frase" src="galeria/ghibli4.3.jpg" alt="">
+                                    </div>
+                                    <div class="contenido-texto">
+                                        <p class="parrafo-frase"><span>"</span>666 Un cerdo que no vuela es sólo un
+                                            cerdo<span>"</span></p>
+                                        <h3 class="titulo-frase">Porco Rosso</h3>
                                     </div>
                                 </div>
-                                <div class="contenedor-frase">
-                                    <div class="frase" id="first-clone">
-                                        <div class="contenedor-img-frase">
-                                            <img class="img-frase" src="galeria/ghibli4.1.png" alt="">
-                                        </div>
-                                        <div class="contenido-texto">
-                                            <p class="parrafo-frase"><span>“</span>777 Una vez que conoces a alguien, nunca lo olvidas
-                                                realmente<span>”</span></p>
-                                            <h3 class="titulo-frase">El viaje de Chihiero</h3>
-                                        </div>
+                            </div>
+                            <div class="contenedor-frase">
+                                <div class="frase" id="first-clone">
+                                    <div class="contenedor-img-frase">
+                                        <img class="img-frase" src="galeria/ghibli4.1.png" alt="">
                                     </div>
-                                </div >
+                                    <div class="contenido-texto">
+                                        <p class="parrafo-frase"><span>“</span>777 Una vez que conoces a alguien, nunca
+                                            lo olvidas
+                                            realmente<span>”</span></p>
+                                        <h3 class="titulo-frase">El viaje de Chihiero</h3>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <button role="button" id="flecha-derecha" class="flecha-derecha"><i
@@ -830,12 +904,12 @@
                             <div class="textos-ver-pelis">
                                 <h3>Ver Online</h3>
                                 <p>Aquí las puedes ver online y descargar</p>
-                            </div>    
+                            </div>
                             <div class="cursor-hover-ver-pelis">
                                 <i class="fas fa-mouse-pointer"></i>
                                 <p class="mybtn">Ver Enlaces</p>
                             </div>
-    
+
                         </div>
                         <div class="contenedor-imagen-ver-pelis">
                             <img src="galeria/animeid.jpg" class="imagen-ver-pelis" alt="">
@@ -904,7 +978,7 @@
                             <div class="contenedor-enlace-ver-peli">
                                 <a href="#" class="enlace-ver-peli mybtn">El recuerdo de Marnie</a>
                             </div>
-                        </div>                        
+                        </div>
                     </div>
                     <div class="peli">
                         <div class="contenedor-textos-ver-pelis">
@@ -939,7 +1013,7 @@
                             <div class="contenedor-enlace-ver-peli">
                                 <a href="#" class="enlace-ver-peli mybtn">Mi Vecino Totoro</a>
                             </div>
-                        </div>    
+                        </div>
                     </div>
                     <div class="peli animeyt">
                         <div class="contenedor-textos-ver-pelis">
@@ -974,7 +1048,7 @@
                             <div class="contenedor-enlace-ver-peli">
                                 <a href="#" class="enlace-ver-peli mybtn">Mi Vecino Totoro</a>
                             </div>
-                        </div>    
+                        </div>
                     </div>
                 </div>
             </div>
