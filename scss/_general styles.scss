@@ -190,31 +190,25 @@ body {
                 position: relative;
 
                 .contenedor-boton-sobre-ghibli {
-                    display: flex;
-                    align-items: flex-end;
-                    transform: translateY(-5%);
-                    width: 100%;
-                    // justify-content: flex-end;
-                    transform: translate(90%);
                     transition: .9s .1s transform ease-in-out;
-                    // background-color: red;
+                    transform: translateY(-5%);
+                    transform: translateX(90%);
 
                     .boton-sobre-ghibli {
-                        background-color: transparent;
                         color: $color1;
                         outline: none;
                     }
                 }
 
                 .translate-boton-sobre-ghibli {
-                    transform: translate(0%);
+                    transform: translateX(0);
 
                 }
 
 
                 .sobre-ghibli {
                     display: flex;
-                    flex-wrap: nowrap;
+                    // flex-wrap: nowrap;
                     overflow: hidden;
                     // position: relative;
 
@@ -1036,7 +1030,6 @@ body {
                                     padding: 2rem;
                                     width: calc(100% - 20px);
                                     height: calc(100% - 20px);
-                                    ;
                                     box-shadow: 0 0 9px 0 rgba(0, 0, 0, .5);
 
                                     .contenedor-img-frase {

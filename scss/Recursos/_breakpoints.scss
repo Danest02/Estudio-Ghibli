@@ -1,7 +1,8 @@
-$mobile: 360px;
-$tablet: 361px;
-$laptop: 1024px;
-$desktop: 1400px;
+$mobile-portrait: 320px;
+$tablet: 768px;
+$tablet-landscape: 1024px;
+$laptop: 1366px;
+$desktop: 1920px;
  
 @mixin media($width){
     @media screen and (max-width: $width){
@@ -10,27 +11,6 @@ $desktop: 1400px;
 }
 @mixin height($height,$width){
     @media (min-height:$height) and (max-width: $width){
-        @content;
-    }
-}
-@mixin mobile{
-    @media screen and (max-width: $mobile){
-        @content;
-    }
-}
-//* @include mobile;
-@mixin tablet{
-    @media screen and (min-width: $tablet){
-        @content;
-    }
-}
-@mixin laptop{
-    @media screen and (min-width: $laptop){
-        @content;
-    }
-}
-@mixin desktop{
-    @media screen and (min-width: $desktop){
         @content;
     }
 }

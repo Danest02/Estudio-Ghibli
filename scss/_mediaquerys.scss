@@ -1,43 +1,163 @@
-
-@include height(1000px,1136px){
-   body{
-       header{
-           max-height: 45vh;
-           background-size: contain;
-       }
-   }
-}
-@include media(1136px){
-   body{
-    //    font-family: $maquina;
-    header{
-        justify-content: center;
-        .textos-header{
-            width: 80%;
+@include height(1000px, 1136px) {
+    body {
+        header {
+            max-height: 45vh;
+            background-size: contain;
         }
     }
-    main{
-        .contenedor{
-         padding: 0 .5rem;
-        }
-        .contenedor-imagen-sobre-ghibli{
-            .imagen-sobre-ghibli-1{
-                max-height: 100%;
+}
+
+@include media(1136px) {
+    body {
+
+        //    font-family: $maquina;
+        header {
+            justify-content: center;
+
+            .textos-header {
+                line-height: 1.2rem;
+                width: 80%;
             }
         }
-        .contenido-textos{
-            min-width: 43%;
+
+        main {
+            .contenedor {
+                padding: 0 .5rem;
+            }
+
+            .contenedor-imagen-sobre-ghibli {
+                .imagen-sobre-ghibli-1 {
+                    max-height: 100%;
+                }
+            }
+
+            .contenido-textos {
+                min-width: 43%;
+            }
+
+            .contenedor-peliculas {
+                width: 95%;
+
+            }
+
+            .swiper-pagination-bullet {
+                display: none;
+            }
+
+            .seccion-kaiosamas-ghibli {
+                .contenedor-kaiosamas-ghibli {
+                    .kaiosamas {
+                        grid-template-columns: 1.5fr 2.5fr 1.5fr;
+                    }
+                }
+            }
+
         }
-        .contenedor-peliculas{
-         width: 95%;
-         
-        }
-        .swiper-pagination-bullet{
-            display: none;
-           }
     }
-   }
 }
+
+
+@include media(1020px) {
+    body {
+
+        //    font-family: $maquina;
+        header {
+            .menu{
+                padding-right: 0;
+                .enlaces{
+                    justify-content: center;
+                    .enlace{
+                        margin: 0 10px;
+                    }
+                }
+            }
+            .textos-header {
+                width: 90%;
+
+                .titulo-textos-header {
+                    font-size: 45px;
+                }
+            }
+        }
+
+        main {
+            .contenedor {
+                width: 90%;
+            }
+
+            .seccion-sobre-ghibli {
+                .contenedor-sobre-ghibli {
+                    .contenedor-boton-sobre-ghibli {
+                        transform: translateX(85%);
+                    }
+
+                    .translate-boton-sobre-ghibli {
+                        transform: translateX(0);
+
+                    }
+                }
+
+
+
+            }
+
+            .seccion-peliculas {
+                .contenedor-peliculas {
+                    .carousel-peliculas {
+                        .arrows-peliculas {
+                            .flecha-derecha {
+                                right: -1rem;
+                            }
+
+                            .flecha-izquierda {
+                                left: -1rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .seccion-kaiosamas-ghibli {
+                .contenedor-kaiosamas-ghibli {
+                    .kaiosamas {
+                        width: 90%;
+                        grid-template-columns: .5fr 3fr .5fr;
+                    }
+                }
+            }
+
+            .seccion-frases {
+                .contenedor-carousel-frases {
+                    .carousel-frases {
+                        .contenedor-frases {
+                            .frases {
+                                .contenedor-frase {
+                                    .frase {
+                                        width: 90%;
+                                        border-radius: 10px;
+                                        // box-shadow: none;
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .seccion-ver-pelis {
+                .peli {
+                    width: 70%;
+                }
+            }
+
+
+
+        }
+
+    }
+}
+
 // @media screen and (max-width:1250px){
 //     body{
 //         border: 5px solid red;
@@ -158,7 +278,7 @@
 //             }
 //             .seccion-kaiosamas-ghibli{
 //                 .contenedor-kaiosamas-ghibli{
-                    
+
 //                     .kaiosamas{
 //                         // display: none;
 //                         width: 95%;
@@ -167,7 +287,7 @@
 //                         // "k1"
 //                         // "k2"
 //                         // "k3";
-                        
+
 //                     }
 //                     .k1 {
 //                         grid-area: k1;
@@ -428,7 +548,7 @@
 //                             align-items: center;
 //                             overflow: hidden;
 //                             border-radius: .5rem;
-                            
+
 //                             .contenedor-imagen-kaiosama{
 //                                 height: 100%;
 //                                 width: 100%;
@@ -478,9 +598,9 @@
 //                                         top: 15%;
 //                                     }
 //                                 }
-    
+
 //                             }
-                            
+
 //                             .contenedor-boton-leer-mas{
 //                                 .boton-leer-mas{
 //                                     display: none;
@@ -505,7 +625,7 @@
 // @media screen and (max-width:480px){
 //     body{
 //         border: 5px solid rgb(0, 255, 42);
-    
+
 //         main{
 //             .contenedor{
 //                 width: 95%;
