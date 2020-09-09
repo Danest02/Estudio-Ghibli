@@ -1,47 +1,41 @@
-// @mixin media($width){
-//     @media screen and (max-width: $width){
-//         @content;
-//     }
-// }
-@include height(1000px){
+
+@include height(1000px,1136px){
    body{
-    //    font-family: $maquina;
        header{
            max-height: 45vh;
            background-size: contain;
-           justify-content: center;
-           .textos-header{
-               width: 80%;
-           }
-       }
-       main{
-           .contenedor-imagen-sobre-ghibli{
-               .imagen-sobre-ghibli-1{
-                   max-height: 100%;
-               }
-           }
-           .contenido-textos{
-               min-width: 43%;
-           }
-           .seccion-sobre-ghibli{
-               .contenedor-sobre-ghibli{
-                   .sobre-ghibli{
-                    .contenedor-sobre-ghibli-1, .contenedor-sobre-ghibli-2{
-                    }
-                   }
-               }
-           }
        }
    }
 }
-@include media(1024px){
+@include media(1136px){
    body{
     //    font-family: $maquina;
-       header{
-        //    max-height: 45vh;
-        //    background-size: contain;
-
-       }
+    header{
+        justify-content: center;
+        .textos-header{
+            width: 80%;
+        }
+    }
+    main{
+        .contenedor{
+         padding: 0 .5rem;
+        }
+        .contenedor-imagen-sobre-ghibli{
+            .imagen-sobre-ghibli-1{
+                max-height: 100%;
+            }
+        }
+        .contenido-textos{
+            min-width: 43%;
+        }
+        .contenedor-peliculas{
+         width: 95%;
+         
+        }
+        .swiper-pagination-bullet{
+            display: none;
+           }
+    }
    }
 }
 // @media screen and (max-width:1250px){

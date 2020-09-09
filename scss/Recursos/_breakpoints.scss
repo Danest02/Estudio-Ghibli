@@ -8,8 +8,8 @@ $desktop: 1400px;
         @content;
     }
 }
-@mixin height($width){
-    @media screen and (min-height: $width){
+@mixin height($height,$width){
+    @media (min-height:$height) and (max-width: $width){
         @content;
     }
 }

@@ -233,13 +233,12 @@ window.addEventListener("load", () => {
     frase = document.querySelectorAll(".contenedor-frase"),
     tamañoWidht = frase[0].clientWidth,
     scroll = contenedor.offsetWidth
-  flechaIzquierda = document.getElementById("flecha-izquierda"),
+    flechaIzquierda = document.getElementById("flecha-izquierda"),
     flechaDerecha = document.getElementById("flecha-derecha");
-  intervalo = 5000;
+    intervalo = 5000;
   window.addEventListener("resize", function () {
-    tamañoWidht = frase[0].clientWidth;
-    contenedor.style.transform = "translate(" + -tamañoWidht * contador + "px"
-  })
+    scroll = contenedor.offsetWidth
+    })
   contenedor.scrollLeft = scroll
 
   // const transform = () => contenedor.style.transform = "translate(" + -tamañoWidht * contador + "px"

@@ -549,6 +549,7 @@ body header {
   background: linear-gradient(to right, rgba(72, 173, 240, 0.1), rgba(53, 127, 176, 0.2)), url(../../galeria/ghibli1.png);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: cover;
+  background-position: top center;
   background-attachment: fixed;
 }
 
@@ -1746,7 +1747,7 @@ body main .seccion-ver-pelis .ver-pelis .pelis-cont {
 
 body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli {
   margin: 1rem;
-  min-width: 280px;
+  min-width: 250px;
   width: 28%;
   text-align: center;
   height: 400px;
@@ -1946,10 +1947,15 @@ body main footer .titulo-final {
   color: #9e9797;
 }
 
-@media screen and (min-height: 1000px) {
+@media (min-height: 1000px) and (max-width: 1136px) {
   body header {
     max-height: 45vh;
     background-size: contain;
+  }
+}
+
+@media screen and (max-width: 1136px) {
+  body header {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1957,11 +1963,20 @@ body main footer .titulo-final {
   body header .textos-header {
     width: 80%;
   }
+  body main .contenedor {
+    padding: 0 .5rem;
+  }
   body main .contenedor-imagen-sobre-ghibli .imagen-sobre-ghibli-1 {
     max-height: 100%;
   }
   body main .contenido-textos {
     min-width: 43%;
+  }
+  body main .contenedor-peliculas {
+    width: 95%;
+  }
+  body main .swiper-pagination-bullet {
+    display: none;
   }
 }
 

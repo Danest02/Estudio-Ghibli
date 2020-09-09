@@ -45,6 +45,7 @@ body {
         background: linear-gradient(to right, rgba(72, 173, 240, 0.1), rgba(53, 127, 176, 0.2)), url(../../galeria/ghibli1.png);
         /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         background-size: cover;
+        background-position: top center;
         background-attachment: fixed;
 
         .menu {
@@ -1106,7 +1107,7 @@ body {
 
                     .peli {
                         margin: 1rem;
-                        min-width: 280px;
+                        min-width: 250px;
                         width: 28%;
                         text-align: center;
                         height: 400px;
