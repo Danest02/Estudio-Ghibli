@@ -48,15 +48,16 @@ window.addEventListener("resize", function () {
     frases = $("#frases-contenedor").offset().top,
     verPelis = $("#ver-pelis").offset().top;
 });
-$(window).scroll(function() {
+$(window).scroll(function () {
   if ($(document).scrollTop() >= sobreGhibli - 100) {
     $("#enlace-sobre-ghibli").addClass("foco");
+    // $("#imagen-sobre-ghibli-1").addClass("img1Totoro");
   } else {
     $("#enlace-sobre-ghibli").removeClass("foco");
   }
 });
-$(window).scroll(function() {
-  if ($(document).scrollTop() >= peliculas -200) {
+$(window).scroll(function () {
+  if ($(document).scrollTop() >= peliculas - 200) {
     $("#enlace-peliculas").addClass("foco");
     $("#enlace-sobre-ghibli").removeClass("foco");
   } else {
@@ -64,32 +65,32 @@ $(window).scroll(function() {
   }
 });
 
-$(window).scroll(function() {
-  if ($(document).scrollTop() >= galeria -200) {
+$(window).scroll(function () {
+  if ($(document).scrollTop() >= galeria - 200) {
     $("#enlace-galeria").addClass("foco");
     $("#enlace-peliculas").removeClass("foco");
   } else {
     $("#enlace-galeria").removeClass("foco");
   }
 });
-$(window).scroll(function() {
-  if ($(document).scrollTop() >= kaiosamas -150) {
+$(window).scroll(function () {
+  if ($(document).scrollTop() >= kaiosamas - 150) {
     $("#enlace-kaiosamas").addClass("foco");
     $("#enlace-galeria").removeClass("foco");
   } else {
     $("#enlace-kaiosamas").removeClass("foco");
   }
 });
-$(window).scroll(function() {
-  if ($(document).scrollTop() >= frases -200) {
+$(window).scroll(function () {
+  if ($(document).scrollTop() >= frases - 200) {
     $("#enlace-frases").addClass("foco");
     $("#enlace-kaiosamas").removeClass("foco");
   } else {
     $("#enlace-frases").removeClass("foco");
   }
 });
-$(window).scroll(function() {
-  if ($(document).scrollTop() >= verPelis -300) {
+$(window).scroll(function () {
+  if ($(document).scrollTop() >= verPelis - 300) {
     $("#enlace-ver-pelis").addClass("foco");
     $("#enlace-frases").removeClass("foco");
   } else {
@@ -180,7 +181,7 @@ window.addEventListener("load", () => {
       prevEl: ".swiper-button-prev",
     },
     // mousewheel: true,
-      keyboard: true,
+    keyboard: true,
   });
 
   // TODO:STUB SCROLL
@@ -228,19 +229,19 @@ window.addEventListener("load", () => {
   // TODO:STUB CAROUSEL FRASES
 
   let contador = 1,
-  contenedor = document.querySelector(".frases"),
-  frase = document.querySelectorAll(".contenedor-frase"),
-  tamañoWidht = frase[0].clientWidth,
-  scroll = contenedor.offsetWidth
+    contenedor = document.querySelector(".frases"),
+    frase = document.querySelectorAll(".contenedor-frase"),
+    tamañoWidht = frase[0].clientWidth,
+    scroll = contenedor.offsetWidth
   flechaIzquierda = document.getElementById("flecha-izquierda"),
-  flechaDerecha = document.getElementById("flecha-derecha");
+    flechaDerecha = document.getElementById("flecha-derecha");
   intervalo = 5000;
   window.addEventListener("resize", function () {
     tamañoWidht = frase[0].clientWidth;
     contenedor.style.transform = "translate(" + -tamañoWidht * contador + "px"
   })
   contenedor.scrollLeft = scroll
-  
+
   // const transform = () => contenedor.style.transform = "translate(" + -tamañoWidht * contador + "px"
   const transform = () => {
     semaforo = false
@@ -252,7 +253,7 @@ window.addEventListener("load", () => {
     }, 300);
 
   }
-  
+
   const transformRight = () => {
     semaforo = false
     if (semaforo) {
@@ -287,46 +288,46 @@ window.addEventListener("load", () => {
   }
   // const transform = () => contenedor.scrollLeft += tamañoWidht
 
-  
+
   const transition = () => contenedor.style.transition = "transform 0.5s ease-in-out";
-  
+
   flechaDerecha.addEventListener("click", () => {
     if (frase[contador].firstElementChild.id === "first-clone") {
       transformRight()
-      
-      
+
+
     }
     // contenedor.scrollLeft += scroll;
     contador++;
     contenedor.scrollLeft += scroll
     // transition();
-    console.log (contador)
+    console.log(contador)
   });
 
   flechaIzquierda.addEventListener("click", () => {
     if (frase[contador].firstElementChild.id === "last-clone") {
-      
+
       transformLeft()
       // contenedor.style.transition = "none";
       // alert ("hola")
       // contador = frase.length - 2;
       // // transform();
       // setTimeout(() => {
-        //   contador--
-        //   transition()
-        //   // transform()
-        
-        // }, 10);
-      }else{
-        // contenedor.scrollLeft -= scroll;
-        contador--;
-        contenedor.scrollLeft -= scroll
-        // transition();
-        
-      }
-      // contenedor.scrollLeft -= slider.offsetWidth;
-      console.log (contador)
-    });
+      //   contador--
+      //   transition()
+      //   // transform()
+
+      // }, 10);
+    } else {
+      // contenedor.scrollLeft -= scroll;
+      contador--;
+      contenedor.scrollLeft -= scroll
+      // transition();
+
+    }
+    // contenedor.scrollLeft -= slider.offsetWidth;
+    console.log(contador)
+  });
   contenedor.addEventListener("transitionend", () => {
     if (frase[contador].firstElementChild.id === "last-clone") {
       contenedor.style.transition = "none";
@@ -374,21 +375,23 @@ window.addEventListener("load", () => {
       "";
   });
 
-  // TODO:STUB LEER MAS
+  // TODO LEER MAS
 
-  const leer = document.querySelectorAll(".boton-leer-mas");
+  let leer = document.querySelectorAll(".boton-leer-mas");
   leer.forEach((elemento) => {
     elemento.addEventListener("click", (evento) => {
-      // evento.preventDefault();
-      const h3 = evento.target.parentElement.parentElement.firstElementChild;
-      t = evento.target.parentElement.parentElement;
-      if (h3.style.top !== "-40.5px") {
-        t.style.padding = "1rem 2rem 1rem";
-        h3.style.top = "-40.5px";
-      } else {
-        h3.style.top = "0";
-        t.style.padding = "3rem 2rem 1.5rem";
-      }
+      texto = evento.target.parentElement.parentElement;
+      texto.classList.toggle("active-boton-leer-mas")
+      evento.target.classList.remove("transformacion")
+      setTimeout(() => {
+        if (evento.target.innerHTML == "Leer mas") {
+          evento.target.classList.add("transformacion")
+          evento.target.innerHTML = "Leer menos";
+        } else {
+          evento.target.classList.add("transformacion")
+          evento.target.innerHTML = "Leer mas";
+        }
+      }, 10);
     });
   });
 });
@@ -403,13 +406,13 @@ imagen.forEach((elemento) => {
     sema = false
     if (sema) {
       return
-    }else{
+    } else {
       evento.toElement.parentElement.classList.toggle("contenedor-imagen-ver-pelis-hover")
       evento.toElement.parentElement.previousElementSibling.classList.toggle("contenedor-textos-ver-pelis-hover")
       evento.toElement.parentElement.nextElementSibling.classList.toggle("enlaces-ver-pelis-hover")
       sema = true
     }
-    console.log (evento.toElement.parentElement.nextElementSibling)
+    console.log(evento.toElement.parentElement.nextElementSibling)
   });
 });
 
@@ -426,7 +429,7 @@ botonSiguiente.addEventListener("click", (evento) => {
   if (botonSiguiente.innerHTML == "Siguiente") {
     botonSiguiente.innerHTML = "Anterior";
     // semaforo = false;
-  }else{
-      botonSiguiente.innerHTML = "Siguiente";
+  } else {
+    botonSiguiente.innerHTML = "Siguiente";
   }
 });

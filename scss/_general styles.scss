@@ -22,6 +22,9 @@ a {
 p {
     font-family: $lato;
 }
+img{
+    max-width: 100%;
+}
 
 
 html {
@@ -34,6 +37,9 @@ body {
     header {
         width: 100%;
         height: 98vh;
+        position: relative;
+        display: flex;
+        // max-height: 50%;
         background: #48aef0 url(../../galeria/ghibli1.png);
         /* Chrome 10-25, Safari 5.1-6 */
         background: linear-gradient(to right, rgba(72, 173, 240, 0.1), rgba(53, 127, 176, 0.2)), url(../../galeria/ghibli1.png);
@@ -128,8 +134,9 @@ body {
         }
 
         .textos-header {
+            // position: absolute;
             display: flex;
-            height: 75vh;
+            height: 75%;
             width: 100%;
             justify-content: center;
             flex-direction: column;
@@ -137,12 +144,12 @@ body {
             -webkit-animation: opacity_scale 3s ease;
             animation: opacity_scale 3s ease;
 
-            h1 {
+            .titulo-textos-header {
                 font-size: 50px;
                 color: #fff;
             }
 
-            h2 {
+            .subtitulo-textos-header {
                 color: #fff;
                 font-weight: 300;
             }
@@ -150,8 +157,11 @@ body {
 
         .wave {
             position: absolute;
-            bottom: 0;
+            bottom: -5px;
             width: 100%;
+            height: 150px;
+            overflow: hidden;
+            // display: none;
         }
     }
 
@@ -212,9 +222,10 @@ body {
                     .contenedor-sobre-ghibli-2 {
                         margin-bottom: 3.5rem;
                         display: flex;
-                        // flex-wrap: wrap;
+                        flex-wrap: wrap;
                         overflow: hidden;
                         border: 1px solid darkcyan;
+
                         // min-width: 100%;
                         // position: rela
 
@@ -233,20 +244,18 @@ body {
 
                             .imagen-sobre-ghibli-1 {
                                 height: 120%;
-                                -webkit-animation: ease-out img1Totoro 1s;
                                 animation: ease-out img1Totoro 1s;
                                 border: 1px solid red;
-                                min-width: 50%;
+                                // max-width: 100%;
 
                             }
 
                             .imagen-sobre-ghibli-2 {
-                                // height: 120%;
+                                height: 120%;
                                 width: 100%;
                                 -webkit-animation: ease-out img1Totoro 1s;
                                 animation: ease-out img1Totoro 1s;
-                                border: 1px solid red;
-                                min-width: 50%;
+                                max-width: 100%;
 
                             }
                         }
@@ -262,7 +271,7 @@ body {
                             .texto-1,
                             .texto-2,
                             .texto-3 {
-                                transition: .6s all ease-out;
+                                transition: 1s all ease-out;
 
 
                                 p {
@@ -281,11 +290,12 @@ body {
 
                         }
                     }
-                    .contenedor-sobre-ghibli-1{
+
+                    .contenedor-sobre-ghibli-1 {
                         justify-content: space-between;
                     }
-                    
-                    
+
+
                     .contenedor-sobre-ghibli-2 {
                         justify-content: space-evenly;
                         transition: 1s transform ease-out;
@@ -293,18 +303,22 @@ body {
                         // right: 100%;
                         transform: translateX(100%);
                         opacity: 0.3;
-                        .contenedor-imagen-sobre-ghibli{
+
+                        .contenedor-imagen-sobre-ghibli {
                             min-width: 40%;
                             width: 48%;
                         }
-                        .contenido-textos{
+
+                        .contenido-textos {
                             transform: translateX(-10px);
                             transform: translateY(60px);
-                            .texto-3{
+
+                            .texto-3 {
                                 transition: .7s .6s all ease-out;
                                 transform: translateX(200%);
                                 opacity: 0.5;
                             }
+
                             // background-color: red;
                         }
 
@@ -313,8 +327,9 @@ body {
                     .translate-sobre-ghibli-2 {
                         transform: translateX(0%);
                         opacity: 1;
-                        .contenido-textos{
-                            .texto-3{
+
+                        .contenido-textos {
+                            .texto-3 {
                                 opacity: 1;
                                 transform: translateX(0px);
 
@@ -327,7 +342,6 @@ body {
 
                         // position: relative;
                         .contenedor-imagen-sobre-ghibli {
-                            transition: 1s all ease-out;
                             transform: translateX(-100%);
                             opacity: .5;
                             // position: relative;
@@ -336,7 +350,6 @@ body {
 
                         .contenido-textos {
                             .texto-1 {
-                                transition: 1s all ease-out;
                                 transform: translateY(-150%);
                                 opacity: .5;
 
@@ -344,7 +357,6 @@ body {
                             }
 
                             .texto-2 {
-                                transition: .6s all ease-out;
                                 transform: translateY(150%);
                                 opacity: .5;
 
@@ -698,6 +710,8 @@ body {
             }
         }
 
+        //  NOTE: KAIOSAMAS DE GHIBLI
+
         .seccion-kaiosamas-ghibli {
             background: url(../../galeria/fondo2.png) no-repeat fixed;
             width: 100%;
@@ -794,7 +808,8 @@ body {
                                 // background:green;
                                 color: black;
                                 top: 0;
-                                transition: top 1s;
+                                transition: transform 1s, opacity .3s .3s;
+                                // transition: opacity 1s .5s ease-in;
                             }
 
                             .contenedor-p {
@@ -815,7 +830,6 @@ body {
                                 text-align: center;
                                 width: 100%;
                                 position: relative;
-                                bottom: -.2rem;
                                 padding: .2rem;
 
                                 // display: none;
@@ -836,6 +850,31 @@ body {
 
                             }
                         }
+                        .active-boton-leer-mas{
+                            padding: 1rem 2rem .5rem;
+                            h3{
+                                transform: translateY(-38px);
+                                opacity: 0;
+                                margin-bottom: 0;
+                            }
+                            .contenedor-p{
+                                overflow-y: scroll;
+                                &::-webkit-scrollbar {
+                                    display: none;   
+                                }
+                                &::-webkit-scrollbar-track {
+                                    display: none;
+                                }
+                                &::-webkit-scrollbar-thumb{
+                                    background: #111;
+                                    display: none;
+                                }
+                            }
+                            .contenedor-boton-leer-mas{
+                                bottom: 0;
+                            }
+                        }
+
 
                     }
 

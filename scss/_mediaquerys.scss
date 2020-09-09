@@ -1,568 +1,612 @@
-
-
-@media screen and (max-width:1250px){
-    body{
-        border: 5px solid red;
-        main{
-            .seccion-galeria{
-                .galeria{
-                    .imagenes-galeria{  
-                        grid-template-columns: repeat(auto-fit, minmax(30%,1fr));
-                        max-height: 1476px;                    }
-                }
-            }
-            .seccion-kaiosamas-ghibli{
-                .contenedor-kaiosamas-ghibli{
-                    .kaiosamas{
-                        grid-template-columns: 1.5fr 2.5fr 1.5fr;
-
+// @mixin media($width){
+//     @media screen and (max-width: $width){
+//         @content;
+//     }
+// }
+@include height(1000px){
+   body{
+    //    font-family: $maquina;
+       header{
+           max-height: 45vh;
+           background-size: contain;
+           justify-content: center;
+           .textos-header{
+               width: 80%;
+           }
+       }
+       main{
+           .contenedor-imagen-sobre-ghibli{
+               .imagen-sobre-ghibli-1{
+                   max-height: 100%;
+               }
+           }
+           .contenido-textos{
+               min-width: 43%;
+           }
+           .seccion-sobre-ghibli{
+               .contenedor-sobre-ghibli{
+                   .sobre-ghibli{
+                    .contenedor-sobre-ghibli-1, .contenedor-sobre-ghibli-2{
                     }
-                }
-            }
-            .frases-contenedor{
-                .contenedor-principal{
-                    .flecha-derecha{
-                        right: 2rem;
-                    }
-                    .flecha-izquierda{
-                        left: 2rem;
-                    }
-                    .contenedor-carousel{
-                        .carousel{
-                            .frase-contenedor{
-                                min-width: 50%;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+                   }
+               }
+           }
+       }
+   }
 }
-@media screen and (max-width:1150px){
-    body{
-        main{
-            .seccion-kaiosamas-ghibli{
-                .contenedor-kaiosamas-ghibli{
-                    .kaiosamas{
-                        width: 90%;
-                        grid-template-columns: 1fr 2.5fr 1fr;  
-                        // visibility: hidden;
-                    }
-                }
-            }
-        }
-    }
+@include media(1024px){
+   body{
+    //    font-family: $maquina;
+       header{
+        //    max-height: 45vh;
+        //    background-size: contain;
+
+       }
+   }
 }
-@media screen and (max-width:110px){
-    body{
-        main{
-            .seccion-kaiosamas-ghibli{
-                .contenedor-kaiosamas-ghibli{
-                    .kaiosamas{
-                        width: 93%;
-                        grid-template-columns: 1fr 3fr 1fr;  
-                        // visibility: hidden;
-                    }
-                }
-            }
-        }
-    }
-}
-@media screen and (max-width:1035px){
-    body{
-        border: 5px solid teal;
-        header{
-            background-position: center;
-        }
-        main{
-            .contenedor{
-                width: 95%;
-                max-width: 95%;
-                // padding: 2rem;
-            }
-            .seccion-sobre-ghibli{
-                .contenedor-sobre-ghibli{
-                    .sobre-ghibli{
-                        display: flex;  
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        .contenedor-imagen-sobre-ghibli{
-                            max-width: 85%;
-                            img{
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-                                width: 100%;;
-                            }
-                        }
-                        .contenido-textos{
-                            width: 85%;
-                            margin-top: 2rem;
-                        }
-                    }
-                }
-            }
-            .seccion-galeria{
-                .galeria{
-                    .imagenes-galeria{  
-                        grid-template-columns: repeat(auto-fit, minmax(31%,1fr));
-                        height: 392px;
-                        min-height: 392px;
-                        max-height: 1176px;
-                        .imagen-galeria{
-                            height: 180px;
-                            transition: height 1s;
-                        }
-                    }
-                }
-            }
-            .seccion-kaiosamas-ghibli{
-                .contenedor-kaiosamas-ghibli{
+// @media screen and (max-width:1250px){
+//     body{
+//         border: 5px solid red;
+//         main{
+//             .seccion-galeria{
+//                 .galeria{
+//                     .imagenes-galeria{  
+//                         grid-template-columns: repeat(auto-fit, minmax(30%,1fr));
+//                         max-height: 1476px;                    }
+//                 }
+//             }
+//             .seccion-kaiosamas-ghibli{
+//                 .contenedor-kaiosamas-ghibli{
+//                     .kaiosamas{
+//                         grid-template-columns: 1.5fr 2.5fr 1.5fr;
+
+//                     }
+//                 }
+//             }
+//             .frases-contenedor{
+//                 .contenedor-principal{
+//                     .flecha-derecha{
+//                         right: 2rem;
+//                     }
+//                     .flecha-izquierda{
+//                         left: 2rem;
+//                     }
+//                     .contenedor-carousel{
+//                         .carousel{
+//                             .frase-contenedor{
+//                                 min-width: 50%;
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+// @media screen and (max-width:1150px){
+//     body{
+//         main{
+//             .seccion-kaiosamas-ghibli{
+//                 .contenedor-kaiosamas-ghibli{
+//                     .kaiosamas{
+//                         width: 90%;
+//                         grid-template-columns: 1fr 2.5fr 1fr;  
+//                         // visibility: hidden;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+// @media screen and (max-width:110px){
+//     body{
+//         main{
+//             .seccion-kaiosamas-ghibli{
+//                 .contenedor-kaiosamas-ghibli{
+//                     .kaiosamas{
+//                         width: 93%;
+//                         grid-template-columns: 1fr 3fr 1fr;  
+//                         // visibility: hidden;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+// @media screen and (max-width:1035px){
+//     body{
+//         border: 5px solid teal;
+//         header{
+//             background-position: center;
+//         }
+//         main{
+//             .contenedor{
+//                 width: 95%;
+//                 max-width: 95%;
+//                 // padding: 2rem;
+//             }
+//             .seccion-sobre-ghibli{
+//                 .contenedor-sobre-ghibli{
+//                     .sobre-ghibli{
+//                         display: flex;  
+//                         flex-direction: column;
+//                         justify-content: center;
+//                         align-items: center;
+//                         .contenedor-imagen-sobre-ghibli{
+//                             max-width: 85%;
+//                             img{
+//                                 flex-direction: column;
+//                                 justify-content: center;
+//                                 align-items: center;
+//                                 width: 100%;;
+//                             }
+//                         }
+//                         .contenido-textos{
+//                             width: 85%;
+//                             margin-top: 2rem;
+//                         }
+//                     }
+//                 }
+//             }
+//             .seccion-galeria{
+//                 .galeria{
+//                     .imagenes-galeria{  
+//                         grid-template-columns: repeat(auto-fit, minmax(31%,1fr));
+//                         height: 392px;
+//                         min-height: 392px;
+//                         max-height: 1176px;
+//                         .imagen-galeria{
+//                             height: 180px;
+//                             transition: height 1s;
+//                         }
+//                     }
+//                 }
+//             }
+//             .seccion-kaiosamas-ghibli{
+//                 .contenedor-kaiosamas-ghibli{
                     
-                    .kaiosamas{
-                        // display: none;
-                        width: 95%;
-                        grid-template-columns: .5fr 3fr .5fr;
-                        // grid-template-areas: 
-                        // "k1"
-                        // "k2"
-                        // "k3";
+//                     .kaiosamas{
+//                         // display: none;
+//                         width: 95%;
+//                         grid-template-columns: .5fr 3fr .5fr;
+//                         // grid-template-areas: 
+//                         // "k1"
+//                         // "k2"
+//                         // "k3";
                         
-                    }
-                    .k1 {
-                        grid-area: k1;
-                    }
+//                     }
+//                     .k1 {
+//                         grid-area: k1;
+//                     }
 
-                    .k2 {
-                        grid-area: k2;
-                    }
+//                     .k2 {
+//                         grid-area: k2;
+//                     }
 
-                    .k3 {
-                        grid-area: k3;
-                    }   
-                }
-            }
-            .frases-contenedor{
-                .contenedor-principal{
-                    .flecha-derecha{
-                        right: 1rem;
-                    }
-                    .flecha-izquierda{
-                        left: 1rem;
-                    }
-                    .contenedor-carousel{
-                        .carousel{
-                            .frase-contenedor{
-                                min-width: calc((100% / 1) - 7px);
-                                justify-content: center;
-                            }
-                        }
-                    }
-                }
-            }
-            .ver-pelis{
-                .contenedor{
-                    .pelis-cont{
-                        justify-content: center;
-                        flex-direction: column;
-                        .peli{
-                            width: 100%;
-                            text-align: center;
-                            img{
-                                width: 90%;
-                            }
-                        }
-                        .peli:nth-child(1), .peli:nth-child(2){
-                            margin-bottom: 60px;
-                        }
-                    }
-                }
-            }
-        }
-    }
+//                     .k3 {
+//                         grid-area: k3;
+//                     }   
+//                 }
+//             }
+//             .frases-contenedor{
+//                 .contenedor-principal{
+//                     .flecha-derecha{
+//                         right: 1rem;
+//                     }
+//                     .flecha-izquierda{
+//                         left: 1rem;
+//                     }
+//                     .contenedor-carousel{
+//                         .carousel{
+//                             .frase-contenedor{
+//                                 min-width: calc((100% / 1) - 7px);
+//                                 justify-content: center;
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//             .ver-pelis{
+//                 .contenedor{
+//                     .pelis-cont{
+//                         justify-content: center;
+//                         flex-direction: column;
+//                         .peli{
+//                             width: 100%;
+//                             text-align: center;
+//                             img{
+//                                 width: 90%;
+//                             }
+//                         }
+//                         .peli:nth-child(1), .peli:nth-child(2){
+//                             margin-bottom: 60px;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
 
-}
-@media screen and (max-width:900px){
-    body{
-        border: 5px solid green;
-        main{
-            .seccion-kaiosamas-ghibli{
-                .contenedor-kaiosamas-ghibli{
-                    padding: 2rem;
-                    .kaiosamas{
-                        width: 97%;
-                        grid-template-columns: .3fr 3.5fr .3fr;  
-                        // visibility: hidden;
-                    }
-                }
-            }
-        }
-    }
-}
-@media screen and (max-width:900px){
-    body{
-        border: 5px solid green;
-        main{
-            .seccion-kaiosamas-ghibli{
-                .contenedor-kaiosamas-ghibli{
-                    padding: 1rem;
-                    .kaiosamas{
-                        width: 100%;
-                        grid-template-columns: .2fr 3.5fr .2fr;  
-                        // visibility: hidden;
-                    }
-                }
-            }
-        }
-    }
-}
-@media screen and (max-width:790px){
-    body{
-        main{
-            .seccion-ver-pelis{
-                // display: none;
-                .ver-pelis{
-                    .pelis-cont{
-                        .peli{
-                            .contenedor-textos-ver-pelis{
-                                .cursor-hover-ver-pelis{
-                                    top: 85%;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-@media screen and (max-width:720px){
-    body{
-        border: 5px solid red;
-        header{
-            // background-position: center;
-            .menu{
-                padding: 0 10px;
-                .enlaces{
-                    position: fixed;
-                    // // background: #FF0099;  /* fallback for old browsers */
-                    background: white;
-                    // background: red;
-                    top: 0;
-                    right: 0;
-                    height: 100vh;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: space-evenly;
-                    // // background: -webkit-linear-gradient(to right, #493240, #FF0099);  /* Chrome 10-25, Safari 5.1-6 */
-                    // background: linear-gradient(to right, #493240, #FF0099); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-                    clip-path: circle(0.0% at 100% 0);
-                    padding: 5rem 0;
-                    transition: ease-in-out 0.5s;
-                    width: 70%;
-                    box-shadow: -15px 0px 10px rgba(0, 0, 0, .2);
-                    .enlace{
-                        color: black;
-                        background: white;
-                        display: inline-block;
-                        line-height: 2.5em;
-                        padding: 0 1.25em;
-                        text-decoration: none;
-                        border-radius: 1.25em;
-                        // box-shadow: 0 0 9px 0 rgba(0,0,0,.5);
-                        outline: none;
-                        cursor:pointer;
-                        &:hover{
-                            transition: all 0.4s linear;
-                            background: $color1;
-                            color: white;
-                        }
-                        &:active{
-                            transform: scale(.95);
-                        }
-                        &:after{
-                            display: none;
-                        }
-                    }
-                }
-                .menudos {
-                    -webkit-clip-path: circle(150% at 100% 0);
-                    clip-path: circle(150% at 100% 0);
-                }
-                .contenedor-hamburguer{
-                    display: block;
-                    cursor: pointer;
-                    transition: color 0.5s ease-in;
-                    position: absolute;
-                    top: 2rem;
-                    right: 2rem;
-                    &:active{
-                        transform: scale(1.05);
-                    }
-                }
-                .contenedor-hamburguer-scroll{
-                    background: white;
-                    box-shadow: 0 0 9px 0 rgba(0,0,0,.5);
-                }
-                .contenedor-hamburguer-dos{
-                    background: none;
-                    box-shadow: none;
-                }
-            }
-            .menu-scroll{
-                .enlaces{
-                    margin-right: 0;
-                }
-            }
-            .textos-header{
-                h1{
-                    font-size: 35px;
-                }
-                h2{
-                    font-size: 20px;
-                }
-            }
-        }
-        main{
-            .seccion-galeria{
-                .galeria{
-                    .imagenes-galeria{  
-                        grid-template-columns: repeat(auto-fit, minmax(48%,1fr));
-                        max-height: 1568px;
-                    }
-                }
-            }
-            .seccion-kaiosamas-ghibli{
-                .contenedor-kaiosamas-ghibli{
-                    padding: .5rem;
-                    .kaiosamas{
-                        grid-template-columns: 0fr 3.5fr 0fr;  
-                        .kaiosama{
-                            .contenido-textos-kaiosama{
-                                .contenedor-p{
-                                    p{
-                                        // visibility: hidden;
-                                        overflow: hidden;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+// }
+// @media screen and (max-width:900px){
+//     body{
+//         border: 5px solid green;
+//         main{
+//             .seccion-kaiosamas-ghibli{
+//                 .contenedor-kaiosamas-ghibli{
+//                     padding: 2rem;
+//                     .kaiosamas{
+//                         width: 97%;
+//                         grid-template-columns: .3fr 3.5fr .3fr;  
+//                         // visibility: hidden;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+// @media screen and (max-width:900px){
+//     body{
+//         border: 5px solid green;
+//         main{
+//             .seccion-kaiosamas-ghibli{
+//                 .contenedor-kaiosamas-ghibli{
+//                     padding: 1rem;
+//                     .kaiosamas{
+//                         width: 100%;
+//                         grid-template-columns: .2fr 3.5fr .2fr;  
+//                         // visibility: hidden;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+// @media screen and (max-width:790px){
+//     body{
+//         main{
+//             .seccion-ver-pelis{
+//                 // display: none;
+//                 .ver-pelis{
+//                     .pelis-cont{
+//                         .peli{
+//                             .contenedor-textos-ver-pelis{
+//                                 .cursor-hover-ver-pelis{
+//                                     top: 85%;
+//                                 }
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+// @media screen and (max-width:720px){
+//     body{
+//         border: 5px solid red;
+//         header{
+//             // background-position: center;
+//             .menu{
+//                 padding: 0 10px;
+//                 .enlaces{
+//                     position: fixed;
+//                     // // background: #FF0099;  /* fallback for old browsers */
+//                     background: white;
+//                     // background: red;
+//                     top: 0;
+//                     right: 0;
+//                     height: 100vh;
+//                     display: flex;
+//                     flex-direction: column;
+//                     align-items: center;
+//                     justify-content: space-evenly;
+//                     // // background: -webkit-linear-gradient(to right, #493240, #FF0099);  /* Chrome 10-25, Safari 5.1-6 */
+//                     // background: linear-gradient(to right, #493240, #FF0099); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+//                     clip-path: circle(0.0% at 100% 0);
+//                     padding: 5rem 0;
+//                     transition: ease-in-out 0.5s;
+//                     width: 70%;
+//                     box-shadow: -15px 0px 10px rgba(0, 0, 0, .2);
+//                     .enlace{
+//                         color: black;
+//                         background: white;
+//                         display: inline-block;
+//                         line-height: 2.5em;
+//                         padding: 0 1.25em;
+//                         text-decoration: none;
+//                         border-radius: 1.25em;
+//                         // box-shadow: 0 0 9px 0 rgba(0,0,0,.5);
+//                         outline: none;
+//                         cursor:pointer;
+//                         &:hover{
+//                             transition: all 0.4s linear;
+//                             background: $color1;
+//                             color: white;
+//                         }
+//                         &:active{
+//                             transform: scale(.95);
+//                         }
+//                         &:after{
+//                             display: none;
+//                         }
+//                     }
+//                 }
+//                 .menudos {
+//                     -webkit-clip-path: circle(150% at 100% 0);
+//                     clip-path: circle(150% at 100% 0);
+//                 }
+//                 .contenedor-hamburguer{
+//                     display: block;
+//                     cursor: pointer;
+//                     transition: color 0.5s ease-in;
+//                     position: absolute;
+//                     top: 2rem;
+//                     right: 2rem;
+//                     &:active{
+//                         transform: scale(1.05);
+//                     }
+//                 }
+//                 .contenedor-hamburguer-scroll{
+//                     background: white;
+//                     box-shadow: 0 0 9px 0 rgba(0,0,0,.5);
+//                 }
+//                 .contenedor-hamburguer-dos{
+//                     background: none;
+//                     box-shadow: none;
+//                 }
+//             }
+//             .menu-scroll{
+//                 .enlaces{
+//                     margin-right: 0;
+//                 }
+//             }
+//             .textos-header{
+//                 h1{
+//                     font-size: 35px;
+//                 }
+//                 h2{
+//                     font-size: 20px;
+//                 }
+//             }
+//         }
+//         main{
+//             .seccion-galeria{
+//                 .galeria{
+//                     .imagenes-galeria{  
+//                         grid-template-columns: repeat(auto-fit, minmax(48%,1fr));
+//                         max-height: 1568px;
+//                     }
+//                 }
+//             }
+//             .seccion-kaiosamas-ghibli{
+//                 .contenedor-kaiosamas-ghibli{
+//                     padding: .5rem;
+//                     .kaiosamas{
+//                         grid-template-columns: 0fr 3.5fr 0fr;  
+//                         .kaiosama{
+//                             .contenido-textos-kaiosama{
+//                                 .contenedor-p{
+//                                     p{
+//                                         // visibility: hidden;
+//                                         overflow: hidden;
+//                                     }
+//                                 }
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
 
-        }
-    }
-}
-@media screen and (max-width:665px){
-    body{
-        border: 3px solid fuchsia;
-        main{
-            .seccion-kaiosamas-ghibli{
-                &:before {
-                    content: ' ';
-                    position: absolute;
-                    background-color: rgba(255, 255, 255, .9);
-                    top: 0;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                }
-                .contenedor-kaiosamas-ghibli{
-                    .kaiosamas{
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        grid-gap: 1.5rem 0;
-                        max-width: 100%;
-                        .kaiosama{
-                            padding: 0;
-                            margin: 3.5rem 0 0 0;
-                            min-width: 0;
-                            width: 280px;
-                            max-width: 280px;
-                            height: 340px;
-                            flex-direction: column;
-                            position: relative;
-                            align-items: center;
-                            overflow: hidden;
-                            border-radius: .5rem;
+//         }
+//     }
+// }
+// @media screen and (max-width:665px){
+//     body{
+//         border: 3px solid fuchsia;
+//         main{
+//             .seccion-kaiosamas-ghibli{
+//                 &:before {
+//                     content: ' ';
+//                     position: absolute;
+//                     background-color: rgba(255, 255, 255, .9);
+//                     top: 0;
+//                     bottom: 0;
+//                     left: 0;
+//                     right: 0;
+//                 }
+//                 .contenedor-kaiosamas-ghibli{
+//                     .kaiosamas{
+//                         display: flex;
+//                         flex-direction: column;
+//                         align-items: center;
+//                         grid-gap: 1.5rem 0;
+//                         max-width: 100%;
+//                         .kaiosama{
+//                             padding: 0;
+//                             margin: 3.5rem 0 0 0;
+//                             min-width: 0;
+//                             width: 280px;
+//                             max-width: 280px;
+//                             height: 340px;
+//                             flex-direction: column;
+//                             position: relative;
+//                             align-items: center;
+//                             overflow: hidden;
+//                             border-radius: .5rem;
                             
-                            .contenedor-imagen-kaiosama{
-                                height: 100%;
-                                width: 100%;
-                                img{
-                                    // max-height: 420px;
-                                    // max-width: 300px;
-                                    // display: none;
-                                    width: 100%;
-                                    height: 100%;
-                                    position: absolute;
-                                    left: 0;
-                                    right: 0;
-                                    margin: auto;
-                                    // top: -50px;
-                                    &:hover{
-                                        transform: none;
-                                    }
-                                }
-                            }
-                            .contenido-textos-kaiosama{
-                                background: linear-gradient(to bottom,  rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.7) 80%, rgba(0, 0, 0, 0.9) 100%);                                height: 100%;
-                                text-align: center;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                               position: absolute;
-                               color: white;
-                               h3{
-                                margin-bottom: .5rem;
-                                position: relative;
-                                top: 80%;
-                                color: white;    
-                                }
-                                .contenedor-p{
-                                    transition: 1s;
-                                    top: 85%;
-                                    display: flex;
-                                    justify-content: center;
-                                    align-items: center;                                
-                                }
-                                &:hover{
-                                    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0,0,0,1) 100%);                                height: 100%;
-                                    h3{
-                                    top: 15%;
-                                   }
-                                    .contenedor-p{
-                                        top: 15%;
-                                    }
-                                }
+//                             .contenedor-imagen-kaiosama{
+//                                 height: 100%;
+//                                 width: 100%;
+//                                 img{
+//                                     // max-height: 420px;
+//                                     // max-width: 300px;
+//                                     // display: none;
+//                                     width: 100%;
+//                                     height: 100%;
+//                                     position: absolute;
+//                                     left: 0;
+//                                     right: 0;
+//                                     margin: auto;
+//                                     // top: -50px;
+//                                     &:hover{
+//                                         transform: none;
+//                                     }
+//                                 }
+//                             }
+//                             .contenido-textos-kaiosama{
+//                                 background: linear-gradient(to bottom,  rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.7) 80%, rgba(0, 0, 0, 0.9) 100%);                                height: 100%;
+//                                 text-align: center;
+//                                 display: flex;
+//                                 justify-content: center;
+//                                 align-items: center;
+//                                position: absolute;
+//                                color: white;
+//                                h3{
+//                                 margin-bottom: .5rem;
+//                                 position: relative;
+//                                 top: 80%;
+//                                 color: white;    
+//                                 }
+//                                 .contenedor-p{
+//                                     transition: 1s;
+//                                     top: 85%;
+//                                     display: flex;
+//                                     justify-content: center;
+//                                     align-items: center;                                
+//                                 }
+//                                 &:hover{
+//                                     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0,0,0,1) 100%);                                height: 100%;
+//                                     h3{
+//                                     top: 15%;
+//                                    }
+//                                     .contenedor-p{
+//                                         top: 15%;
+//                                     }
+//                                 }
     
-                            }
+//                             }
                             
-                            .contenedor-boton-leer-mas{
-                                .boton-leer-mas{
-                                    display: none;
-                                }
-                            }
-                        }
-                        .k1{
-                            text-align: start;
-                        }
-                        .k2{
-                            grid-column: 1 / span 2;
-                            align-items: center;
-                            flex-direction: column;
-                            text-align: center;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-@media screen and (max-width:480px){
-    body{
-        border: 5px solid rgb(0, 255, 42);
+//                             .contenedor-boton-leer-mas{
+//                                 .boton-leer-mas{
+//                                     display: none;
+//                                 }
+//                             }
+//                         }
+//                         .k1{
+//                             text-align: start;
+//                         }
+//                         .k2{
+//                             grid-column: 1 / span 2;
+//                             align-items: center;
+//                             flex-direction: column;
+//                             text-align: center;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+// @media screen and (max-width:480px){
+//     body{
+//         border: 5px solid rgb(0, 255, 42);
     
-        main{
-            .contenedor{
-                width: 95%;
-                padding: 0 1rem; 
-            }
-            .seccion-sobre-ghibli{
-                .contenedor-sobre-ghibli{
-                    .sobre-ghibli{
-                        .contenedor-imagen-sobre-ghibli{
-                            max-width: 100%;
-                            height: auto;
-                            img{
-                                width: 100%;
-                            }
-                        }
-                        .contenido-textos{
-                            width: 95%;
-                        }
-                    }
-                }
-            }
-            .seccion-galeria{
-                .galeria{
-                    .imagenes-galeria{  
-                        grid-template-columns: repeat(auto-fit, minmax(85%,1fr));
-                        max-height: 1968px;
-                        .imagen-galeria{
-                            width: 100%;
-                        }
-                    }
-                }
-            }
-            .frases-contenedor{
-                .contenedor-principal{
-                    .flecha-izquierda, .flecha-derecha{
-                        z-index: auto;
-                    }
-                    .flecha-derecha{
-                        right: 1rem;
-                    }
-                    .flecha-izquierda{
-                        left: 1rem;
-                    }
-                    .contenedor-carousel{
-                        .carousel{
-                            height: 350px;
-                            .frase-contenedor{
-                                height: 350px;
-                                min-width: calc((100% / 1) - 7px);
-                                justify-content: center;
-                                align-items: center;
-                                text-align: center;
-                                .frase{
-                                    flex-direction: column;
-                                    img{
-                                        margin-bottom: 1rem;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            .seccion-ver-pelis{
-                display: none;
-                .ver-pelis{
-                    .pelis-cont{
-                        .peli{
-                            .contenedor-textos-ver-pelis{
-                                .cursor-hover-ver-pelis{
-                                    top: 85%;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            footer{
-                .contenedor-footer{
-                    flex-direction: column;
-                    border: none;
-                    .content-foo{
-                        margin-bottom: 20px;
-                        text-align: center;
-                        h4{
-                            border: none;
-                        }
-                        p{
-                            color: #ccc;
-                            border-bottom: 1px solid #f2f2f2;
-                            padding-bottom: 20px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+//         main{
+//             .contenedor{
+//                 width: 95%;
+//                 padding: 0 1rem; 
+//             }
+//             .seccion-sobre-ghibli{
+//                 .contenedor-sobre-ghibli{
+//                     .sobre-ghibli{
+//                         .contenedor-imagen-sobre-ghibli{
+//                             max-width: 100%;
+//                             height: auto;
+//                             img{
+//                                 width: 100%;
+//                             }
+//                         }
+//                         .contenido-textos{
+//                             width: 95%;
+//                         }
+//                     }
+//                 }
+//             }
+//             .seccion-galeria{
+//                 .galeria{
+//                     .imagenes-galeria{  
+//                         grid-template-columns: repeat(auto-fit, minmax(85%,1fr));
+//                         max-height: 1968px;
+//                         .imagen-galeria{
+//                             width: 100%;
+//                         }
+//                     }
+//                 }
+//             }
+//             .frases-contenedor{
+//                 .contenedor-principal{
+//                     .flecha-izquierda, .flecha-derecha{
+//                         z-index: auto;
+//                     }
+//                     .flecha-derecha{
+//                         right: 1rem;
+//                     }
+//                     .flecha-izquierda{
+//                         left: 1rem;
+//                     }
+//                     .contenedor-carousel{
+//                         .carousel{
+//                             height: 350px;
+//                             .frase-contenedor{
+//                                 height: 350px;
+//                                 min-width: calc((100% / 1) - 7px);
+//                                 justify-content: center;
+//                                 align-items: center;
+//                                 text-align: center;
+//                                 .frase{
+//                                     flex-direction: column;
+//                                     img{
+//                                         margin-bottom: 1rem;
+//                                     }
+//                                 }
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//             .seccion-ver-pelis{
+//                 display: none;
+//                 .ver-pelis{
+//                     .pelis-cont{
+//                         .peli{
+//                             .contenedor-textos-ver-pelis{
+//                                 .cursor-hover-ver-pelis{
+//                                     top: 85%;
+//                                 }
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//             footer{
+//                 .contenedor-footer{
+//                     flex-direction: column;
+//                     border: none;
+//                     .content-foo{
+//                         margin-bottom: 20px;
+//                         text-align: center;
+//                         h4{
+//                             border: none;
+//                         }
+//                         p{
+//                             color: #ccc;
+//                             border-bottom: 1px solid #f2f2f2;
+//                             padding-bottom: 20px;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }

@@ -63,14 +63,15 @@
             </div>
         </nav>
         <section class="textos-header">
-            <h1>El Maravilloso Mundo de Ghibli</h1>
-            <h2>"¡Venga, vamos a reirnos para alejar a los fantasmas!"</h2>
+            <h1 class="titulo-textos-header">El Maravilloso Mundo de Ghibli</h1>
+            <h2 class="subtitulo-textos-header">"¡Venga, vamos a reirnos para alejar a los fantasmas!"</h2>
         </section>
-        <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
-                style="height: 100%; width: 100%;">
+        <div class="wave">
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
                 <path d="M0.00,49.99 C150.00,150.00 349.20,-49.99 500.00,49.99 L500.00,150.00 L0.00,150.00 Z"
                     style="stroke: none; fill: #fff;"></path>
-            </svg></div>
+            </svg>
+        </div>
     </header>
     <main>
         <article class="seccion-sobre-ghibli" id="seccion-sobre-ghibli">
@@ -80,24 +81,21 @@
                 <div class="sobre-ghibli">
                     <div class="contenedor-sobre-ghibli-1" id="contenedor-sobre-ghibli-1">
                         <div class="contenedor-imagen-sobre-ghibli">
-                            <img src="galeria/ghibli2.1.jpg" class="imagen-sobre-ghibli-1 "
+                            <img src="galeria/ghibli2.1.jpg" class="imagen-sobre-ghibli-1" id="imagen-sobre-ghibli-1"
                                 alt="logo del estudio ghibli">
                         </div>
                         <div class="contenido-textos">
                             <div class="texto-1">
-                                <h3><i class="fas fa-check-circle"></i> El mejor estudio</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam commodi incidunt
-                                    eius iure
-                                    necessitatibus unde repudiandae pariatur nobis, possimus aliquam, hic harum illum
-                                    consectetur animi quisquam facilis voluptatum tenetur facere.</p>
-
-                            </div>
-                            <div class="texto-2">
-                                <h3><i class="fas fa-check-circle"></i> El mejor estudio</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam commodi incidunt
-                                    eius iure
-                                    necessitatibus unde repudiandae pariatur nobis, possimus aliquam, hic harum illum
-                                    consectetur animi quisquam facilis voluptatum tenetur facere.</p>
+                                <h3><i class="fas fa-check-circle"></i> ¿Que es?</h3>
+                                <p>
+                                    Studio Ghibli (スタジオジブリ Sutajio Jiburi?) es un estudio japonés de animación, considerado por la crítica especializada y muchos cinéfilos como uno de los mejores estudios de animación del mundo en la actualidad.
+                                    
+                                </div>
+                                <div class="texto-2">
+                                    <h3><i class="fas fa-check-circle"></i> Nombre</h3>
+                                    <p>
+                                        El nombre Ghibli fue elegido por Hayao Miyazaki y deriva de la palabra italiana «ghibli», basada en el nombre del viento cálido del desierto que sopla en Libia.También hace referencia a un avión italiano, el Caproni Ca.309 Ghibli. Aunque la palabra en italiano se translitera ギブリ (Giburi), el nombre en japonés del estudio es ジブリ (Jiburi).                                </p>
+                                </p>
 
                             </div>
                         </div>
@@ -109,13 +107,9 @@
                         </div>
                         <div class="contenido-textos">
                             <div class="texto-3">
-                                <h3><i class="fas fa-check-circle"></i> El mejor estudio</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam commodi incidunt
-                                    eius iure
-                                    necessitatibus unde repudiandae pariatur nobis, possimus aliquam, hic harum illum
-                                    consectetur animi quisquam facilis voluptatum tenetur facere.
-                                </p>
-                            </div>
+                                <h3><i class="fas fa-check-circle"></i> Historia</h3>
+                                <p>
+                                    Fundado en 1985, el estudio está dirigido por el director Hayao Miyazaki, y hasta 2018 estuvo dirigido por Miyazaki junto a su amigo y mentor, Isao Takahata, fallecido en ese año. Sus orígenes datan de 1983, con la película Nausicäa del Valle del Viento.Debido a la fama de los estudios se abrió en las afueras de Tokio el Museo Ghibli. El 1 de septiembre de 2013, Hayao Miyazaki, anunció su retirada a través de un comunicado oficial. Cabe destacar que las películas de dicho estudio han adquirido muchos premios, entre ellas cinco de sus películas fueron nominadas al Óscar a la producción cinematográfica de animación más destacada; las cintas nominadas fueron: El viaje de Chihiro (2001), El castillo ambulante (2004), El recuerdo de Marnie (2014), El viento se levanta (2013) y El cuento de la princesa Kaguya (2013). A pesar de estas numerosas nominaciones, tan solo El viaje de Chihiro fue galardonada con el Óscar.                            </div>
                             <!-- <h3><i class="fas fa-check-circle"></i> El mejor estudio</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam commodi incidunt eius iure
                                 necessitatibus unde repudiandae pariatur nobis, possimus aliquam, hic harum illum
@@ -720,6 +714,7 @@
                 <!-- <a href="#galeria-port" class="boton-ver-mas mybtn">ver mas</a> -->
             </div>
         </article>
+        <!-- NOTE KAIOSAMAS DE GHILBI -->
         <article class="seccion-kaiosamas-ghibli" id="seccion-kaiosamas-ghibli">
             <div class="contenedor-kaiosamas-ghibli contenedor">
                 <div class="contenedor-titulo-kaiosama">
@@ -733,11 +728,42 @@
                             <img src="galeria/hayaomiyazaki.jpg" class="imagen-kaiosama-ghibli">
                         </div>
                         <div class="contenido-textos-kaiosama">
-                            <h3>El mejor estudio</h3>
+                            <h3>Hayao Miyazaki</h3>
                             <div class="contenedor-p">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam commodi incidunt
-                                    eius iure necessitatibus unde repudiandae pariatur nobis, possimus aliquam, hic
-                                    harum illum consectetur animi quisquam facilis voluptatum tenetur facere.</p>
+                                <p>
+                                    Nacio en Bunkyō de Tokio, el 5 de enero de 1941. Es un director de cine de
+                                    animación, productor, animador, ilustrador, dibujante de mangas y productor de anime
+                                    japonés, de renombre internacional y con una carrera de cinco décadas. Junto con
+                                    Isao Takahata, fundó Studio Ghibli, un estudio de películas y animación. Ha sido
+                                    comparado con Walt Disney, Steven Spielberg u Orson Welles.1​ Entre sus filmes de
+                                    animación más populares se hallan títulos como El viaje de Chihiro (que rebasó los
+                                    ingresos en taquillas de Japón y superó el éxito obtenido por Titanic, también
+                                    obtuvo el premio como Película del Año en los Premios de la Academia de Japón, y fue
+                                    la primera película de anime en ganar un Premio Óscar), La princesa Mononoke, Mi
+                                    vecino Totoro, Howl no Ugoku Shiro y Gake no ue no Ponyo. Sus películas hablan de la
+                                    relación de la humanidad con la naturaleza, la tecnología y la dificultad de
+                                    mantener una ética pacifista; las protagonistas regularmente son niñas y mujeres
+                                    jóvenes fuertes e independientes. En dos de sus filmes, El castillo de Cagliostro y
+                                    El castillo en el cielo, se presentan villanos tradicionales, mientras que en otros,
+                                    como Nausicaä y La princesa Mononoke (1997; la primera película animada en ganar la
+                                    categoría de Película del Año en los Premios de la Academia Japonesa y, por breve
+                                    tiempo, la más taquillera en Japón, hasta que fue eclipsada por Titanic el mismo
+                                    año), existen antagonistas moralmente ambiguos con características positivas.
+                                    Coescribió Karigurashi no Arriety y La colina de las amapolas.
+
+                                    El 1 de septiembre de 2013, anunció, a través de un comunicado del presidente de la
+                                    compañía, Kōji Koshino, que su película Kaze Tachinu (estrenada en Japón el 20 de
+                                    julio de 2013) sería su último largometraje, y que se retiraría como director de
+                                    proyectos de animación de Ghibli.2​3​4​5​6​ En agosto de 2014, la Academia de Artes
+                                    y Ciencias de Hollywood informó de la concesión a Miyazaki del Óscar honorífico como
+                                    reconocimiento a toda su trayectoria.7​Este premio le fue entregado en la ceremonia
+                                    de los Óscar en enero del 2015. En el 2002, el crítico cinematográfico Roger Ebert
+                                    sugirió que Miyazaki podría ser el mejor creador de películas de animación de la
+                                    historia, y alabó la profundidad y nivel artístico de sus creaciones.8​
+
+                                    El 25 de febrero de 2017, Studio Ghibli confirmó oficialmente el regreso de Miyazaki
+                                    con Kimitachi wa Dō Ikiru ka, y cuyo estreno en Japón se espera entre 2020 y 2021.9​
+                                    El 10 de agosto de 2017, el estudio reabrió sus puertas </p>
                             </div>
                             <div class="contenedor-boton-leer-mas">
                                 <button class="boton-leer-mas">Leer mas</button>
@@ -749,11 +775,17 @@
                             <img src="galeria/isaotakahata.jpg" class="imagen-kaiosama-ghibli">
                         </div>
                         <div class="contenido-textos-kaiosama">
-                            <h3>El mejor estudio</h3>
+                            <h3>Isao Takahata</h3>
                             <div class="contenedor-p">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam commodi incidunt
-                                    eius iure necessitatibus unde repudiandae pariatur nobis, possimus aliquam, hic
-                                    harum illum consectetur animi quisquam facilis voluptatum tenetur facere.</p>
+                                <p>
+                                    Isao Takahata (Ise, 29 de octubre de 1935-Tokio, 5 de abril de
+                                    2018) fue un director, productor y guionista de películas y series de animación
+                                    japonesa. Fundó, junto con su amigo Hayao Miyazaki, los estudios Ghibli. Sus obras
+                                    más reconocidas fueron las series para televisión Heidi, la niña de los Alpes (1974)
+                                    y Marco (1976), y los largometrajes La tumba de las luciérnagas (1988), Recuerdos
+                                    del ayer (1991) y El cuento de la princesa Kaguya (2013), a la postre su última
+                                    película, que fue nominada a un Óscar en la categoría de mejor película de animación
+                                    en los 87.º Premios Óscar.1​ </p>
                             </div>
                             <div class="contenedor-boton-leer-mas">
                                 <button class="boton-leer-mas">Leer mas</button>
@@ -765,11 +797,10 @@
                             <img src="galeria/toshiosuzuki.jpg" class="imagen-kaiosama-ghibli">
                         </div>
                         <div class="contenido-textos-kaiosama">
-                            <h3>El mejor estudio</h3>
+                            <h3>Toshio Suzuki</h3>
                             <div class="contenedor-p">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam commodi incidunt
-                                    eius iure necessitatibus unde repudiandae pariatur nobis, possimus aliquam, hic
-                                    harum illum consectetur animi quisquam facilis voluptatum tenetur facere.</p>
+                                <p>
+                                    Suzuki nació en Nagoya , en la prefectura de Aichi en 1948. En 1967 se inscribió en la Universidad de Keio y se graduó con un título en literatura en 1972. ESuzuki nació en Nagoya , en la prefectura de Aichi en 1948. En 1967 se inscribió en la Universidad de Keio y se graduó con un título en literatura en 1972.                                </p>
                             </div>
                             <div class="contenedor-boton-leer-mas">
                                 <button class="boton-leer-mas">Leer mas</button>

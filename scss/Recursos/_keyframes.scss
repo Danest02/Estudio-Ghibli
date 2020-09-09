@@ -1,6 +1,15 @@
 .escalar{
     animation: escalar .8s;
 }
+.transformacion{
+    animation: transformacion 1s;
+}
+.aparecer{
+    animation: aparecer .8s;
+}
+.img1Totoro{
+    animation: img1Totoro 1.5s;
+}
 
 // * animacion para imagenes de rombo a circulo
 .rombo{
@@ -43,6 +52,9 @@
     50% {
         transform: scale(1.2);
     }
+    100%{
+        transform: scale(1);
+    }
 }
 @keyframes opacity_scale {
     0% {
@@ -52,5 +64,25 @@
     50% {
         opacity: 1;
         transform: scale(1);
+    }
+}
+@keyframes transformacion {
+    0% {
+        transform: scale(.8);
+        opacity: .3;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes aparecer {
+    0% {
+        transform: scale(.8);
+        opacity: .5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
     }
 }

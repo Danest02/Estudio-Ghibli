@@ -243,28 +243,39 @@ window.addEventListener("load", () => {
       "";
   });
 
-  // Leer mas
+  // TODO LEER MAS
+
   const leer = document.querySelectorAll(".boton-leer-mas");
   leer.forEach((elemento) => {
     elemento.addEventListener("click", (evento) => {
       // evento.preventDefault();
       const h3 = evento.target.parentElement.parentElement.firstElementChild;
-      t = evento.target.parentElement.parentElement;
+      texto = evento.target.parentElement.parentElement;
+      console.log(texto)
       if (h3.style.top !== "-40.5px") {
-        t.style.padding = "1rem 2rem 1rem";
+        texto.style.padding = "1rem 2rem 1rem";
         h3.style.top = "-40.5px";
       } else {
         h3.style.top = "0";
-        t.style.padding = "3rem 2rem 1.5rem";
+        texto.style.padding = "3rem 2rem 1.5rem";
       }
+      texto.classList.toggle("active-boton-leer-mas")
     });
   });
+  // const leer = document.querySelectorAll(".boton-leer-mas");
+  // leer.forEach((elemento) => {
+  //   elemento.addEventListener("click", (evento) => {
+  //     // evento.preventDefault();
+  //     const h3 = evento.target.parentElement.parentElement.firstElementChild;
+  //     texto = evento.target.parentElement.parentElement;
+  //     if (h3.style.top !== "-40.5px") {
+  //       texto.style.padding = "1rem 2rem 1rem";
+  //       h3.style.top = "-40.5px";
+  //     } else {
+  //       h3.style.top = "0";
+  //       texto.style.padding = "3rem 2rem 1.5rem";
+  //     }
+  //   });
+  // });
 
-
-  const imagen = document.querySelector('.contenedor-imagen-ver-pelis')
-  
-  
-  
-  const contenedorTextoVerPeli = document.querySelectorAll(".contenedor-texto-ver-pelis")  
-  imagen.style.border = "1px solid red"
 });

@@ -3,6 +3,16 @@ $tablet: 361px;
 $laptop: 1024px;
 $desktop: 1400px;
  
+@mixin media($width){
+    @media screen and (max-width: $width){
+        @content;
+    }
+}
+@mixin height($width){
+    @media screen and (min-height: $width){
+        @content;
+    }
+}
 @mixin mobile{
     @media screen and (max-width: $mobile){
         @content;
