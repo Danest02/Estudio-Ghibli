@@ -1,12 +1,47 @@
-@include height(1000px, 1136px) {
+
+@include height(1030px, 1136px) {
     body {
         header {
             max-height: 45vh;
+            background-size: contain;
+
+            .textos-header {
+                top: 30%;
+            }
+        }
+    }
+}
+
+@include height(1000px, 1020px) {
+    body {
+        header {
+            max-height: 50vh;
             background-size: contain;
         }
     }
 }
 
+@include height(1000px, 768px) {
+    body {
+        header {
+            max-height: 45vh;
+        }
+    }
+}
+@media screen and (min-height: 1041px) {
+    body {
+        header {
+            max-height: 40vh;
+        }
+    }
+}
+// @media (min-height: 1200px) and (min-width: 1136px){
+//     body {
+//         header {
+//             background-size: cover;            
+//         }
+//     }
+// }
 @include media(1136px) {
     body {
 
@@ -62,15 +97,18 @@
 
         //    font-family: $maquina;
         header {
-            .menu{
+            .menu {
                 padding-right: 0;
-                .enlaces{
+
+                .enlaces {
                     justify-content: center;
-                    .enlace{
+
+                    .enlace {
                         margin: 0 10px;
                     }
                 }
             }
+
             .textos-header {
                 width: 90%;
 
@@ -96,9 +134,6 @@
 
                     }
                 }
-
-
-
             }
 
             .seccion-peliculas {
@@ -150,12 +185,107 @@
                     width: 70%;
                 }
             }
+        }
+    }
+}
 
 
+
+@include media(768px) {
+    body {
+        main {
+            .seccion-sobre-ghibli {
+                .contenedor-sobre-ghibli {
+                    .sobre-ghibli {
+
+                        .contenedor-sobre-ghibli-1,
+                        .contenedor-sobre-ghibli-2 {
+                            justify-content: center;
+
+                            .contenedor-imagen-sobre-ghibli {
+                                min-width: 100%;
+                            }
+
+                            .contenido-textos {
+                                width: 80%;
+                                text-align: center;
+                                justify-content: start;
+
+                                h3 {
+                                    color: $color1;
+                                }
+
+                                i {
+                                    display: none;
+                                }
+                            }
+
+                        }
+
+                        .translate-sobre-ghibli-1,
+                        .translate-sobre-ghibli-2 {
+                            .contenido-textos {
+                                overflow: hidden;
+                            }
+                        }
+                    }
+
+                    .contenedor-boton-sobre-ghibli {
+                        transform: translateX(75%);
+                    }
+
+                    .translate-boton-sobre-ghibli {
+                        transform: translateX(10%);
+                    }
+
+
+                }
+            }
+
+            .seccion-galeria {
+                .categorias-galeria {
+                    width: 80%;
+                }
+            }
+
+            .seccion-kaiosamas-ghibli {
+                .contenedor-kaiosamas-ghibli {
+                    .kaiosamas {
+                        width: 90%;
+                        grid-template-columns: .15fr 3.5fr .15fr;
+                    }
+                }
+            }
+
+            .seccion-frases {
+                .contenedor-carousel-frases {
+                    .carousel-frases {
+
+                        .flecha-izquierda,
+                        .flecha-derecha {
+                            box-shadow: 0 0 9px 0 rgba(0, 0, 0, .3);
+
+                        }
+
+                        .contenedor-frases {
+                            .frases {
+                                .contenedor-frase {
+                                    .frase {
+                                        width: 90%;
+                                        border-radius: 10px;
+                                        box-shadow: none;
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
 
         }
-
     }
+
 }
 
 // @media screen and (max-width:1250px){

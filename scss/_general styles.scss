@@ -135,9 +135,11 @@ body {
         }
 
         .textos-header {
-            // position: absolute;
+            position: absolute;
             display: flex;
-            height: 75%;
+            top: 32%;
+            // height: 75%;
+            line-height: 1.5rem;
             width: 100%;
             justify-content: center;
             flex-direction: column;
@@ -344,9 +346,10 @@ body {
                         }
 
                         .contenido-textos {
+                            // overflow: hidden;
                             .texto-1 {
                                 transform: translateY(-150%);
-                                opacity: .5;
+                                opacity: .0;
 
 
                             }
@@ -500,6 +503,9 @@ body {
 
             .galeria {
                 border: 2px solid darkmagenta;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
 
                 .contenedor-barra-busqueda {
                     width: 100%;
