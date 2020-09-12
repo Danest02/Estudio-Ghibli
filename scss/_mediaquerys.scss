@@ -1,4 +1,3 @@
-
 @include height(1030px, 1136px) {
     body {
         header {
@@ -28,6 +27,7 @@
         }
     }
 }
+
 @media screen and (min-height: 1041px) {
     body {
         header {
@@ -35,6 +35,16 @@
         }
     }
 }
+
+@media screen and (max-height: 900px) and (max-width: 730px) {
+    body {
+        header {
+            max-height: 98vh;
+            background-size: cover;
+        }
+    }
+}
+
 // @media (min-height: 1200px) and (min-width: 1136px){
 //     body {
 //         header {
@@ -189,6 +199,23 @@
     }
 }
 
+@include media (850px){
+    body{
+        main{
+            .seccion-galeria {
+                .galeria {
+                    width: 80%;
+                    .imagenes-galeria {
+                        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+                    }
+                }
+            }
+
+        }
+    }
+}
+
 
 
 @include media(768px) {
@@ -204,7 +231,12 @@
 
                             .contenedor-imagen-sobre-ghibli {
                                 min-width: 100%;
+
+                                .imagen-sobre-ghibli-2 {
+                                    max-width: 80%;
+                                }
                             }
+
 
                             .contenido-textos {
                                 width: 80%;
@@ -241,12 +273,19 @@
 
                 }
             }
-
-            .seccion-galeria {
-                .categorias-galeria {
-                    width: 80%;
+            .seccion-peliculas{
+                .contenedor-peliculas{
+                    .carousel-peliculas{
+                        .arrows-peliculas{
+                            // display: none;
+                        }
+                        .peliculas{
+                            width: 90%;
+                        }
+                    }
                 }
             }
+
 
             .seccion-kaiosamas-ghibli {
                 .contenedor-kaiosamas-ghibli {
@@ -286,6 +325,222 @@
         }
     }
 
+}
+
+@include media(700px) {
+    body {
+        header {
+            position: relative;
+
+            .menu {
+                padding: 0 10px;
+
+                .enlaces {
+                    position: fixed;
+                    // // background: #FF0099;  /* fallback for old browsers */
+                    background: white;
+                    // background: red;
+                    top: 0;
+                    right: 0;
+                    height: 100vh;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    // // background: -webkit-linear-gradient(to right, #493240, #FF0099);  /* Chrome 10-25, Safari 5.1-6 */
+                    // background: linear-gradient(to right, #493240, #FF0099); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                    clip-path: circle(0.0% at 100% 0);
+                    padding: 5rem 0;
+                    transition: ease-in-out 0.5s;
+                    width: 70%;
+                    box-shadow: -15px 0px 10px rgba(0, 0, 0, .2);
+
+                    .enlace {
+                        color: black;
+                        background: white;
+                        display: inline-block;
+                        line-height: 2.5em;
+                        padding: 0 1.25em;
+                        text-decoration: none;
+                        border-radius: 1.25em;
+                        // box-shadow: 0 0 9px 0 rgba(0,0,0,.5);
+                        outline: none;
+                        cursor: pointer;
+
+                        &:hover {
+                            transition: all 0.4s linear;
+                            background: $color1;
+                            color: white;
+                        }
+
+                        &:active {
+                            transform: scale(.95);
+                        }
+
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+
+                .menudos {
+                    -webkit-clip-path: circle(150% at 100% 0);
+                    clip-path: circle(150% at 100% 0);
+                }
+
+                .contenedor-hamburguer {
+                    display: block;
+                    cursor: pointer;
+                    transition: color 0.5s ease-in;
+                    position: absolute;
+                    top: 2rem;
+                    right: 2rem;
+
+                    &:active {
+                        transform: scale(1.05);
+                    }
+                }
+
+                .contenedor-hamburguer-scroll {
+                    background: white;
+                    box-shadow: 0 0 9px 0 rgba(0, 0, 0, .5);
+                }
+
+                .contenedor-hamburguer-dos {
+                    background: none;
+                    box-shadow: none;
+                }
+            }
+
+            .menu-scroll {
+                .enlaces {
+                    margin-right: 0;
+                }
+            }
+
+            // .textos-header {
+            //     h1 {
+            //         font-size: 35px;
+            //     }
+
+            //     h2 {
+            //         font-size: 20px;
+            //     }
+            // }
+
+            .textos-header {
+                top: 0;
+                bottom: 150px;
+                right: 0;
+                left: 0;
+                width: 75%;
+                margin: auto;
+                .titulo-textos-header {
+                    line-height: 3rem;
+                    font-size: 3rem;
+                    margin: 1rem;
+                }
+
+                .subtitulo-textos-header {
+                    font-size: 2rem;
+                    line-height: 2rem;
+                }
+            }
+        }
+        main{
+            .seccion-peliculas{
+                .contenedor-peliculas{
+                    .carousel-peliculas{
+                        .arrows-peliculas{
+                            display: none;
+                        }
+                        .peliculas{
+                            width: 100%;
+                            .pelicula{
+                                // height: 50%;
+                                height: 408px;
+                                height: calc(408px - 10%);
+                                width: calc(288px - 5%);
+                            }
+                        }
+                    }
+                }
+            }
+            .seccion-kaiosamas-ghibli {
+                .contenedor-kaiosamas-ghibli {
+                    .kaiosamas {
+                        width: 90%;
+                        grid-template-columns: .0fr 3.5fr .0fr;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@include media(530px) {
+    body {
+        main {
+            .seccion-sobre-ghibli {
+                .contenedor-sobre-ghibli {
+                    .sobre-ghibli {
+
+                        .contenedor-sobre-ghibli-1,
+                        .contenedor-sobre-ghibli-2 {
+                            .contenedor-imagen-sobre-ghibli {
+                                min-width: 100%;
+                                height: 400px;
+
+                                .imagen-sobre-ghibli-1 {
+                                    max-height: 400px;
+                                }
+
+                                .imagen-sobre-ghibli-2 {
+                                    max-width: 80%;
+                                }
+                            }
+
+
+                            .contenido-textos {
+                                width: 80%;
+                                text-align: center;
+                                justify-content: start;
+
+                                h3 {
+                                    color: $color1;
+                                }
+
+                                i {
+                                    display: none;
+                                }
+                            }
+
+                        }
+
+                        .translate-sobre-ghibli-1,
+                        .translate-sobre-ghibli-2 {
+                            .contenido-textos {
+                                overflow: hidden;
+                            }
+                        }
+                    }
+
+                    .contenedor-boton-sobre-ghibli {
+                        transform: translateX(75%);
+                    }
+
+                    .translate-boton-sobre-ghibli {
+                        transform: translateX(10%);
+                    }
+
+
+                }
+
+            }
+
+        }
+    }
 }
 
 // @media screen and (max-width:1250px){

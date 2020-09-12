@@ -197,11 +197,11 @@ window.addEventListener("load", () => {
         .getElementsByClassName("contenedor-hamburguer")[0]
         .classList.add("contenedor-hamburguer-scroll");
     } else {
-      document.getElementsByTagName("nav")[0].style.top = "-100px";
+      document.getElementsByTagName("nav")[0].style.top = "-130px";
     }
 
     if (desplazamientoActual < 676 && desplazamientoActual !== 0) {
-      document.getElementsByTagName("nav")[0].style.top = "-100px";
+      document.getElementsByTagName("nav")[0].style.top = "-130px";
     }
 
     ubicacionPrincipal = desplazamientoActual;
