@@ -406,13 +406,29 @@ imagen.forEach((elemento) => {
     if (sema) {
       return
     } else {
-      evento.toElement.parentElement.classList.toggle("contenedor-imagen-ver-pelis-hover")
-      evento.toElement.parentElement.previousElementSibling.classList.toggle("contenedor-textos-ver-pelis-hover")
-      evento.toElement.parentElement.nextElementSibling.classList.toggle("enlaces-ver-pelis-hover")
+      evento.target.parentElement.classList.toggle("contenedor-imagen-ver-pelis-hover")
+      evento.target.parentElement.previousElementSibling.classList.toggle("contenedor-textos-ver-pelis-hover")
+      evento.target.parentElement.nextElementSibling.classList.toggle("enlaces-ver-pelis-hover")
       sema = true
     }
-    console.log(evento.toElement.parentElement.nextElementSibling)
+    
+    // console.log(evento.target.parentElement.nextElementSibling)
   });
+  elemento.addEventListener("click", (evento) => {
+    sema = false
+    if (sema) {
+      return
+    } else {
+      evento.target.parentElement.classList.toggle("contenedor-imagen-ver-pelis-hover")
+      evento.target.parentElement.previousElementSibling.classList.toggle("contenedor-textos-ver-pelis-hover")
+      evento.target.parentElement.nextElementSibling.classList.toggle("enlaces-ver-pelis-hover")
+      sema = true
+    }
+    // console.log(evento.target.parentElement.nextElementSibling)
+  });
+
+  //* lo hice con toElement en lugar de target pero mozilla no lo reconoce
+
 });
 
 // TODO:STUB ANIMACION SOBRE GHIBLI
@@ -432,3 +448,27 @@ botonSiguiente.addEventListener("click", (evento) => {
     botonSiguiente.innerHTML = "Siguiente";
   }
 });
+
+// TODO:STUB BOTON LEER MAS KAIOSAMA RESPONSIVE
+
+let botonMas = document.querySelectorAll(".boton-contenedor-p");
+// kaisama = document.getElementsByClassName("contenedor-imagen-ver-pelis")
+botonMas.forEach((elemento) => {
+  elemento.addEventListener("click", (evento) => {
+    kaiosama = evento.target.parentElement.parentElement;
+    console.log(kaiosama)
+    kaiosama.classList.toggle("kaiosama-active")
+    evento.target.classList.remove("transformacion")
+    setTimeout(() => {
+      if (evento.target.innerHTML == "Mas") {
+        evento.target.classList.add("transformacion")
+        evento.target.innerHTML = "Menos";
+      } else {
+        evento.target.classList.add("transformacion")
+        evento.target.innerHTML = "Mas";
+      }
+    }, 10);
+  });
+});
+
+

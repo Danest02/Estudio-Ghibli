@@ -231,6 +231,7 @@ body {
                             justify-content: center;
                             max-width: 55%;
                             min-width: 50%;
+
                             height: 500px;
                             overflow: hidden;
                             border: 1px solid deeppink;
@@ -269,7 +270,6 @@ body {
                             .texto-2,
                             .texto-3 {
                                 transition: 1s all ease-out;
-
 
                                 p {
                                     padding: 0 0 30px 10px;
@@ -438,6 +438,7 @@ body {
                             position: relative;
 
                             .portada {
+                                overflow: hidden;
                                 .img-pelicula {
                                     // max-height: 408px;
                                     // max-width: 288px;
@@ -772,6 +773,8 @@ body {
                         height: 180px;
                         box-shadow: 0 0 9px 0 rgba(0, 0, 0, .5);
                         background: white;
+                        transition:  transform 1s;
+
 
                         .contenedor-imagen-kaiosama {
                             height: 180px;
@@ -799,8 +802,9 @@ body {
                             flex-direction: column;
                             padding: 3rem 2rem 1.5rem;
                             overflow: hidden;
-                            transition: padding 1s;
+                            transition: color 1s;
                             position: relative;
+                            transition: padding 1s;
 
                             // background:  blue;
                             h3 {
@@ -811,6 +815,9 @@ body {
                                 top: 0;
                                 transition: transform 1s, opacity .3s .3s;
                                 // transition: opacity 1s .5s ease-in;
+                            }
+                            .boton-contenedor-p{
+                                display: none;
                             }
 
                             .contenedor-p {
@@ -970,7 +977,7 @@ body {
                         height: 50px;
                         color: $color1;
                         cursor: pointer;
-                        transition: .3s ease all;
+                        transition: all .3s ease;
                         outline: none;
 
                         &:hover {
@@ -1003,7 +1010,7 @@ body {
                     .contenedor-frases {
                         width: 85%;
                         overflow: hidden;
-
+                        
                         .frases::-webkit-scrollbar {
                             display: none;
                         }
@@ -1012,6 +1019,8 @@ body {
                             scroll-behavior: smooth;
                             overflow: scroll;
                             display: flex;
+                            // * para mozilla
+                            scrollbar-width: none;
                             // overflow: hidden;
                             // scroll-snap-type: x proximity;
                             -ms-scroll-snap-type: x mandatory;
@@ -1061,13 +1070,13 @@ body {
                                             color: rgba(0, 0, 0, .8);
                                             font-weight: 300;
                                             font-style: oblique;
-                                            font-size: 16px;
+                                            font-size: 1rem;
                                         }
 
                                         .parrafo-frase {
                                             font-style: italic;
                                             font-weight: 500;
-                                            font-size: 20px;
+                                            font-size: 1.5rem;
                                             padding-bottom: 5px;
                                             color: $color3;
                                             // span{
@@ -1091,15 +1100,19 @@ body {
 
         .seccion-ver-pelis {
             background: #f2f2f2;
+                    background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../../galeria/ghibli3.3.jpg);
+                    background-position: 30%;
+                    background-size: cover  ;
+
             padding-bottom: 3.5rem;
 
             .ver-pelis {
                 .pelis-cont {
                     display: flex;
                     // width: 100%;
-                    justify-content: space-evenly;
+                    justify-content: space-between;
                     flex-wrap: wrap;
-                    // align-items: center;
+                    // align-items: center
                     margin-bottom: 7.5rem;
                     margin-top: 100px;
                     // border: 1px solid red;
@@ -1207,7 +1220,7 @@ body {
                             overflow: hidden;
                             border-radius: 50%;
                             box-shadow: 0 0 9px 0 rgba(0, 0, 0, .5);
-                            transition: all .5s ease-in-out;
+                            transition: all .5s  ease-in-out;
 
                             .imagen-ver-pelis {
                                 height: 100%;
