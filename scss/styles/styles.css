@@ -165,6 +165,37 @@
   max-width: 100%;
 }
 
+.background-before, body main .seccion-kaiosamas-ghibli:before, body main .adios .contenedor-video:before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.background-linear-gradient-image {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.5))), url(../../galeria/fondo4.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(../../galeria/fondo4.png);
+}
+
+.scrollbar-none, body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases, body main .historia .contenedor-texto-historia .texto-historia {
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.scrollbar-none::-webkit-scrollbar, body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases::-webkit-scrollbar, body main .historia .contenedor-texto-historia .texto-historia::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-none::-webkit-scrollbar-track, body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases::-webkit-scrollbar-track, body main .historia .contenedor-texto-historia .texto-historia::-webkit-scrollbar-track {
+  display: none;
+}
+
+.scrollbar-none::-webkit-scrollbar-thumb, body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases::-webkit-scrollbar-thumb, body main .historia .contenedor-texto-historia .texto-historia::-webkit-scrollbar-thumb {
+  display: none;
+}
+
 /* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -1328,13 +1359,7 @@ body main .seccion-kaiosamas-ghibli {
 }
 
 body main .seccion-kaiosamas-ghibli:before {
-  content: ' ';
-  position: absolute;
   background-color: rgba(255, 255, 255, 0.8);
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
 
 body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli {
@@ -1646,17 +1671,12 @@ body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contened
   overflow: hidden;
 }
 
-body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases::-webkit-scrollbar {
-  display: none;
-}
-
 body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases {
   scroll-behavior: smooth;
   overflow: scroll;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  scrollbar-width: none;
   -ms-scroll-snap-type: x mandatory;
   scroll-snap-type: x mandatory;
 }
@@ -1735,7 +1755,7 @@ body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contened
 body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases .contenedor-frase .frase .contenido-texto .parrafo-frase {
   font-style: italic;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding-bottom: 5px;
   color: #409ad6;
 }
@@ -1880,8 +1900,8 @@ body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-imagen-ver
   border-radius: 50%;
   -webkit-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.5);
-  -webkit-transition: all .5s  ease-in-out;
-  transition: all .5s  ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-imagen-ver-pelis .imagen-ver-pelis {
@@ -1924,6 +1944,67 @@ body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .enlaces-ver-pelis-hov
 
 body main .seccion-ver-pelis .ver-pelis .pelis-cont .animeflv img {
   background: #9da1a4;
+}
+
+body main .historia .contenedor-texto-historia {
+  height: 370px;
+  width: 70%;
+  background-color: #fff;
+  margin-top: 3.5rem;
+  margin-bottom: 7rem;
+}
+
+body main .historia .contenedor-texto-historia .texto-historia {
+  height: inherit;
+}
+
+body main .historia .contenedor-texto-historia .texto-historia .parrafo-historia {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+body main .adios {
+  position: relative;
+}
+
+body main .adios .contenedor-video {
+  max-width: 100%;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+body main .adios .contenedor-video video {
+  top: -20px;
+  z-index: -10;
+  position: absolute;
+  min-width: 100%;
+}
+
+body main .adios .contenedor-video:before {
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(rgba(255, 255, 255, 0.5)), to(rgba(0, 0, 0, 0.8)));
+  background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.8));
+}
+
+body main .adios .contenedor-video .contenedor-texto-adios {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .adios .contenedor-video .contenedor-texto-adios .texto-adios {
+  position: relative;
+  color: #fff;
+  z-index: 1000;
+  font-size: 5rem;
 }
 
 body main footer {

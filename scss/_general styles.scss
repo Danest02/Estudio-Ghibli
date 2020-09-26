@@ -22,7 +22,8 @@ a {
 p {
     font-family: $lato;
 }
-img{
+
+img {
     max-width: 100%;
 }
 
@@ -346,6 +347,7 @@ body {
                         }
 
                         .contenido-textos {
+
                             // overflow: hidden;
                             .texto-1 {
                                 transform: translateY(-150%);
@@ -439,6 +441,7 @@ body {
 
                             .portada {
                                 overflow: hidden;
+
                                 .img-pelicula {
                                     // max-height: 408px;
                                     // max-width: 288px;
@@ -720,14 +723,13 @@ body {
             background-size: cover;
             position: relative;
 
+            // @include background-before {
+            //     background-color: rgba(255, 255, 255, .8);
+            // }
+
             &:before {
-                content: ' ';
-                position: absolute;
+                @extend .background-before;
                 background-color: rgba(255, 255, 255, .8);
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
             }
 
             .contenedor-kaiosamas-ghibli {
@@ -773,7 +775,7 @@ body {
                         height: 180px;
                         box-shadow: 0 0 9px 0 rgba(0, 0, 0, .5);
                         background: white;
-                        transition:  transform 1s;
+                        transition: transform 1s;
 
 
                         .contenedor-imagen-kaiosama {
@@ -816,7 +818,8 @@ body {
                                 transition: transform 1s, opacity .3s .3s;
                                 // transition: opacity 1s .5s ease-in;
                             }
-                            .boton-contenedor-p{
+
+                            .boton-contenedor-p {
                                 display: none;
                             }
 
@@ -858,27 +861,34 @@ body {
 
                             }
                         }
-                        .active-boton-leer-mas{
+
+                        .active-boton-leer-mas {
                             padding: 1rem 2rem .5rem;
-                            h3{
+
+                            h3 {
                                 transform: translateY(-38px);
                                 opacity: 0;
                                 margin-bottom: 0;
                             }
-                            .contenedor-p{
+
+                            .contenedor-p {
                                 overflow-y: scroll;
+
                                 &::-webkit-scrollbar {
-                                    display: none;   
+                                    display: none;
                                 }
+
                                 &::-webkit-scrollbar-track {
                                     display: none;
                                 }
-                                &::-webkit-scrollbar-thumb{
+
+                                &::-webkit-scrollbar-thumb {
                                     background: #111;
                                     display: none;
                                 }
                             }
-                            .contenedor-boton-leer-mas{
+
+                            .contenedor-boton-leer-mas {
                                 bottom: 0;
                             }
                         }
@@ -1010,18 +1020,16 @@ body {
                     .contenedor-frases {
                         width: 85%;
                         overflow: hidden;
-                        
-                        .frases::-webkit-scrollbar {
-                            display: none;
-                        }
+
+                        // .frases::-webkit-scrollbar {
+                        //     display: none;
+                        // }
 
                         .frases {
                             scroll-behavior: smooth;
                             overflow: scroll;
                             display: flex;
-                            // * para mozilla
-                            scrollbar-width: none;
-                            // overflow: hidden;
+                            @extend .scrollbar-none;
                             // scroll-snap-type: x proximity;
                             -ms-scroll-snap-type: x mandatory;
                             scroll-snap-type: x mandatory;
@@ -1076,7 +1084,7 @@ body {
                                         .parrafo-frase {
                                             font-style: italic;
                                             font-weight: 500;
-                                            font-size: 1.5rem;
+                                            font-size: 1.2rem;
                                             padding-bottom: 5px;
                                             color: $color3;
                                             // span{
@@ -1100,9 +1108,9 @@ body {
 
         .seccion-ver-pelis {
             background: #f2f2f2;
-                    background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../../galeria/ghibli3.3.jpg);
-                    background-position: 30%;
-                    background-size: cover  ;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../../galeria/ghibli3.3.jpg);
+            background-position: 30%;
+            background-size: cover;
 
             padding-bottom: 3.5rem;
 
@@ -1220,7 +1228,7 @@ body {
                             overflow: hidden;
                             border-radius: 50%;
                             box-shadow: 0 0 9px 0 rgba(0, 0, 0, .5);
-                            transition: all .5s  ease-in-out;
+                            transition: all .5s ease-in-out;
 
                             .imagen-ver-pelis {
                                 height: 100%;
@@ -1281,6 +1289,85 @@ body {
                     }
                 }
             }
+        }
+
+        .historia {
+            // display: none;
+
+
+
+            .contenedor-texto-historia {
+                // position: relative;
+
+                height: 370px;
+                width: 70%;
+                background-color: #fff;
+                margin-top: 3.5rem;
+                margin-bottom: 7rem;
+                // &:before{
+                //     content: " ";
+                //     position: absolute;
+                //     top: 0;
+                //     left: 0;
+                //     right: 0;
+                //     bottom: 0;
+                //     background: linear-gradient( rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.9));
+
+                // }
+
+
+
+                .texto-historia {
+
+                    height: inherit;
+                    @extend .scrollbar-none;
+                    .parrafo-historia {
+
+                        text-align: center;
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
+
+        .adios {
+            position: relative;
+
+            .contenedor-video {
+                max-width: 100%;
+                height: 400px;
+                // min-height: 250px;
+                position: relative;
+                overflow: hidden;
+
+                video {
+                    top: -20px;
+                    z-index: -10;
+                    position: absolute;
+                    min-width: 100%;
+                }
+
+                &:before {
+                    @extend .background-before;
+                    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, .5), rgba(0, 0, 0, .8));
+                }
+
+                .contenedor-texto-adios {
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .texto-adios {
+                        position: relative;
+                        color: #fff;
+                        z-index: 1000;
+                        font-size: 5rem;
+                    }
+                }
+            }
+
         }
 
         footer {
