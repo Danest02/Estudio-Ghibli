@@ -7,6 +7,7 @@
   text-decoration: none;
   border-radius: 1.25em;
   border: 1px solid rgba(0, 0, 0, 0.2);
+  outline: none;
   cursor: pointer;
 }
 
@@ -179,21 +180,33 @@
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(../../galeria/fondo4.png);
 }
 
-.scrollbar-none, body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases, body main .historia .contenedor-texto-historia .texto-historia {
+.scrollbar-none, body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases {
   overflow-y: scroll;
   scrollbar-width: none;
 }
 
-.scrollbar-none::-webkit-scrollbar, body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases::-webkit-scrollbar, body main .historia .contenedor-texto-historia .texto-historia::-webkit-scrollbar {
+.scrollbar-none::-webkit-scrollbar, body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases::-webkit-scrollbar {
   display: none;
 }
 
-.scrollbar-none::-webkit-scrollbar-track, body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases::-webkit-scrollbar-track, body main .historia .contenedor-texto-historia .texto-historia::-webkit-scrollbar-track {
+.scrollbar-none::-webkit-scrollbar-track, body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases::-webkit-scrollbar-track {
   display: none;
 }
 
-.scrollbar-none::-webkit-scrollbar-thumb, body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases::-webkit-scrollbar-thumb, body main .historia .contenedor-texto-historia .texto-historia::-webkit-scrollbar-thumb {
+.scrollbar-none::-webkit-scrollbar-thumb, body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases::-webkit-scrollbar-thumb {
   display: none;
+}
+
+.center-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -1946,21 +1959,46 @@ body main .seccion-ver-pelis .ver-pelis .pelis-cont .animeflv img {
   background: #9da1a4;
 }
 
+body main .historia {
+  margin-bottom: 7rem;
+}
+
 body main .historia .contenedor-texto-historia {
+  -webkit-transition: height 1s;
+  transition: height 1s;
   height: 370px;
+  margin: 3.5rem auto;
   width: 70%;
   background-color: #fff;
-  margin-top: 3.5rem;
-  margin-bottom: 7rem;
 }
 
 body main .historia .contenedor-texto-historia .texto-historia {
   height: inherit;
 }
 
-body main .historia .contenedor-texto-historia .texto-historia .parrafo-historia {
+body main .historia .contenedor-texto-historia .texto-historia .contenedor-parrafo-historia .parrafo-historia {
   text-align: center;
   font-size: 1.1rem;
+}
+
+body main .historia .contenedor-texto-historia-active {
+  height: 870px;
+  min-height: -webkit-max-content;
+  min-height: -moz-max-content;
+  min-height: max-content;
+}
+
+body main .historia .contenedor-boton-historia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .historia .contenedor-boton-historia .boton-historia {
+  margin: 0 auto;
 }
 
 body main .adios {

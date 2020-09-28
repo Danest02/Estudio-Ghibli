@@ -471,4 +471,25 @@ botonMas.forEach((elemento) => {
   });
 });
 
+// TODO:STUB BOTON LEER MAS HISTORIA
+let botonHistoria = document.getElementById("boton-historia"),
+parrafoHistoria = document.getElementById("parrafo-historia"),
+contenedor = document.getElementsByClassName("contenedor-texto-historia-active"),
+
+heightParrafoHistoria = parrafoHistoria.style.maxHeight
+console.log(heightParrafoHistoria)
+window.addEventListener("resize", function () {
+  let heightParrafoHistoria = parrafoHistoria.clientHeight
+  })
+
+console.log(heightParrafoHistoria)
+botonHistoria.addEventListener("click", (evento) => {
+  
+  parrafoHistoria.style.height = heightParrafoHistoria;
+  parrafoHistoria.classList.toggle("contenedor-texto-historia-active")
+  console.log(heightParrafoHistoria)
+  console.log(contenedor)
+  
+})
+
 

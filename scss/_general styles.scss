@@ -99,8 +99,8 @@ body {
                 display: none;
 
                 .hamburguer {
-                    font-size: 2.5rem;
-                    padding: 1.5rem 1.55rem;
+                    // font-size: 2.5rem;
+                    // padding: 1.5rem 1.55rem;
 
                     &:active {
                         color: $color1;
@@ -1293,39 +1293,46 @@ body {
 
         .historia {
             // display: none;
+            margin-bottom: 7rem;
 
 
 
             .contenedor-texto-historia {
-                // position: relative;
-
+                transition: height 1s;
                 height: 370px;
+                // max-height: auto;
+                // min-height: 370px;
+
+                margin: 3.5rem auto;
                 width: 70%;
                 background-color: #fff;
-                margin-top: 3.5rem;
-                margin-bottom: 7rem;
-                // &:before{
-                //     content: " ";
-                //     position: absolute;
-                //     top: 0;
-                //     left: 0;
-                //     right: 0;
-                //     bottom: 0;
-                //     background: linear-gradient( rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.9));
-
-                // }
-
-
 
                 .texto-historia {
-
                     height: inherit;
-                    @extend .scrollbar-none;
-                    .parrafo-historia {
 
-                        text-align: center;
-                        font-size: 1.1rem;
+                    .contenedor-parrafo-historia {
+                        .parrafo-historia {
+
+                            text-align: center;
+                            font-size: 1.1rem;
+                        }
+
                     }
+                }
+            }
+            .contenedor-texto-historia-active{
+                height: 870px;
+                min-height: max-content;
+
+            }
+
+            .contenedor-boton-historia {
+                display: flex;
+                justify-content: center;
+
+                .boton-historia {
+                    margin: 0 auto;
+                    
                 }
             }
         }

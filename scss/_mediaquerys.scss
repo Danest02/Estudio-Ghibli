@@ -528,12 +528,30 @@
                 }
 
                 .contenedor-hamburguer {
-                    display: block;
                     cursor: pointer;
+                    @extend .center-flex;
                     transition: color 0.5s ease-in;
                     position: absolute;
                     top: 2rem;
                     right: 2rem;
+                    .hamburguer{
+                        background-color: #000;
+                        width: 40px;
+                        height: 5px;
+                        border-radius: 2.5px;
+                        position: relative;
+                        &:before, &:after{
+                            content: " ";
+                            position: absolute;
+                            display: block;
+                            width: 40px;
+                            height: 5px;
+                            border-radius: 2.5px;
+                            background-color: #000;
+                            top: -0.7rem;
+
+                        }
+                    }
 
                     &:active {
                         transform: scale(1.05);
