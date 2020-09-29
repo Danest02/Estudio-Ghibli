@@ -71,41 +71,10 @@ body {
                     font-weight: 500;
                     list-style: none;
 
-                    // &:after {
-                    //     content: "";
-                    //     margin-top: 3px;
-                    //     display: block;
-                    //     position: absolute;
-                    //     width: 0;
-                    //     height: 3px;
-                    //     left: 50%;
-                    //     background: #fff;
-                    //     transition: width .3s ease-in-out, left .3s ease-in-out;
-                    //     // * width en 100% se elimina left se usa transform
-                    //     // transform: translateX(-100%);
-                    // }
-
-                    // &:hover:after {
-                    //     width: 100%;
-                    //     // transform: translateX(0);
-                    //     left: 0;
-                    // }
                 }
             }
-
-            .contenedor-hamburguer {
+            .contenedor-hamburguer{
                 display: none;
-                border-radius: 50%;
-                display: none;
-
-                .hamburguer {
-                    // font-size: 2.5rem;
-                    // padding: 1.5rem 1.55rem;
-
-                    &:active {
-                        color: $color1;
-                    }
-                }
             }
         }
 
@@ -114,7 +83,8 @@ body {
             color: $color3;
             background: #fff;
             box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .2);
-            transition: ease-in-out 0.5s;
+            transition: transform ease-in-out 0.5s;
+
 
             .enlaces {
                 margin-right: 3.5rem;
@@ -133,6 +103,16 @@ body {
                     color: $color1;
                 }
             }
+        }
+        .menu-top{
+            // transition: translate 1s;
+            
+            // top: -130px;
+            transform: translateY(-130px);
+        }
+        .menu-top-active{
+            transform: translateY(0px);
+
         }
 
         .textos-header {

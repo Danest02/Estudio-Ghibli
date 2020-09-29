@@ -33,7 +33,8 @@ $(".categoria-galeria").click(function () {
   }
 });
 
-// TODO:STUB Desplazarse enlaces menu
+// TODO:STUB MARCADOR SECCIONES ENLACES MENU
+
 let sobreGhibli = $("#seccion-sobre-ghibli").offset().top,
   peliculas = $("#seccion-peliculas").offset().top,
   galeria = $("#seccion-galeria").offset().top,
@@ -97,6 +98,18 @@ $(window).scroll(function () {
     $("#enlace-ver-pelis").removeClass("foco");
   }
 });
+
+// TODO:STUB DESPLAZARSE SECCIONES ENLACES MENU
+
+function hamburguer(){
+  $("#enlaces").removeClass("menudos")
+  $("#hamburguer").removeClass("hamburguer-simple")
+  $("#contenedor-hamburguer").removeClass("contenedor-hamburguer-active")
+  $("#menu").removeClass("menu-top")
+  $("#menu").removeClass("menu-top-active")
+
+}
+
 $("#enlace-sobre-ghibli").on("click", function (e) {
   e.preventDefault();
   $("html, body").animate({
@@ -104,6 +117,7 @@ $("#enlace-sobre-ghibli").on("click", function (e) {
     },
     700
   );
+  hamburguer()
 });
 $("#enlace-peliculas").on("click", function (e) {
   e.preventDefault();
@@ -112,6 +126,7 @@ $("#enlace-peliculas").on("click", function (e) {
     },
     700
   );
+  hamburguer()
 });
 $("#enlace-galeria").on("click", function (e) {
   e.preventDefault();
@@ -120,6 +135,7 @@ $("#enlace-galeria").on("click", function (e) {
     },
     700
   );
+  hamburguer()
 });
 $("#enlace-kaiosamas").on("click", function (e) {
   e.preventDefault();
@@ -128,6 +144,7 @@ $("#enlace-kaiosamas").on("click", function (e) {
     },
     700
   );
+  hamburguer()
 });
 $("#enlace-frases").on("click", function (e) {
   e.preventDefault();
@@ -136,6 +153,7 @@ $("#enlace-frases").on("click", function (e) {
     },
     700
   );
+  hamburguer()
 });
 $("#enlace-ver-pelis").on("click", function (e) {
   e.preventDefault();
@@ -144,6 +162,7 @@ $("#enlace-ver-pelis").on("click", function (e) {
     },
     700
   );
+  hamburguer()
 });
 
 // ANCHOR Vanilla
@@ -184,24 +203,49 @@ window.addEventListener("load", () => {
     keyboard: true,
   });
 
+
+  // TODO:STUB HAMBURGUER
+  let enlaces = document.getElementById("enlaces")
+  let hamburguer = document.getElementById("hamburguer")
+  document.getElementById("contenedor-hamburguer")
+    .addEventListener("click", function () {
+      var semaforoBurguer = true
+      enlaces.classList.toggle("menudos");
+      enlaces.classList.toggle("animation-enlace");
+      hamburguer.classList.toggle("hamburguer-simple");
+      document.getElementById("contenedor-hamburguer").classList.toggle("contenedor-hamburguer-active");
+      document.getElementById("menu").classList.remove("menu-top");
+      document.getElementById("menu").classList.toggle("menu-top-active");
+
+
+      // if (semaforoBurguer == true) {
+      //   window.addEventListener('scroll', function(){
+      //     document.getElementsByTagName("nav")[0].style.top = "0px";
+
+      //   });
+      // }else{
+      //   document.getElementsByTagName("nav")[0].style.top = "-130px";
+      // }
+      // semaforoBurguer = false
+    });
+
+
   // TODO:STUB SCROLL
 
   let ubicacionPrincipal = window.pageYOffset;
-  window.addEventListener("scroll", function () {
+  window.addEventListener("scroll", function scrollNav() {
     let desplazamientoActual = window.pageYOffset;
 
     if (ubicacionPrincipal >= desplazamientoActual) {
-      document.getElementsByTagName("nav")[0].style.top = "0px";
-      document.getElementsByTagName("nav")[0].classList.add("menu-scroll");
-      document
-        .getElementsByClassName("contenedor-hamburguer")[0]
-        .classList.add("contenedor-hamburguer-scroll");
+      document.getElementById("menu").classList.remove("menu-top");
+      document.getElementById("menu").classList.add("menu-scroll");
+      document.getElementById("contenedor-hamburguer").classList.add("contenedor-hamburguer-scroll");
     } else {
-      document.getElementsByTagName("nav")[0].style.top = "-130px";
+      document.getElementById("menu").classList.add("menu-top");
     }
 
     if (desplazamientoActual < 676 && desplazamientoActual !== 0) {
-      document.getElementsByTagName("nav")[0].style.top = "-130px";
+      document.getElementById("menu").classList.add("menu-top");
     }
 
     ubicacionPrincipal = desplazamientoActual;
@@ -209,22 +253,10 @@ window.addEventListener("load", () => {
 
   window.addEventListener("scroll", function () {
     if (window.pageYOffset == 0) {
-      document.getElementsByTagName("nav")[0].classList.remove("menu-scroll");
-      document
-        .getElementById("contenedor-hamburguer")
-        .classList.remove("contenedor-hamburguer-scroll");
+      document.getElementById("menu").classList.remove("menu-scroll");
+      document.getElementById("contenedor-hamburguer").classList.remove("contenedor-hamburguer-scroll");
     }
   });
-
-  // Menu
-  let enlaces = document.querySelectorAll(".enlaces")[0],
-    semaforo = true;
-
-  document
-    .querySelectorAll(".contenedor-hamburguer")[0]
-    .addEventListener("click", function () {
-      enlaces.classList.toggle("menudos");
-    });
 
   // TODO:STUB CAROUSEL FRASES
 
@@ -233,12 +265,12 @@ window.addEventListener("load", () => {
     frase = document.querySelectorAll(".contenedor-frase"),
     tamañoWidht = frase[0].clientWidth,
     scroll = contenedor.offsetWidth
-    flechaIzquierda = document.getElementById("flecha-izquierda"),
+  flechaIzquierda = document.getElementById("flecha-izquierda"),
     flechaDerecha = document.getElementById("flecha-derecha");
-    intervalo = 5000;
+  intervalo = 5000;
   window.addEventListener("resize", function () {
     scroll = contenedor.offsetWidth
-    })
+  })
   contenedor.scrollLeft = scroll
 
   // const transform = () => contenedor.style.transform = "translate(" + -tamañoWidht * contador + "px"
@@ -411,7 +443,7 @@ imagen.forEach((elemento) => {
       evento.target.parentElement.nextElementSibling.classList.toggle("enlaces-ver-pelis-hover")
       sema = true
     }
-    
+
     // console.log(evento.target.parentElement.nextElementSibling)
   });
   elemento.addEventListener("click", (evento) => {
@@ -473,23 +505,21 @@ botonMas.forEach((elemento) => {
 
 // TODO:STUB BOTON LEER MAS HISTORIA
 let botonHistoria = document.getElementById("boton-historia"),
-parrafoHistoria = document.getElementById("parrafo-historia"),
-contenedor = document.getElementsByClassName("contenedor-texto-historia-active"),
+  parrafoHistoria = document.getElementById("parrafo-historia"),
+  contenedor = document.getElementsByClassName("contenedor-texto-historia-active"),
 
-heightParrafoHistoria = parrafoHistoria.style.maxHeight
+  heightParrafoHistoria = parrafoHistoria.style.maxHeight
 console.log(heightParrafoHistoria)
 window.addEventListener("resize", function () {
   let heightParrafoHistoria = parrafoHistoria.clientHeight
-  })
+})
 
 console.log(heightParrafoHistoria)
 botonHistoria.addEventListener("click", (evento) => {
-  
+
   parrafoHistoria.style.height = heightParrafoHistoria;
   parrafoHistoria.classList.toggle("contenedor-texto-historia-active")
   console.log(heightParrafoHistoria)
   console.log(contenedor)
-  
+
 })
-
-

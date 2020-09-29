@@ -474,14 +474,14 @@
             .menu {
                 padding: 0 10px;
 
+
                 .enlaces {
                     position: fixed;
                     // // background: #FF0099;  /* fallback for old browsers */
                     background: white;
                     // background: red;
-                    top: 0;
+                    top: -2px;
                     right: 0;
-                    height: 100vh;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -492,7 +492,9 @@
                     padding: 5rem 0;
                     transition: ease-in-out 0.5s;
                     width: 70%;
+                    height: 100vh;
                     box-shadow: -15px 0px 10px rgba(0, 0, 0, .2);
+                    margin: 0;
 
                     .enlace {
                         color: black;
@@ -506,6 +508,7 @@
                         outline: none;
                         cursor: pointer;
 
+
                         &:hover {
                             transition: all 0.4s linear;
                             background: $color1;
@@ -514,6 +517,8 @@
 
                         &:active {
                             transform: scale(.95);
+                            animation: opacity 1s;
+
                         }
 
                         &:after {
@@ -525,48 +530,24 @@
                 .menudos {
                     -webkit-clip-path: circle(150% at 100% 0);
                     clip-path: circle(150% at 100% 0);
+                    height: 105vh;
+
                 }
 
                 .contenedor-hamburguer {
-                    cursor: pointer;
-                    @extend .center-flex;
-                    transition: color 0.5s ease-in;
-                    position: absolute;
+                    display: flex;
+                    position: fixed;
                     top: 2rem;
                     right: 2rem;
-                    .hamburguer{
-                        background-color: #000;
-                        width: 40px;
-                        height: 5px;
-                        border-radius: 2.5px;
-                        position: relative;
-                        &:before, &:after{
-                            content: " ";
-                            position: absolute;
-                            display: block;
-                            width: 40px;
-                            height: 5px;
-                            border-radius: 2.5px;
-                            background-color: #000;
-                            top: -0.7rem;
+                }
 
-                        }
-                    }
+                .animation-enlace{
+                    .enlace{
+                        animation: aparecer 2s;
 
-                    &:active {
-                        transform: scale(1.05);
                     }
                 }
 
-                .contenedor-hamburguer-scroll {
-                    background: white;
-                    box-shadow: 0 0 9px 0 rgba(0, 0, 0, .5);
-                }
-
-                .contenedor-hamburguer-dos {
-                    background: none;
-                    box-shadow: none;
-                }
             }
 
             .menu-scroll {
