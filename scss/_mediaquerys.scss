@@ -102,7 +102,7 @@
 }
 
 
-@include media(1020px) {
+@include media(1024px) {
     body {
 
         //    font-family: $maquina;
@@ -329,6 +329,11 @@
 
                         }
                     }
+                }
+            }
+            .adios{
+                .contenedor-video{
+                    max-height: 400px;
                 }
             }
         }

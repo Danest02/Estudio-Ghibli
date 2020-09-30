@@ -332,7 +332,7 @@
   display: none;
 }
 
-.center-flex {
+.center-flex, body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .contenedor-sobre-ghibli-2 .contenido-textos .texto-3 .contenedor-boton-leer-mas-historia {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -342,6 +342,21 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.parallax, body header, body main .seccion-kaiosamas-ghibli {
+  background-attachment: fixed;
+  max-width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.position-absolute, body main .adios .contenedor-video .contenedor-texto-adios {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 /* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -716,7 +731,6 @@ body {
 }
 
 body header {
-  width: 100%;
   height: 98vh;
   position: relative;
   display: -webkit-box;
@@ -727,9 +741,7 @@ body header {
   background: -webkit-gradient(linear, left top, right top, from(rgba(72, 173, 240, 0.1)), to(rgba(53, 127, 176, 0.2))), url(../../galeria/ghibli1.png);
   background: linear-gradient(to right, rgba(72, 173, 240, 0.1), rgba(53, 127, 176, 0.2)), url(../../galeria/ghibli1.png);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background-size: cover;
   background-position: top center;
-  background-attachment: fixed;
 }
 
 body header .menu {
@@ -1029,6 +1041,16 @@ body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .contened
   -webkit-transform: translateX(200%);
           transform: translateX(200%);
   opacity: 0.5;
+}
+
+body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .contenedor-sobre-ghibli-2 .contenido-textos .texto-3 .contenedor-boton-leer-mas-historia {
+  width: 100%;
+}
+
+body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .contenedor-sobre-ghibli-2 .contenido-textos .texto-3 .contenedor-boton-leer-mas-historia .boton-leer-mas-historia {
+  color: #357fb0;
+  cursor: pointer;
+  display: block;
 }
 
 body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .translate-sobre-ghibli-2 {
@@ -1501,9 +1523,7 @@ body main .seccion-galeria .contenedor-boton-ver-mas .boton-ver-mas {
 }
 
 body main .seccion-kaiosamas-ghibli {
-  background: url(../../galeria/fondo2.png) no-repeat fixed;
-  width: 100%;
-  background-size: cover;
+  background: url(../../galeria/fondo2.png);
   position: relative;
 }
 
@@ -2137,22 +2157,19 @@ body main .historia .contenedor-boton-historia .boton-historia {
   margin: 0 auto;
 }
 
-body main .adios {
-  position: relative;
-}
-
 body main .adios .contenedor-video {
-  max-width: 100%;
-  height: 400px;
-  position: relative;
+  width: 100%;
   overflow: hidden;
+  max-height: 450px;
+  position: relative;
 }
 
 body main .adios .contenedor-video video {
-  top: -20px;
   z-index: -10;
-  position: absolute;
+  position: relative;
   min-width: 100%;
+  width: 100%;
+  max-width: 100%;
 }
 
 body main .adios .contenedor-video:before {
@@ -2172,12 +2189,12 @@ body main .adios .contenedor-video .contenedor-texto-adios {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 10;
 }
 
 body main .adios .contenedor-video .contenedor-texto-adios .texto-adios {
   position: relative;
   color: #fff;
-  z-index: 1000;
   font-size: 5rem;
 }
 
@@ -2290,7 +2307,7 @@ body main footer .titulo-final {
   }
 }
 
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 1024px) {
   body header .menu {
     padding-right: 0;
   }
@@ -2443,6 +2460,9 @@ body main footer .titulo-final {
     opacity: 1;
     height: 500px;
     margin: 0;
+  }
+  body main .adios .contenedor-video {
+    max-height: 400px;
   }
 }
 

@@ -41,6 +41,7 @@ let sobreGhibli = $("#seccion-sobre-ghibli").offset().top,
   kaiosamas = $("#seccion-kaiosamas-ghibli").offset().top,
   frases = $("#frases-contenedor").offset().top,
   verPelis = $("#ver-pelis").offset().top;
+  historia = $("#historia").offset().top;
 window.addEventListener("resize", function () {
   let sobreGhibli = $("#seccion-sobre-ghibli").offset().top,
     peliculas = $("#seccion-peliculas").offset().top,
@@ -48,6 +49,8 @@ window.addEventListener("resize", function () {
     kaiosamas = $("#seccion-kaiosamas-ghibli").offset().top,
     frases = $("#frases-contenedor").offset().top,
     verPelis = $("#ver-pelis").offset().top;
+    historia = $("#historia").offset().top;
+
 });
 $(window).scroll(function () {
   if ($(document).scrollTop() >= sobreGhibli - 100) {
@@ -96,6 +99,22 @@ $(window).scroll(function () {
     $("#enlace-frases").removeClass("foco");
   } else {
     $("#enlace-ver-pelis").removeClass("foco");
+  }
+});
+$(window).scroll(function () {
+  if ($(document).scrollTop() >= verPelis - 300) {
+    $("#enlace-ver-pelis").addClass("foco");
+    $("#enlace-frases").removeClass("foco");
+  } else {
+    $("#enlace-ver-pelis").removeClass("foco");
+  }
+});
+$(window).scroll(function () {
+  if ($(document).scrollTop() >= historia - 300) {
+    $("#enlace-historia").addClass("foco");
+    $("#enlace-ver-pelis").removeClass("foco");
+  } else {
+    $("#enlace-historia").removeClass("foco");
   }
 });
 
@@ -159,6 +178,15 @@ $("#enlace-ver-pelis").on("click", function (e) {
   e.preventDefault();
   $("html, body").animate({
       scrollTop: verPelis,
+    },
+    700
+  );
+  hamburguer()
+});
+$(".enlace-historia").on("click", function (e) {
+  e.preventDefault();
+  $("html, body").animate({
+      scrollTop: historia,
     },
     700
   );
@@ -406,7 +434,7 @@ window.addEventListener("load", () => {
       "";
   });
 
-  // TODO LEER MAS
+  // TODO LEER MAS KAIOSAMAS
 
   let leer = document.querySelectorAll(".boton-leer-mas");
   leer.forEach((elemento) => {
@@ -426,6 +454,29 @@ window.addEventListener("load", () => {
     });
   });
 });
+
+// TODO:STUB BOTON LEER MAS KAIOSAMA RESPONSIVE
+
+let botonMas = document.querySelectorAll(".boton-contenedor-p");
+// kaisama = document.getElementsByClassName("contenedor-imagen-ver-pelis")
+botonMas.forEach((elemento) => {
+  elemento.addEventListener("click", (evento) => {
+    kaiosama = evento.target.parentElement.parentElement;
+    console.log(kaiosama)
+    kaiosama.classList.toggle("kaiosama-active")
+    evento.target.classList.remove("transformacion")
+    setTimeout(() => {
+      if (evento.target.innerHTML == "Mas") {
+        evento.target.classList.add("transformacion")
+        evento.target.innerHTML = "Menos";
+      } else {
+        evento.target.classList.add("transformacion")
+        evento.target.innerHTML = "Mas";
+      }
+    }, 10);
+  });
+});
+
 
 // TODO:STUB VER PELIS
 
@@ -481,27 +532,6 @@ botonSiguiente.addEventListener("click", (evento) => {
   }
 });
 
-// TODO:STUB BOTON LEER MAS KAIOSAMA RESPONSIVE
-
-let botonMas = document.querySelectorAll(".boton-contenedor-p");
-// kaisama = document.getElementsByClassName("contenedor-imagen-ver-pelis")
-botonMas.forEach((elemento) => {
-  elemento.addEventListener("click", (evento) => {
-    kaiosama = evento.target.parentElement.parentElement;
-    console.log(kaiosama)
-    kaiosama.classList.toggle("kaiosama-active")
-    evento.target.classList.remove("transformacion")
-    setTimeout(() => {
-      if (evento.target.innerHTML == "Mas") {
-        evento.target.classList.add("transformacion")
-        evento.target.innerHTML = "Menos";
-      } else {
-        evento.target.classList.add("transformacion")
-        evento.target.innerHTML = "Mas";
-      }
-    }, 10);
-  });
-});
 
 // TODO:STUB BOTON LEER MAS HISTORIA
 let botonHistoria = document.getElementById("boton-historia"),
@@ -516,10 +546,29 @@ window.addEventListener("resize", function () {
 
 console.log(heightParrafoHistoria)
 botonHistoria.addEventListener("click", (evento) => {
+  const yHistoria = window.scrollY - 2
+
 
   parrafoHistoria.style.height = heightParrafoHistoria;
   parrafoHistoria.classList.toggle("contenedor-texto-historia-active")
   console.log(heightParrafoHistoria)
   console.log(contenedor)
+  setTimeout(() => {
+    if (evento.target.innerHTML == "Leer mas") {
+      evento.target.classList.add("transformacion")
+      evento.target.innerHTML = "Leer menos";
+      console.log(yHistoria)
+      // setTimeout(() => {
+        
+      //   window.scroll(0, yHistoria)
+      // }, 100);
+
+      
+    } else {
+      evento.target.classList.add("transformacion")
+      evento.target.innerHTML = "Leer mas";
+    }
+  }, 10);
+
 
 })
