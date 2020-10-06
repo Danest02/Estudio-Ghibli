@@ -1,17 +1,24 @@
-doctype
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(name="viewport" content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible" content="ie=edge")
-        title Peliculas Estudio Ghibli
-        meta(name="description" content="Todas las peliculas del Estudio Ghibli")
-        meta(name="author" content="Daniel Botero")
-    
-
+extends templates/template.pug
+block body
     body
-        //- -const name= "Daniel"
-        //- p= ` ${name} daniel`
-     main
-        h1 hola mundo
+        header
+            nav.menu#menu
+                ul.enlaces#enlaces
+                    -const enlaces = ["Sobre-Ghibli","Peliculas","Imagenes","Creadores","Frases","Ver peliculas", "Historia",]
+                    each enlace in enlaces
+                        li( id="enlace-" + enlace, class="enlace borde-animado-centro ")
+            .contenedor-hamburguer#contenedor-hamburguer
+                .hamburguer#hamburguer
+            .textos-header
+                h1.titulo-textos-header El Maravilloso Mundo de Ghibli
+                h2.subtitulo-textos-header "¡Venga, vamos a reirnos para alejar a los fantasmas!"
+            .wave
+                svg(viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;")
+                    path(d="M0.00,49.99 C150.00,150.00 349.20,-49.99 500.00,49.99 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;")
+
+        main
+        //- NOTE SOBRE GHIBLI
+        section.seccion-sobre-ghibli#seccion-sobre-ghibli
+            .contenedor-sobre-ghibli.contenedor
+            h2.titulo Estudio Ghibli
+            .sobre-ghibli
