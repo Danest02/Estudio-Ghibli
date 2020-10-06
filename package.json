@@ -1,0 +1,29 @@
+{
+  "name": "pagina3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Danest02/Estudio-Ghibli.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Danest02/Estudio-Ghibli/issues"
+  },
+  "homepage": "https://github.com/Danest02/Estudio-Ghibli#readme",
+  "description": "",
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0"
+  },
+  "dependencies": {
+    "babel-register": "^6.26.0",
+    "pug": "^3.0.0"
+  }
+}
