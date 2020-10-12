@@ -3,18 +3,10 @@
     padding: 0;
     box-sizing: border-box;
     border: none !important;
-
 }
 
-//  NOTE usar @extend de sass para reutlizar en clases los estilos que se repiten
-// .transitionejemplo{
-//     transition: none;
-// }
-// .ejemplo{
-//     @extend transitionejemplo
-// }
+// *GENERALES
 
-// Inicialización
 a {
     text-decoration: none;
 }
@@ -27,6 +19,10 @@ img {
     max-width: 100%;
 }
 
+li {
+    list-style: none;
+}
+
 
 html {
     scroll-behavior: smooth;
@@ -36,122 +32,71 @@ body {
     font-family: $roboto;
 
     header {
-        height: 98vh;
+        background: #48aef0 url(../../galeria/ghibli-mobile-2.jpg);
+        background: linear-gradient(to right, rgba(72, 173, 240, 0.3), rgba(53, 127, 176, 0.4)), url(../../galeria/ghibli-mobile-2.jpg);
         position: relative;
-        display: flex;
-        // max-height: 50%;
-        background: #48aef0 url(../../galeria/ghibli1.png);
-        /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, rgba(72, 173, 240, 0.1), rgba(53, 127, 176, 0.2)), url(../../galeria/ghibli1.png);
-        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        background-position: top center;
+
+        @include background-before {
+            background: rgba(0, 0, 0, 0.2);
+
+        }
+
+        min-height: 100vh;
+        background-position: center;
+        background-size: cover;
         @extend .parallax;
+        overflow: hidden;
+        // @extend .center-flex;
 
         .menu {
-            width: 100%;
-            text-align: right;
-            padding: 30px 50px 0 0;
             position: fixed;
             z-index: 100;
 
-            .enlaces {
+            .contenedor-hamburguer {
                 display: flex;
-                justify-content: flex-end;
-
-                .enlace {
-                    -webkit-animation: opacity_scale 3s ease;
-                    animation: opacity_scale 3s ease;
-                    margin-left: 10px;
-                    position: relative;
-                    // padding: .5rem 0; es necesario
-                    color: #fff;
-                    cursor: pointer;
-                    font-weight: 500;
-                    list-style: none;
-
-                }
+                position: fixed;
+                top: 2rem;
+                right: 2rem;
             }
-            .contenedor-hamburguer{
-                display: none;
-            }
-        }
-
-        .menu-scroll {
-            padding: .7rem;
-            color: $color3;
-            background: #fff;
-            box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .2);
-            transition: transform ease-in-out 0.5s;
-
-
-            .enlaces {
-                margin-right: 3.5rem;
-
-                .enlace {
-                    color: #444;
-
-                    &:after {
-                        background: $color1;
-
-                    }
-                }
-
-                .foco {
-                    transition: .5s;
-                    color: $color1;
-                }
-            }
-        }
-        .menu-top{
-            // transition: translate 1s;
-            
-            // top: -130px;
-            transform: translateY(-130px);
-        }
-        .menu-top-active{
-            transform: translateY(0px);
-
         }
 
         .textos-header {
-            position: absolute;
-            display: flex;
-            top: 32%;
-            // height: 75%;
-            line-height: 1.5rem;
-            width: 100%;
-            justify-content: center;
+            @extend .position-absolute;
+            top: 15%;
+            width: 90%;
+
             flex-direction: column;
             text-align: center;
             -webkit-animation: opacity_scale 3s ease;
             animation: opacity_scale 3s ease;
 
             .titulo-textos-header {
-                font-size: 50px;
+                font-size: 2.5em;
                 color: #fff;
             }
 
             .subtitulo-textos-header {
+                font-size: 1.5em;
                 color: #fff;
                 font-weight: 300;
             }
         }
 
         .wave {
-            position: absolute;
+            // display: none;
             bottom: -5px;
-            width: 100%;
+            width: 150%;
             height: 150px;
+            bottom: -50px;
             overflow: hidden;
             // display: none;
         }
+
     }
 
     main {
         .contenedor {
-            padding: 0 3.5rem;
-            width: 85%;
-            max-width: 95%;
+            max-width: 90%;
             margin: auto;
             overflow: hidden;
             border: 2px solid darkmagenta;
@@ -159,7 +104,7 @@ body {
 
         .titulo {
             color: $color1;
-            font-size: 3rem;
+            font-size: 3em;
             text-align: center;
             margin: 3.5rem 0;
             border: 1px solid rgb(255, 0, 85);
@@ -167,1240 +112,235 @@ body {
 
         .seccion-sobre-ghibli {
             .contenedor-sobre-ghibli {
-                border: 2px solid darkmagenta;
-                position: relative;
-
-                .contenedor-boton-sobre-ghibli {
-                    transition: .9s .1s transform ease-in-out;
-                    transform: translateY(-5%);
-                    transform: translateX(90%);
-
-                    .boton-sobre-ghibli {
-                        color: $color1;
-                        outline: none;
-                    }
-                }
-
-                .translate-boton-sobre-ghibli {
-                    transform: translateX(0);
-
-                }
-
-
                 .sobre-ghibli {
                     display: flex;
-                    // flex-wrap: nowrap;
+                    flex-direction: column;
                     overflow: hidden;
-                    // position: relative;
 
-
-                    .contenedor-sobre-ghibli-1,
-                    .contenedor-sobre-ghibli-2 {
-                        margin-bottom: 3.5rem;
+                    .sobre-ghibli-1,
+                    .sobre-ghibli-2 {
                         display: flex;
                         flex-wrap: wrap;
                         overflow: hidden;
-                        border: 1px solid darkcyan;
-
-                        // min-width: 100%;
-                        // position: rela
+                        min-width: 100%;
 
                         .contenedor-imagen-sobre-ghibli {
-                            display: flex;
-                            justify-content: center;
-                            max-width: 55%;
-                            min-width: 50%;
-
-                            height: 500px;
-                            overflow: hidden;
-                            border: 1px solid deeppink;
-                            transition: .6s all ease-out;
-                            // background: blue;
-
-
-
-                            .imagen-sobre-ghibli-1 {
-                                height: 120%;
-                                animation: ease-out img1Totoro 1s;
-                                border: 1px solid red;
-                                // max-width: 100%;
-
-                            }
-
                             .imagen-sobre-ghibli-2 {
-                                height: 120%;
-                                width: 100%;
-                                -webkit-animation: ease-out img1Totoro 1s;
-                                animation: ease-out img1Totoro 1s;
-                                max-width: 100%;
-
+                                display: none;
                             }
+
                         }
 
-                        .contenido-textos {
-                            width: 35%;
-                            min-height: 100%;
-                            display: flex;
-                            justify-content: center;
-                            flex-direction: column;
-                            border: 1px solid red;
+                        .contenido-textos-sobre-ghibli {
+                            width: 95%;
+                            margin: auto;
 
-                            .texto-1,
-                            .texto-2,
-                            .texto-3 {
-                                transition: 1s all ease-out;
+                            .texto-sobre-ghibli-1,
+                            .texto-sobre-ghibli-2,
+                            .texto-sobre-ghibli-3 {
+                                flex-direction: column;
+                                @extend .center-flex;
+                                text-align: center;
+                                margin-bottom: .5rem;
 
-                                p {
-                                    padding: 0 0 30px 10px;
-                                    text-align: justify;
-                                }
+                                .contenedor-parrafo-sobre-ghibli {
+                                    height: 0;
+                                    max-height: auto;
+                                    overflow: hidden;
+                                    transition: height .5s ease-out;
 
-                                h3 {
-                                    margin-bottom: 15px;
-
-                                    i {
-                                        color: $color2;
+                                    .parrafo-sobre-ghibli {
+                                        margin: 1rem 0;
+                                        text-align: justify;
                                     }
                                 }
-                            }
 
-                        }
-                    }
+                                .contenedor-parrafo-sobre-ghibli-1 {
+                                    max-height: 150px;
+                                }
 
-                    .contenedor-sobre-ghibli-1 {
-                        justify-content: space-between;
-                    }
+                                .contenedor-parrafo-sobre-ghibli-2 {
+                                    max-height: 240px;
+                                }
 
+                                .contenedor-parrafo-sobre-ghibli-3 {
+                                    max-height: 450px;
 
-                    .contenedor-sobre-ghibli-2 {
-                        justify-content: space-evenly;
-                        transition: 1s transform ease-out;
-                        position: absolute;
-                        // right: 100%;
-                        transform: translateX(100%);
-                        opacity: 0.3;
+                                    .contenedor-boton-leer-mas-historia {
+                                        .boton-leer-mas-historia {
+                                            color: $color1;
 
-                        .contenedor-imagen-sobre-ghibli {
-                            min-width: 40%;
-                            width: 48%;
-                        }
+                                        }
 
-                        .contenido-textos {
-                            transform: translateX(-10px);
-                            transform: translateY(60px);
+                                    }
+                                }
 
-                            .texto-3 {
-                                transition: .7s .6s all ease-out;
-                                transform: translateX(200%);
-                                opacity: 0.5;
-                                .contenedor-boton-leer-mas-historia{
+                                .contenedor-h3-sobre-ghibli {
                                     width: 100%;
+                                    height: 2rem;
+                                    background-color: #48adf041;
+                                    border-radius: 10px;
                                     @extend .center-flex;
-                                    .boton-leer-mas-historia{
+                                    position: relative;
+
+                                    .h3-sobre-ghibli {
+                                        position: relative;
                                         color: $color1;
-                                        cursor: pointer;
-                                        display: block;
+                                        width: 100%;
+                                        @extend .position-absolute;
+                                        margin: auto;
+
+                                        i {
+                                            display: none;
+                                        }
+
                                     }
                                 }
-                                p{
+
+
+                            }
+
+                            .texto-sobre-ghibli-visible {
+                                .contenedor-parrafo-sobre-ghibli {
+                                    // max-height: inherit;
+                                    transition: height 1.2s ease-out;
+                                    height: 600px;
+                                }
+
+                                .contenedor-h3-sobre-ghibli {
+                                    background-color: #409ad671;
 
                                 }
                             }
-
-                            // background-color: red;
-                        }
-
-                    }
-
-                    .translate-sobre-ghibli-2 {
-                        transform: translateX(0%);
-                        opacity: 1;
-
-                        .contenido-textos {
-                            .texto-3 {
-                                opacity: 1;
-                                transform: translateX(0px);
-
-                            }
                         }
                     }
 
-                    .translate-sobre-ghibli-1 {
-                        transition: 1s all ease-in;
+                }
 
-                        // position: relative;
-                        .contenedor-imagen-sobre-ghibli {
-                            transform: translateX(-100%);
-                            opacity: .5;
-                            // position: relative;
-                            // top: -100px;
-                        }
-
-                        .contenido-textos {
-
-                            // overflow: hidden;
-                            .texto-1 {
-                                transform: translateY(-150%);
-                                opacity: .0;
-
-
-                            }
-
-                            .texto-2 {
-                                transform: translateY(150%);
-                                opacity: .5;
-
-
-                            }
-                        }
-                    }
+                .contenedor-boton-sobre-ghibli {
+                    display: none;
                 }
             }
         }
 
         .seccion-peliculas {
             .contenedor-peliculas {
-                display: flex;
-                flex-direction: column;
-                border: 2px solid darkmagenta;
-                display: flex;
+                margin-bottom: 3.5rem;
+                @extend .flex-column;
                 justify-content: space-around;
                 align-items: center;
+                overflow: visible;
 
+                
                 .swiper-pagination-bullet {
-                    width: 25px;
-                    height: 25px;
-                    text-align: center;
-                    line-height: 25px;
-                    font-size: 12px;
-                    color: rgb(61, 61, 61);
-                    opacity: 1;
-                    // box-shadow: 0 0 9px 0 rgba(0,0,0,.5);
-                    background: white;
+                    display: none;
                 }
-
-                .swiper-pagination-bullet-active {
-                    color: #fff;
-                    background: $color2;
-                }
-
+                
                 .carousel-peliculas {
-                    border: 1px solid darkcyan;
-                    display: flex;
-                    max-width: 92%;
+                    width: 100%;
+                    @extend .flex-column;
                     position: relative;
-                    margin-bottom: 3.5rem;
+                    overflow: visible;
 
-                    .arrows-peliculas {
-
-                        .flecha-derecha,
-                        .flecha-izquierda {
-                            opacity: .7;
-                            transform: scale(.9);
-                            color: $color1;
-
-                            &:hover {
-                                transition: opacity .5s, transform .4s;
-                                opacity: 1;
-                                transform: scale(1)
-                            }
-                        }
-
-                        .flecha-derecha {
-                            right: .5rem;
-                        }
-
-                        .flecha-izquierda {
-                            left: .5rem;
-                        }
-                    }
-
+                    
+                    
                     .peliculas {
-                        border: 1px solid deeppink;
-                        width: 88%;
+                        width: 100%;
                         display: flex;
-                        padding-bottom: 50px;
+                        overflow: visible;
+                        .arrows-peliculas {
+                            overflow: visible;
+                            @extend .center-flex;
+                            .flecha-derecha,
+                            .flecha-izquierda {
+                                height: 3.2rem;
+                                width: 3.2rem;
+                                color: white;
+                                background-color: rgba(0, 0, 0, .5);
+                                // padding: 2rem 1.8rem;
+                                border-radius: 50%;
+                                cursor: pointer;
+                                outline: none;
+                                transition: transform .7s, background-color .5s;
+                                
+                                
+                                
+                                i{
+                                    font-size: 2.5rem;
+                                    transition: transform .5s;
+                                    
+                                    
+                                }
+                                &:active, &:hover{
+                                    color: $color1;
+                                    background-color: rgba(0, 0, 0, .8);
+
+                                }
+                            }
+                            .flecha-izquierda {
+                                left: 2%;
+                                
+                                i{
+                                    transform: translateX(-2px);
+                                }
+                                &:active, &:hover {
+                                    transform: translateX(-.215em)
+                                }
+                            }
+        
+                            .flecha-derecha {
+                                right: 2%;
+                                i{
+                                    transform: translateX(2px);
+                                }
+                                &:active, &:hover {
+                                    transform: translateX(.15rem)
+                                }
+                            }
+                            .flecha-derecha:after,
+                            .flecha-izquierda:after{
+                                display: none;
+                            }    
+                            // .flecha-derecha {
+                            //     right: .5rem;
+                            // }
+    
+                            // .flecha-izquierda {
+                            //     left: .5rem;
+                            // }
+                        }
+    
 
                         .pelicula {
-                            border: 1px solid darkcyan;
-                            overflow: hidden;
-                            height: 408px;
-                            width: 288px;
+                            // overflow: hidden;
                             box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, .7);
                             position: relative;
+                            height: calc(408px / 1.6);
+                            width: calc(288px / 1.6);
 
                             .portada {
+
                                 overflow: hidden;
 
                                 .img-pelicula {
-                                    // max-height: 408px;
-                                    // max-width: 288px;
-                                    width: 100%;
-                                    // transform: scale(1.05, 1.1);
                                     object-fit: cover;
                                 }
                             }
 
                             .informacion {
-                                display: flex;
-                                flex-direction: column;
-                                align-items: center;
-                                justify-content: space-between;
-                                position: absolute;
-                                height: 100%;
-                                width: 100%;
-                                background: #48aef0e6;
-                                top: 90%;
-                                color: #fff;
-                                transition: top .7s;
-
-                                .contenedor-nombre {
-                                    display: flex;
-                                    // background: red;
-                                    align-items: center;
-                                    justify-content: center;
-                                    height: 10%;
-                                    width: 100%;
-                                    transition: margin 0.7s;
-
-                                    .nombre {
-                                        font-size: 1.1rem;
-                                    }
+                                .contenedor-nombre{
+                                    // position: relative;
                                 }
-
-                                &:hover {
-                                    top: 0;
-                                }
-
-                                &:hover .contenedor-nombre {
-                                    margin-top: 2rem;
-                                }
-
                                 .ver-peliculas {
-                                    display: block;
+                                    display: none;
                                     margin: 2.5rem;
                                 }
-
-                                .sipnosis {
-                                    text-align: center;
-                                    padding: 0 1rem;
-                                }
                             }
                         }
-                    }
-                }
-            }
-        }
-
-        .seccion-galeria {
-            background: #f2f2f2;
-
-            .galeria {
-                border: 2px solid darkmagenta;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-
-                .contenedor-barra-busqueda {
-                    width: 100%;
-                    display: flex;
-                    justify-content: center;
-                    margin-bottom: 1rem;
-                    border: 1px solid red;
-
-                    .barra-busqueda {
-                        width: 70%;
-                        height: 40px;
-                        line-height: 40px;
-                        background: #fff;
-                        padding: 0 20px;
-                        border-radius: 100px;
-                        border: none;
-                        text-align: center;
-                        font-size: 16px;
-                        color: #414141;
-                        outline: none;
-                    }
-                }
-
-                .categorias-galeria {
-                    display: flex;
-                    justify-content: center;
-                    flex-wrap: wrap;
-                    margin-bottom: 2.5rem;
-                    border: 1px solid red;
-
-                    .categoria-galeria {
-                        color: #9B9B9B;
-                        margin: 10px 20px;
-                        font-size: 18px;
-                        font-weight: 700;
-                        list-style: none;
-                        cursor: pointer;
-                    }
-
-                    .activo {
-                        color: #555555;
-                    }
-                }
-
-                .imagenes-galeria {
-                    border: 1px solid darkcyan;
-                    display: flex;
-                    display: grid;
-                    grid-template-columns: repeat(auto-fill, minmax(240px, 240px));
-                    width: 100%;
-                    grid-gap: 1rem;
-                    // flex-grow: 1;
-                    max-height: 980px;
-                    min-height: 490px;
-                    height: 490px;
-                    transition: height 2s;
-                    align-content: flex-start;
-                    justify-content: center;
-                    // overflow: auto;
-
-                    .imagen-galeria {
-                        height: 230px;
-                        -o-object-fit: cover;
-                        object-fit: cover;
-                        overflow: hidden;
-                        position: relative;
-                        cursor: pointer;
-                        box-shadow: 0 0 9px 0 rgba(0, 0, 0, .5);
-                        border-radius: 15px;
-                        width: 100%;
-
-                        >img {
-                            width: 100%;
-                            height: 100%;
-                            -o-object-fit: cover;
-                            object-fit: cover;
-                        }
-
-                        .hover-imagen-galeria {
-                            background: rgba(72, 173, 240, 0.5);
-                            position: absolute;
-                            width: 150%;
-                            height: 150%;
-                            top: -25%;
-                            left: -25%;
-                            transform: scale(0);
-                            border-radius: 50%;
-                            transition: transform .5s;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            flex-direction: column;
-
-                            img {
-                                width: 51px;
-                            }
-
-                            p {
-                                color: white;
-                            }
-                        }
-                    }
-
-                    .imagen-galeria:hover>img {
-                        transition: -webkit-filter .5s;
-                        transition: filter .5s;
-                        transition: filter .5s, -webkit-filter .5s;
-                        -webkit-filter: blur(2px);
-                        filter: blur(2px);
-                    }
-
-                    .imagen-galeria:hover .hover-imagen-galeria {
-                        transform: scale(1);
                     }
 
                 }
-            }
-
-            .overlay {
-                position: fixed;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                background: rgba(255, 255, 255, 0.9);
-                width: 100%;
-                height: 100vh;
-                display: none;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                z-index: 1500;
-
-                .contenedor-img {
-                    position: relative;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    max-width: 50%;
-                    ;
-                    box-shadow: 0 0 9px 0 rgba(0, 0, 0, .5);
-
-                    img {
-                        max-width: 100%;
-                    }
-
-                    #btn-cerrar-popup {
-                        background: white;
-                        box-shadow: 0 0 12px 0 rgba(0, 0, 0, .5);
-                        padding: .4rem .7rem;
-                        border-radius: 50%;
-                        font-size: 18px;
-                        color: $color1;
-                        border: none;
-                        cursor: pointer;
-                        position: absolute;
-                        top: -.5rem;
-                        right: -.5rem;
-                        outline: none;
-
-                        &:hover {
-                            transition: all 0.4s linear;
-                            background: $color1;
-                            transform: scale(1.2);
-                            color: white;
-                        }
-
-                        &:active {
-                            transform: scale(.75);
-                        }
-                    }
-                }
-
-                .descripcion {
-                    display: block;
-                    background: white;
-                    color: $color1;
-                    box-shadow: 0 0 9px 0 rgba(0, 0, 0, .5);
-                    padding: 20px;
-                    text-align: center;
-                    margin-top: 5px;
-                    border-radius: 10px;
-                    // max-width: 50%;
-                    width: 50%;
-                }
-            }
-
-            .activo-overlay {
-                display: flex;
-            }
-
-            .contenedor-boton-ver-mas {
-                display: flex;
-                justify-content: center;
-                padding: 3.5rem 0;
-                border: 1px solid red;
-
-                .boton-ver-mas {
-                    font-size: 1.2rem;
-                    outline: none;
-                    /*quitar border pordefecto del boton al hacer click*/
-                }
-            }
-        }
-
-        //  NOTE: KAIOSAMAS DE GHIBLI
-
-        .seccion-kaiosamas-ghibli {
-            background: url(../../galeria/fondo2.png);
-            position: relative;
-            @extend .parallax;
-
-            &:before {
-                @extend .background-before;
-                background-color: rgba(255, 255, 255, .8);
-            }
-
-            .contenedor-kaiosamas-ghibli {
-
-                width: 100%;
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-
-                .contenedor-titulo-kaiosama {
-                    position: relative;
-                    margin-top: 3.5rem;
-                    // background-color: #c3c3c3;
-                    // background-blend-mode: soft-light;
-                }
-
-                .kaiosamas {
-                    position: relative;
-                    margin: 0 0 3.5rem;
-                    width: 85%;
-                    display: grid;
-                    grid-template-columns: 1.5fr 2fr 1.5fr;
-                    // grid-template-columns: repeat(2, 50%);
-                    grid-template-rows: repeat(3);
-                    grid-template-areas:
-                        "k1 k1 ."
-                        ". k2 k2"
-                        "k3 k3 .";
-                    grid-gap: 1.5rem 0;
-                    // grid-template-columns: 
-                    // [line-start] 1fr
-                    // [line-end] 1fr;
-                    // grid-template-rows: 
-                    // [fila-star] 1fr
-                    // [fila-center] 1fr
-                    // [fila-end] 1fr;
-
-                    .kaiosama {
-                        min-width: 320px;
-                        display: flex;
-                        justify-content: space-between;
-                        // margin: 1.5rem 0;
-                        height: 180px;
-                        box-shadow: 0 0 9px 0 rgba(0, 0, 0, .5);
-                        background: white;
-                        transition: transform 1s;
-
-
-                        .contenedor-imagen-kaiosama {
-                            height: 180px;
-                            // overflow: hidden;
-                            min-width: 160px;
-                            width: 160px;
-
-                            img {
-                                width: 100%;
-                                height: 100%;
-                                -o-object-position: 30%;
-                                object-position: 30%;
-                                -o-object-fit: cover;
-                                object-fit: cover;
-                                transition: 1s;
-
-                                &:hover {
-                                    transform: scale(1.2);
-                                }
-                            }
-                        }
-
-                        .contenido-textos-kaiosama {
-                            display: flex;
-                            flex-direction: column;
-                            padding: 3rem 2rem 1.5rem;
-                            overflow: hidden;
-                            transition: color 1s;
-                            position: relative;
-                            transition: padding 1s;
-
-                            // background:  blue;
-                            h3 {
-                                margin-bottom: .5rem;
-                                position: relative;
-                                // background:green;
-                                color: black;
-                                top: 0;
-                                transition: transform 1s, opacity .3s .3s;
-                                // transition: opacity 1s .5s ease-in;
-                            }
-
-                            .boton-contenedor-p {
-                                display: none;
-                            }
-
-                            .contenedor-p {
-                                overflow: hidden;
-                                position: relative;
-
-                                // background: red;
-                                p {
-                                    font-size: 1rem;
-                                }
-                            }
-
-
-                            .contenedor-boton-leer-mas {
-                                display: flex;
-                                justify-content: center;
-                                // background: green;
-                                text-align: center;
-                                width: 100%;
-                                position: relative;
-                                padding: .2rem;
-
-                                // display: none;
-                                .boton-leer-mas {
-                                    outline: none;
-                                    background: none;
-                                    border: none;
-                                    color: $color2;
-                                    font-size: 1rem;
-                                    cursor: pointer;
-                                    transition: .5s;
-
-                                    &:hover {
-                                        color: $color1;
-                                        transform: scale(1.1)
-                                    }
-                                }
-
-                            }
-                        }
-
-                        .active-boton-leer-mas {
-                            padding: 1rem 2rem .5rem;
-
-                            h3 {
-                                transform: translateY(-38px);
-                                opacity: 0;
-                                margin-bottom: 0;
-                            }
-
-                            .contenedor-p {
-                                overflow-y: scroll;
-
-                                &::-webkit-scrollbar {
-                                    display: none;
-                                }
-
-                                &::-webkit-scrollbar-track {
-                                    display: none;
-                                }
-
-                                &::-webkit-scrollbar-thumb {
-                                    background: #111;
-                                    display: none;
-                                }
-                            }
-
-                            .contenedor-boton-leer-mas {
-                                bottom: 0;
-                            }
-                        }
-
-
-                    }
-
-                    .k1 {
-                        grid-column: 1 / span 2;
-                        grid-row: 1;
-                        grid-area: k1;
-                        // grid-column: line-start / span 1;
-                        // grid-row: fila-start / span 1;
-
-                        .contenedor-boton-leer-mas {
-                            right: 0;
-                        }
-                    }
-
-                    .k2 {
-                        grid-column: span 2 / -1;
-                        grid-row: 2;
-                        grid-area: k2;
-                        // grid-column: line-end;
-                        // grid-row: fila-center / span 1;
-
-                        display: flex;
-                        flex-direction: row-reverse;
-                        text-align: end;
-
-                        .contenedor-imagen-kaiosama {
-                            img {
-                                -o-object-position: 20%;
-                                object-position: 20%;
-                            }
-                        }
-
-                        .contenido-textos-kaiosama {
-                            align-items: flex-end;
-
-                            h3 {
-                                // display: flex;
-                                flex-direction: row-reverse;
-                            }
-
-                            .contenedor-boton-leer-mas {
-                                left: 0;
-                            }
-                        }
-                    }
-
-                    .k3 {
-                        grid-column: 1 / span 2;
-                        grid-row: 3;
-                        grid-area: k3;
-                        // grid-column: line-start / span 1;
-                        // grid-row: fila-end / span 1;
-
-
-
-                        .contenedor-boton-leer-mas {
-                            right: 0;
-                        }
-                    }
-                }
-            }
-
-        }
-
-
-
-
-
-
-
-
-
-        .seccion-frases {
-            .contenedor-carousel-frases {
-                .carousel-frases {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-
-                    .flecha-izquierda,
-                    .flecha-derecha {
-                        // position: absolute;
-                        border: none;
-                        background: rgba(255, 255, 255, .5);
-                        box-shadow: 0 0 9px 0 rgba(0, 0, 0, .5);
-                        font-size: 41px;
-                        border-radius: 50%;
-                        top: calc(50%-25%);
-                        line-height: 40px;
-                        width: 50px;
-                        height: 50px;
-                        color: $color1;
-                        cursor: pointer;
-                        transition: all .3s ease;
-                        outline: none;
-
-                        &:hover {
-                            background: rgba(0, 0, 0, .8);
-                            background: $color1;
-                            color: white;
-                        }
-                    }
-
-                    .flecha-izquierda {
-                        left: 3rem;
-                        padding-right: 5px;
-
-                        &:hover {
-                            transform: translateX(-.4rem)
-                        }
-                    }
-
-                    .flecha-derecha {
-                        right: 3rem;
-                        padding-left: 5px;
-
-                        &:hover {
-                            transform: translateX(.4rem)
-                        }
-                    }
-
-                    margin-bottom: 3.5rem;
-
-                    .contenedor-frases {
-                        width: 85%;
-                        overflow: hidden;
-
-                        // .frases::-webkit-scrollbar {
-                        //     display: none;
-                        // }
-
-                        .frases {
-                            scroll-behavior: smooth;
-                            overflow: scroll;
-                            display: flex;
-                            @extend .scrollbar-none;
-                            // scroll-snap-type: x proximity;
-                            -ms-scroll-snap-type: x mandatory;
-                            scroll-snap-type: x mandatory;
-
-                            // width: calc(100% / 3);
-                            .contenedor-frase {
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                overflow: hidden;
-                                width: 100%;
-                                flex-shrink: 0;
-                                scroll-snap-align: center;
-
-                                .frase {
-                                    display: flex;
-                                    flex-direction: column;
-                                    text-align: center;
-                                    justify-content: center;
-                                    align-items: center;
-                                    padding: 2rem;
-                                    width: calc(100% - 20px);
-                                    height: calc(100% - 20px);
-                                    box-shadow: 0 0 9px 0 rgba(0, 0, 0, .5);
-
-                                    .contenedor-img-frase {
-                                        .img-frase {
-                                            width: 120px;
-                                            height: 120px;
-                                            -o-object-fit: cover;
-                                            object-fit: cover;
-                                            border: 3px solid #fff;
-                                            border-radius: 50%;
-                                            display: block;
-                                            margin-bottom: 1rem;
-                                        }
-                                    }
-
-                                    .contenido-texto {
-                                        display: flex;
-                                        flex-direction: column;
-                                        align-items: center;
-
-                                        .titulo-frase {
-                                            width: 60%;
-                                            color: rgba(0, 0, 0, .8);
-                                            font-weight: 300;
-                                            font-style: oblique;
-                                            font-size: 1rem;
-                                        }
-
-                                        .parrafo-frase {
-                                            font-style: italic;
-                                            font-weight: 500;
-                                            font-size: 1.2rem;
-                                            padding-bottom: 5px;
-                                            color: $color3;
-                                            // span{
-                                            //     color: black;
-                                            //     font-size: 50px;
-                                            // }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                        .frases-transition-none {
-                            scroll-behavior: inherit;
-                        }
-
-                    }
-                }
-            }
-        }
-
-        .seccion-ver-pelis {
-            background: #f2f2f2;
-            background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../../galeria/ghibli3.3.jpg);
-            background-position: 30%;
-            background-size: cover;
-
-            padding-bottom: 3.5rem;
-
-            .ver-pelis {
-                .pelis-cont {
-                    display: flex;
-                    // width: 100%;
-                    justify-content: space-between;
-                    flex-wrap: wrap;
-                    // align-items: center
-                    margin-bottom: 7.5rem;
-                    margin-top: 100px;
-                    // border: 1px solid red;
-
-                    .peli {
-                        margin: 1rem;
-                        min-width: 250px;
-                        width: 28%;
-                        text-align: center;
-                        height: 400px;
-                        border: 1px solid darkcyan;
-                        border-radius: 15px;
-                        background-color: #fff;
-                        box-shadow: 0 0 9px 0 rgba(0, 0, 0, .5);
-                        overflow: hidden;
-                        position: relative;
-                        border: 2px solid red;
-
-                        .contenedor-textos-ver-pelis {
-                            display: flex;
-                            flex-direction: column;
-                            // justify-content: start;
-                            align-items: center;
-                            position: relative;
-                            left: 0;
-                            right: 0;
-                            border-radius: 15px 15px 0 0;
-                            height: 100%;
-                            background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, 0.5)), url(../../galeria/fondo4.png);
-                            background-size: cover;
-                            background-position: 60%;
-                            color: #fff;
-                            padding: 1rem;
-                            border: 1px solid red;
-                            transition: all .5s ease-in-out;
-
-                            .textos-ver-pelis {
-                                position: relative;
-                                top: 25%;
-
-                                h3 {
-                                    font-size: 35px;
-                                }
-                            }
-
-                            .cursor-hover-ver-pelis {
-                                transition: .5s;
-                                position: absolute;
-                                top: 100%;
-                                left: 45%;
-                                opacity: 1;
-                                z-index: 50;
-
-                                i {
-                                    color: white;
-                                    font-size: 2rem;
-                                }
-
-                                p {
-                                    background-color: white;
-                                    color: $color1;
-                                    line-height: 2rem;
-                                }
-                            }
-
-                            &:hover .cursor-hover-ver-pelis {
-                                top: 85%;
-                            }
-
-                        }
-
-                        .contenedor-textos-ver-pelis-hover {
-                            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.8)), url(../../galeria/fondo4.png);
-                            background-size: cover;
-                            background-position: top;
-                            height: 20%;
-                            overflow: hidden;
-                            position: relative;
-
-                            // top: -60%;
-                            // display: none;
-                            .textos-ver-pelis {
-                                transition: all .5s;
-                                opacity: 0;
-                                transform: translateY(100px);
-                            }
-
-                            .cursor-hover-ver-pelis {
-                                transform: scale(.5);
-                                opacity: 0;
-                            }
-
-                        }
-
-                        .contenedor-imagen-ver-pelis {
-                            position: absolute;
-                            bottom: -60px;
-                            top: calc(100% - 240px);
-                            // bottom: 0;
-                            left: 0;
-                            right: 0;
-                            margin: auto;
-                            height: 150px;
-                            width: 150px;
-                            overflow: hidden;
-                            border-radius: 50%;
-                            box-shadow: 0 0 9px 0 rgba(0, 0, 0, .5);
-                            transition: all .5s ease-in-out;
-
-                            .imagen-ver-pelis {
-                                height: 100%;
-                                width: 100%;
-                                // position: absolute;
-                                // left: 50%;
-                                // transform: translatex(-50%);
-
-
-                            }
-
-                        }
-
-                        .contenedor-imagen-ver-pelis-hover {
-                            top: calc(-100% + 100px);
-                            transform: scale(.6);
-                        }
-
-                        .enlaces-ver-pelis {
-                            visibility: hidden;
-                            margin-top: 80px;
-                            opacity: 0;
-                            height: 55%;
-                            overflow: auto;
-                            padding: 0.3rem;
-
-                            &::-webkit-scrollbar {
-                                display: none;
-                            }
-
-                            .enlace-ver-peli {
-                                margin: .5rem 0;
-                                line-height: 1rem;
-                                padding: .7rem;
-                                font-size: .9rem;
-                            }
-                        }
-
-                        .enlaces-ver-pelis-hover {
-                            transition: all .8s ease-in-out;
-                            opacity: 1;
-                            visibility: visible;
-                        }
-                    }
-
-                    // .animeyt{
-                    //     .contenedor-imagen-ver-pelis{
-                    //         .imagen-ver-pelis{
-                    //             // transform: scale(.8);
-                    //         }
-                    //     }
-                    // }
-                    .animeflv {
-                        img {
-
-                            background: #9da1a4;
-                        }
-                    }
-                }
-            }
-        }
-
-        .historia {
-            // display: none;
-            margin-bottom: 7rem;
-
-
-
-            .contenedor-texto-historia {
-                transition: height 1s;
-                height: 370px;
-                // max-height: auto;
-                // min-height: 370px;
-
-                margin: 3.5rem auto;
-                width: 70%;
-                background-color: #fff;
-
-                .texto-historia {
-                    height: inherit;
-
-                    .contenedor-parrafo-historia {
-                        .parrafo-historia {
-
-                            text-align: center;
-                            font-size: 1.1rem;
-                        }
-
-                    }
-                }
-            }
-            .contenedor-texto-historia-active{
-                height: 870px;
-                min-height: max-content;
-
-            }
-
-            .contenedor-boton-historia {
-                display: flex;
-                justify-content: center;
-
-                .boton-historia {
-                    margin: 0 auto;
-                    
-                }
-            }
-        }
-
-        .adios {
-            
-            .contenedor-video {
-                width: 100%;
-                overflow: hidden;
-                max-height: 450px;
-                // min-height: 250px;
-                position: relative;
-
-                video {
-                    z-index: -10;
-                    position: relative;
-                    min-width: 100%;
-                    width: 100%;
-                    max-width: 100%;
-                }
-                &:before {
-                    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) , rgba(255, 255, 255, .5), rgba(0, 0, 0, .8));
-                    @extend .background-before;
-
-                }
-
-                .contenedor-texto-adios {
-                    height: 100%;
-                    width: 100%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    @extend .position-absolute;
-                    
-                    z-index: 10;
-
-                    .texto-adios {
-                        position: relative;
-                        color: #fff;
-                        font-size: 5rem;
-                    }
-                }
-            }
-
-        }
-
-        footer {
-            background: #414141;
-            padding: 60px 0 30px 0;
-            margin: auto;
-            overflow: hidden;
-
-            .contenedor-footer {
-                display: flex;
-                width: 90%;
-                justify-content: space-evenly;
-                margin: auto;
-                padding-bottom: 50px;
-                border-bottom: 1px solid #ccc;
-
-                .content-foo {
-                    text-align: center;
-
-                    h4 {
-                        color: #fff;
-                        border-bottom: 3px solid $color3;
-                        padding-bottom: 5px;
-                        margin-bottom: 10px;
-                    }
-
-                    p {
-                        color: #ccc;
-                    }
-                }
-            }
-
-            .titulo-final {
-                text-align: center;
-                font-size: 24px;
-                margin: 20px 0 0 0;
-                color: #9e9797;
             }
         }
     }
-
 }

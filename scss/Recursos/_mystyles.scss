@@ -185,6 +185,8 @@
 // <div class="contenedor-hamburguer" id="contenedor-hamburguer">
     // <div class="hamburguer"></div>
 // </div>
+$width: 30px;
+$height: 5px;
 .contenedor-hamburguer {
     display: flex;
     justify-content: center;
@@ -192,15 +194,15 @@
     border-radius: 50%;
     background-color: transparent;
     cursor: pointer;
-    min-height: 80px;
-    min-width: 80px;
+    min-height: 60px;
+    min-width: 60px;
     .hamburguer{
         display: flex;
         justify-content: center;
         align-items: center;    
-        width: 40px;
-        height: 5px;
-        border-radius: 2.5px;
+        width: $width;
+        height: $height;
+        border-radius: $height / 2;
         position: relative;
         background-color: #000;
         transition: background-color 0.5s ease-in, transform 1s;
@@ -208,16 +210,16 @@
             content: " ";
             position: absolute;
             display: block;
-            width: 40px;
-            height: 5px;
-            border-radius: 2.5px;
+            width: $width;
+            height: $height;
+            border-radius: $height / 2;
             background-color: #000;
-            top: -0.7rem;
+            top: -0.6rem;
             transition: background-color 0.5s ease-in, transform 0.3s;
 
         }
         &:after{
-            top: 0.7rem;
+            top: 0.6rem;
         }
     }
 
@@ -235,7 +237,7 @@
     .hamburguer-left-arrow{
         &:before, &:after{
             transform: rotate(-35deg);
-            width: 30px;
+            width: $width;
             top: -.5em;
             left: -.1em;
         }
@@ -250,7 +252,7 @@
     .hamburguer-right-arrow{
         &:before, &:after{
             transform: rotate(35deg);
-            width: 30px;
+            width: $width;
             top: -.5em;
             right: -.1em;
         }

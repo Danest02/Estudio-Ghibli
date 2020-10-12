@@ -7,8 +7,8 @@ block body
                     -const enlaces = ["Sobre-Ghibli","Peliculas","Imagenes","Creadores","Frases","Ver peliculas", "Historia",]
                     each enlace in enlaces
                         li( id="enlace-" + enlace, class="enlace borde-animado-centro ")
-            .contenedor-hamburguer#contenedor-hamburguer
-                .hamburguer#hamburguer
+                .contenedor-hamburguer#contenedor-hamburguer
+                    .hamburguer#hamburguer
             .textos-header
                 h1.titulo-textos-header El Maravilloso Mundo de Ghibli
                 h2.subtitulo-textos-header "¡Venga, vamos a reirnos para alejar a los fantasmas!"
@@ -17,8 +17,76 @@ block body
                     path(d="M0.00,49.99 C150.00,150.00 349.20,-49.99 500.00,49.99 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;")
 
         main
-        //- NOTE SOBRE GHIBLI
-        section.seccion-sobre-ghibli#seccion-sobre-ghibli
-            .contenedor-sobre-ghibli.contenedor
-            h2.titulo Estudio Ghibli
-            .sobre-ghibli
+            //- NOTE SOBRE GHIBLI
+            section.seccion-sobre-ghibli#seccion-sobre-ghibli
+                .contenedor-sobre-ghibli.contenedor
+                    h2.titulo Estudio Ghibli
+                    .sobre-ghibli
+                        .sobre-ghibli-1#sobre-ghibli-1
+                            .contenedor-imagen-sobre-ghibli
+                                img(src="galeria/ghibli2.1.jpg" class="imagen-sobre-ghibli-1" id="imagen-sobre-ghibli-1" alt="logo del estudio ghibli")
+                            .contenido-textos-sobre-ghibli
+                                .texto-sobre-ghibli.texto-sobre-ghibli-1.texto-sobre-ghibli-visible
+                                    .contenedor-h3-sobre-ghibli
+                                        <h3 class="h3-sobre-ghibli"><i class="fas fa-check-circle"></i> ¿Que es?</h3>
+                                    .contenedor-parrafo-sobre-ghibli.contenedor-parrafo-sobre-ghibli-1.contenedor-parrafo-sobre-ghibli-visible
+                                        p.parrafo-sobre-ghibli Studio Ghibli (スタジオジブリ Sutajio Jiburi?) es un estudio japonés de animación, considerado por la crítica especializada y muchos cinéfilos como uno de los mejores estudios de animación del mundo en la actualidad.
+                                .texto-sobre-ghibli.texto-sobre-ghibli-2
+                                    .contenedor-h3-sobre-ghibli
+                                        <h3 class="h3-sobre-ghibli"><i class="fas fa-check-circle"></i> Nombre</h3>
+                                    .contenedor-parrafo-sobre-ghibli.contenedor-parrafo-sobre-ghibli-2
+                                        p.parrafo-sobre-ghibli El nombre Ghibli fue elegido por Hayao Miyazaki y deriva de la palabra italiana «ghibli», basada en el nombre del viento cálido del desierto que sopla en Libia.También hace referencia a un avión italiano, el Caproni Ca.309 Ghibli. Aunque la palabra en italiano se translitera ギブリ (Giburi), el nombre en japonés del estudio es ジブリ (Jiburi). 
+                        .sobre-ghibli-2#sobre-ghibli-2
+                            .contenedor-imagen-sobre-ghibli
+                                img(src="galeria/ghibli2.2.svg" class="imagen-sobre-ghibli-2" id="imagen-sobre-ghibli-2" alt="logo del estudio ghibli")
+                            .contenido-textos-sobre-ghibli
+                                .texto-sobre-ghibli.texto-sobre-ghibli-3
+                                    .contenedor-h3-sobre-ghibli
+                                        <h3 class="h3-sobre-ghibli"><i class="fas fa-check-circle"></i> Historia</h3>
+                                    .contenedor-parrafo-sobre-ghibli.contenedor-parrafo-sobre-ghibli-3
+                                        p.parrafo-sobre-ghibli Fundado en 1985, y dirigido por Hayao Miyasaki junto a su amigo y mentor Isao Takahata, fallecido en 2018. Sus orígenes datan de 1983, con la película Nausicäa del Valle del Viento. Debido a la fama de los estudios se abrió en las afueras de Tokio el Museo Ghibli. El 1 de septiembre de 2013, Hayao Miyazaki, anunció su retirada. Sus películas han adquirido muchos premios, entre ellas cinco nominaciones al Óscar a la producción cinematográfica de animación más destacada; las cintas nominadas fueron: El viaje de Chihiro (2001), El castillo ambulante (2004), El recuerdo de Marnie (2014), El viento se levanta (2013) y El cuento de la princesa Kaguya (2013). A pesar de estas numerosas nominaciones, tan solo El viaje de Chihiro fue galardonada con el Óscar.
+                                            .contenedor-boton-leer-mas-historia
+                                                a.enlace.borde-animado-centro.enlace-historia.boton-leer-mas-historia Leer Mas
+                    .contenedor-boton-sobre-ghibli
+                        buttom.boton-sobre-ghibli.mybtn-zoon#boton-siguiente-sobre-ghibli Siguiente
+            //- NOTE PELICULAS
+            seccion.seccion-peliculas#seccion-peliculas
+                .contenedor-peliculas.contenedor
+                    h2.titulo Peliculas
+                    .carousel-peliculas
+                        .peliculas.swiper-container
+                            //- <div class="swiper-button-next"></div>
+                            //- <div class="swiper-button-prev"></div>
+                            .arrows-peliculas
+                                .swiper-button-prev.flecha-izquierda 
+                                    i.fas.fa-angle-left
+                                .swiper-button-next.flecha-derecha 
+                                    i.fas.fa-angle-right
+                            ul.swiper-wrapper
+                                li.pelicula.swiper-slide
+                                    .portada
+                                        img(src="galeria/Nausicaa del Valle del Viento portada.jpg" alt="" class="img-pelicula")
+                                    .informacion
+                                        .contenedor-nombre
+                                            h3.nombre Nausicaä del Valle del Viento
+                                        p.sipnosis
+                                        a(href="#" class="ver-peliculas mybtn-zoon") Ver
+                                li.pelicula.swiper-slide
+                                    .portada
+                                        img(src="galeria/El Castillo en el Cielo.jpg" alt="" class="img-pelicula")
+                                    .informacion
+                                        .contenedor-nombre
+                                            h3.nombre Laputa, El Castillo en el Cielo
+                                        p.sipnosis
+                                        a(href="#" class="ver-peliculas mybtn-zoon") Ver
+                            .swiper-pagination
+
+
+        script(src="jquery/jquery.js")
+        script(src="js/script.js")
+        script(src="https://kit.fontawesome.com/2a4c2c58c8.js" crossorigin="anonymous")
+        script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
+
+
+
+
