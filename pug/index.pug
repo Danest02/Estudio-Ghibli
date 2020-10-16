@@ -4,9 +4,9 @@ block body
         header
             nav.menu#menu
                 ul.enlaces#enlaces
-                    -const enlaces = ["Sobre-Ghibli","Peliculas","Imagenes","Creadores","Frases","Ver peliculas", "Historia",]
+                    -const enlaces = ["Sobre-Ghibli","Peliculas","Imagenes","Creadores","Frases","Ver-peliculas", "Historia",]
                     each enlace in enlaces
-                        li( id="enlace-" + enlace, class="enlace borde-animado-centro ")
+                        li( id="enlace-" + enlace, class="enlace borde-animado-centro ") #{enlace}
                 .contenedor-hamburguer#contenedor-hamburguer
                     .hamburguer#hamburguer
             .textos-header
@@ -53,7 +53,7 @@ block body
             seccion.seccion-peliculas#seccion-peliculas
                 .contenedor-peliculas.contenedor
                     h2.titulo Peliculas
-                    .carousel-peliculas
+                    .carousel-peliculas#carousel-peliculas
                         .peliculas.swiper-container
                             //- <div class="swiper-button-next"></div>
                             //- <div class="swiper-button-prev"></div>
@@ -67,20 +67,43 @@ block body
                                     .portada
                                         img(src="galeria/Nausicaa del Valle del Viento portada.jpg" alt="" class="img-pelicula")
                                     .informacion
-                                        .contenedor-nombre
-                                            h3.nombre Nausicaä del Valle del Viento
+                                        .contenedor-nombre-ver-pelis
+                                            h3.nombre-ver-pelis Nausicaä del Valle del Viento
                                         p.sipnosis
-                                        a(href="#" class="ver-peliculas mybtn-zoon") Ver
+                                        a(href="#" class="ver-peliculas mybtn") Ver
                                 li.pelicula.swiper-slide
                                     .portada
                                         img(src="galeria/El Castillo en el Cielo.jpg" alt="" class="img-pelicula")
                                     .informacion
-                                        .contenedor-nombre
-                                            h3.nombre Laputa, El Castillo en el Cielo
+                                        .contenedor-nombre-ver-pelis
+                                            h3.nombre-ver-pelis Laputa, El Castillo en el Cielo
                                         p.sipnosis
-                                        a(href="#" class="ver-peliculas mybtn-zoon") Ver
+                                        a(href="#" class="ver-peliculas mybtn") Ver
+                                li.pelicula.swiper-slide
+                                    .portada
+                                        img(src="galeria/La tumba de las luciernagas portada.jpg" alt="" class="img-pelicula")
+                                    .informacion
+                                        .contenedor-nombre-ver-pelis
+                                            h3.nombre-ver-pelis La Tumba de las Luciérnagas
+                                        p.sipnosis
+                                        a(href="#" class="ver-peliculas mybtn") Ver
+                                li.pelicula.swiper-slide
+                                    .portada
+                                        img(src="galeria/Mi Vecino Totoro portada.jpg" alt="" class="img-pelicula")
+                                    .informacion
+                                        .contenedor-nombre-ver-pelis
+                                            h3.nombre-ver-pelis Mi Vecino Totoro
+                                        p.sipnosis
+                                        a(href="#" class="ver-peliculas mybtn") Ver
+                                li.pelicula.swiper-slide
+                                    .portada
+                                        img(src="galeria/Nicky, la aprendiz de bruja portada.jpg" alt="" class="img-pelicula")
+                                    .informacion
+                                        .contenedor-nombre-ver-pelis
+                                            h3.nombre-ver-pelis Nicky, la Aprendiz de Bruja
+                                        p.sipnosis
+                                        a(href="#" class="ver-peliculas mybtn") Ver
                             .swiper-pagination
-
 
         script(src="jquery/jquery.js")
         script(src="js/script.js")

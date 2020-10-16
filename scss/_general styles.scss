@@ -9,6 +9,8 @@
 
 a {
     text-decoration: none;
+    cursor: pointer;
+    outline: none;
 }
 
 p {
@@ -30,35 +32,77 @@ html {
 
 body {
     font-family: $roboto;
+    color: #000;
 
     header {
         background: #48aef0 url(../../galeria/ghibli-mobile-2.jpg);
         background: linear-gradient(to right, rgba(72, 173, 240, 0.3), rgba(53, 127, 176, 0.4)), url(../../galeria/ghibli-mobile-2.jpg);
-        position: relative;
-
-        @include background-before {
-            background: rgba(0, 0, 0, 0.2);
-
-        }
-
-        min-height: 100vh;
-        background-position: center;
-        background-size: cover;
-        @extend .parallax;
-        overflow: hidden;
+        
+        // @include background-before {
+            //     background: rgba(0, 0, 0, 0.2);
+            
+            // }
+            
+            min-height: 100vh;
+            background-position: center;
+            background-size: cover;
+            @extend .parallax;
+            overflow: hidden;
+            position: relative;
         // @extend .center-flex;
 
         .menu {
+            transition: transform .5s ease-in-out;
             position: fixed;
             z-index: 100;
+            width: 100%;
+            .enlaces{
+                width: 70%;
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100vh;
+                background-color: #fff;
+                @extend .center-flex, .flex-column;
+                justify-content: space-evenly;
+                padding: 6rem 0 4rem;
+                box-shadow: -15px 0px 10px rgba(0, 0, 0, .2);
+                clip-path: circle(0.0% at 100% 0);
+                transition: clip-path .7s ease-in-out;
+                margin: 0;
+            }
+            .menudos {
+                -webkit-clip-path: circle(150% at 100% 0);
+                clip-path: circle(150% at 100% 0);
+                height: 100vh;
 
-            .contenedor-hamburguer {
-                display: flex;
+            }
+            .animation-enlace{
+                .enlace{
+                    animation: aparecer 2s;
+
+                }
+            }
+
+
+            .contenedor-hamburguer{
+                z-index: 150;
                 position: fixed;
                 top: 2rem;
                 right: 2rem;
             }
+            
         }
+        .menu-top{
+            transform: translateY(-130px);
+        }
+        .menu-top-active{
+            transform: translateY(0px);
+
+        }
+
+
+        
 
         .textos-header {
             @extend .position-absolute;
@@ -72,7 +116,7 @@ body {
 
             .titulo-textos-header {
                 font-size: 2.5em;
-                color: #fff;
+                color: #fff
             }
 
             .subtitulo-textos-header {
@@ -229,30 +273,32 @@ body {
                 @extend .flex-column;
                 justify-content: space-around;
                 align-items: center;
-                overflow: visible;
 
-                
+
+
                 .swiper-pagination-bullet {
                     display: none;
                 }
-                
+
                 .carousel-peliculas {
                     width: 100%;
                     @extend .flex-column;
-                    position: relative;
-                    overflow: visible;
 
-                    
-                    
+
+
                     .peliculas {
                         width: 100%;
+                        height: calc(408px / 1.6 + 140px);
+                        overflow-y: visible;
                         display: flex;
-                        overflow: visible;
+
+
                         .arrows-peliculas {
-                            overflow: visible;
                             @extend .center-flex;
+
                             .flecha-derecha,
                             .flecha-izquierda {
+                                top: calc(50% - 50px);
                                 height: 3.2rem;
                                 width: 3.2rem;
                                 color: white;
@@ -262,65 +308,72 @@ body {
                                 cursor: pointer;
                                 outline: none;
                                 transition: transform .7s, background-color .5s;
-                                
-                                
-                                
-                                i{
+
+
+
+                                i {
                                     font-size: 2.5rem;
                                     transition: transform .5s;
-                                    
-                                    
+
+
                                 }
-                                &:active, &:hover{
+
+                                &:active,
+                                &:hover {
                                     color: $color1;
                                     background-color: rgba(0, 0, 0, .8);
 
                                 }
                             }
+
                             .flecha-izquierda {
                                 left: 2%;
-                                
-                                i{
+
+                                i {
                                     transform: translateX(-2px);
                                 }
-                                &:active, &:hover {
+
+                                &:active,
+                                &:hover {
                                     transform: translateX(-.215em)
                                 }
                             }
-        
+
                             .flecha-derecha {
                                 right: 2%;
-                                i{
+
+                                i {
                                     transform: translateX(2px);
                                 }
-                                &:active, &:hover {
+
+                                &:active,
+                                &:hover {
                                     transform: translateX(.15rem)
                                 }
                             }
+
                             .flecha-derecha:after,
-                            .flecha-izquierda:after{
+                            .flecha-izquierda:after {
                                 display: none;
-                            }    
+                            }
+
                             // .flecha-derecha {
                             //     right: .5rem;
                             // }
-    
+
                             // .flecha-izquierda {
                             //     left: .5rem;
                             // }
                         }
-    
+
 
                         .pelicula {
-                            // overflow: hidden;
                             box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, .7);
-                            position: relative;
                             height: calc(408px / 1.6);
                             width: calc(288px / 1.6);
 
                             .portada {
 
-                                overflow: hidden;
 
                                 .img-pelicula {
                                     object-fit: cover;
@@ -328,15 +381,74 @@ body {
                             }
 
                             .informacion {
-                                .contenedor-nombre{
-                                    // position: relative;
+                                .contenedor-nombre-ver-pelis {
+                                    display: none;
+                                    text-align: center;
+                                    margin: 1rem 0;
                                 }
+
                                 .ver-peliculas {
                                     display: none;
-                                    margin: 2.5rem;
+                                    margin: 1rem 2.5rem;
                                 }
                             }
                         }
+
+                        .pelicula-active {
+                            .informacion {
+                                .contenedor-nombre-ver-pelis {
+                                    display: block;
+                                }
+
+                                .ver-peliculas {
+                                    display: block;
+                                }
+                            }
+                        }
+
+                        .swiper-slide-active {
+                            .informacion {
+                                .contenedor-nombre-ver-pelis {
+                                    display: block;
+                                }
+
+                                .ver-peliculas {
+                                    display: block;
+                                }
+                            }
+                        }
+
+                        .position-absolute-informacion {
+                            .informacion {
+                                position: absolute;
+                                @extend .height-width;
+                                @extend .center-flex;
+                                flex-direction: column;
+                                background: #48aef0e6;
+                                top: 90%;
+                                color: #fff;
+                                transition: top .7s;
+
+                                .contenedor-nombre {
+                                    @extend .center-flex;
+                                    height: 10%;
+                                    width: 100%;
+                                    transition: margin 0.7s;
+
+                                }
+
+                                &:hover {
+                                    top: 0;
+                                }
+
+                                &:hover .contenedor-nombre {
+                                    margin-top: 2rem;
+                                }
+
+
+                            }
+                        }
+
                     }
 
                 }

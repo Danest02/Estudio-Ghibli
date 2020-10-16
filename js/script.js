@@ -545,14 +545,7 @@
 // })
 
 // console.log(heightParrafoHistoria)
-// botonHistoria.addEventListener("click", (evento) => {
-//   const yHistoria = window.scrollY - 2
-
-
-//   parrafoHistoria.style.height = heightParrafoHistoria;
-//   parrafoHistoria.classList.toggle("contenedor-texto-historia-active")
-//   console.log(heightParrafoHistoria)
-//   console.log(contenedor)
+ 
 //   setTimeout(() => {
 //     if (evento.target.innerHTML == "Leer mas") {
 //       evento.target.classList.add("transformacion")
@@ -565,37 +558,78 @@
 
       
 //     } else {
-//       evento.target.classList.add("transformacion")
+//       evento.target.classList.add("transformacion") 
 //       evento.target.innerHTML = "Leer mas";
 //     }
 //   }, 10);
 
 
 // })
+  // STUB FUNCIONES GENERALES
 
-// TODO:STUB ACORDEON SOBRE-GHIBLI
+  function hasClass(element, className) {
+    return (' ' + element.className + ' ').indexOf(' ' + className+ ' ') > -1;
+  }
 
-let h3SobreGhibli = document.getElementsByClassName("h3-sobre-ghibli")
-// let pSobreGhibli = document.getElementsByClassName("contenedor-parrafo-sobre-ghibli")
-let textoSobreGhibli = document.getElementsByClassName("texto-sobre-ghibli")
-var contenedortextoSobreGhibli = Array.from(textoSobreGhibli)
-let contenedorh3SobreGhibli = Array.from(h3SobreGhibli)
-function hasClass(element, className) {
-  return (' ' + element.className + ' ').indexOf(' ' + className+ ' ') > -1;
-}
-contenedorh3SobreGhibli.forEach((elemento) => {
+  
+  // ANCHOR VANILLA
+
+    // TODO:STUB HAMBURGUER
+    let enlaces = document.getElementById("enlaces")
+    let hamburguer = document.getElementById("hamburguer")
+    document.getElementById("contenedor-hamburguer")
+      .addEventListener("click", function () {
+        var semaforoBurguer = true
+        enlaces.classList.toggle("menudos");
+        enlaces.classList.toggle("animation-enlace");
+        hamburguer.classList.toggle("hamburguer-simple");
+        document.getElementById("contenedor-hamburguer").classList.toggle("contenedor-hamburguer-active");
+        document.getElementById("menu").classList.remove("menu-top");
+        document.getElementById("menu").classList.toggle("menu-top-active");
+      });
+  
+  
+    // TODO:STUB SCROLL
+  
+    let ubicacionPrincipal = window.pageYOffset;
+    window.addEventListener("scroll", function scrollNav() {
+      let desplazamientoActual = window.pageYOffset;
+  
+      if (ubicacionPrincipal >= desplazamientoActual) {
+        document.getElementById("menu").classList.remove("menu-top");
+        document.getElementById("menu").classList.add("menu-scroll");
+        document.getElementById("contenedor-hamburguer").classList.add("contenedor-hamburguer-scroll");
+      } else {
+        document.getElementById("menu").classList.add("menu-top");
+      }
+  
+      if (desplazamientoActual < 530 && desplazamientoActual !== 0) {
+        document.getElementById("menu").classList.add("menu-top");
+      }
+  
+      ubicacionPrincipal = desplazamientoActual;
+    });
+  
+    window.addEventListener("scroll", function () {
+      if (window.pageYOffset == 0) {
+        document.getElementById("menu").classList.remove("menu-scroll");
+        document.getElementById("contenedor-hamburguer").classList.remove("contenedor-hamburguer-scroll");
+      }
+    });
+
+  // TODO:STUB ACORDEON SOBRE-GHIBLI
+
+  let h3SobreGhibli = document.getElementsByClassName("h3-sobre-ghibli")
+  let textoSobreGhibli = document.getElementsByClassName("texto-sobre-ghibli")
+  var contenedortextoSobreGhibli = Array.from(textoSobreGhibli)
+  let contenedorh3SobreGhibli = Array.from(h3SobreGhibli)
+  contenedorh3SobreGhibli.forEach((elemento) => {
     elemento.addEventListener("click", (evento) => {
       console.log(evento.target.parentElement.parentElement)
       if(hasClass(evento.target.parentElement.parentElement, "texto-sobre-ghibli-visible" )){
         evento.target.parentElement.parentElement.classList.remove("texto-sobre-ghibli-visible")
         
       }else{
-        // for (i = 0; i<contenedortextoSobreGhibli.length; i++ ){
-        //   contenedortextoSobreGhibli[i].classList.remove("texto-sobre-ghibli-visible")
-        //   if(hasClass(contenedortextoSobreGhibli[i], "texto-sobre-ghibli-visible")){
-        //     contenedortextoSobreGhibli[i].classList.remove("texto-sobre-ghibli-visible")
-        //   }
-        // }
         for (let e of contenedortextoSobreGhibli){
           e.classList.remove("texto-sobre-ghibli-visible")
         }
@@ -604,39 +638,49 @@ contenedorh3SobreGhibli.forEach((elemento) => {
     });
   })
 
-// TODO:STUB SLIDER PELICULAS
+  
+// ANCHOR EJECUTAR LUEGO DEL DOM
+document.addEventListener('DOMContentLoaded', () => {
 
-window.addEventListener("load", () => {
-  var swiper = new Swiper(".swiper-container", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: "auto",
-    coverflowEffect: {
-      rotate: 40,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows: true,
-    },
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: true,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="' + className + '">' + (index + 1) + "</span>";
+
+  // TODO:STUB SLIDER PELICULAS
+
+  window.addEventListener("load", () => {
+    var swiper = new Swiper(".swiper-container", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 40,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
       },
-    },
-    // cssMode: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    // mousewheel: true,
-    keyboard: true,
-  });
-})
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+      },
+      // cssMode: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      // mousewheel: true,
+      keyboard: true,
+    });
+  })
+
+
+  
+});
+
