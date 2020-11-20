@@ -104,8 +104,347 @@ block body
                                         p.sipnosis
                                         a(href="#" class="ver-peliculas mybtn") Ver
                             .swiper-pagination
+            //- NOTE GALERIA
+            section.seccion-galeria#seccion-galeria
+                .galeria.contenedor
+                    h2.titulo Imagenes
+                    form(action="" class="contenedor-barra-busqueda")
+                        input(type="text" class="barra-busqueda" id="barra-busqueda" placeholder="Buscar")
+                        //- <i class="fas fa-search icon-barra-busqueda"></i>
+                    ul.categorias-galeria#categorias-galeria
+                        li(class="categoria-galeria activo" data-categoria="todos") Todos
+                        li(class="categoria-galeria" data-categoria="ciudades") Ciudades
+                        li(class="categoria-galeria" data-categoria="personas") Personas
+                        li(class="categoria-galeria" data-categoria="animales") Animales
+                        li(class="categoria-galeria" data-categoria="paisajes ") Paisajes
+                        li(class="categoria-galeria" data-categoria="naturaleza") Naturaleza
+                    .imagenes-galeria
+                        .imagen-galeria
+                            img(src="galeria/ghibli3.1.jpg")
+                        .imagen-galeria
+                            img(src="galeria/ghibli3.1.jpg")
+                        .imagen-galeria
+                            img(src="galeria/ghibli3.1.jpg")
+                        .imagen-galeria
+                            img(src="galeria/ghibli3.1.jpg")
+                        .imagen-galeria
+                            img(src="galeria/ghibli3.1.jpg")
+                        .imagen-galeria
+                            img(src="galeria/ghibli3.1.jpg")
+                        .imagen-galeria
+                            img(src="galeria/ghibli3.1.jpg")
+                    .overlay#overlay
+                        .contenedor-img
+                            buttom.btn-cerrar-popup#btn-cerrar-popup
+                                i(class="fas fa-times")
+                            img(src="" alt="" id="ruta")
+                        p.description
+                    .contenedor-boton-ver-mas
+                        buttom.boton-ver-mas.mybtn Ver mas
+            section.seccion-kaiosamas-ghibli#seccion-kaiosamas-ghibli
+                .contenedor-kaiosamas-ghibli.contenedor
+                    .contenedor-titulo-kaiosamas
+                        .titulo-kaiosamas
+                            h2.titulo Kaiosamas de Ghibli
+                    .kaiosamas
+                        .kaiosama.k1
+                            .contenedor-imagen-kaiosama
+                                img(src="galeria/hayaomiyazaki.jpg" class="imagen-kaiosama")
+                            .contenido-textos-kaiosama
+                                h3.h3-kaiosama Hayao Miyasaki
+                                buttom.contenedor-boton-p.mybtn Mas
+                                .contenedor-p
+                                    p Nacio en Bunkyō de Tokio, el 5 de enero de 1941. Director de cine de animación, productor, animador, ilustrador, dibujante de mangas y productor de anime japonés, de renombre internacional y con una carrera de cinco décadas. Ha sido comparado con Walt Disney, Steven Spielberg u Orson Welles. Entre sus películas más populares se hallan títulos como El viaje de Chihiro (que rebasó los ingresos en taquillas de Japón y superó el éxito obtenido por Titanic, y y fue la primera película de anime en ganar un Premio Óscar), La princesa Mononoke, Mi vecino Totoro, El Castillo Ambulante y Ponyo y el secreto de la sirenita. Sus películas hablan de la relación de la humanidad con la naturaleza, la tecnología y la dificultad de mantener una ética pacifista; las protagonistas regularmente son niñas y mujeres jóvenes fuertes e independientes.
+                                .contenedor-boton-leer-mas
+                                    buttom.boton-leer-mas Leer mas
+                        .kaiosama.k2
+                            .contenedor-imagen-kaiosama
+                                img(src="galeria/isaotakahata.jpg" class="imagen-kaiosama")
+                            .contenido-textos-kaiosama
+                                h3.h3-kaiosama Hayao Miyasaki
+                                buttom.contenedor-boton-p.mybtn Mas
+                                .contenedor-p
+                                    p Nacio en Bunkyō de Tokio, el 5 de enero de 1941. Director de cine de animación, productor, animador, ilustrador, dibujante de mangas y productor de anime japonés, de renombre internacional y con una carrera de cinco décadas. Ha sido comparado con Walt Disney, Steven Spielberg u Orson Welles. Entre sus películas más populares se hallan títulos como El viaje de Chihiro (que rebasó los ingresos en taquillas de Japón y superó el éxito obtenido por Titanic, y y fue la primera película de anime en ganar un Premio Óscar), La princesa Mononoke, Mi vecino Totoro, El Castillo Ambulante y Ponyo y el secreto de la sirenita. Sus películas hablan de la relación de la humanidad con la naturaleza, la tecnología y la dificultad de mantener una ética pacifista; las protagonistas regularmente son niñas y mujeres jóvenes fuertes e independientes.
+                                .contenedor-boton-leer-mas
+                                    buttom.boton-leer-mas Leer mas
+                        .kaiosama.k3
+                            .contenedor-imagen-kaiosama
+                                img(src="galeria/toshiosuzuki.jpg" class="imagen-kaiosama")
+                            .contenido-textos-kaiosama
+                                h3.h3-kaiosama Hayao Miyasaki
+                                buttom.contenedor-boton-p.mybtn Mas
+                                .contenedor-p
+                                    p Nacio en Bunkyō de Tokio, el 5 de enero de 1941. Director de cine de animación, productor, animador, ilustrador, dibujante de mangas y productor de anime japonés, de renombre internacional y con una carrera de cinco décadas. Ha sido comparado con Walt Disney, Steven Spielberg u Orson Welles. Entre sus películas más populares se hallan títulos como El viaje de Chihiro (que rebasó los ingresos en taquillas de Japón y superó el éxito obtenido por Titanic, y y fue la primera película de anime en ganar un Premio Óscar), La princesa Mononoke, Mi vecino Totoro, El Castillo Ambulante y Ponyo y el secreto de la sirenita. Sus películas hablan de la relación de la humanidad con la naturaleza, la tecnología y la dificultad de mantener una ética pacifista; las protagonistas regularmente son niñas y mujeres jóvenes fuertes e independientes.
+                                .contenedor-boton-leer-mas
+                                    buttom.boton-leer-mas Leer mas
+            //- NOTE FRASES
+            section.seccion-frases#frases-contenedor
+                .contenedor-carousel-frases.contenedor
+                    h2.titulo.titulo-frases Frases de Ghibli
+                    .carousel-frases
+                        buttom(role="button" id="flecha-izquierda" class="flecha-izquierda")
+                            i.fas.fa-angle-left
+                        .contenedor-frases
+                            ul.frases
+                                li.contenedor-frase
+                                    .frase#last-clone
+                                        .contenedor-img-frase
+                                         img(class="img-frase" src="galeria/ghibli4.3.jpg" alt="")
+                                        .contenido-texto
+                                            .contenedor-parrafo-frase
+                                                blackquote(cite="#" class="parrafo-frase")
+                                                    span "
+                                                    |un cerdo que no vuela es un cerdo
+                                                    span "
+                                            h3.titulo-frase Porco Rosso
+                                li.contenedor-frase
+                                    .frase
+                                        .contenedor-img-frase
+                                         img(class="img-frase" src="galeria/ghibli4.1.png" alt="")
+                                        .contenido-texto
+                                            .contenedor-parrafo-frase
+                                                blackquote(cite="#" class="parrafo-frase")
+                                                    span "
+                                                    |Una vez que conoces a alguien nunca lo olvidas realmente
+                                                    span "
+                                            h3.titulo-frase El viaje de Chihiro
+                                li.contenedor-frase
+                                    .frase
+                                        .contenedor-img-frase
+                                         img(class="img-frase" src="galeria/ghibli4.2.jpg" alt="")
+                                        .contenido-texto
+                                            .contenedor-parrafo-frase
+                                                blackquote(cite="#" class="parrafo-frase")
+                                                    span "
+                                                    |Es divertido despertarse cada día sin saber si será uno de esos que cammbian tu vida para siempre 
+                                                    span "
+                                            h3.titulo-frase Arrietty y el mundo de los diminutos
+                                li.contenedor-frase
+                                    .frase
+                                        .contenedor-img-frase
+                                         img(class="img-frase" src="galeria/ghibli4.3.jpg" alt="")
+                                        .contenido-texto
+                                            .contenedor-parrafo-frase
+                                                blackquote(cite="#" class="parrafo-frase")
+                                                    span "
+                                                    |un cerdo que no vuela es un cerdo
+                                                    span "
+                                            h3.titulo-frase Porco Rosso
+                                li.contenedor-frase
+                                    .frase
+                                        .contenedor-img-frase
+                                         img(class="img-frase" src="galeria/ghibli4.1.png" alt="")
+                                        .contenido-texto
+                                            .contenedor-parrafo-frase
+                                                blackquote(cite="#" class="parrafo-frase")
+                                                    span "
+                                                    |Una vez que conoces a alguien nunca lo olvidas realmente
+                                                    span "
+                                            h3.titulo-frase El viaje de Chihiro
+                                li.contenedor-frase
+                                    .frase
+                                        .contenedor-img-frase
+                                         img(class="img-frase" src="galeria/ghibli4.2.jpg" alt="")
+                                        .contenido-texto
+                                            .contenedor-parrafo-frase
+                                                blackquote(cite="#" class="parrafo-frase")
+                                                    span "
+                                                    |Es divertido despertarse cada día sin saber si será uno de esos que cammbian tu vida para siempre 
+                                                    span "
+                                            h3.titulo-frase Arrietty y el mundo de los diminutos
+                                li.contenedor-frase
+                                    .frase
+                                        .contenedor-img-frase
+                                         img(class="img-frase" src="galeria/ghibli4.3.jpg" alt="")
+                                        .contenido-texto
+                                            .contenedor-parrafo-frase
+                                                blackquote(cite="#" class="parrafo-frase")
+                                                    span "
+                                                    |un cerdo que no vuela es un cer
+                                                    span "
+                                            h3.titulo-frase Porco Rosso
+                                li.contenedor-frase
+                                    .frase#firts-clone
+                                        .contenedor-img-frase
+                                         img(class="img-frase" src="galeria/ghibli4.1.png" alt="")
+                                        .contenido-texto
+                                            .contenedor-parrafo-frase
+                                                blackquote(cite="#" class="parrafo-frase")
+                                                    span "
+                                                    |Una vez que conoces a alguien nunca lo olvidas realmente
+                                                    span "
+                                            h3.titulo-frase El viaje de Chihiro
+                        buttom(role="button" id="flecha-derecha" class="flecha-derecha")
+                            i.fas.fa-angle-right
+
+            //- NOTE VER PELIS
+            section.seccion-ver-pelis#ver-pelis
+                .ver-pelis.contenedor
+                    h2.titulo.titulo-ver-pelis Ver todas las peliculas
+                    .pelis-cont
+                        .peli
+                            .contenedor-textos-ver-pelis
+                                .textos-ver-pelis
+                                    h3.titulo-textos-ver-pelis Ver Online
+                                    p Aquí las puedes ver y descargar
+                                .cursor-hover-ver-pelis
+                                    i(class="fas fa-mouse-pointer")
+                                    p.mybtn Ver Enlaces
+                            .contenedor-imagen-ver-pelis
+                                img(src="galeria/animeid.jpg" class="imagen-ver-pelis" alt="")
+                            .enlaces-ver-pelis
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Nausicaä del Valle del Viento
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") El castillo en el cielo
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") La tumba de las luciérnagas
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Nicky, la aprendiz de bruja
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Recuerdos del ayer
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Porco Rosso
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Puedo escuchar en el mar
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Pompoko
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Susurros del corazóno
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") la princesa Mononoke
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Mis vecinos los Yamada
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") El viaje de Chihiro
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Haru en el reino de los gatos
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") El castillo ambulante
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Cuentos de Terramar
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Ponyo en el alcantilado
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Arrietty y el mundo de los diminutos
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") La colina de las amapolas
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") El viento se levanta
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") El cuento de la princesa Kaguya
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") El recuerdo de Marnie
+                        .peli
+                            .contenedor-textos-ver-pelis
+                                .textos-ver-pelis
+                                    h3.titulo-textos-ver-pelis Ver Online
+                                    p Aquí las puedes ver y descargar
+                                .cursor-hover-ver-pelis
+                                    i(class="fas fa-mouse-pointer")
+                                    p.mybtn Ver Enlaces
+                            .contenedor-imagen-ver-pelis
+                                img(src="galeria/animeflv.png" class="imagen-ver-pelis" alt="")
+                            .enlaces-ver-pelis
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Nausicaä del Valle del Viento
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") El castillo en el cielo
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") La tumba de las luciérnagas
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Nicky, la aprendiz de bruja
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Recuerdos del ayer
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Porco Rosso
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Puedo escuchar en el mar
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Pompoko
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Susurros del corazóno
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") la princesa Mononoke
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Mis vecinos los Yamada
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") El viaje de Chihiro
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Haru en el reino de los gatos
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") El castillo ambulante
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Cuentos de Terramar
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Ponyo en el alcantilado
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Arrietty y el mundo de los diminutos
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") La colina de las amapolas
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") El viento se levanta
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") El cuento de la princesa Kaguya
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") El recuerdo de Marnie
+                        .peli
+                            .contenedor-textos-ver-pelis
+                                .textos-ver-pelis
+                                    h3.titulo-textos-ver-pelis Descargar
+                                    p Aquí las puedes descargar full calidad
+                                .cursor-hover-ver-pelis
+                                    i(class="fas fa-mouse-pointer")
+                                    p.mybtn Ver Enlaces
+                            .contenedor-imagen-ver-pelis
+                                img(src="galeria/sphinx anime.jpg" class="imagen-ver-pelis" alt="")
+                            .enlaces-ver-pelis
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Nausicaä del Valle del Viento
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") El castillo en el cielo
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") La tumba de las luciérnagas
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Nicky, la aprendiz de bruja
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Recuerdos del ayer
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Porco Rosso
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Puedo escuchar en el mar
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Pompoko
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Susurros del corazóno
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") la princesa Mononoke
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Mis vecinos los Yamada
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") El viaje de Chihiro
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Haru en el reino de los gatos
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") El castillo ambulante
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Cuentos de Terramar
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Ponyo en el alcantilado
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") Arrietty y el mundo de los diminutos
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") La colina de las amapolas
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") El viento se levanta
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") El cuento de la princesa Kaguya
+                                .contenedor-enlace-ver-peli
+                                    a(href="#" class="enlace-ver-peli mybtn") El recuerdo de Marnie
+
 
         script(src="jquery/jquery.js")
+        script(src="js/myfunctions.js")
         script(src="js/script.js")
         script(src="https://kit.fontawesome.com/2a4c2c58c8.js" crossorigin="anonymous")
         script(src="https://unpkg.com/swiper/swiper-bundle.min.js")

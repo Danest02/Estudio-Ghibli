@@ -35,35 +35,34 @@ body {
     color: #000;
 
     header {
-        background: #48aef0 url(../../galeria/ghibli-mobile-2.jpg);
-        background: linear-gradient(to right, rgba(72, 173, 240, 0.3), rgba(53, 127, 176, 0.4)), url(../../galeria/ghibli-mobile-2.jpg);
-        
-        // @include background-before {
-            //     background: rgba(0, 0, 0, 0.2);
-            
-            // }
-            
-            min-height: 100vh;
-            background-position: center;
-            background-size: cover;
-            @extend .parallax;
-            overflow: hidden;
-            position: relative;
-        // @extend .center-flex;
+        @include background-image {
+            background: #48aef0 url(../../galeria/ghibli-mobile-2.jpg);
+            background: linear-gradient(to right, rgba(72, 173, 240, 0.3), rgba(53, 127, 176, 0.4)), url(../../galeria/ghibli-mobile-2.jpg);
+        }
+
+        @include background-before {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        @include background-parallax;
+
+        min-height: 100vh;
+        overflow: hidden;
 
         .menu {
-            transition: transform .5s ease-in-out;
             position: fixed;
             z-index: 100;
             width: 100%;
-            .enlaces{
+
+            .enlaces {
                 width: 70%;
                 position: absolute;
                 top: 0;
                 right: 0;
                 height: 100vh;
                 background-color: #fff;
-                @extend .center-flex, .flex-column;
+                @extend .center-flex,
+                .flex-column;
                 justify-content: space-evenly;
                 padding: 6rem 0 4rem;
                 box-shadow: -15px 0px 10px rgba(0, 0, 0, .2);
@@ -71,38 +70,46 @@ body {
                 transition: clip-path .7s ease-in-out;
                 margin: 0;
             }
+
             .menudos {
                 -webkit-clip-path: circle(150% at 100% 0);
                 clip-path: circle(150% at 100% 0);
                 height: 100vh;
 
             }
-            .animation-enlace{
-                .enlace{
+
+            .animation-enlace {
+                .enlace {
                     animation: aparecer 2s;
 
                 }
             }
 
 
-            .contenedor-hamburguer{
+            .contenedor-hamburguer {
                 z-index: 150;
                 position: fixed;
                 top: 2rem;
                 right: 2rem;
             }
-            
+
         }
-        .menu-top{
+
+        .menu-scroll {
+            transition: transform .5s ease-in-out;
+        }
+
+        .menu-top {
             transform: translateY(-130px);
         }
-        .menu-top-active{
+
+        .menu-top-active {
             transform: translateY(0px);
 
         }
 
 
-        
+
 
         .textos-header {
             @extend .position-absolute;
@@ -128,7 +135,6 @@ body {
 
         .wave {
             // display: none;
-            bottom: -5px;
             width: 150%;
             height: 150px;
             bottom: -50px;
@@ -140,19 +146,19 @@ body {
 
     main {
         .contenedor {
-            max-width: 90%;
+            max-width: 95%;
             margin: auto;
             overflow: hidden;
-            border: 2px solid darkmagenta;
         }
 
         .titulo {
             color: $color1;
-            font-size: 3em;
+            font-size: 2.5rem;
             text-align: center;
-            margin: 3.5rem 0;
-            border: 1px solid rgb(255, 0, 85);
+            margin: 3rem 0;
         }
+
+        // TODO:STUB SOBRE GHIBLI
 
         .seccion-sobre-ghibli {
             .contenedor-sobre-ghibli {
@@ -266,6 +272,8 @@ body {
                 }
             }
         }
+
+        // TODO:STUB PELICULAS
 
         .seccion-peliculas {
             .contenedor-peliculas {
@@ -454,5 +462,485 @@ body {
                 }
             }
         }
+
+        // TODO:STUB GALERIA
+
+        .seccion-galeria {
+            background-color: $color-fondo;
+
+            .galeria {
+                @extend .center-flex,
+                .flex-column;
+
+                .contenedor-barra-busqueda {
+                    @extend .center-flex;
+                    width: 100%;
+                    margin-bottom: 2rem;
+
+                    .icon-barra-busqueda {
+                        position: relative;
+                        right: 15%;
+                        color: $color1;
+                    }
+
+                    .barra-busqueda {
+                        // padding-right: 10%;
+                        width: 50%;
+                        height: 40px;
+                        background-color: #fff;
+                        border-radius: 100px;
+                        text-align: center;
+                        color: #414141;
+                        outline: none;
+                        transition: width .7s ease, background-color .7s;
+
+                        &:focus {
+                            width: 90%;
+                            background-color: $color2;
+                            color: #fff;
+
+                            &::placeholder {
+                                color: rgba(255, 255, 255, 0.3);
+                            }
+                        }
+
+                        &::placeholder {
+                            transition: color .8s;
+                            color: $color2;
+                        }
+                    }
+                }
+
+                .categorias-galeria {
+                    @extend .center-flex,
+                    .wrap;
+                    text-align: center;
+                    margin-bottom: 2rem;
+
+                    .categoria-galeria {
+                        color: #9B9B9B;
+                        // margin: 0 20px;
+                        padding: 0 7px;
+                        font-size: 18px;
+                        line-height: 36px;
+                        font-weight: 700;
+                        list-style: none;
+                        cursor: pointer;
+                    }
+
+                    .activo {
+                        color: #555555;
+                    }
+
+
+                }
+
+                $height-imagen: 130px;
+
+                .imagenes-galeria {
+                    display: flex;
+                    align-content: flex-start;
+                    justify-content: center;
+                    // flex-wrap: wrap;
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(230px, 240px));
+                    grid-gap: 1rem;
+                    max-height: 430px;
+                    overflow: hidden;
+
+                    .imagen-galeria {
+                        height: $height-imagen;
+                        box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+                        overflow: hidden;
+                        border-radius: 15px;
+
+                        img {
+                            @extend .height-width;
+                            object-fit: cover;
+                        }
+                    }
+                }
+
+                .overlay {
+                    display: none;
+                }
+
+                .contenedor-boton-ver-mas {
+                    display: flex;
+                    justify-content: center;
+                    padding: 2rem 0;
+
+                    .boton-ver-mas {
+                        font-size: 1.2rem;
+                        outline: none;
+                        /*quitar border pordefecto del boton al hacer click*/
+                    }
+                }
+            }
+        }
+
+        // TODO:STUB KAIOSAMAS DE GHIBLI
+
+        .seccion-kaiosamas-ghibli {
+            @include background-image {
+                background: url(../../galeria/ghibli-mobile-1.jpg);
+            }
+
+            @include background-parallax;
+
+            @include background-before {
+                background-color: rgba(255, 255, 255, .95);
+            }
+
+
+            .contenedor-kaiosamas-ghibli {
+                width: 100%;
+                @extend .center-flex,
+                .flex-column;
+
+                .contenedor-titulo-kaiosamas {
+                    position: relative;
+                    margin-top: 3.5rem;
+                }
+
+                .kaiosamas {
+                    position: relative;
+                    // @extend .center-flex, .flex-column;
+                    display: grid;
+                    width: 95%;
+                    grid-template-areas:
+                        "k1 k1 k1"
+                        "k2 k2 k2"
+                        "k3 k3 k3";
+
+                    .k1 {
+                        grid-area: k1;
+                    }
+
+                    .k2 {
+                        grid-area: k2;
+                        display: flex;
+                        flex-direction: row-reverse;
+                        text-align: end;
+
+                        .contenedor-imagen-kaiosama {
+                            right: 1.5rem;
+
+                        }
+                    }
+
+                    .k3 {
+                        grid-area: k3;
+
+                    }
+
+                    .kaiosama {
+                        overflow: hidden;
+                        position: relative;
+                        margin-bottom: 2rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .contenedor-imagen-kaiosama {
+                            width: 50%;
+
+                            // @extend .height-width;
+                            .imagen-kaiosama {
+                                // @extend .height-width;
+                                object-fit: cover;
+                                border-radius: 50%;
+                                height: 130px;
+                                width: 130px;
+                            }
+                        }
+
+                        .contenido-textos-kaiosama {
+                            width: 50%;
+                            @extend .center-flex,
+                            .flex-column;
+
+                            .h3-kaiosama {
+                                margin: .5rem 0;
+                                font-size: 1rem;
+                            }
+
+                            .contenedor-p {
+                                display: none;
+                            }
+
+                            .contenedor-boton-leer-mas {
+                                display: none;
+                            }
+
+                            .boton-contenedor-p {
+                                transition: none;
+                                margin-bottom: .5rem;
+                            }
+
+                        }
+                    }
+
+                    .kaiosama-active {
+                        width: 100%;
+                        height: 100%;
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        z-index: 1000;
+                        background-color: #fff;
+                        flex-wrap: wrap;
+                        text-align: start;
+                        flex-direction: row;
+
+                        .contenedor-imagen-kaiosama {
+                            position: absolute;
+                            top: 1rem;
+                            left: 1.5rem;
+                            width: 100%;
+
+                            .imagen-kaiosama {
+                                height: 100px;
+                                width: 100px;
+                                border-radius: 50%;
+                            }
+                        }
+
+                        .contenido-textos-kaiosama {
+                            text-align: center;
+                            top: 8%;
+                            background: none;
+                            width: 100%;
+                            position: absolute;
+
+                            .h3-kaiosama {
+                                margin: .5rem 0 3.8rem;
+                                transform: translateX(2.5rem);
+                            }
+
+                            .contenedor-p {
+                                display: block;
+                                padding: 0 .45rem;
+                            }
+
+                            .contenedor-boton-p {
+                                margin: .5rem 0;
+
+                                order: 3;
+                            }
+
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+        // TODO:STUB FRASES
+        .seccion-frases {
+            .contenedor-carousel-frases {
+                min-width: 100%;
+
+                .carousel-frases {
+                    @extend .center-flex;
+                    justify-content: space-between;
+
+                    .flecha-derecha,
+                    .flecha-izquierda {
+                        position: absolute;
+                        z-index: 100;
+                        @extend .center-flex;
+                        color: $color1;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        outline: none;
+                        transition: transform .7s, background-color .5s;
+
+                        i {
+                            font-size: 2.5rem;
+                            transition: transform .5s;
+                        }
+                    }
+
+                    .flecha-izquierda {
+                        left: 3%;
+                    }
+
+                    .flecha-derecha {
+                        right: 3%;
+                    }
+
+                    .contenedor-frases {
+                        max-height: 200px;
+
+                        .frases {
+                            scroll-behavior: smooth;
+                            display: flex;
+                            @extend .scrollbar-none;
+                            // scroll-snap-type: x proximity;
+                            -ms-scroll-snap-type: x mandatory;
+                            scroll-snap-type: x mandatory;
+
+                            .contenedor-frase {
+                                position: relative;
+                                height: 100%;
+                                width: 100%;
+                                flex-shrink: 0;
+                                scroll-snap-align: center;
+
+                                .frase {
+                                    @include background-before {
+                                        background-color: rgba(0, 0, 0, 0.5);
+                                    }
+
+                                    .contenido-texto {
+                                        width: 65%;
+                                        @extend .position-absolute,
+                                        .center-flex,
+                                        .flex-column;
+                                        text-align: center;
+
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+
+                    .frases-transition-none {
+                        scroll-behavior: inherit;
+                    }
+
+                }
+            }
+        }
+
+        // TODO:STUB VER PELIS
+        .seccion-ver-pelis {
+            background: #f2f2f2;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../../galeria/ghibli3.3.jpg);
+            background-position: 30%;
+            background-size: cover;
+
+            .ver-pelis {
+                .titulo-ver-pelis {
+                    margin-top: 7rem;
+                    margin-bottom: 1rem;
+                }
+
+                .pelis-cont {
+                    @extend .flex-column,
+                    .space-between;
+                    margin-bottom: 3.5rem;
+
+                    .peli {
+                        width: 100%;
+                        position: relative;
+                        @extend .flex-column,
+                        .center-flex;
+                        padding: 0 .5rem;
+                        padding-bottom: calc(200px - 2rem);
+                        margin-top: 2rem;
+
+                        .contenedor-textos-ver-pelis {
+                            @extend .flex-column,
+                            .center-flex;
+                            position: relative;
+                            font-size: 1.7rem;
+
+                            .textos-ver-pelis {
+                                @extend .flex-column,
+                                .center-flex;
+                                position: relative;
+                                color: $color2;
+
+                                h3 {
+                                    font-size: 2rem;
+                                }
+
+                                p {
+                                    text-align: center;
+                                    font-size: 1.5rem;
+
+                                }
+                            }
+
+                            .cursor-hover-ver-pelis {
+                                display: none;
+                            }
+                        }
+
+                        .contenedor-textos-ver-pelis-hover {
+                            transition: height .5s;
+                            overflow: hidden;
+                            height: 0;
+                        }
+
+                        .contenedor-imagen-ver-pelis {
+                            overflow: hidden;
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            border-radius: 50%;
+                            margin: auto;
+                            height: 150px;
+                            width: 150px;
+                            transition: transform .7s;
+
+                            .imagen-ver-pelis {
+                                height: 100%;
+                                width: 100%;
+
+                            }
+
+                        }
+
+                        .contenedor-imagen-ver-pelis-hover {
+                            // top: calc(-100% + 100px);
+                            transition: transform .7s;
+                            transform: scale(.7);
+                        }
+
+                        .enlaces-ver-pelis {
+                            overflow: auto;
+                            height: 0;
+                            opacity: 0;
+                            transition: all .8s ease-in-out;
+                            @extend .center-flex,
+                            .flex-column;
+
+                            .enlace-ver-peli {
+                                font-size: 1rem;
+                                line-height: 1.3rem;
+                                padding: .65rem;
+                                margin: .5rem 0;
+
+
+                            }
+                        }
+
+                        .enlaces-ver-pelis-hover {
+                            transition: all .8s ease-in-out;
+                            opacity: 1;
+                            height: 1200px;
+                            margin: 0;
+                            // visibility: visible;
+                        }
+
+
+
+                    }
+                }
+            }
+        }
+
+
+
+
     }
 }

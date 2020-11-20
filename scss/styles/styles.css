@@ -1,5 +1,5 @@
 .mybtn {
-  background: #48aef0;
+  background-color: #48aef0;
   display: inline-block;
   line-height: 2.5em;
   padding: 0 1.25em;
@@ -13,9 +13,9 @@
 }
 
 .mybtn:hover {
-  -webkit-transition: all 0.4s linear;
-  transition: all 0.4s linear;
-  background: #357fb0;
+  -webkit-transition: background-color 0.4s linear;
+  transition: background-color 0.4s linear;
+  background-color: #357fb0;
 }
 
 .mybtn:active {
@@ -302,6 +302,12 @@
           box-shadow: none;
 }
 
+.background-parallax {
+  background-attachment: fixed;
+  max-width: 100%;
+  background-repeat: no-repeat;
+}
+
 .background-before {
   content: ' ';
   position: absolute;
@@ -316,20 +322,20 @@
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(../../galeria/fondo4.png);
 }
 
-.scrollbar-none {
+.scrollbar-none, body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases {
   overflow-y: scroll;
   scrollbar-width: none;
 }
 
-.scrollbar-none::-webkit-scrollbar {
+.scrollbar-none::-webkit-scrollbar, body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases::-webkit-scrollbar {
   display: none;
 }
 
-.scrollbar-none::-webkit-scrollbar-track {
+.scrollbar-none::-webkit-scrollbar-track, body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases::-webkit-scrollbar-track {
   display: none;
 }
 
-.scrollbar-none::-webkit-scrollbar-thumb {
+.scrollbar-none::-webkit-scrollbar-thumb, body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases::-webkit-scrollbar-thumb {
   display: none;
 }
 
@@ -343,7 +349,8 @@ body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-gh
 body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-1 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-3 .contenedor-h3-sobre-ghibli,
 body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-1 .contenedor-h3-sobre-ghibli,
 body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-2 .contenedor-h3-sobre-ghibli,
-body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-3 .contenedor-h3-sobre-ghibli, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .arrows-peliculas, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .position-absolute-informacion .informacion, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .position-absolute-informacion .informacion .contenedor-nombre {
+body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-3 .contenedor-h3-sobre-ghibli, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .arrows-peliculas, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .position-absolute-informacion .informacion, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .position-absolute-informacion .informacion .contenedor-nombre, body main .seccion-galeria .galeria, body main .seccion-galeria .galeria .contenedor-barra-busqueda, body main .seccion-galeria .galeria .categorias-galeria, body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli, body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama .contenido-textos-kaiosama, body main .seccion-frases .contenedor-carousel-frases .carousel-frases, body main .seccion-frases .contenedor-carousel-frases .carousel-frases .flecha-derecha,
+body main .seccion-frases .contenedor-carousel-frases .carousel-frases .flecha-izquierda, body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases .contenedor-frase .frase .contenido-texto, body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli, body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis, body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis .textos-ver-pelis, body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .enlaces-ver-pelis {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -355,7 +362,7 @@ body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-gh
           align-items: center;
 }
 
-.flex-column, body header .menu .enlaces, body main .seccion-peliculas .contenedor-peliculas, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas {
+.flex-column, body header .menu .enlaces, body main .seccion-peliculas .contenedor-peliculas, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas, body main .seccion-galeria .galeria, body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli, body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama .contenido-textos-kaiosama, body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases .contenedor-frase .frase .contenido-texto, body main .seccion-ver-pelis .ver-pelis .pelis-cont, body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli, body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis, body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis .textos-ver-pelis, body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .enlaces-ver-pelis {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -365,11 +372,15 @@ body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-gh
           flex-direction: column;
 }
 
-.parallax, body header {
-  background-attachment: fixed;
-  max-width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
+.wrap, body main .seccion-galeria .galeria .categorias-galeria {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.space-between, body main .seccion-ver-pelis .ver-pelis .pelis-cont {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .position-absolute, body header .textos-header, body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-1 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-1 .contenedor-h3-sobre-ghibli .h3-sobre-ghibli,
@@ -377,7 +388,7 @@ body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-gh
 body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-1 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-3 .contenedor-h3-sobre-ghibli .h3-sobre-ghibli,
 body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-1 .contenedor-h3-sobre-ghibli .h3-sobre-ghibli,
 body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-2 .contenedor-h3-sobre-ghibli .h3-sobre-ghibli,
-body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-3 .contenedor-h3-sobre-ghibli .h3-sobre-ghibli {
+body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-3 .contenedor-h3-sobre-ghibli .h3-sobre-ghibli, body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases .contenedor-frase .frase .contenido-texto {
   position: absolute;
   top: 0;
   right: 0;
@@ -386,11 +397,20 @@ body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-gh
   margin: auto;
 }
 
+.position-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
 
-.height-width, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .position-absolute-informacion .informacion {
+.height-width, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .position-absolute-informacion .informacion, body main .seccion-galeria .galeria .imagenes-galeria .imagen-galeria img {
   width: 100%;
   height: 100%;
 }
@@ -777,18 +797,27 @@ body header {
   background: #48aef0 url(../../galeria/ghibli-mobile-2.jpg);
   background: -webkit-gradient(linear, left top, right top, from(rgba(72, 173, 240, 0.3)), to(rgba(53, 127, 176, 0.4))), url(../../galeria/ghibli-mobile-2.jpg);
   background: linear-gradient(to right, rgba(72, 173, 240, 0.3), rgba(53, 127, 176, 0.4)), url(../../galeria/ghibli-mobile-2.jpg);
-  min-height: 100vh;
-  background-position: center;
-  background-size: cover;
-  overflow: hidden;
   position: relative;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  max-width: 100%;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+body header:before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 body header .menu {
-  -webkit-transition: -webkit-transform .5s ease-in-out;
-  transition: -webkit-transform .5s ease-in-out;
-  transition: transform .5s ease-in-out;
-  transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
   position: fixed;
   z-index: 100;
   width: 100%;
@@ -834,6 +863,13 @@ body header .menu .contenedor-hamburguer {
   right: 2rem;
 }
 
+body header .menu-scroll {
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+  transition: -webkit-transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
+  transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+}
+
 body header .menu-top {
   -webkit-transform: translateY(-130px);
           transform: translateY(-130px);
@@ -868,7 +904,6 @@ body header .textos-header .subtitulo-textos-header {
 }
 
 body header .wave {
-  bottom: -5px;
   width: 150%;
   height: 150px;
   bottom: -50px;
@@ -876,18 +911,16 @@ body header .wave {
 }
 
 body main .contenedor {
-  max-width: 90%;
+  max-width: 95%;
   margin: auto;
   overflow: hidden;
-  border: 2px solid darkmagenta;
 }
 
 body main .titulo {
   color: #357fb0;
-  font-size: 3em;
+  font-size: 2.5rem;
   text-align: center;
-  margin: 3.5rem 0;
-  border: 1px solid #ff0055;
+  margin: 3rem 0;
 }
 
 body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli {
@@ -1202,6 +1235,518 @@ body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .pelicula
 
 body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .position-absolute-informacion .informacion:hover .contenedor-nombre {
   margin-top: 2rem;
+}
+
+body main .seccion-galeria {
+  background-color: #f2f2f2;
+}
+
+body main .seccion-galeria .galeria .contenedor-barra-busqueda {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+body main .seccion-galeria .galeria .contenedor-barra-busqueda .icon-barra-busqueda {
+  position: relative;
+  right: 15%;
+  color: #357fb0;
+}
+
+body main .seccion-galeria .galeria .contenedor-barra-busqueda .barra-busqueda {
+  width: 50%;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 100px;
+  text-align: center;
+  color: #414141;
+  outline: none;
+  -webkit-transition: width .7s ease, background-color .7s;
+  transition: width .7s ease, background-color .7s;
+}
+
+body main .seccion-galeria .galeria .contenedor-barra-busqueda .barra-busqueda:focus {
+  width: 90%;
+  background-color: #48aef0;
+  color: #fff;
+}
+
+body main .seccion-galeria .galeria .contenedor-barra-busqueda .barra-busqueda:focus::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+body main .seccion-galeria .galeria .contenedor-barra-busqueda .barra-busqueda:focus:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+body main .seccion-galeria .galeria .contenedor-barra-busqueda .barra-busqueda:focus::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+body main .seccion-galeria .galeria .contenedor-barra-busqueda .barra-busqueda:focus::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+body main .seccion-galeria .galeria .contenedor-barra-busqueda .barra-busqueda::-webkit-input-placeholder {
+  -webkit-transition: color .8s;
+  transition: color .8s;
+  color: #48aef0;
+}
+
+body main .seccion-galeria .galeria .contenedor-barra-busqueda .barra-busqueda:-ms-input-placeholder {
+  -webkit-transition: color .8s;
+  transition: color .8s;
+  color: #48aef0;
+}
+
+body main .seccion-galeria .galeria .contenedor-barra-busqueda .barra-busqueda::-ms-input-placeholder {
+  -webkit-transition: color .8s;
+  transition: color .8s;
+  color: #48aef0;
+}
+
+body main .seccion-galeria .galeria .contenedor-barra-busqueda .barra-busqueda::placeholder {
+  -webkit-transition: color .8s;
+  transition: color .8s;
+  color: #48aef0;
+}
+
+body main .seccion-galeria .galeria .categorias-galeria {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+body main .seccion-galeria .galeria .categorias-galeria .categoria-galeria {
+  color: #9B9B9B;
+  padding: 0 7px;
+  font-size: 18px;
+  line-height: 36px;
+  font-weight: 700;
+  list-style: none;
+  cursor: pointer;
+}
+
+body main .seccion-galeria .galeria .categorias-galeria .activo {
+  color: #555555;
+}
+
+body main .seccion-galeria .galeria .imagenes-galeria {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(230px, 240px))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(230px, 240px));
+  grid-gap: 1rem;
+  max-height: 430px;
+  overflow: hidden;
+}
+
+body main .seccion-galeria .galeria .imagenes-galeria .imagen-galeria {
+  height: 130px;
+  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+body main .seccion-galeria .galeria .imagenes-galeria .imagen-galeria img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body main .seccion-galeria .galeria .overlay {
+  display: none;
+}
+
+body main .seccion-galeria .galeria .contenedor-boton-ver-mas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2rem 0;
+}
+
+body main .seccion-galeria .galeria .contenedor-boton-ver-mas .boton-ver-mas {
+  font-size: 1.2rem;
+  outline: none;
+  /*quitar border pordefecto del boton al hacer click*/
+}
+
+body main .seccion-kaiosamas-ghibli {
+  background: url(../../galeria/ghibli-mobile-1.jpg);
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  max-width: 100%;
+  background-repeat: no-repeat;
+}
+
+body main .seccion-kaiosamas-ghibli:before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli {
+  width: 100%;
+}
+
+body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .contenedor-titulo-kaiosamas {
+  position: relative;
+  margin-top: 3.5rem;
+}
+
+body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  width: 95%;
+      grid-template-areas: "k1 k1 k1" "k2 k2 k2" "k3 k3 k3";
+}
+
+body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .k1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: k1;
+}
+
+body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .k2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: k2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  text-align: end;
+}
+
+body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .k2 .contenedor-imagen-kaiosama {
+  right: 1.5rem;
+}
+
+body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .k3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: k3;
+}
+
+body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama .contenedor-imagen-kaiosama {
+  width: 50%;
+}
+
+body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama .contenedor-imagen-kaiosama .imagen-kaiosama {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  height: 130px;
+  width: 130px;
+}
+
+body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama .contenido-textos-kaiosama {
+  width: 50%;
+}
+
+body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama .contenido-textos-kaiosama .h3-kaiosama {
+  margin: .5rem 0;
+  font-size: 1rem;
+}
+
+body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama .contenido-textos-kaiosama .contenedor-p {
+  display: none;
+}
+
+body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama .contenido-textos-kaiosama .contenedor-boton-leer-mas {
+  display: none;
+}
+
+body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama .contenido-textos-kaiosama .boton-contenedor-p {
+  -webkit-transition: none;
+  transition: none;
+  margin-bottom: .5rem;
+}
+
+body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama-active {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  background-color: #fff;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama-active .contenedor-imagen-kaiosama {
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+  width: 100%;
+}
+
+body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama-active .contenedor-imagen-kaiosama .imagen-kaiosama {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama-active .contenido-textos-kaiosama {
+  text-align: center;
+  top: 8%;
+  background: none;
+  width: 100%;
+  position: absolute;
+}
+
+body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama-active .contenido-textos-kaiosama .h3-kaiosama {
+  margin: .5rem 0 3.8rem;
+  -webkit-transform: translateX(2.5rem);
+          transform: translateX(2.5rem);
+}
+
+body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama-active .contenido-textos-kaiosama .contenedor-p {
+  display: block;
+  padding: 0 .45rem;
+}
+
+body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama-active .contenido-textos-kaiosama .contenedor-boton-p {
+  margin: .5rem 0;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
+body main .seccion-frases .contenedor-carousel-frases {
+  min-width: 100%;
+}
+
+body main .seccion-frases .contenedor-carousel-frases .carousel-frases {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main .seccion-frases .contenedor-carousel-frases .carousel-frases .flecha-derecha,
+body main .seccion-frases .contenedor-carousel-frases .carousel-frases .flecha-izquierda {
+  position: absolute;
+  z-index: 100;
+  color: #357fb0;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: background-color .5s, -webkit-transform .7s;
+  transition: background-color .5s, -webkit-transform .7s;
+  transition: transform .7s, background-color .5s;
+  transition: transform .7s, background-color .5s, -webkit-transform .7s;
+}
+
+body main .seccion-frases .contenedor-carousel-frases .carousel-frases .flecha-derecha i,
+body main .seccion-frases .contenedor-carousel-frases .carousel-frases .flecha-izquierda i {
+  font-size: 2.5rem;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+body main .seccion-frases .contenedor-carousel-frases .carousel-frases .flecha-izquierda {
+  left: 3%;
+}
+
+body main .seccion-frases .contenedor-carousel-frases .carousel-frases .flecha-derecha {
+  right: 3%;
+}
+
+body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases {
+  max-height: 200px;
+}
+
+body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases {
+  scroll-behavior: smooth;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory;
+}
+
+body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases .contenedor-frase {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  scroll-snap-align: center;
+}
+
+body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases .contenedor-frase .frase:before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases .contenedor-frase .frase .contenido-texto {
+  width: 65%;
+  text-align: center;
+  color: #fff;
+}
+
+body main .seccion-frases .contenedor-carousel-frases .carousel-frases .frases-transition-none {
+  scroll-behavior: inherit;
+}
+
+body main .seccion-ver-pelis {
+  background: #f2f2f2;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8))), url(../../galeria/ghibli3.3.jpg);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../../galeria/ghibli3.3.jpg);
+  background-position: 30%;
+  background-size: cover;
+}
+
+body main .seccion-ver-pelis .ver-pelis .titulo-ver-pelis {
+  margin-top: 7rem;
+  margin-bottom: 1rem;
+}
+
+body main .seccion-ver-pelis .ver-pelis .pelis-cont {
+  margin-bottom: 3.5rem;
+}
+
+body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli {
+  width: 100%;
+  position: relative;
+  padding: 0 .5rem;
+  padding-bottom: calc(200px - 2rem);
+  margin-top: 2rem;
+}
+
+body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis {
+  position: relative;
+  font-size: 1.7rem;
+}
+
+body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis .textos-ver-pelis {
+  position: relative;
+  color: #48aef0;
+}
+
+body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis .textos-ver-pelis h3 {
+  font-size: 2rem;
+}
+
+body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis .textos-ver-pelis p {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis .cursor-hover-ver-pelis {
+  display: none;
+}
+
+body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis-hover {
+  -webkit-transition: height .5s;
+  transition: height .5s;
+  overflow: hidden;
+  height: 0;
+}
+
+body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-imagen-ver-pelis {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  margin: auto;
+  height: 150px;
+  width: 150px;
+  -webkit-transition: -webkit-transform .7s;
+  transition: -webkit-transform .7s;
+  transition: transform .7s;
+  transition: transform .7s, -webkit-transform .7s;
+}
+
+body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-imagen-ver-pelis .imagen-ver-pelis {
+  height: 100%;
+  width: 100%;
+}
+
+body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-imagen-ver-pelis-hover {
+  -webkit-transition: -webkit-transform .7s;
+  transition: -webkit-transform .7s;
+  transition: transform .7s;
+  transition: transform .7s, -webkit-transform .7s;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+}
+
+body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .enlaces-ver-pelis {
+  overflow: auto;
+  height: 0;
+  opacity: 0;
+  -webkit-transition: all .8s ease-in-out;
+  transition: all .8s ease-in-out;
+}
+
+body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .enlaces-ver-pelis .enlace-ver-peli {
+  font-size: 1rem;
+  line-height: 1.3rem;
+  padding: .65rem;
+  margin: .5rem 0;
+}
+
+body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .enlaces-ver-pelis-hover {
+  -webkit-transition: all .8s ease-in-out;
+  transition: all .8s ease-in-out;
+  opacity: 1;
+  height: 1200px;
+  margin: 0;
 }
 
 .escalar {

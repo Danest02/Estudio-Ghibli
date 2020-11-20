@@ -1,5 +1,11 @@
 // TODO:STUB  BACKGROUNDS
 
+@mixin background-image {
+    @content;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
 @mixin background-before {
     &:before {
         content: ' ';
@@ -8,8 +14,19 @@
         bottom: 0;
         left: 0;
         right: 0;
-        @content
+        @content;
     }
+}
+@mixin background-parallax{
+    background-attachment: fixed;
+    max-width: 100%;
+    background-repeat: no-repeat;
+
+}
+.background-parallax{
+    background-attachment: fixed;
+    max-width: 100%;
+    background-repeat: no-repeat;
 }
 
 .background-before {
@@ -59,12 +76,11 @@
     display: flex;
     flex-direction: column;
 }
-.parallax{
-    background-attachment: fixed;
-    max-width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-
+.wrap{
+    flex-wrap: wrap;
+}
+.space-between{
+    justify-content: space-between
 }
 .position-absolute{
     position: absolute;
@@ -73,6 +89,14 @@
     bottom: 0;
     left: 0;
     margin: auto;
+}
+.position-fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
 }
 .overflow-hidden{
     overflow: hidden;

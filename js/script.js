@@ -1,5 +1,4 @@
 // // ANCHOR  JQuery
-
 // // TODO:STUB Boton ver mas
 // $(".boton-ver-mas").on("click", function (evt) {
 //   evt.preventDefault();
@@ -545,18 +544,18 @@
 // })
 
 // console.log(heightParrafoHistoria)
- 
+
 //   setTimeout(() => {
 //     if (evento.target.innerHTML == "Leer mas") {
 //       evento.target.classList.add("transformacion")
 //       evento.target.innerHTML = "Leer menos";
 //       console.log(yHistoria)
 //       // setTimeout(() => {
-        
+
 //       //   window.scroll(0, yHistoria)
 //       // }, 100);
 
-      
+
 //     } else {
 //       evento.target.classList.add("transformacion") 
 //       evento.target.innerHTML = "Leer mas";
@@ -565,80 +564,80 @@
 
 
 // })
-  // STUB FUNCIONES GENERALES
+// STUB FUNCIONES GENERALES
 
-  function hasClass(element, className) {
-    return (' ' + element.className + ' ').indexOf(' ' + className+ ' ') > -1;
+function hasClass(element, className) {
+  return (' ' + element.className + ' ').indexOf(' ' + className + ' ') > -1;
+}
+
+
+// ANCHOR VANILLA
+
+// TODO:STUB HAMBURGUER
+let enlaces = document.getElementById("enlaces")
+let hamburguer = document.getElementById("hamburguer")
+document.getElementById("contenedor-hamburguer")
+  .addEventListener("click", function () {
+    var semaforoBurguer = true
+    enlaces.classList.toggle("menudos");
+    enlaces.classList.toggle("animation-enlace");
+    hamburguer.classList.toggle("hamburguer-simple");
+    document.getElementById("contenedor-hamburguer").classList.toggle("contenedor-hamburguer-active");
+    document.getElementById("menu").classList.remove("menu-top");
+    document.getElementById("menu").classList.toggle("menu-top-active");
+  });
+
+
+// TODO:STUB SCROLL
+
+let ubicacionPrincipal = window.pageYOffset;
+window.addEventListener("scroll", function scrollNav() {
+  let desplazamientoActual = window.pageYOffset;
+
+  if (ubicacionPrincipal >= desplazamientoActual) {
+    document.getElementById("menu").classList.remove("menu-top");
+    document.getElementById("menu").classList.add("menu-scroll");
+    document.getElementById("contenedor-hamburguer").classList.add("contenedor-hamburguer-scroll");
+  } else {
+    document.getElementById("menu").classList.add("menu-top");
   }
 
-  
-  // ANCHOR VANILLA
+  if (desplazamientoActual < 530 && desplazamientoActual !== 0) {
+    document.getElementById("menu").classList.add("menu-top");
+  }
 
-    // TODO:STUB HAMBURGUER
-    let enlaces = document.getElementById("enlaces")
-    let hamburguer = document.getElementById("hamburguer")
-    document.getElementById("contenedor-hamburguer")
-      .addEventListener("click", function () {
-        var semaforoBurguer = true
-        enlaces.classList.toggle("menudos");
-        enlaces.classList.toggle("animation-enlace");
-        hamburguer.classList.toggle("hamburguer-simple");
-        document.getElementById("contenedor-hamburguer").classList.toggle("contenedor-hamburguer-active");
-        document.getElementById("menu").classList.remove("menu-top");
-        document.getElementById("menu").classList.toggle("menu-top-active");
-      });
-  
-  
-    // TODO:STUB SCROLL
-  
-    let ubicacionPrincipal = window.pageYOffset;
-    window.addEventListener("scroll", function scrollNav() {
-      let desplazamientoActual = window.pageYOffset;
-  
-      if (ubicacionPrincipal >= desplazamientoActual) {
-        document.getElementById("menu").classList.remove("menu-top");
-        document.getElementById("menu").classList.add("menu-scroll");
-        document.getElementById("contenedor-hamburguer").classList.add("contenedor-hamburguer-scroll");
-      } else {
-        document.getElementById("menu").classList.add("menu-top");
-      }
-  
-      if (desplazamientoActual < 530 && desplazamientoActual !== 0) {
-        document.getElementById("menu").classList.add("menu-top");
-      }
-  
-      ubicacionPrincipal = desplazamientoActual;
-    });
-  
-    window.addEventListener("scroll", function () {
-      if (window.pageYOffset == 0) {
-        document.getElementById("menu").classList.remove("menu-scroll");
-        document.getElementById("contenedor-hamburguer").classList.remove("contenedor-hamburguer-scroll");
-      }
-    });
+  ubicacionPrincipal = desplazamientoActual;
+});
 
-  // TODO:STUB ACORDEON SOBRE-GHIBLI
+window.addEventListener("scroll", function () {
+  if (window.pageYOffset == 0) {
+    document.getElementById("menu").classList.remove("menu-scroll");
+    document.getElementById("contenedor-hamburguer").classList.remove("contenedor-hamburguer-scroll");
+  }
+});
 
-  let h3SobreGhibli = document.getElementsByClassName("h3-sobre-ghibli")
-  let textoSobreGhibli = document.getElementsByClassName("texto-sobre-ghibli")
-  var contenedortextoSobreGhibli = Array.from(textoSobreGhibli)
-  let contenedorh3SobreGhibli = Array.from(h3SobreGhibli)
-  contenedorh3SobreGhibli.forEach((elemento) => {
-    elemento.addEventListener("click", (evento) => {
-      console.log(evento.target.parentElement.parentElement)
-      if(hasClass(evento.target.parentElement.parentElement, "texto-sobre-ghibli-visible" )){
-        evento.target.parentElement.parentElement.classList.remove("texto-sobre-ghibli-visible")
-        
-      }else{
-        for (let e of contenedortextoSobreGhibli){
-          e.classList.remove("texto-sobre-ghibli-visible")
-        }
-        evento.target.parentElement.parentElement.classList.toggle("texto-sobre-ghibli-visible")
+// TODO:STUB ACORDEON SOBRE-GHIBLI
+
+let h3SobreGhibli = document.getElementsByClassName("h3-sobre-ghibli")
+let textoSobreGhibli = document.getElementsByClassName("texto-sobre-ghibli")
+var contenedortextoSobreGhibli = Array.from(textoSobreGhibli)
+let contenedorh3SobreGhibli = Array.from(h3SobreGhibli)
+contenedorh3SobreGhibli.forEach((elemento) => {
+  elemento.addEventListener("click", (evento) => {
+    console.log(evento.target.parentElement.parentElement)
+    if (hasClass(evento.target.parentElement.parentElement, "texto-sobre-ghibli-visible")) {
+      evento.target.parentElement.parentElement.classList.remove("texto-sobre-ghibli-visible")
+
+    } else {
+      for (let e of contenedortextoSobreGhibli) {
+        e.classList.remove("texto-sobre-ghibli-visible")
       }
-    });
-  })
+      evento.target.parentElement.parentElement.classList.toggle("texto-sobre-ghibli-visible")
+    }
+  });
+})
 
-  
+
 // ANCHOR EJECUTAR LUEGO DEL DOM
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -679,8 +678,94 @@ document.addEventListener('DOMContentLoaded', () => {
       keyboard: true,
     });
   })
-
-
   
+  // TODO:STUB BOTON VER MAS KAIOSAMAS
+
+  var botonVerMasKaiosama = document.getElementsByClassName("contenedor-boton-p")
+
+  let botonT = Array.from(botonVerMasKaiosama)
+  botonT.forEach((elemento) => {
+    elemento.addEventListener("click", (evento) => {
+      texto = evento.target.parentElement.parentElement;
+      texto.classList.toggle("kaiosama-active")
+      setTimeout(() => {
+        if (evento.target.innerHTML == "Mas") {
+          evento.target.classList.add("transformacion")
+          evento.target.innerHTML = "Menos";
+        } else {
+          evento.target.classList.add("transformacion")
+          evento.target.innerHTML = "Mas";
+        }
+      }, 10);
+    
+    });
+  });
+
+
+
 });
 
+  // TODO:STUB CAROUSEL FRASES
+
+  let contador = 1,
+    contenedor = document.querySelector(".frases"),
+    frase = document.querySelectorAll(".contenedor-frase"),
+    tamañoWidht = frase[0].clientWidth,
+    scroll = contenedor.offsetWidth
+  flechaIzquierda = document.getElementById("flecha-izquierda"),
+    flechaDerecha = document.getElementById("flecha-derecha");
+  intervalo = 5000;
+  window.addEventListener("resize", function () {
+    scroll = contenedor.offsetWidth
+  })
+  contenedor.scrollLeft = scroll
+
+  flechaDerecha.addEventListener("click", () => {
+    contenedor.scrollLeft += scroll
+  });
+  flechaIzquierda.addEventListener("click", () => {
+    contenedor.scrollLeft -= scroll
+  });
+
+  // TODO:STUB VER PELIS
+
+let imagenVerPelis = document.getElementsByClassName("contenedor-imagen-ver-pelis");
+// imagenVerPelis.classList.add("contenedor-imagen-ver-pelis-hover");
+let imagen = Array.from(imagenVerPelis)
+imagen.forEach((elemento) => {
+  elemento.addEventListener("mouseover", (evento) => {
+    sema = false
+    if (sema) {
+      return
+    } else {
+      evento.target.parentElement.classList.toggle("contenedor-imagen-ver-pelis-hover")
+      evento.target.parentElement.previousElementSibling.classList.toggle("contenedor-textos-ver-pelis-hover")
+      evento.target.parentElement.nextElementSibling.classList.toggle("enlaces-ver-pelis-hover")
+      sema = true
+    }
+
+    // console.log(evento.target.parentElement.nextElementSibling)
+  });
+  elemento.addEventListener("click", (evento) => {
+    sema = false
+    if (sema) {
+      return
+    } else {
+      evento.target.parentElement.classList.toggle("contenedor-imagen-ver-pelis-hover")
+      evento.target.parentElement.previousElementSibling.classList.toggle("contenedor-textos-ver-pelis-hover")
+      evento.target.parentElement.nextElementSibling.classList.toggle("enlaces-ver-pelis-hover")
+      sema = true
+    }
+    // console.log(evento.target.parentElement.nextElementSibling)
+  });
+
+  //* lo hice con toElement en lugar de target pero mozilla no lo reconoce
+
+});
+
+
+
+
+$(function () {
+  // Aqui va el condio jQuery
+})
