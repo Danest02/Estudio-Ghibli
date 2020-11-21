@@ -3,7 +3,9 @@
 
 
 // TODO:STUB BOTONES
-
+.display-none{
+    display: none;
+}
 .mybtn {
     background-color: $color2;
     display: inline-block;
@@ -13,7 +15,7 @@
     text-decoration: none;
     text-align: center;
     border-radius: 1.25em;
-    border: 1px solid rgba(#000, .2);
+    // border: 1px solid rgba(#000, .2);
     outline:none;
     cursor: pointer;
 

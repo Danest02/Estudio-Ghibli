@@ -92,7 +92,7 @@
         <div class="contenedor-peliculas contenedor">
           <h2 class="titulo">Peliculas</h2>
           <div class="carousel-peliculas" id="carousel-peliculas">
-            <div class="peliculas swiper-container">
+            <div class="peliculas swiper-container" id="peliculas">
               <div class="arrows-peliculas">
                 <div class="swiper-button-prev flecha-izquierda"> <i class="fas fa-angle-left"></i></div>
                 <div class="swiper-button-next flecha-derecha"> <i class="fas fa-angle-right"></i></div>
@@ -104,7 +104,8 @@
                     <div class="contenedor-nombre-ver-pelis">
                       <h3 class="nombre-ver-pelis">Nausicaä del Valle del Viento</h3>
                     </div>
-                    <p class="sipnosis"></p><a class="ver-peliculas mybtn" href="#">Ver</a>
+                    <p class="sipnosis"> La historia está situada 1,000 años después de una revolución industrial, donde la población humana está reducida a pocos habitantes aislados unos de otros por junglas tóxicas y lagos ácidos; donde insectos gigantescos tomaron el control de estas junglas impidendo el acceso a los humanos y defendiendo su territorio en estampidas....</p>
+                    <buttom class="ver-peliculas mybtn">Ver</buttom>
                   </div>
                 </li>
                 <li class="pelicula swiper-slide">
@@ -113,7 +114,8 @@
                     <div class="contenedor-nombre-ver-pelis">
                       <h3 class="nombre-ver-pelis">Laputa, El Castillo en el Cielo</h3>
                     </div>
-                    <p class="sipnosis"></p><a class="ver-peliculas mybtn" href="#">Ver</a>
+                    <p class="sipnosis">La aventura de Pazu, un chico que trabaja en una ciudad minera, y Shita, una niña que posee una gema legendaria por la que todo el mundo parece perseguirla al contener el secreto que conduce hasta la isla flotante de Laputa</p>
+                    <buttom class="ver-peliculas mybtn">Ver</buttom>
                   </div>
                 </li>
                 <li class="pelicula swiper-slide">
@@ -122,7 +124,8 @@
                     <div class="contenedor-nombre-ver-pelis">
                       <h3 class="nombre-ver-pelis">La Tumba de las Luciérnagas</h3>
                     </div>
-                    <p class="sipnosis"></p><a class="ver-peliculas mybtn" href="#">Ver</a>
+                    <p class="sipnosis">Durante la Segunda Guerra Mundial. Seita se ve obligado a cuidar a su hermana menor después de que un bombardeo aliado durante la Segunda Guerra Mundial destruye su casa y mata a su madre. en una época donde la comida y la ayuda escasean.</p>
+                    <buttom class="ver-peliculas mybtn">Ver</buttom>
                   </div>
                 </li>
                 <li class="pelicula swiper-slide">
@@ -131,7 +134,8 @@
                     <div class="contenedor-nombre-ver-pelis">
                       <h3 class="nombre-ver-pelis">Mi Vecino Totoro</h3>
                     </div>
-                    <p class="sipnosis"></p><a class="ver-peliculas mybtn" href="#">Ver</a>
+                    <p class="sipnosis">Esta historia sigue a las estudiantes y hermanas Satsuke y Mei mientras se establecen en su casa de campo con su padre y esperan a que su madre se recupere de una enfermedad en un hospital del área. Cuando las hermanas exploran su nueva casa, descubren y hacen amistad con unos duendes juguetones, y en el bosque cercano encuentran a una enorme criatura conocida como Totoro.</p>
+                    <buttom class="ver-peliculas mybtn">Ver</buttom>
                   </div>
                 </li>
                 <li class="pelicula swiper-slide">
@@ -140,11 +144,17 @@
                     <div class="contenedor-nombre-ver-pelis">
                       <h3 class="nombre-ver-pelis">Nicky, la Aprendiz de Bruja</h3>
                     </div>
-                    <p class="sipnosis"></p><a class="ver-peliculas mybtn" href="#">Ver</a>
+                    <p class="sipnosis">Por tradición de las brujas al cumplir los 13 años deben abandonar la casa de los padres y buscar una ciudad donde sus servicios sean requeridos, y quedarse allí durante algún tiempo. De esta manera, Kiki comenzará el camino que la llevará a convertirse definitivamente en bruja. Este viaje lo realiza junto a su amigo Jiji, un gato negro, y montada en su escoba voladora.</p>
+                    <buttom class="ver-peliculas mybtn">Ver</buttom>
                   </div>
                 </li>
               </ul>
               <div class="swiper-pagination"></div>
+              <div id="sipnosis">
+                <h3 class="nombre-sipnosis" id="nombre-sipnosis">nombre</h3><img class="img-sipnosis" src="" alt="" id="img-sipnosis">
+                <p class="parrafo-sipnosis display-none" id="sipnosis-active">hola</p>
+                <buttom class="mybtn boton-sipnosis" id="boton-sipnosis-cerrar"><i class="fas fa-times"></i></buttom>
+              </div>
             </div>
           </div>
         </div>
@@ -163,24 +173,39 @@
             <li class="categoria-galeria" data-categoria="paisajes ">Paisajes</li>
             <li class="categoria-galeria" data-categoria="naturaleza">Naturaleza</li>
           </ul>
-          <div class="imagenes-galeria">
-            <div class="imagen-galeria"><img src="galeria/ghibli3.1.jpg"></div>
-            <div class="imagen-galeria"><img src="galeria/ghibli3.1.jpg"></div>
-            <div class="imagen-galeria"><img src="galeria/ghibli3.1.jpg"></div>
-            <div class="imagen-galeria"><img src="galeria/ghibli3.1.jpg"></div>
-            <div class="imagen-galeria"><img src="galeria/ghibli3.1.jpg"></div>
-            <div class="imagen-galeria"><img src="galeria/ghibli3.1.jpg"></div>
-            <div class="imagen-galeria"><img src="galeria/ghibli3.1.jpg"></div>
-          </div>
+          <ul class="imagenes-galeria">
+            <li class="imagen-galeria" data-descripcion="1.- Lorem ipsum dolor sit amet consectetur."><img src="galeria/ghibli3.1.jpg"></li>
+            <li class="imagen-galeria" data-descripcion="1.- Lorem ipsum dolor sit amet consectetur."><img src="galeria/ghibli3.2.jpg"></li>
+            <li class="imagen-galeria" data-descripcion="1.- Lorem ipsum dolor sit amet consectetur."><img src="galeria/ghibli3.3.jpg"></li>
+            <li class="imagen-galeria" data-descripcion="1.- Lorem ipsum dolor sit amet consectetur."><img src="galeria/ghibli3.4.png"></li>
+            <li class="imagen-galeria" data-descripcion="1.- Lorem ipsum dolor sit amet consectetur."><img src="galeria/ghibli3.5.jpg"></li>
+            <li class="imagen-galeria" data-descripcion="1.- Lorem ipsum dolor sit amet consectetur."><img src="galeria/ghibli3.6.jpg"></li>
+            <li class="imagen-galeria" data-descripcion="1.- Lorem ipsum dolor sit amet consectetur."><img src="galeria/ghibli3.7.jpg"></li>
+            <li class="imagen-galeria" data-descripcion="1.- Lorem ipsum dolor sit amet consectetur."><img src="galeria/ghibli3.1.jpg"></li>
+            <li class="imagen-galeria" data-descripcion="1.- Lorem ipsum dolor sit amet consectetur."><img src="galeria/ghibli3.2.jpg"></li>
+            <li class="imagen-galeria" data-descripcion="1.- Lorem ipsum dolor sit amet consectetur."><img src="galeria/ghibli3.3.jpg"></li>
+            <li class="imagen-galeria" data-descripcion="1.- Lorem ipsum dolor sit amet consectetur."><img src="galeria/ghibli3.4.png"></li>
+            <li class="imagen-galeria" data-descripcion="1.- Lorem ipsum dolor sit amet consectetur."><img src="galeria/ghibli3.5.jpg"></li>
+            <li class="imagen-galeria" data-descripcion="1.- Lorem ipsum dolor sit amet consectetur."><img src="galeria/ghibli3.6.jpg"></li>
+            <li class="imagen-galeria" data-descripcion="1.- Lorem ipsum dolor sit amet consectetur."><img src="galeria/ghibli3.7.jpg"></li>
+          </ul>
           <div class="overlay" id="overlay">
             <div class="contenedor-img">
               <buttom class="btn-cerrar-popup" id="btn-cerrar-popup"><i class="fas fa-times"></i></buttom><img src="" alt="" id="ruta">
             </div>
-            <p class="description"></p>
+            <p class="descripcion"></p>
           </div>
-          <div class="contenedor-boton-ver-mas">
+          <div class="contenedor-botones-imagenes-galeria">
             <buttom class="boton-ver-mas mybtn">Ver mas</buttom>
+            <buttom class="boton-ver-menos display-none mybtn-borde">Ver menos</buttom>
+            <buttom class="boton-cerrar-imagenes display-none mybtn"><i class="fas fa-times"></i></buttom>
           </div>
+        </div>
+        <div class="overlay" id="overlay">
+          <div class="contenedor-img">
+            <buttom id="btn-cerrar-popup"><i class="fas fa-times"></i></buttom><img src="" alt="" id="ruta">
+          </div>
+          <p class="descripcion"></p>
         </div>
       </section>
       <section class="seccion-kaiosamas-ghibli" id="seccion-kaiosamas-ghibli">
@@ -353,7 +378,7 @@
                 <div class="contenedor-enlace-ver-peli"><a class="enlace-ver-peli mybtn" href="#">Nausicaä del Valle del Viento</a></div>
                 <div class="contenedor-enlace-ver-peli"><a class="enlace-ver-peli mybtn" href="#">El castillo en el cielo</a></div>
                 <div class="contenedor-enlace-ver-peli"><a class="enlace-ver-peli mybtn" href="#">La tumba de las luciérnagas</a></div>
-                <div class="contenedor-enlace-ver-peli"><a class="enlace-ver-peli mybtn" href="#">Nicky, la aprendiz de bruja</a></div>
+                <div class="contenedor-enlace-ver-peli"><a class="enlace-ver-peli mybtn" href="https://www3.animeflv.net/anime/majo-no-takkyuubin">Nicky, la aprendiz de bruja</a></div>
                 <div class="contenedor-enlace-ver-peli"><a class="enlace-ver-peli mybtn" href="#">Recuerdos del ayer</a></div>
                 <div class="contenedor-enlace-ver-peli"><a class="enlace-ver-peli mybtn" href="#">Porco Rosso</a></div>
                 <div class="contenedor-enlace-ver-peli"><a class="enlace-ver-peli mybtn" href="#">Puedo escuchar en el mar</a></div>
@@ -443,6 +468,79 @@
                 <div class="contenedor-enlace-ver-peli"><a class="enlace-ver-peli mybtn" href="#">El recuerdo de Marnie</a></div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section class="seccion-historia" id="historia">
+        <div class="contenedor-texto-historia contenedor" id="parrafo-historia">
+          <div class="texto-historia">
+            <h2 class="titulo titulo-historia">Historia</h2>
+            <div class="contenedor-parrafo-historia"> 
+              <p class="parrafo-historia">
+                Fundado en 1985, el estudio está dirigido por el galardonado director Hayao Miyazaki, y
+                hasta
+                2018 estuvo dirigido por Miyazaki junto a su amigo y mentor, Isao Takahata, fallecido en ese
+                año. Sus orígenes datan de 1983, con la película Nausicäa del Valle del Viento, la cual
+                comenzó
+                como un manga en una publicación de la revista Tokuma Shoten. Tokuma era la compañía "madre"
+                de
+                Ghibli, y cedió a Disney los derechos de video y distribución de varias películas; entre
+                ellas
+                La princesa Mononoke y El viaje de Chihiro. El compositor Joe Hisaishi ha creado la banda
+                sonora
+                para muchas de las películas del Studio Ghibli.
+                <br><br>
+                Debido a la fama de los estudios se abrió en las afueras de Tokio el Museo Ghibli. El 1 de
+                septiembre de 2013, el director de cine y cofundador de la compañía, Hayao Miyazaki, anunció
+                su
+                retirada a través de un comunicado oficial.
+                <br><br>
+                El 3 de agosto de 2014, Toshio Suzuki, productor del estudio y uno de los fundadores del
+                estudio, anunciaba que clausuraban su sección de producción de largometrajes. Uno de los
+                factores que provocaron esta decisión fue la retirada del director de cine Hayao Miyazaki,
+                otro
+                de los fundadores del estudio, que según las declaraciones, su salida supuso un duro golpe;
+                junto con la jubilación del cineasta, se cree que la regular recepción de taquilla de El
+                cuento
+                de la princesa Kaguya, la última obra dirigida por Isao Takahata, fue también un motivo. El
+                Studio Ghibli siguió con sus licencias hasta acabar un proceso de reestructuración.
+                <br><br>
+                El 10 de agosto de 2017, el estudio reabrió sus puertas.
+                <br><br>
+                Cabe destacar que las películas de dicho estudio han adquirido muchos premios, entre ellas
+                cinco
+                de sus películas fueron nominadas al Óscar a la producción cinematográfica de animación más
+                destacada; las cintas nominadas fueron: El viaje de Chihiro (2001), El castillo ambulante
+                (2004), El recuerdo de Marnie (2014), El viento se levanta (2013) y El cuento de la princesa
+                Kaguya (2013). A pesar de estas numerosas nominaciones, tan solo El viaje de Chihiro fue
+                galardonada con el Óscar.
+                <br><br>
+                Además de las películas ya mencionadas, muchas otras contaron con un gran éxito en los
+                cines,
+                como puede ser el caso de El castillo ambulante y Ponyo en el acantilado. A lo largo de
+                todas
+                sus películas han contado con grandes voces para el doblaje en inglés, como por ejemplo
+                Patrick
+                Stewart, Anne Hathaway, Elle Fanning, Liam Neeson, Matt Damon, entre otros.
+                <br><br>
+                El 3 de junio de 2020, se anunció oficialmente el lanzamiento de Earwig y la bruja, la
+                primera
+                película en animación del estudio hecha por ordenador
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="contenedor-boton-historia">
+          <buttom class="boton-historia mybtn" id="boton-historia">Leer mas</buttom>
+        </div>
+      </section>
+      <section class="seccion-adios">
+        <div class="contenedor-video">
+          <video autoplay loop muted>
+            <source src="galeria/video.mp4" type="video/mp4">
+          </video>
+          <div class="contenedor-texto-adios">
+            <p class="texto-adios">ADIOS</p>
           </div>
         </div>
       </section>

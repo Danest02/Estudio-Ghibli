@@ -1,3 +1,4 @@
+//- pug -w --pretty pug/index.pug -o ./ -p pug/templates
 extends templates/template.pug
 block body
     body
@@ -54,7 +55,7 @@ block body
                 .contenedor-peliculas.contenedor
                     h2.titulo Peliculas
                     .carousel-peliculas#carousel-peliculas
-                        .peliculas.swiper-container
+                        .peliculas.swiper-container#peliculas
                             //- <div class="swiper-button-next"></div>
                             //- <div class="swiper-button-prev"></div>
                             .arrows-peliculas
@@ -69,41 +70,47 @@ block body
                                     .informacion
                                         .contenedor-nombre-ver-pelis
                                             h3.nombre-ver-pelis Nausicaä del Valle del Viento
-                                        p.sipnosis
-                                        a(href="#" class="ver-peliculas mybtn") Ver
+                                        p.sipnosis  La historia está situada 1,000 años después de una revolución industrial, donde la población humana está reducida a pocos habitantes aislados unos de otros por junglas tóxicas y lagos ácidos; donde insectos gigantescos tomaron el control de estas junglas impidendo el acceso a los humanos y defendiendo su territorio en estampidas....
+                                        buttom(class="ver-peliculas mybtn") Ver
                                 li.pelicula.swiper-slide
                                     .portada
                                         img(src="galeria/El Castillo en el Cielo.jpg" alt="" class="img-pelicula")
                                     .informacion
                                         .contenedor-nombre-ver-pelis
                                             h3.nombre-ver-pelis Laputa, El Castillo en el Cielo
-                                        p.sipnosis
-                                        a(href="#" class="ver-peliculas mybtn") Ver
+                                        p.sipnosis La aventura de Pazu, un chico que trabaja en una ciudad minera, y Shita, una niña que posee una gema legendaria por la que todo el mundo parece perseguirla al contener el secreto que conduce hasta la isla flotante de Laputa
+                                        buttom(class="ver-peliculas mybtn") Ver
                                 li.pelicula.swiper-slide
                                     .portada
                                         img(src="galeria/La tumba de las luciernagas portada.jpg" alt="" class="img-pelicula")
                                     .informacion
                                         .contenedor-nombre-ver-pelis
                                             h3.nombre-ver-pelis La Tumba de las Luciérnagas
-                                        p.sipnosis
-                                        a(href="#" class="ver-peliculas mybtn") Ver
+                                        p.sipnosis Durante la Segunda Guerra Mundial. Seita se ve obligado a cuidar a su hermana menor después de que un bombardeo aliado durante la Segunda Guerra Mundial destruye su casa y mata a su madre. en una época donde la comida y la ayuda escasean.
+                                        buttom(class="ver-peliculas mybtn") Ver
                                 li.pelicula.swiper-slide
                                     .portada
                                         img(src="galeria/Mi Vecino Totoro portada.jpg" alt="" class="img-pelicula")
                                     .informacion
                                         .contenedor-nombre-ver-pelis
                                             h3.nombre-ver-pelis Mi Vecino Totoro
-                                        p.sipnosis
-                                        a(href="#" class="ver-peliculas mybtn") Ver
+                                        p.sipnosis Esta historia sigue a las estudiantes y hermanas Satsuke y Mei mientras se establecen en su casa de campo con su padre y esperan a que su madre se recupere de una enfermedad en un hospital del área. Cuando las hermanas exploran su nueva casa, descubren y hacen amistad con unos duendes juguetones, y en el bosque cercano encuentran a una enorme criatura conocida como Totoro.
+                                        buttom(class="ver-peliculas mybtn") Ver
                                 li.pelicula.swiper-slide
                                     .portada
                                         img(src="galeria/Nicky, la aprendiz de bruja portada.jpg" alt="" class="img-pelicula")
                                     .informacion
                                         .contenedor-nombre-ver-pelis
                                             h3.nombre-ver-pelis Nicky, la Aprendiz de Bruja
-                                        p.sipnosis
-                                        a(href="#" class="ver-peliculas mybtn") Ver
+                                        p.sipnosis Por tradición de las brujas al cumplir los 13 años deben abandonar la casa de los padres y buscar una ciudad donde sus servicios sean requeridos, y quedarse allí durante algún tiempo. De esta manera, Kiki comenzará el camino que la llevará a convertirse definitivamente en bruja. Este viaje lo realiza junto a su amigo Jiji, un gato negro, y montada en su escoba voladora.
+                                        buttom(class="ver-peliculas mybtn") Ver
                             .swiper-pagination
+                            #sipnosis
+                                h3#nombre-sipnosis.nombre-sipnosis nombre
+                                img(src="" alt="" id="img-sipnosis" class="img-sipnosis")
+                                p#sipnosis-active.parrafo-sipnosis.display-none hola
+                                buttom.mybtn.boton-sipnosis#boton-sipnosis-cerrar
+                                    i(class="fas fa-times")
             //- NOTE GALERIA
             section.seccion-galeria#seccion-galeria
                 .galeria.contenedor
@@ -118,29 +125,52 @@ block body
                         li(class="categoria-galeria" data-categoria="animales") Animales
                         li(class="categoria-galeria" data-categoria="paisajes ") Paisajes
                         li(class="categoria-galeria" data-categoria="naturaleza") Naturaleza
-                    .imagenes-galeria
-                        .imagen-galeria
+                    ul.imagenes-galeria
+                        li(class="imagen-galeria" data-descripcion="1.- Lorem ipsum dolor sit amet consectetur.")
                             img(src="galeria/ghibli3.1.jpg")
-                        .imagen-galeria
+                        li(class="imagen-galeria" data-descripcion="1.- Lorem ipsum dolor sit amet consectetur.")
+                            img(src="galeria/ghibli3.2.jpg")
+                        li(class="imagen-galeria" data-descripcion="1.- Lorem ipsum dolor sit amet consectetur.")
+                            img(src="galeria/ghibli3.3.jpg")
+                        li(class="imagen-galeria" data-descripcion="1.- Lorem ipsum dolor sit amet consectetur.")
+                            img(src="galeria/ghibli3.4.png")
+                        li(class="imagen-galeria" data-descripcion="1.- Lorem ipsum dolor sit amet consectetur.")
+                            img(src="galeria/ghibli3.5.jpg")
+                        li(class="imagen-galeria" data-descripcion="1.- Lorem ipsum dolor sit amet consectetur.")
+                            img(src="galeria/ghibli3.6.jpg")
+                        li(class="imagen-galeria" data-descripcion="1.- Lorem ipsum dolor sit amet consectetur.")
+                            img(src="galeria/ghibli3.7.jpg")
+                        li(class="imagen-galeria" data-descripcion="1.- Lorem ipsum dolor sit amet consectetur.")
                             img(src="galeria/ghibli3.1.jpg")
-                        .imagen-galeria
-                            img(src="galeria/ghibli3.1.jpg")
-                        .imagen-galeria
-                            img(src="galeria/ghibli3.1.jpg")
-                        .imagen-galeria
-                            img(src="galeria/ghibli3.1.jpg")
-                        .imagen-galeria
-                            img(src="galeria/ghibli3.1.jpg")
-                        .imagen-galeria
-                            img(src="galeria/ghibli3.1.jpg")
+                        li(class="imagen-galeria" data-descripcion="1.- Lorem ipsum dolor sit amet consectetur.")
+                            img(src="galeria/ghibli3.2.jpg")
+                        li(class="imagen-galeria" data-descripcion="1.- Lorem ipsum dolor sit amet consectetur.")
+                            img(src="galeria/ghibli3.3.jpg")
+                        li(class="imagen-galeria" data-descripcion="1.- Lorem ipsum dolor sit amet consectetur.")
+                            img(src="galeria/ghibli3.4.png")
+                        li(class="imagen-galeria" data-descripcion="1.- Lorem ipsum dolor sit amet consectetur.")
+                            img(src="galeria/ghibli3.5.jpg")
+                        li(class="imagen-galeria" data-descripcion="1.- Lorem ipsum dolor sit amet consectetur.")
+                            img(src="galeria/ghibli3.6.jpg")
+                        li(class="imagen-galeria" data-descripcion="1.- Lorem ipsum dolor sit amet consectetur.")
+                            img(src="galeria/ghibli3.7.jpg")
                     .overlay#overlay
                         .contenedor-img
                             buttom.btn-cerrar-popup#btn-cerrar-popup
                                 i(class="fas fa-times")
                             img(src="" alt="" id="ruta")
-                        p.description
-                    .contenedor-boton-ver-mas
+                        p.descripcion
+                    .contenedor-botones-imagenes-galeria
                         buttom.boton-ver-mas.mybtn Ver mas
+                        buttom.boton-ver-menos.display-none.mybtn-borde Ver menos
+                        buttom.boton-cerrar-imagenes.display-none.mybtn
+                            i(class="fas fa-times")
+                .overlay#overlay
+                    .contenedor-img
+                        buttom#btn-cerrar-popup
+                            i(class="fas fa-times")
+                        img(src="" alt="" id="ruta")
+                    p.descripcion
             section.seccion-kaiosamas-ghibli#seccion-kaiosamas-ghibli
                 .contenedor-kaiosamas-ghibli.contenedor
                     .contenedor-titulo-kaiosamas
@@ -300,7 +330,7 @@ block body
                                 .contenedor-enlace-ver-peli
                                     a(href="#" class="enlace-ver-peli mybtn") La tumba de las luciérnagas
                                 .contenedor-enlace-ver-peli
-                                    a(href="#" class="enlace-ver-peli mybtn") Nicky, la aprendiz de bruja
+                                    a(href="https://www3.animeflv.net/anime/majo-no-takkyuubin" class="enlace-ver-peli mybtn") Nicky, la aprendiz de bruja
                                 .contenedor-enlace-ver-peli
                                     a(href="#" class="enlace-ver-peli mybtn") Recuerdos del ayer
                                 .contenedor-enlace-ver-peli
@@ -441,8 +471,69 @@ block body
                                     a(href="#" class="enlace-ver-peli mybtn") El cuento de la princesa Kaguya
                                 .contenedor-enlace-ver-peli
                                     a(href="#" class="enlace-ver-peli mybtn") El recuerdo de Marnie
-
-
+            section.seccion-historia#historia
+                .contenedor-texto-historia.contenedor#parrafo-historia
+                    .texto-historia
+                     h2.titulo.titulo-historia Historia
+                     .contenedor-parrafo-historia  
+                        p.parrafo-historia
+                            |Fundado en 1985, el estudio está dirigido por el galardonado director Hayao Miyazaki, y
+                            |hasta
+                            |2018 estuvo dirigido por Miyazaki junto a su amigo y mentor, Isao Takahata, fallecido en ese
+                            |año. Sus orígenes datan de 1983, con la película Nausicäa del Valle del Viento, la cual
+                            |comenzó
+                            |como un manga en una publicación de la revista Tokuma Shoten. Tokuma era la compañía "madre"
+                            |de
+                            |Ghibli, y cedió a Disney los derechos de video y distribución de varias películas; entre
+                            |ellas
+                            |La princesa Mononoke y El viaje de Chihiro. El compositor Joe Hisaishi ha creado la banda
+                            |sonora
+                            |para muchas de las películas del Studio Ghibli.
+                            |<br><br>
+                            |Debido a la fama de los estudios se abrió en las afueras de Tokio el Museo Ghibli. El 1 de
+                            |septiembre de 2013, el director de cine y cofundador de la compañía, Hayao Miyazaki, anunció
+                            |su
+                            |retirada a través de un comunicado oficial.
+                            |<br><br>
+                            |El 3 de agosto de 2014, Toshio Suzuki, productor del estudio y uno de los fundadores del
+                            |estudio, anunciaba que clausuraban su sección de producción de largometrajes. Uno de los
+                            |factores que provocaron esta decisión fue la retirada del director de cine Hayao Miyazaki,
+                            |otro
+                            |de los fundadores del estudio, que según las declaraciones, su salida supuso un duro golpe;
+                            |junto con la jubilación del cineasta, se cree que la regular recepción de taquilla de El
+                            |cuento
+                            |de la princesa Kaguya, la última obra dirigida por Isao Takahata, fue también un motivo. El
+                            |Studio Ghibli siguió con sus licencias hasta acabar un proceso de reestructuración.
+                            |<br><br>
+                            |El 10 de agosto de 2017, el estudio reabrió sus puertas.
+                            |<br><br>
+                            |Cabe destacar que las películas de dicho estudio han adquirido muchos premios, entre ellas
+                            |cinco
+                            |de sus películas fueron nominadas al Óscar a la producción cinematográfica de animación más
+                            |destacada; las cintas nominadas fueron: El viaje de Chihiro (2001), El castillo ambulante
+                            |(2004), El recuerdo de Marnie (2014), El viento se levanta (2013) y El cuento de la princesa
+                            |Kaguya (2013). A pesar de estas numerosas nominaciones, tan solo El viaje de Chihiro fue
+                            |galardonada con el Óscar.
+                            |<br><br>
+                            |Además de las películas ya mencionadas, muchas otras contaron con un gran éxito en los
+                            |cines,
+                            |como puede ser el caso de El castillo ambulante y Ponyo en el acantilado. A lo largo de
+                            |todas
+                            |sus películas han contado con grandes voces para el doblaje en inglés, como por ejemplo
+                            |Patrick
+                            |Stewart, Anne Hathaway, Elle Fanning, Liam Neeson, Matt Damon, entre otros.
+                            |<br><br>
+                            |El 3 de junio de 2020, se anunció oficialmente el lanzamiento de Earwig y la bruja, la
+                            |primera
+                            |película en animación del estudio hecha por ordenador
+                .contenedor-boton-historia
+                    buttom.boton-historia.mybtn#boton-historia Leer mas
+            section.seccion-adios
+                .contenedor-video
+                    video(autoplay loop muted)
+                        source(src="galeria/video.mp4" type="video/mp4")
+                    .contenedor-texto-adios
+                        p.texto-adios ADIOS
         script(src="jquery/jquery.js")
         script(src="js/myfunctions.js")
         script(src="js/script.js")

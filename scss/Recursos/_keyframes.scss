@@ -1,5 +1,8 @@
-.escalar{
-    animation: escalar .8s;
+.escalar-pequeño{
+    animation: escalar-pequeño .8s;
+}
+.escalar-grande{
+    animation: escalar-grande .8s;
 }
 .transformacion{
     animation: transformacion 1s;
@@ -44,13 +47,25 @@
     }
 }
 
-@keyframes escalar {
+@keyframes escalar-pequeño {
     0% {
         
         transform: scale(1) ;
     }
     50% {
-        transform: scale(1.2);
+        transform: scale(.9);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes escalar-grande {
+    0% {
+        
+        transform: scale(1) ;
+    }
+    50% {
+        transform: scale(.9);
     }
     100%{
         transform: scale(1);
