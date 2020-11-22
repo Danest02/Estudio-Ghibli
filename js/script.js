@@ -200,41 +200,19 @@ imagen.forEach((elemento) => {
 });
 
 // TODO:STUB BOTON LEER MAS HISTORIA
-let botonHistoria = document.getElementById("boton-historia"),
-  parrafoHistoria = document.getElementById("parrafo-historia"),
-
-  heightParrafoHistoria = parrafoHistoria.style.maxHeight
-console.log(heightParrafoHistoria)
-window.addEventListener("resize", function () {
-  let heightParrafoHistoria = parrafoHistoria.clientHeight
-})
-
-console.log(heightParrafoHistoria)
+let botonHistoria = document.getElementById("boton-historia");
+let parrafoHistoria = document.getElementById("parrafo-historia");
 botonHistoria.addEventListener("click", (evento) => {
-  const yHistoria = window.scrollY - 2
-
-
-  parrafoHistoria.style.height = heightParrafoHistoria;
   parrafoHistoria.classList.toggle("contenedor-texto-historia-active")
-  console.log(heightParrafoHistoria)
-  console.log(contenedor)
   setTimeout(() => {
     if (evento.target.innerHTML == "Leer mas") {
       evento.target.classList.add("transformacion")
       evento.target.innerHTML = "Leer menos";
-      console.log(yHistoria)
-      // setTimeout(() => {
-
-      //   window.scroll(0, yHistoria)
-      // }, 100);
-
-
     } else {
       evento.target.classList.add("transformacion")
       evento.target.innerHTML = "Leer mas";
     }
   }, 10);
-
 
 })
 
@@ -275,41 +253,41 @@ verSipnosis.forEach((elemento) => {
     console.log(nombre)
   });
 });
-  // TODO:STUB OVERLAY
-  const overlay = document.getElementById("overlay"),
-    y = document.querySelectorAll(".imagen-galeria"),
-    x = document.querySelectorAll(".imagen-galeria>img");
-  y.forEach((elemento) => {
-    elemento.addEventListener("click", () => {
-      setTimeout(() => {
-        const ruta = elemento.firstChild.getAttribute("src");
-        document.getElementById("ruta").src = ruta;
-        overlay.classList.add("activo-overlay");
-        const descripcion = elemento.dataset.descripcion;
-        console.log(descripcion)
-        document.querySelector(".descripcion").innerHTML = descripcion;
-      }, 1000);
-
-      // animacion click hover
-      elemento.classList.add("escalar-pequeño");
-      setTimeout(() => {
-        elemento.classList.remove("escalar-pequeño");
-      }, 900);
-    });
-  });
-
-  // remover activo-overlay
-  overlay.addEventListener("click", (evento) => {
-    evento.target.id === "overlay" ?
-      overlay.classList.remove("activo-overlay") :
-      "";
-  });
-  // Eventlistener del boton de cerrar
-  document.querySelector("#btn-cerrar-popup").addEventListener("click", () => {
+// TODO:STUB OVERLAY
+const overlay = document.getElementById("overlay"),
+  y = document.querySelectorAll(".imagen-galeria"),
+  x = document.querySelectorAll(".imagen-galeria>img");
+y.forEach((elemento) => {
+  elemento.addEventListener("click", () => {
     setTimeout(() => {
-      overlay.classList.remove("activo-overlay");
-    }, 600);
+      const ruta = elemento.firstChild.getAttribute("src");
+      document.getElementById("ruta").src = ruta;
+      overlay.classList.add("activo-overlay");
+      const descripcion = elemento.dataset.descripcion;
+      console.log(descripcion)
+      document.querySelector(".descripcion").innerHTML = descripcion;
+    }, 1000);
+
+    // animacion click hover
+    elemento.classList.add("escalar-pequeño");
+    setTimeout(() => {
+      elemento.classList.remove("escalar-pequeño");
+    }, 900);
   });
+});
+
+// remover activo-overlay
+overlay.addEventListener("click", (evento) => {
+  evento.target.id === "overlay" ?
+    overlay.classList.remove("activo-overlay") :
+    "";
+});
+// Eventlistener del boton de cerrar
+document.querySelector("#btn-cerrar-popup").addEventListener("click", () => {
+  setTimeout(() => {
+    overlay.classList.remove("activo-overlay");
+  }, 600);
+});
 
 
 
@@ -321,14 +299,17 @@ $(function () {
 
   // TODO:STUB VER MAS GALERIA
   let height = $(".imagenes-galeria").css("height");
-  let adicion = 436
-  let min = $(".imagenes-galeria").css("min-height");
+  let gap = parseInt($(".imagenes-galeria").css("grid-gap"));
+  let min = parseInt($(".imagenes-galeria").css("min-height"));
+  let adicion = min + gap / 2 - 2
+  let adicionContador = adicion
+  console.log(adicion)
   $(".boton-ver-mas").on("click", function (evt) {
     console.log(adicion)
-    adicion += 436
+    adicion += adicionContador
     evt.preventDefault();
     let max = $(".imagenes-galeria").css("max-height");
-    parseInt($(".imagenes-galeria").css("height", adicion))
+    parseInt($(".imagenes-galeria").css("height", adicion + "px"))
     $(".boton-ver-menos").removeClass("display-none");
     $(".boton-cerrar-imagenes").removeClass("display-none");
     $(".boton-ver-mas").removeClass("mybtn");
@@ -336,10 +317,10 @@ $(function () {
   });
   $(".boton-ver-menos").on("click", function (evt) {
     console.log(adicion)
-    adicion -= 436
+    adicion -= adicionContador
     evt.preventDefault();
-    parseInt($(".imagenes-galeria").css("height", adicion))
-    if (adicion == 436) {
+    parseInt($(".imagenes-galeria").css("height", adicion + "px"))
+    if (adicion == adicionContador) {
       $(".boton-ver-menos").addClass("display-none");
       $(".boton-cerrar-imagenes").addClass("display-none");
       $(".boton-ver-mas").removeClass("mybtn-borde");

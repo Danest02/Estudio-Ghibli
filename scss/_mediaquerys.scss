@@ -1,0 +1,41 @@
+@include min-width(360px){
+    body{
+        font-size: 1.1rem;
+        main{
+            .seccion-peliculas{
+                .contenedor-peliculas{
+                    .carousel-peliculas{
+                        .peliculas{
+                            .pelicula{
+                                --scalar: 1.5;
+                            }
+                        }
+                    }
+                }
+            }
+            .seccion-galeria{
+                .galeria{
+                    .imagenes-galeria{
+                        min-height: 410px ;
+                        height: 410px;
+                        grid-gap: .5rem;
+                        width: 100%;
+                    }
+                }
+            }
+            .seccion-kaiosamas-ghibli{
+                .contenedor-kaiosamas-ghibli{
+                    .kaiosamas{
+                        width: 92%;
+                    }
+                }
+            }
+            .seccion-historia{
+                .contenedor-texto-historia{
+                    min-height: 540px;
+                    max-height: 1950px;
+                }
+            }
+        }
+    }
+}

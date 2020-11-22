@@ -6,11 +6,31 @@
 .display-none{
     display: none;
 }
+.mybtn-exit{
+    line-height: 0;
+    border-radius: 50%;
+    font-size: 1.3em;
+    padding: .5em .65em;
+    background-color: lightcoral;
+    outline:none;
+    color: #fff;
+    &:hover {
+        transition: background-color 0.4s linear;
+        background-color: coral;
+    }
+
+    &:active {
+        transform: scale(.85);
+    }
+
+
+}
 .mybtn {
+    font-size: 1.1em;
     background-color: $color2;
     display: inline-block;
-    line-height: 2.5em;
-    padding: 0 1.25em;
+    line-height: 2.4em;
+    padding: 0 1.2em;
     color: #fff;
     text-decoration: none;
     text-align: center;
@@ -25,15 +45,16 @@
     }
 
     &:active {
-        transform: scale(.95);
+        transition: transform .5s;
+        transform: scale(.85);
     }
 }
 
 .mybtn-borde {
     background: #fff;
     display: inline-block;
-    line-height: 2.5em;
-    padding: 0 1.25em;
+    line-height: 2.4em;
+    padding: 0 1.2em;
     color: $color2;
     text-decoration: none;
     border-radius: 1.25em;
@@ -47,7 +68,8 @@
     }
 
     &:active {
-        transform: scale(.95);
+        transition: transform .5s;
+        transform: scale(.85);
     }
 }
 

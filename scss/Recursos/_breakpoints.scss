@@ -4,8 +4,13 @@ $tablet-landscape: 1024px;
 $laptop: 1366px;
 $desktop: 1920px;
  
-@mixin media($width){
+@mixin max-width($width){
     @media screen and (max-width: $width){
+        @content;
+    }
+}
+@mixin min-width($min-width){
+    @media screen and (min-width: $min-width){
         @content;
     }
 }
