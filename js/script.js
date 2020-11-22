@@ -199,6 +199,28 @@ imagen.forEach((elemento) => {
 
 });
 
+  // TODO LEER MAS KAIOSAMAS
+
+  let leer = document.querySelectorAll(".boton-leer-mas");
+  leer.forEach((elemento) => {
+    elemento.addEventListener("click", (evento) => {
+      texto = evento.target.parentElement.parentElement.parentElement;
+      console.log(texto)
+      texto.classList.toggle("active-boton-leer-mas")
+      evento.target.classList.remove("transformacion")
+      setTimeout(() => {
+        if (evento.target.innerHTML == "Leer mas") {
+          evento.target.classList.add("transformacion")
+          evento.target.innerHTML = "Leer menos";
+        } else {
+          evento.target.classList.add("transformacion")
+          evento.target.innerHTML = "Leer mas";
+        }
+      }, 10);
+    });
+  });
+
+
 // TODO:STUB BOTON LEER MAS HISTORIA
 let botonHistoria = document.getElementById("boton-historia");
 let parrafoHistoria = document.getElementById("parrafo-historia");

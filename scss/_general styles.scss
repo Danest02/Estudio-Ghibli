@@ -441,10 +441,11 @@ body {
                             @extend .position-fixed,
                             .center-flex,
                             .wrap,
-                            .space-between;
+                            .space-around;
                             padding: 0 1rem;
                             background-color: #fff;
                             text-align: center;
+                            z-index: 1000;
 
                             .boton-sipnosis {
                                 @extend .center-flex;
@@ -467,6 +468,7 @@ body {
                             .img-sipnosis {
                                 height: 150px;
                                 width: 40%;
+                                max-width: 130px;
                             }
 
                             .parrafo-sipnosis {
@@ -557,6 +559,7 @@ body {
                 .imagenes-galeria {
                     @extend .center-flex,
                     .flex-start;
+                    justify-items: center;
                     display: grid;
                     grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
                     grid-gap: 1rem;
@@ -583,8 +586,7 @@ body {
                 .contenedor-botones-imagenes-galeria {
                     padding: 2rem 0;
                     width: 80%;
-                    @extend .center-flex,
-                    .wrap;
+                    @extend .center-flex;
 
                     .boton-ver-mas,
                     .boton-ver-menos {
@@ -730,7 +732,6 @@ body {
                             width: 50%;
                             @extend .center-flex,
                             .flex-column;
-
                             .h3-kaiosama {
                                 margin: .5rem 0;
                             }
@@ -740,7 +741,9 @@ body {
                             }
 
                             .contenedor-boton-leer-mas {
+                                @extend .center-flex;
                                 display: none;
+                                @include mybtn-convertir;
                             }
 
                             .boton-contenedor-p {
