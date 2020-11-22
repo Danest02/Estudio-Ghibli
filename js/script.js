@@ -202,6 +202,7 @@ imagen.forEach((elemento) => {
 // TODO:STUB BOTON LEER MAS HISTORIA
 let botonHistoria = document.getElementById("boton-historia");
 let parrafoHistoria = document.getElementById("parrafo-historia");
+// let maxheight = document.getElementById("parrafo-historia")
 botonHistoria.addEventListener("click", (evento) => {
   parrafoHistoria.classList.toggle("contenedor-texto-historia-active")
   setTimeout(() => {

@@ -771,12 +771,10 @@ body {
                         }
 
                         .contenido-textos-kaiosama {
+                            @extend .center-flex;
                             text-align: center;
                             top: 8%;
-                            // background: red;
                             width: 100%;
-                            position: absolute;
-                            bottom: 0;
 
                             .h3-kaiosama {
                                 margin: .5rem 0 3.8rem;
@@ -785,7 +783,7 @@ body {
 
                             .contenedor-p {
                                 display: block;
-                                padding: 0 .45rem;
+                                padding: 0 .45rem 1rem;
                                 margin-bottom: auto;
                             }
 
@@ -1043,7 +1041,7 @@ body {
             }
 
             .contenedor-texto-historia-active {
-                height: 2000px;
+                height: 2200px;
             }
 
             .contenedor-boton-historia {

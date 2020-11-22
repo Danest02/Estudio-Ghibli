@@ -384,7 +384,7 @@ body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-gh
 body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-1 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-3 .contenedor-h3-sobre-ghibli,
 body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-1 .contenedor-h3-sobre-ghibli,
 body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-2 .contenedor-h3-sobre-ghibli,
-body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-3 .contenedor-h3-sobre-ghibli, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .arrows-peliculas, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .position-absolute-informacion .informacion, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .position-absolute-informacion .informacion .contenedor-nombre, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .ver-sipnosis-active, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .ver-sipnosis-active .boton-sipnosis, body main .seccion-galeria .galeria, body main .seccion-galeria .galeria .contenedor-barra-busqueda, body main .seccion-galeria .galeria .categorias-galeria, body main .seccion-galeria .galeria .imagenes-galeria, body main .seccion-galeria .galeria .contenedor-botones-imagenes-galeria, body main .seccion-galeria .overlay, body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli, body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama, body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama .contenido-textos-kaiosama, body main .seccion-frases .contenedor-carousel-frases .carousel-frases, body main .seccion-frases .contenedor-carousel-frases .carousel-frases .flecha-derecha,
+body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-3 .contenedor-h3-sobre-ghibli, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .arrows-peliculas, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .position-absolute-informacion .informacion, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .position-absolute-informacion .informacion .contenedor-nombre, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .ver-sipnosis-active, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .ver-sipnosis-active .boton-sipnosis, body main .seccion-galeria .galeria, body main .seccion-galeria .galeria .contenedor-barra-busqueda, body main .seccion-galeria .galeria .categorias-galeria, body main .seccion-galeria .galeria .imagenes-galeria, body main .seccion-galeria .galeria .contenedor-botones-imagenes-galeria, body main .seccion-galeria .overlay, body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli, body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama, body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama .contenido-textos-kaiosama, body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama-active .contenido-textos-kaiosama, body main .seccion-frases .contenedor-carousel-frases .carousel-frases, body main .seccion-frases .contenedor-carousel-frases .carousel-frases .flecha-derecha,
 body main .seccion-frases .contenedor-carousel-frases .carousel-frases .flecha-izquierda, body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases .contenedor-frase .frase .contenido-texto, body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli, body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis, body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis .textos-ver-pelis, body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .enlaces-ver-pelis {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1661,8 +1661,6 @@ body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kai
   text-align: center;
   top: 8%;
   width: 100%;
-  position: absolute;
-  bottom: 0;
 }
 
 body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama-active .contenido-textos-kaiosama .h3-kaiosama {
@@ -1673,7 +1671,7 @@ body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kai
 
 body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama-active .contenido-textos-kaiosama .contenedor-p {
   display: block;
-  padding: 0 .45rem;
+  padding: 0 .45rem 1rem;
   margin-bottom: auto;
 }
 
@@ -1906,7 +1904,7 @@ body main .seccion-historia .contenedor-texto-historia .texto-historia .contened
 }
 
 body main .seccion-historia .contenedor-texto-historia-active {
-  height: 2000px;
+  height: 2200px;
 }
 
 body main .seccion-historia .contenedor-boton-historia {
@@ -1982,7 +1980,60 @@ body main .seccion-adios .contenedor-video .contenedor-texto-adios .texto-adios 
   }
   body main .seccion-historia .contenedor-texto-historia {
     min-height: 540px;
-    max-height: 1950px;
+    max-height: 1900px;
+  }
+}
+
+@media screen and (min-width: 360px) and (min-width: 390px) {
+  body {
+    font-size: 1.2rem;
+  }
+  body main .seccion-historia .contenedor-texto-historia {
+    font-size: 1em;
+    min-height: 600px;
+    max-height: 2110px;
+  }
+}
+
+@media screen and (min-width: 410px) {
+  body {
+    font-size: 1.25rem;
+  }
+  body main .seccion-historia .contenedor-texto-historia {
+    max-height: 2180px;
+  }
+}
+
+@media screen and (min-width: 430px) {
+  body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas {
+    width: 90%;
+  }
+  body main .seccion-historia .contenedor-texto-historia {
+    min-height: 550px;
+    max-height: 2010px;
+  }
+  body main .seccion-historia .contenedor-texto-historia-active {
+    height: 2020px;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas {
+    width: 85%;
+  }
+}
+
+@media screen and (min-width: 485px) {
+  body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas {
+    width: 80%;
+  }
+  body main .seccion-historia .contenedor-texto-historia {
+    min-height: 525px;
+    height: 525px;
+    max-height: 1900px;
+  }
+  body main .seccion-historia .contenedor-texto-historia-active {
+    height: 2020px;
   }
 }
 

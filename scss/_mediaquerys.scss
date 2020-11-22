@@ -33,8 +33,97 @@
             .seccion-historia{
                 .contenedor-texto-historia{
                     min-height: 540px;
-                    max-height: 1950px;
+                    max-height: 1900px;
+
                 }
+            }
+        }
+    }
+@include min-width(390px){
+    body{
+        font-size: 1.2rem;
+        main{
+            .seccion-historia{
+                .contenedor-texto-historia{
+                    font-size: 1em;
+                    min-height: 600px;
+                    max-height: 2110px;
+                }
+            }
+        }
+    }
+}
+}@include min-width(410px){
+    body{
+        font-size: 1.25rem;
+        main{
+            .seccion-historia{
+                .contenedor-texto-historia{
+                    max-height: 2180px;
+                }
+            }
+        }
+    }
+}
+@include min-width(430px){
+    body{
+        main{
+            .seccion-kaiosamas-ghibli{
+                .contenedor-kaiosamas-ghibli{
+                    .kaiosamas{
+                        width: 90%;
+                    }
+                }
+            }
+
+            .seccion-historia{
+                .contenedor-texto-historia{
+                    min-height: 550px;
+
+                    max-height: 2010px;
+                }
+                .contenedor-texto-historia-active {
+                    height: 2020px;
+                }
+    
+            }
+        }
+    }
+}
+@include min-width(450px){
+    body{
+        main{
+            .seccion-kaiosamas-ghibli{
+                .contenedor-kaiosamas-ghibli{
+                    .kaiosamas{
+                        width: 85%;
+                    }
+                }
+            }
+        }
+    }
+}
+@include min-width(485px){
+    body{
+        main{
+            .seccion-kaiosamas-ghibli{
+                .contenedor-kaiosamas-ghibli{
+                    .kaiosamas{
+                        width: 80%;
+                    }
+                }
+            }
+
+            .seccion-historia{
+                .contenedor-texto-historia{
+                    min-height: 525px;
+                    height: 525px;
+                    max-height: 1900px;
+                }
+                .contenedor-texto-historia-active {
+                    height: 2020px;
+                }
+    
             }
         }
     }
