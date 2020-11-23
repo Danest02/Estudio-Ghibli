@@ -278,87 +278,88 @@ body {
                 .space-around;
                 margin-bottom: 1rem;
                 align-items: center;
-
+                position: relative;
+                
                 .swiper-pagination-bullet {
                     display: none;
                 }
-
+                
                 .carousel-peliculas {
                     width: 100%;
                     @extend .flex-column;
+                    .arrows-peliculas {
+                        @extend .center-flex;
+                        .flecha-derecha,
+                        .flecha-izquierda {
+                            top: calc(50% - 0px);
+                            height: 3.2rem;
+                            width: 3.2rem;
+                            color: white;
+                            background-color: rgba(0, 0, 0, .5);
+                            border-radius: 50%;
+                            transition: transform .7s, background-color .5s;
+                            transition: transform .7s;
 
+
+                            i {
+                                font-size: 2.5rem;
+                                transition: transform .5s;
+                            }
+
+                            &:active,
+                            &:hover {
+                                color: $color1;
+                                background-color: rgba(0, 0, 0, .8);
+
+                            }
+
+                        }
+
+                        .flecha-izquierda {
+                            left: 1%;
+
+                            i {
+                                transform: translateX(-2px);
+                            }
+
+                            &:active,
+                            &:hover {
+                                transform: translateX(-.215em)
+                            }
+
+                            @include scale-boton;
+
+                        }
+
+                        .flecha-derecha {
+                            right: 1%;
+
+                            i {
+                                transform: translateX(2px);
+                            }
+
+                            &:active,
+                            &:hover {
+                                transform: translateX(.15rem)
+                            }
+
+                            @include scale-boton;
+                        }
+
+                        .flecha-derecha:after,
+                        .flecha-izquierda:after {
+                            display: none;
+                        }
+                    }
                     .peliculas {
-                        width: 100%;
-                        height: calc(458px / 1.6 + 140px);
+                        --scalar: 1.6;
+                        max-width: 100%;
+                        height: calc(458px / var(--scalar) + 140px);
                         overflow-y: visible;
                         display: flex;
 
 
-                        .arrows-peliculas {
-                            @extend .center-flex;
-
-                            .flecha-derecha,
-                            .flecha-izquierda {
-                                top: calc(50% - 70px);
-                                height: 3.2rem;
-                                width: 3.2rem;
-                                color: white;
-                                background-color: rgba(0, 0, 0, .5);
-                                border-radius: 50%;
-                                transition: transform .7s, background-color .5s;
-                                transition: transform .7s;
-
-
-                                i {
-                                    font-size: 2.5rem;
-                                    transition: transform .5s;
-                                }
-
-                                &:active,
-                                &:hover {
-                                    color: $color1;
-                                    background-color: rgba(0, 0, 0, .8);
-
-                                }
-
-                            }
-
-                            .flecha-izquierda {
-                                left: 2%;
-
-                                i {
-                                    transform: translateX(-2px);
-                                }
-
-                                &:active,
-                                &:hover {
-                                    transform: translateX(-.215em)
-                                }
-
-                                @include scale-boton;
-
-                            }
-
-                            .flecha-derecha {
-                                right: 2%;
-
-                                i {
-                                    transform: translateX(2px);
-                                }
-
-                                &:active,
-                                &:hover {
-                                    transform: translateX(.15rem)
-                                }
-
-                                @include scale-boton;
-                            }
-
-                            .flecha-derecha:after,
-                            .flecha-izquierda:after {
-                                display: none;
-                            }
-                        }
+                        
 
 
                         .pelicula {
@@ -370,6 +371,7 @@ body {
                             .portada {
                                 .img-pelicula {
                                     object-fit: cover;
+                                    @extend .height-width;
                                 }
                             }
 
@@ -811,14 +813,14 @@ body {
                 min-width: 100%;
 
                 .carousel-frases {
-                    @extend .center-flex, .space-between;
+                    @extend .center-flex;
 
                     .flecha-derecha,
                     .flecha-izquierda {
                         @extend .center-flex;
                         position: absolute;
                         z-index: 100;
-                        color: $color1;
+                        color: $color2;
                         border-radius: 50%;
                         
                         i {
@@ -840,15 +842,15 @@ body {
                         .frases {
                             scroll-behavior: smooth;
                             display: flex;
-                            @extend .scrollbar-none;
+                            @extend .scrollbar-none,;
                             // scroll-snap-type: x proximity;
                             -ms-scroll-snap-type: x mandatory;
                             scroll-snap-type: x mandatory;
+                            width: 100vw;
 
                             .contenedor-frase {
                                 position: relative;
-                                height: 100%;
-                                width: 100%;
+                                width: 100vw;
                                 flex-shrink: 0;
                                 scroll-snap-align: center;
 
@@ -856,7 +858,10 @@ body {
                                     @include background-before {
                                         background-color: rgba(0, 0, 0, 0.8);
                                     }
-
+                                    @extend
+                                    .center-flex,
+                                    .flex-column;
+                                    max-height: 100%;                                    
                                     .contenido-texto {
                                         width: 65%;
                                         @extend .position-absolute,
@@ -864,15 +869,14 @@ body {
                                         .flex-column;
                                         text-align: center;
                                         color: #fff;
-                                        margin: auto;
                                         .contenedor-parrafo-frase{
                                             margin: .5rem;
                                             font-size: 1.1em;
                                         }
                                         .titulo-frase{
                                             font-size: .95em;
+                                            font-style: oblique;
                                             font-weight: 300;
-                                            font-family: $josefin-slab;
                                         }
                                     }
                                 }
@@ -880,7 +884,8 @@ body {
 
                             .contenedor-img-frase {
                                 .img-frase {
-                                    width: 100%;
+                                    width: 100vw;
+                                    display: block;
                                 }
                             }
                         }
@@ -1016,8 +1021,6 @@ body {
 
         // TODO:STUB HISTORIA
         .seccion-historia {
-            margin-bottom: 3.5rem;
-
 
 
             .contenedor-texto-historia {
@@ -1050,6 +1053,7 @@ body {
             .contenedor-boton-historia {
                 display: flex;
                 justify-content: center;
+                margin-bottom: 3.5rem;
 
                 .boton-historia {
                     margin: 0 auto;
@@ -1063,7 +1067,7 @@ body {
             .contenedor-video {
                 width: 100%;
                 overflow: hidden;
-                max-height: 450px;
+                max-height: 400px;
                 // min-height: 250px;
                 position: relative;
 

@@ -384,8 +384,8 @@ body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-gh
 body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-1 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-3 .contenedor-h3-sobre-ghibli,
 body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-1 .contenedor-h3-sobre-ghibli,
 body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-2 .contenedor-h3-sobre-ghibli,
-body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-3 .contenedor-h3-sobre-ghibli, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .arrows-peliculas, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .position-absolute-informacion .informacion, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .position-absolute-informacion .informacion .contenedor-nombre, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .ver-sipnosis-active, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .ver-sipnosis-active .boton-sipnosis, body main .seccion-galeria .galeria, body main .seccion-galeria .galeria .contenedor-barra-busqueda, body main .seccion-galeria .galeria .categorias-galeria, body main .seccion-galeria .galeria .imagenes-galeria, body main .seccion-galeria .galeria .contenedor-botones-imagenes-galeria, body main .seccion-galeria .overlay, body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli, body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama, body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama .contenido-textos-kaiosama, body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama .contenido-textos-kaiosama .contenedor-boton-leer-mas, body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama-active .contenido-textos-kaiosama, body main .seccion-frases .contenedor-carousel-frases .carousel-frases, body main .seccion-frases .contenedor-carousel-frases .carousel-frases .flecha-derecha,
-body main .seccion-frases .contenedor-carousel-frases .carousel-frases .flecha-izquierda, body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases .contenedor-frase .frase .contenido-texto, body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli, body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis, body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis .textos-ver-pelis, body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .enlaces-ver-pelis {
+body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-3 .contenedor-h3-sobre-ghibli, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .arrows-peliculas, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .position-absolute-informacion .informacion, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .position-absolute-informacion .informacion .contenedor-nombre, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .ver-sipnosis-active, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .ver-sipnosis-active .boton-sipnosis, body main .seccion-galeria .galeria, body main .seccion-galeria .galeria .contenedor-barra-busqueda, body main .seccion-galeria .galeria .categorias-galeria, body main .seccion-galeria .galeria .imagenes-galeria, body main .seccion-galeria .galeria .contenedor-botones-imagenes-galeria, body main .seccion-galeria .overlay, body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli, body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama, body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama .contenido-textos-kaiosama, body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama .contenido-textos-kaiosama .contenedor-boton-leer-mas, body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama-active .contenido-textos-kaiosama, body main .seccion-frases .contenedor-carousel-frases .carousel-frases, body main .seccion-frases .contenedor-carousel-frases .carousel-frases .flecha-derecha,
+body main .seccion-frases .contenedor-carousel-frases .carousel-frases .flecha-izquierda, body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases .contenedor-frase .frase, body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases .contenedor-frase .frase .contenido-texto, body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli, body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis, body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis .textos-ver-pelis, body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .enlaces-ver-pelis {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -402,7 +402,7 @@ body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-gh
 body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-1 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-3,
 body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-1,
 body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-2,
-body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-3, body main .seccion-peliculas .contenedor-peliculas, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .position-absolute-informacion .informacion, body main .seccion-galeria .galeria, body main .seccion-galeria .overlay, body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli, body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama .contenido-textos-kaiosama, body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases .contenedor-frase .frase .contenido-texto, body main .seccion-ver-pelis .ver-pelis .pelis-cont, body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli, body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis, body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis .textos-ver-pelis, body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .enlaces-ver-pelis {
+body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-3, body main .seccion-peliculas .contenedor-peliculas, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .position-absolute-informacion .informacion, body main .seccion-galeria .galeria, body main .seccion-galeria .overlay, body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli, body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama .contenido-textos-kaiosama, body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases .contenedor-frase .frase, body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases .contenedor-frase .frase .contenido-texto, body main .seccion-ver-pelis .ver-pelis .pelis-cont, body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli, body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis, body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-textos-ver-pelis .textos-ver-pelis, body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .enlaces-ver-pelis {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -426,7 +426,7 @@ body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-gh
       align-content: flex-start;
 }
 
-.space-between, body main .seccion-frases .contenedor-carousel-frases .carousel-frases, body main .seccion-ver-pelis .ver-pelis .pelis-cont {
+.space-between, body main .seccion-ver-pelis .ver-pelis .pelis-cont {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -469,7 +469,7 @@ body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-gh
   overflow: hidden;
 }
 
-.height-width, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .position-absolute-informacion .informacion, body main .seccion-galeria .galeria .imagenes-galeria .imagen-galeria img, body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama-active, body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-imagen-ver-pelis .imagen-ver-pelis {
+.height-width, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .pelicula .portada .img-pelicula, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .position-absolute-informacion .informacion, body main .seccion-galeria .galeria .imagenes-galeria .imagen-galeria img, body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama-active, body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .contenedor-imagen-ver-pelis .imagen-ver-pelis {
   width: 100%;
   height: 100%;
 }
@@ -1126,6 +1126,7 @@ body main .seccion-peliculas .contenedor-peliculas {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 body main .seccion-peliculas .contenedor-peliculas .swiper-pagination-bullet {
@@ -1136,18 +1137,9 @@ body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas {
   width: 100%;
 }
 
-body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas {
-  width: 100%;
-  height: calc(458px / 1.6 + 140px);
-  overflow-y: visible;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .arrows-peliculas .flecha-derecha,
-body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .arrows-peliculas .flecha-izquierda {
-  top: calc(50% - 70px);
+body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .arrows-peliculas .flecha-derecha,
+body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .arrows-peliculas .flecha-izquierda {
+  top: calc(50% - 0px);
   height: 3.2rem;
   width: 3.2rem;
   color: white;
@@ -1163,8 +1155,8 @@ body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .pelicula
   transition: transform .7s, -webkit-transform .7s;
 }
 
-body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .arrows-peliculas .flecha-derecha i,
-body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .arrows-peliculas .flecha-izquierda i {
+body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .arrows-peliculas .flecha-derecha i,
+body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .arrows-peliculas .flecha-izquierda i {
   font-size: 2.5rem;
   -webkit-transition: -webkit-transform .5s;
   transition: -webkit-transform .5s;
@@ -1172,28 +1164,28 @@ body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .pelicula
   transition: transform .5s, -webkit-transform .5s;
 }
 
-body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .arrows-peliculas .flecha-derecha:active, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .arrows-peliculas .flecha-derecha:hover,
-body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .arrows-peliculas .flecha-izquierda:active,
-body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .arrows-peliculas .flecha-izquierda:hover {
+body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .arrows-peliculas .flecha-derecha:active, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .arrows-peliculas .flecha-derecha:hover,
+body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .arrows-peliculas .flecha-izquierda:active,
+body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .arrows-peliculas .flecha-izquierda:hover {
   color: #357fb0;
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .arrows-peliculas .flecha-izquierda {
-  left: 2%;
+body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .arrows-peliculas .flecha-izquierda {
+  left: 1%;
 }
 
-body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .arrows-peliculas .flecha-izquierda i {
+body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .arrows-peliculas .flecha-izquierda i {
   -webkit-transform: translateX(-2px);
           transform: translateX(-2px);
 }
 
-body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .arrows-peliculas .flecha-izquierda:active, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .arrows-peliculas .flecha-izquierda:hover {
+body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .arrows-peliculas .flecha-izquierda:active, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .arrows-peliculas .flecha-izquierda:hover {
   -webkit-transform: translateX(-0.215em);
           transform: translateX(-0.215em);
 }
 
-body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .arrows-peliculas .flecha-izquierda:active {
+body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .arrows-peliculas .flecha-izquierda:active {
   -webkit-transition: -webkit-transform .7s;
   transition: -webkit-transform .7s;
   transition: transform .7s;
@@ -1202,21 +1194,21 @@ body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .pelicula
           transform: scale(0.7);
 }
 
-body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .arrows-peliculas .flecha-derecha {
-  right: 2%;
+body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .arrows-peliculas .flecha-derecha {
+  right: 1%;
 }
 
-body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .arrows-peliculas .flecha-derecha i {
+body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .arrows-peliculas .flecha-derecha i {
   -webkit-transform: translateX(2px);
           transform: translateX(2px);
 }
 
-body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .arrows-peliculas .flecha-derecha:active, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .arrows-peliculas .flecha-derecha:hover {
+body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .arrows-peliculas .flecha-derecha:active, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .arrows-peliculas .flecha-derecha:hover {
   -webkit-transform: translateX(0.15rem);
           transform: translateX(0.15rem);
 }
 
-body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .arrows-peliculas .flecha-derecha:active {
+body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .arrows-peliculas .flecha-derecha:active {
   -webkit-transition: -webkit-transform .7s;
   transition: -webkit-transform .7s;
   transition: transform .7s;
@@ -1225,9 +1217,19 @@ body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .pelicula
           transform: scale(0.7);
 }
 
-body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .arrows-peliculas .flecha-derecha:after,
-body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .arrows-peliculas .flecha-izquierda:after {
+body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .arrows-peliculas .flecha-derecha:after,
+body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .arrows-peliculas .flecha-izquierda:after {
   display: none;
+}
+
+body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas {
+  --scalar: 1.6;
+  max-width: 100%;
+  height: calc(458px / var(--scalar) + 140px);
+  overflow-y: visible;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .pelicula {
@@ -1710,7 +1712,7 @@ body main .seccion-frases .contenedor-carousel-frases .carousel-frases .flecha-d
 body main .seccion-frases .contenedor-carousel-frases .carousel-frases .flecha-izquierda {
   position: absolute;
   z-index: 100;
-  color: #357fb0;
+  color: #48aef0;
   border-radius: 50%;
 }
 
@@ -1747,15 +1749,19 @@ body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contened
   display: flex;
   -ms-scroll-snap-type: x mandatory;
   scroll-snap-type: x mandatory;
+  width: 100vw;
 }
 
 body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases .contenedor-frase {
   position: relative;
-  height: 100%;
-  width: 100%;
+  width: 100vw;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   scroll-snap-align: center;
+}
+
+body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases .contenedor-frase .frase {
+  max-height: 100%;
 }
 
 body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases .contenedor-frase .frase:before {
@@ -1772,7 +1778,6 @@ body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contened
   width: 65%;
   text-align: center;
   color: #fff;
-  margin: auto;
 }
 
 body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases .contenedor-frase .frase .contenido-texto .contenedor-parrafo-frase {
@@ -1782,12 +1787,13 @@ body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contened
 
 body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases .contenedor-frase .frase .contenido-texto .titulo-frase {
   font-size: .95em;
+  font-style: oblique;
   font-weight: 300;
-  font-family: "Josefin Slab", serif;
 }
 
 body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases .contenedor-img-frase .img-frase {
-  width: 100%;
+  width: 100vw;
+  display: block;
 }
 
 body main .seccion-frases .contenedor-carousel-frases .carousel-frases .frases-transition-none {
@@ -1897,10 +1903,6 @@ body main .seccion-ver-pelis .ver-pelis .pelis-cont .peli .enlaces-ver-pelis-hov
   margin: 0;
 }
 
-body main .seccion-historia {
-  margin-bottom: 3.5rem;
-}
-
 body main .seccion-historia .contenedor-texto-historia {
   -webkit-transition: height 1.5s;
   transition: height 1.5s;
@@ -1932,6 +1934,7 @@ body main .seccion-historia .contenedor-boton-historia {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 3.5rem;
 }
 
 body main .seccion-historia .contenedor-boton-historia .boton-historia {
@@ -1941,7 +1944,7 @@ body main .seccion-historia .contenedor-boton-historia .boton-historia {
 body main .seccion-adios .contenedor-video {
   width: 100%;
   overflow: hidden;
-  max-height: 450px;
+  max-height: 400px;
   position: relative;
 }
 
@@ -2062,6 +2065,69 @@ body main .seccion-adios .contenedor-video .contenedor-texto-adios .texto-adios 
 }
 
 @media screen and (min-width: 500px) {
+  body main .seccion-sobre-ghibli {
+    margin-bottom: 3.5rem;
+    margin: 0 5%;
+  }
+  body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-1 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-1 .contenedor-parrafo-sobre-ghibli-1,
+  body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-1 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-2 .contenedor-parrafo-sobre-ghibli-1,
+  body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-1 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-3 .contenedor-parrafo-sobre-ghibli-1,
+  body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-1 .contenedor-parrafo-sobre-ghibli-1,
+  body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-2 .contenedor-parrafo-sobre-ghibli-1,
+  body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-3 .contenedor-parrafo-sobre-ghibli-1 {
+    max-height: 100px;
+  }
+  body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-1 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-1 .contenedor-parrafo-sobre-ghibli-2,
+  body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-1 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-2 .contenedor-parrafo-sobre-ghibli-2,
+  body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-1 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-3 .contenedor-parrafo-sobre-ghibli-2,
+  body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-1 .contenedor-parrafo-sobre-ghibli-2,
+  body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-2 .contenedor-parrafo-sobre-ghibli-2,
+  body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-3 .contenedor-parrafo-sobre-ghibli-2 {
+    max-height: 140px;
+  }
+  body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-1 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-1 .contenedor-parrafo-sobre-ghibli-3,
+  body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-1 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-2 .contenedor-parrafo-sobre-ghibli-3,
+  body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-1 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-3 .contenedor-parrafo-sobre-ghibli-3,
+  body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-1 .contenedor-parrafo-sobre-ghibli-3,
+  body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-2 .contenedor-parrafo-sobre-ghibli-3,
+  body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-3 .contenedor-parrafo-sobre-ghibli-3 {
+    max-height: 250px;
+  }
+  body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-1 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-1 .contenedor-h3-sobre-ghibli,
+  body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-1 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-2 .contenedor-h3-sobre-ghibli,
+  body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-1 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-3 .contenedor-h3-sobre-ghibli,
+  body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-1 .contenedor-h3-sobre-ghibli,
+  body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-2 .contenedor-h3-sobre-ghibli,
+  body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-3 .contenedor-h3-sobre-ghibli {
+    background-color: transparent;
+    width: auto;
+    height: 100%;
+    border-radius: 0;
+    padding: 0 1rem;
+    position: relative;
+    border-bottom: 2px solid #48aef0;
+  }
+  body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-1 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-1 .contenedor-h3-sobre-ghibli .h3-sobre-ghibli:after,
+  body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-1 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-2 .contenedor-h3-sobre-ghibli .h3-sobre-ghibli:after,
+  body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-1 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-3 .contenedor-h3-sobre-ghibli .h3-sobre-ghibli:after,
+  body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-1 .contenedor-h3-sobre-ghibli .h3-sobre-ghibli:after,
+  body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-2 .contenedor-h3-sobre-ghibli .h3-sobre-ghibli:after,
+  body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-3 .contenedor-h3-sobre-ghibli .h3-sobre-ghibli:after {
+    display: inline-block;
+    font-family: "Font Awesome 5 Free";
+    content: "\f0da";
+    margin-left: .5rem;
+    color: rgba(0, 0, 0, 0.7);
+    -webkit-transition: -webkit-transform .3s ease-in-out;
+    transition: -webkit-transform .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+    transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  }
+  body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-1 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-visible .contenedor-h3-sobre-ghibli .h3-sobre-ghibli:after,
+  body main .seccion-sobre-ghibli .contenedor-sobre-ghibli .sobre-ghibli .sobre-ghibli-2 .contenido-textos-sobre-ghibli .texto-sobre-ghibli-visible .contenedor-h3-sobre-ghibli .h3-sobre-ghibli:after {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
   body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas {
     width: 95%;
   }
@@ -2078,8 +2144,8 @@ body main .seccion-adios .contenedor-video .contenedor-texto-adios .texto-adios 
     height: 100%;
     max-width: 8.125em;
     opacity: 1;
-    -webkit-transition: width .7s , opacity .7s;
-    transition: width .7s , opacity .7s;
+    -webkit-transition: width .7s, opacity .7s;
+    transition: width .7s, opacity .7s;
   }
   body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama .contenedor-imagen-kaiosama .imagen-kaiosama {
     border-radius: 0;
@@ -2097,10 +2163,10 @@ body main .seccion-adios .contenedor-video .contenedor-texto-adios .texto-adios 
     margin-bottom: .3rem;
     position: relative;
     top: 0;
-    -webkit-transition: opacity .5s ease-in , margin 1s, -webkit-transform 1s;
-    transition: opacity .5s ease-in , margin 1s, -webkit-transform 1s;
-    transition: transform 1s, opacity .5s ease-in , margin 1s;
-    transition: transform 1s, opacity .5s ease-in , margin 1s, -webkit-transform 1s;
+    -webkit-transition: opacity .5s ease-in, margin 1s, -webkit-transform 1s;
+    transition: opacity .5s ease-in, margin 1s, -webkit-transform 1s;
+    transition: transform 1s, opacity .5s ease-in, margin 1s;
+    transition: transform 1s, opacity .5s ease-in, margin 1s, -webkit-transform 1s;
   }
   body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama .contenido-textos-kaiosama .contenedor-boton-p {
     display: none;
@@ -2156,6 +2222,170 @@ body main .seccion-adios .contenedor-video .contenedor-texto-adios .texto-adios 
   body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .active-boton-leer-mas .contenido-textos-kaiosama .contenedor-p::-webkit-scrollbar-thumb {
     background: #111;
     display: none;
+  }
+  body main .seccion-frases {
+    margin-bottom: 3.5rem;
+  }
+  body main .seccion-frases .contenedor-carousel-frases .carousel-frases .flecha-izquierda {
+    left: 5%;
+  }
+  body main .seccion-frases .contenedor-carousel-frases .carousel-frases .flecha-derecha {
+    right: 5%;
+  }
+  body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases .contenedor-frase .frase:before {
+    background-color: transparent;
+  }
+  body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases .contenedor-frase .frase .contenido-texto {
+    width: 70%;
+    color: #000;
+    position: relative;
+  }
+  body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases .contenedor-frase .frase .contenido-texto .contenedor-parrafo-frase .parrafo-frase span {
+    color: #357fb0;
+  }
+  body main .seccion-frases .contenedor-carousel-frases .carousel-frases .contenedor-frases .frases .contenedor-img-frase .img-frase {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  body main .seccion-historia .contenedor-texto-historia {
+    min-height: 380px;
+    height: 380px;
+    max-height: 1240px;
+  }
+  body main .seccion-historia .contenedor-texto-historia-active {
+    height: 1250px;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .arrows-peliculas .flecha-derecha {
+    right: 6%;
+  }
+  body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .arrows-peliculas .flecha-izquierda {
+    left: 6%;
+  }
+  body main .seccion-historia {
+    margin: 0 5%;
+  }
+}
+
+@media screen and (min-width: 575px) {
+  body main .seccion-historia {
+    margin: 0 6%;
+  }
+  body main .seccion-historia .contenedor-texto-historia {
+    min-height: 360px;
+    height: 360px;
+    max-height: 1180px;
+  }
+  body main .seccion-historia .contenedor-texto-historia-active {
+    height: 1200px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .arrows-peliculas .flecha-derecha,
+  body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .arrows-peliculas .flecha-izquierda {
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
+    margin: 0 .3rem;
+    background-color: transparent;
+    color: #48aef0;
+    height: 4rem;
+    width: 4rem;
+    outline: none;
+  }
+  body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .arrows-peliculas .flecha-derecha i,
+  body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .arrows-peliculas .flecha-izquierda i {
+    font-size: 3rem;
+  }
+  body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .arrows-peliculas .flecha-derecha:active, body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .arrows-peliculas .flecha-derecha:hover,
+  body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .arrows-peliculas .flecha-izquierda:active,
+  body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .arrows-peliculas .flecha-izquierda:hover {
+    color: #48aef0;
+    background-color: transparent;
+  }
+  body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .arrows-peliculas .flecha-derecha {
+    right: 0rem;
+  }
+  body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .arrows-peliculas .flecha-izquierda {
+    left: 0rem;
+  }
+  body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas {
+    max-width: 80%;
+  }
+}
+
+@media screen and (min-width: 670px) {
+  body main .seccion-historia {
+    margin: 0 8%;
+  }
+  body main .seccion-historia .contenedor-texto-historia {
+    min-height: 340px;
+    height: 340px;
+    max-height: 1100px;
+  }
+  body main .seccion-historia .contenedor-texto-historia-active {
+    height: 1110px;
+  }
+}
+
+@media (min-height: 500px) and (min-width: 700px) {
+  body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas {
+    --scalar: 1;
+  }
+  body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas .peliculas .pelicula {
+    --scalar: 1;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    font-size: 1.1rem;
+  }
+  body main .contenedor {
+    max-width: 90%;
+  }
+  body main .seccion-galeria .galeria .imagenes-galeria {
+    -ms-grid-columns: (minmax(210px, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  }
+  body main .seccion-galeria .galeria .imagenes-galeria .imagen-galeria {
+    height: 200px;
+    min-width: 100%;
+  }
+  body main .seccion-galeria .galeria .imagenes-galeria .imagen-galeria img {
+    min-width: 210px;
+    display: block;
+  }
+  body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama .contenido-textos-kaiosama {
+    padding: .6rem 1rem .5rem;
+  }
+  body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .active-boton-leer-mas .contenido-textos-kaiosama {
+    padding: .1rem 1rem .1rem;
+  }
+  body main .seccion-historia .contenedor-texto-historia {
+    min-height: 385px;
+    height: 385px;
+    max-height: 1300px;
+  }
+  body main .seccion-historia .contenedor-texto-historia-active {
+    height: 1310px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  body main .seccion-historia .contenedor-texto-historia {
+    min-height: 365px;
+    height: 365px;
+    max-height: 1215px;
+  }
+  body main .seccion-historia .contenedor-texto-historia-active {
+    height: 1220px;
   }
 }
 

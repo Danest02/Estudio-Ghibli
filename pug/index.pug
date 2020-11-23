@@ -1,4 +1,5 @@
 //- pug -w --pretty pug/index.pug -o ./ -p pug/templates
+
 extends templates/template.pug
 block body
     body
@@ -55,14 +56,15 @@ block body
                 .contenedor-peliculas.contenedor
                     h2.titulo Peliculas
                     .carousel-peliculas#carousel-peliculas
+                        //- .swiper-button-prev
+                        //- .swiper-button-next
+                        
+                        .arrows-peliculas
+                            .swiper-button-prev.flecha-izquierda 
+                                i.fas.fa-angle-left
+                            .swiper-button-next.flecha-derecha 
+                                i.fas.fa-angle-right
                         .peliculas.swiper-container#peliculas
-                            //- <div class="swiper-button-next"></div>
-                            //- <div class="swiper-button-prev"></div>
-                            .arrows-peliculas
-                                .swiper-button-prev.flecha-izquierda 
-                                    i.fas.fa-angle-left
-                                .swiper-button-next.flecha-derecha 
-                                    i.fas.fa-angle-right
                             ul.swiper-wrapper
                                 li.pelicula.swiper-slide
                                     .portada
