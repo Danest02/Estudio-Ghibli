@@ -6,6 +6,9 @@
 .display-none{
     display: none;
 }
+.visibility-hidden{
+    visibility: hidden;
+}
 .mybtn-exit{
     line-height: 0;
     border-radius: 50%;
@@ -111,9 +114,9 @@
     }
 
     &:hover:after {
+        left: 0;
         width: 100%;
         // transform: translateX(0);
-        left: 0;
     }
 }
 

@@ -19,3 +19,9 @@ $desktop: 1920px;
         @content;
     }
 }
+@mixin landscape{
+    @media (orientation: landscape){
+        @content
+    }
+
+}

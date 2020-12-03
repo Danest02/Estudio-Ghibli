@@ -157,6 +157,80 @@
 // 736px	iPhone 8 Plus
 // 812px	iPhone X
 
+
+
+
+@media (orientation: landscape){
+    body {
+        header {
+            background: #070808 url(../../galeria/ghibli1.png);
+            background: linear-gradient(to right, rgba(72, 173, 240, 0.1), rgba(53, 127, 176, 0.2)), url(../../galeria/ghibli1.png);
+            background-size: cover;
+            background-position: center;
+            height: 99vh;
+            .textos-header{
+                top: 35%;
+                .titulo-textos-header{
+                    font-size: 2.2rem;
+                    margin: .5rem;
+                }
+            }
+
+        }
+    }
+}
+@media (orientation: landscape) and (max-height: 450px){
+    body{
+        header{
+            .menu{
+                .enlaces{
+                    padding: 4rem 0 2rem;
+
+                }
+            }
+        }
+        main{
+            .seccion-galeria{
+                .overlay{
+                    .contenedor-img{
+                        max-width: 70%;
+                    }
+                    .descripcion{
+                        max-width: 70%;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (orientation: landscape) and (min-width: 767px){
+    header{
+        min-height: 99vh;
+        .menu{
+            .enlaces{
+                padding: 0;
+
+            }
+        }
+    }
+
+}
+@media (max-height: 500px) and (min-width: 800px){
+    body{
+        main{
+            .seccion-peliculas{
+                .contenedor-peliculas{
+                    .carousel-peliculas{
+                        max-width: 90%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
 @include min-width(500px) {
     body {
         font-size: 1rem;
@@ -261,7 +335,7 @@
                             }
 
                             .contenido-textos-kaiosama {
-                                padding: .5rem 1rem .5rem;
+                                padding: .5em 1em .5em;
                                 position: relative;
                                 width: 100%;
                                 height: 9.2em;
@@ -318,7 +392,7 @@
                             }
 
                             .contenido-textos-kaiosama {
-                                padding: 0rem 1rem .0rem;
+                                padding: 0.1em 1em 0.1em;
 
                                 .h3-kaiosama {
                                     transform: translateY(-38px);
@@ -380,9 +454,14 @@
 
                                             .contenedor-parrafo-frase {
                                                 .parrafo-frase {
-                                                    span {
-                                                        color: $color1;
+
+                                                    &:before,
+                                                    &:after {
+                                                        color: rgba(0, 0, 0, 0.6);
+                                                        font-size: 3rem;
+                                                        line-height: 2.2rem;
                                                     }
+
                                                 }
                                             }
                                         }
@@ -428,10 +507,11 @@
                 .contenedor-peliculas {
                     .carousel-peliculas {
                         .arrows-peliculas {
-                            .flecha-derecha{
+                            .flecha-derecha {
                                 right: 6%;
-                            } 
-                            .flecha-izquierda{
+                            }
+
+                            .flecha-izquierda {
                                 left: 6%;
                             }
                         }
@@ -469,9 +549,9 @@
     }
 }
 
-@include min-width(600px){
-    body{
-        main{
+@include min-width(600px) {
+    body {
+        main {
             .seccion-peliculas {
                 .contenedor-peliculas {
                     .carousel-peliculas {
@@ -480,33 +560,38 @@
                             .flecha-derecha,
                             .flecha-izquierda {
                                 transform: translateY(-1rem);
-                                margin: 0 .3rem ;
+                                margin: 0 .3rem;
                                 background-color: transparent;
                                 color: $color2;
-                                height: 4rem;
-                                width: 4rem;
+                                height: 2rem;
+                                width: 2rem;
                                 outline: none;
-                                i{
+
+                                i {
                                     font-size: 3rem;
                                 }
+
                                 &:active,
                                 &:hover {
                                     color: $color2;
                                     background-color: transparent;
-    
+
                                 }
-    
-    
-                            }   
-                            .flecha-derecha{
+
+
+                            }
+
+                            .flecha-derecha {
                                 right: 0rem;
-                            } 
-                            .flecha-izquierda{
+                            }
+
+                            .flecha-izquierda {
                                 left: 0rem;
                             }
                         }
+
                         .peliculas {
-                            max-width: 80%;
+                            max-width: 85%;
                         }
                     }
                 }
@@ -515,9 +600,10 @@
         }
     }
 }
-@include min-width(670px){
-    body{
-        main{
+
+@include min-width(670px) {
+    body {
+        main {
             .seccion-historia {
                 margin: 0 8%;
 
@@ -536,17 +622,18 @@
         }
     }
 }
-@include min-height-min-width(500px,700px){
-    body{
-        main{
-            .seccion-peliculas{
-                .contenedor-peliculas{
-                    .carousel-peliculas{
-                        .peliculas{
-                            --scalar: 1;
-                            .pelicula{
-                                --scalar: 1;
 
+@include min-height-min-width(500px, 700px) {
+    body {
+        main {
+            .seccion-peliculas {
+                .contenedor-peliculas {
+                    .carousel-peliculas {
+                        .peliculas {
+                            --scalar: 1;
+
+                            .pelicula {
+                                --scalar: 1;
                             }
                         }
                     }
@@ -555,21 +642,26 @@
         }
     }
 }
-@include min-width(700px){
-    body{
+
+@include min-width(700px) {
+    body {
         font-size: 1.1rem;
-        main{
-            .contenedor{
+
+        main {
+            .contenedor {
                 max-width: 90%;
             }
+
             .seccion-galeria {
                 .galeria {
                     .imagenes-galeria {
                         grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-                        .imagen-galeria{
+
+                        .imagen-galeria {
                             height: 200px;
                             min-width: 100%;
-                            img{
+
+                            img {
                                 min-width: 210px;
                                 display: block;
                             }
@@ -577,17 +669,317 @@
                     }
                 }
             }
-            .seccion-kaiosamas-ghibli{
-                .contenedor-kaiosamas-ghibli{
-                    .kaiosamas{
-                        .kaiosama{
-                            
-                        }
-                    }
+
+            .seccion-historia {
+
+                .contenedor-texto-historia {
+                    min-height: 390px;
+                    height: 390px;
+                    max-height: 1290px;
                 }
+
+                .contenedor-texto-historia-active {
+                    height: 1290px;
+                }
+
             }
 
         }
     }
 
+}
+
+
+// TODO:STUB TABLET
+
+// 768px	iPad Air, iPad Mini, iPad Pro 9″
+// 834px	iPad Pro 10″
+
+@include min-width(767px) {
+    body {
+        header {
+            background: #070808 url(../../galeria/ghibli1.png);
+            background: linear-gradient(to right, rgba(72, 173, 240, 0.1), rgba(53, 127, 176, 0.2)), url(../../galeria/ghibli1.png);
+            background-size: cover;
+            background-position: center;
+            height: 45vh;
+
+            &:before {
+                background: rgba(0, 0, 0, 0.1);
+            }
+
+            .textos-header {
+                top: 30%;
+            }
+
+            .menu {
+                padding: 2rem 0;
+
+                .enlaces {
+                    flex-direction: row;
+                    justify-content: center;
+                    clip-path: none;
+                    position: relative;
+                    height: auto;
+                    width: 100%;
+                    padding: 0;
+                    background-color: transparent;
+                    box-shadow: none;
+
+
+                    .enlace {
+                        margin: 0 7px;
+                        padding: 0 .1rem;
+                        color: #fff;
+                        animation: opacity_scale 3s ease;
+                        position: relative;
+                        font-weight: 500;
+                    }
+                }
+
+                .contenedor-hamburguer {
+                    display: none;
+                }
+            }
+
+            .menu-scroll {
+                padding: .7rem 3rem;
+                background-color: #fff;
+                box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .2);
+                transition: transform ease-in-out 0.5s;
+
+                .enlaces {
+                    .enlace {
+                        color: #444;
+                    }
+
+                    .foco {
+                        transition: .5s;
+                        color: $color1;
+                    }
+                }
+
+            }
+
+            .wave {
+                width: 100%;
+            }
+        }
+
+        main {
+            .contenedor {
+                max-width: 85%;
+            }
+
+            .titulo {
+                font-size: 3rem;
+            }
+
+            .seccion-peliculas {
+                .contenedor-peliculas {
+                    .carousel-peliculas {
+                        .peliculas {
+                            .ver-sipnosis-active {
+                                .nombre-sipnosis {
+                                    font-size: 2rem;
+                                }
+
+                                .img-sipnosis {
+                                    height: 250px;
+                                }
+
+                                .boton-sipnosis {
+                                    width: 40%;
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+
+            .seccion-historia {
+
+                .contenedor-texto-historia {
+                    min-height: 385px;
+                    height: 385px;
+                    max-height: 1250px;
+                }
+
+                .contenedor-texto-historia-active {
+                    height: 1250px;
+                }
+
+            }
+
+        }
+    }
+}
+
+@include min-width(820px) {
+    body {
+        main {
+            font-size: 1.2rem;
+
+            .seccion-historia {
+
+                .contenedor-texto-historia {
+                    min-height: 475px;
+                    height: 475px;
+                    max-height: 1220px;
+                }
+
+                .contenedor-texto-historia-active {
+                    height: 1220px;
+                }
+
+            }
+
+        }
+    }
+}
+
+@include min-width(820px) {
+    body {
+        main {
+            .seccion-historia {
+
+                .contenedor-texto-historia {
+                    min-height: 415px;
+                    height: 415px;
+                    max-height: 1350px;
+                }
+
+                .contenedor-texto-historia-active {
+                    height: 1350px;
+                }
+
+            }
+
+        }
+    }
+}
+
+@include min-width(1020px) {
+    body {
+        main {
+            .seccion-kaiosamas-ghibli {
+                background: url(../../galeria/fondo2.png);
+
+                &:before {
+                    background-color: rgba(255, 255, 255, .8);
+                }
+
+                .contenedor-kaiosamas-ghibli {
+                    .kaiosamas {
+                        grid-template-columns: 1fr 3fr 1fr;
+                        margin-bottom: 3.5rem;
+
+                        .kaiosama {
+                            min-height: 10.5rem;
+
+                            .contenedor-imagen-kaiosama {
+                                max-width: 9rem;
+
+                                .imagen-kaiosama {
+                                    height: 100%;
+                                    width: 100%;
+                                }
+                            }
+
+                            .contenido-textos-kaiosama {
+                                // padding: 1.5rem 2rem .8rem;
+
+                            }
+                        }
+
+                        .k1 {
+                            grid-column: 1 / span 2;
+
+                        }
+
+                        .k2 {
+                            grid-column: span 2 / -1;
+
+                        }
+
+                        .k3 {
+                            grid-column: 1 / span 2;
+                        }
+
+                    }
+                }
+            }
+
+            .seccion-frases {
+                .contenedor-carousel-frases {
+                    .carousel-frases {
+
+                        .flecha-derecha,
+                        .flecha-izquierda {
+                            height: 3.2rem;
+                            width: 3.2rem;
+                            box-shadow: 0 0 9px 0 rgba(0, 0, 0, .5);
+                            border-radius: 50%;
+                            transition: transform .7s, background-color .5s;
+                        }
+
+                        .flecha-izquierda {
+                            padding-right: 5px;
+                        }
+
+                        .flecha-derecha {
+                            padding-left: 5px;
+
+                        }
+
+                        .contenedor-frases {
+                            max-width: 80%;
+
+                            .frases {
+                                width: 100%;
+                                height: 300px;
+
+                                .contenedor-frase {
+
+                                    .frase {
+                                        margin: 1rem 15%;
+                                        width: 70%;
+                                        padding: 2rem;
+                                        box-shadow: 0 0 9px 0 rgba(0, 0, 0, .5);
+                                        border-radius: 10px;
+
+                                        .contenido-texto {
+                                            width: 100%;
+
+                                            .contenedor-parrafo-frase {
+                                                color: $color1;
+                                            }
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+
+            .seccion-historia {
+
+                .contenedor-texto-historia {
+                    min-height: 475px;
+                    height: 475px;
+                    max-height: 1180px;
+                }
+
+                .contenedor-texto-historia-active {
+                    height: 1180px;
+                }
+
+            }
+
+
+        }
+    }
 }

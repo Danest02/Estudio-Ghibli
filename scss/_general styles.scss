@@ -31,6 +31,7 @@ html {
 }
 
 body {
+    // quotes: '\201c' '\201d';
     font-family: $roboto;
     color: #000;
 
@@ -46,7 +47,7 @@ body {
 
         @include background-parallax;
 
-        min-height: 100vh;
+        height: 100vh;
         overflow: hidden;
 
         .menu {
@@ -160,6 +161,8 @@ body {
         // TODO:STUB SOBRE GHIBLI
 
         .seccion-sobre-ghibli {
+            margin-bottom: 3.5rem;
+
             .contenedor-sobre-ghibli {
                 .sobre-ghibli {
                     @extend .center-flex,
@@ -279,16 +282,19 @@ body {
                 margin-bottom: 1rem;
                 align-items: center;
                 position: relative;
-                
+
                 .swiper-pagination-bullet {
                     display: none;
                 }
-                
+
                 .carousel-peliculas {
                     width: 100%;
                     @extend .flex-column;
+
                     .arrows-peliculas {
+                        overflow: hidden;
                         @extend .center-flex;
+
                         .flecha-derecha,
                         .flecha-izquierda {
                             top: calc(50% - 0px);
@@ -351,6 +357,7 @@ body {
                             display: none;
                         }
                     }
+
                     .peliculas {
                         --scalar: 1.6;
                         max-width: 100%;
@@ -359,7 +366,7 @@ body {
                         display: flex;
 
 
-                        
+
 
 
                         .pelicula {
@@ -396,6 +403,7 @@ body {
 
                         .pelicula-active {
                             .informacion {
+                                
                                 .contenedor-nombre-ver-pelis {
                                     display: block;
                                 }
@@ -408,6 +416,7 @@ body {
 
                         .swiper-slide-active {
                             .informacion {
+                                animation: aparecer-bajo .7s ease-out;
                                 .contenedor-nombre-ver-pelis {
                                     display: block;
                                 }
@@ -418,36 +427,15 @@ body {
                             }
                         }
 
-                        .position-absolute-informacion {
-                            .informacion {
-                                position: absolute;
-                                @extend .height-width,
-                                .center-flex,
-                                .flex-column;
-                                background: #48aef0e6;
-                                top: 90%;
-                                color: #fff;
-                                transition: top .7s;
-
-                                .contenedor-nombre {
-                                    @extend .center-flex;
-                                    height: 10%;
-                                    width: 100%;
-                                    transition: margin 0.7s;
-                                }
-
-                            }
-                        }
 
                         .ver-sipnosis-active {
                             @extend .position-fixed,
                             .center-flex,
-                            .wrap,
-                            .space-around;
+                            .wrap;
                             padding: 0 1rem;
                             background-color: #fff;
                             text-align: center;
-                            z-index: 1000;
+                            z-index: 3000;
 
                             .boton-sipnosis {
                                 @extend .center-flex;
@@ -455,7 +443,7 @@ body {
                                 right: 0;
                                 padding: .5rem .8rem;
                                 border-radius: 1.5rem;
-                                width: 100%;
+                                width: 95%;
 
                                 i {
                                     font-size: 1.5rem;
@@ -468,14 +456,18 @@ body {
                             }
 
                             .img-sipnosis {
-                                height: 150px;
-                                width: 40%;
-                                max-width: 130px;
+                                height: 140px;
+                                width: 45%;
+                                object-fit: contain;
+
                             }
 
                             .parrafo-sipnosis {
                                 width: 100%;
+                                max-height: 43%;
                                 padding: .5rem 0;
+                                overflow: scroll;
+                                margin: auto;
                             }
                         }
 
@@ -576,6 +568,7 @@ body {
                         height: 130px;
                         box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
                         border-radius: 15px;
+                        overflow: hidden;
 
                         img {
                             @extend .height-width;
@@ -588,7 +581,7 @@ body {
                 .contenedor-botones-imagenes-galeria {
                     padding: 2rem 0;
                     width: 80%;
-                    @extend .center-flex;
+                    @extend .center-flex, .wrap;
 
                     .boton-ver-mas,
                     .boton-ver-menos {
@@ -628,19 +621,19 @@ body {
                         border-radius: 50%;
                         font-size: 1.2em;
                         color: $color1;
-                        
+
                         &:hover {
                             transition: color .5s ease, transform .5s ease, background-color .5 ease;
                             background: $color1;
                             transform: scale(1.2);
                             color: white;
                         }
-                    
+
                         @include mybtn-convertir;
-                        
+
                     }
                 }
-                
+
                 .descripcion {
                     display: block;
                     background: #fff;
@@ -722,6 +715,7 @@ body {
 
                         .contenedor-imagen-kaiosama {
                             width: 50%;
+
                             .imagen-kaiosama {
                                 object-fit: cover;
                                 border-radius: 50%;
@@ -734,6 +728,7 @@ body {
                             width: 50%;
                             @extend .center-flex,
                             .flex-column;
+
                             .h3-kaiosama {
                                 margin: .5rem 0;
                             }
@@ -757,7 +752,8 @@ body {
                     }
 
                     .kaiosama-active {
-                        @extend .height-width, .wrap;
+                        @extend .height-width,
+                        .wrap;
                         @include position-fixed;
                         z-index: 1000;
                         background-color: #fff;
@@ -768,6 +764,7 @@ body {
                             top: 1rem;
                             left: 1.5em;
                             width: 100%;
+
                             .imagen-kaiosama {
                                 height: 6.5em;
                                 width: 6.5em;
@@ -820,12 +817,12 @@ body {
                         @extend .center-flex;
                         position: absolute;
                         z-index: 100;
-                        color: $color2;
-                        border-radius: 50%;
-                        
+                        color: $color1;
+
+                        @include mybtn-convertir;
+
                         i {
                             font-size: 2.5em;
-                            @include mybtn-convertir;
                         }
                     }
 
@@ -842,7 +839,8 @@ body {
                         .frases {
                             scroll-behavior: smooth;
                             display: flex;
-                            @extend .scrollbar-none,;
+                            @extend .scrollbar-none
+                            ;
                             // scroll-snap-type: x proximity;
                             -ms-scroll-snap-type: x mandatory;
                             scroll-snap-type: x mandatory;
@@ -851,6 +849,7 @@ body {
                             .contenedor-frase {
                                 position: relative;
                                 width: 100vw;
+                                @extend .center-flex;
                                 flex-shrink: 0;
                                 scroll-snap-align: center;
 
@@ -858,10 +857,11 @@ body {
                                     @include background-before {
                                         background-color: rgba(0, 0, 0, 0.8);
                                     }
-                                    @extend
-                                    .center-flex,
+
+                                    @extend .center-flex,
                                     .flex-column;
-                                    max-height: 100%;                                    
+                                    max-height: 100%;
+
                                     .contenido-texto {
                                         width: 65%;
                                         @extend .position-absolute,
@@ -869,11 +869,36 @@ body {
                                         .flex-column;
                                         text-align: center;
                                         color: #fff;
-                                        .contenedor-parrafo-frase{
+
+                                        .contenedor-parrafo-frase {
                                             margin: .5rem;
                                             font-size: 1.1em;
+
+                                            .parrafo-frase {
+
+                                                &:before,
+                                                &:after {
+                                                    color: rgba(255, 255, 255, 1);
+                                                    font-family: Georgia;
+                                                    font-size: 2rem;
+                                                    font-weight: bold;
+                                                    line-height: 1.5rem;
+                                                    vertical-align: middle;
+                                                }
+
+                                                &:before {
+                                                    content: open-quote;
+                                                }
+
+                                                &:after {
+                                                    content: close-quote;
+
+
+                                                }
+                                            }
                                         }
-                                        .titulo-frase{
+
+                                        .titulo-frase {
                                             font-size: .95em;
                                             font-style: oblique;
                                             font-weight: 300;

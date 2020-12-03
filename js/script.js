@@ -251,18 +251,21 @@ let nombreSipnosis = document.getElementById("nombre-sipnosis")
 let peliculas = document.getElementById("peliculas")
 botonSipnosisCerrar.addEventListener("click", (evento) => {
   sipnosis.classList.remove("ver-sipnosis-active")
+  arrowsPeliculas.classList.toggle("visibility-hidden")
+
   sipnosisActive.innerHTML = " "
 
 })
 let sipnosis = document.getElementById("sipnosis")
+let arrowsPeliculas = document.getElementById("arrows-peliculas")
 let verPeliculas = document.getElementsByClassName("ver-peliculas");
 let sipnosisActive = document.getElementById("sipnosis-active");
 let verSipnosis = Array.from(verPeliculas)
-
 verSipnosis.forEach((elemento) => {
   elemento.addEventListener("click", (evento) => {
     evento.preventDefault()
     // evento.target.parentNode.parentNode.classList.add("ver-sipnosis-active");
+    arrowsPeliculas.classList.toggle("visibility-hidden")
     peliculas.classList.toggle("height-auto")
     sipnosis.classList.add("ver-sipnosis-active")
     sipnosisActive.classList.remove("display-none")
@@ -414,7 +417,7 @@ $(function () {
     }
   });
   $(window).scroll(function () {
-    if ($(document).scrollTop() >= kaiosamas - 150) {
+    if ($(document).scrollTop() >= kaiosamas - 200) {
       $("#enlace-Creadores").addClass("foco");
       $("#enlace-Imagenes").removeClass("foco");
     } else {
@@ -430,7 +433,7 @@ $(function () {
     }
   });
   $(window).scroll(function () {
-    if ($(document).scrollTop() >= verPelis - 300) {
+    if ($(document).scrollTop() >= verPelis - 200) {
       $("#enlace-Ver-peliculas").addClass("foco");
       $("#enlace-Frases").removeClass("foco");
     } else {
@@ -438,7 +441,7 @@ $(function () {
     }
   });
   $(window).scroll(function () {
-    if ($(document).scrollTop() >= verPelis - 300) {
+    if ($(document).scrollTop() >= verPelis - 200) {
       $("#enlace-Ver-peliculas").addClass("foco");
       $("#enlace-Frases").removeClass("foco");
     } else {
@@ -446,7 +449,7 @@ $(function () {
     }
   });
   $(window).scroll(function () {
-    if ($(document).scrollTop() >= historia - 300) {
+    if ($(document).scrollTop() >= historia - 200) {
       $("#enlace-Historia").addClass("foco");
       $("#enlace-Ver-peliculas").removeClass("foco");
     } else {
