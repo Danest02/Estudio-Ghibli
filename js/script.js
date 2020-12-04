@@ -224,9 +224,16 @@ imagen.forEach((elemento) => {
 // TODO:STUB BOTON LEER MAS HISTORIA
 let botonHistoria = document.getElementById("boton-historia");
 let parrafoHistoria = document.getElementById("parrafo-historia");
-// let maxheight = document.getElementById("parrafo-historia")
+let heightHistoria = window.getComputedStyle(parrafoHistoria, null).getPropertyValue("height")
+let heightParrafoHistoria = parrafoHistoria.scrollHeight + "px"
 botonHistoria.addEventListener("click", (evento) => {
-  parrafoHistoria.classList.toggle("contenedor-texto-historia-active")
+  if (parrafoHistoria.style.height == heightParrafoHistoria) {
+    parrafoHistoria.style.height = heightHistoria
+    parrafoHistoria.style.maxHeight = heightHistoria
+  } else {
+    parrafoHistoria.style.height = heightParrafoHistoria
+    parrafoHistoria.style.maxHeight = heightParrafoHistoria
+  }
   setTimeout(() => {
     if (evento.target.innerHTML == "Leer mas") {
       evento.target.classList.add("transformacion")
@@ -329,7 +336,6 @@ $(function () {
   let min = parseInt($(".imagenes-galeria").css("min-height"));
   let adicion = min + gap / 2 - 2
   let adicionContador = adicion
-  console.log(adicion)
   $(".boton-ver-mas").on("click", function (evt) {
     console.log(adicion)
     adicion += adicionContador
@@ -369,7 +375,6 @@ $(function () {
   if (height < "500") {
     $(".boton-ver-menos").addClass("display-none");
     $(".boton-cerrar-imagenes").addClass("display-none");
-    console.log("hola")
   }
 
   // TODO:STUB MARCADOR SECCIONES ENLACES MENU

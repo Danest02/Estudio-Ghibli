@@ -1048,11 +1048,10 @@ body {
         .seccion-historia {
 
 
-            .contenedor-texto-historia {
-                transition: height 1.5s;
-                min-height: 505px;
-                height: 505px;
-                max-height: 1780px;
+            #parrafo-historia {
+                transition: height 1.5s ease-in-out, max-height 1.5s;
+                height: 1000px;
+                max-height: 550px;
                 margin: 3.5rem auto 2rem;
                 width: 90%;
                 background-color: #fff;
@@ -1071,9 +1070,6 @@ body {
                 }
             }
 
-            .contenedor-texto-historia-active {
-                height: 2200px;
-            }
 
             .contenedor-boton-historia {
                 display: flex;
