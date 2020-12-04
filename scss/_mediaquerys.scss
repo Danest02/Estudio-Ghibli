@@ -218,6 +218,9 @@
 @media (max-height: 500px) and (min-width: 800px){
     body{
         main{
+             .seccion-sobre-ghibli, .seccion-kaiosamas-ghibli{
+                 font-size: 1.17rem;
+             }
             .seccion-peliculas{
                 .contenedor-peliculas{
                     .carousel-peliculas{

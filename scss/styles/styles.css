@@ -2120,6 +2120,9 @@ body main .seccion-adios .contenedor-video .contenedor-texto-adios .texto-adios 
 }
 
 @media (max-height: 500px) and (min-width: 800px) {
+  body main .seccion-sobre-ghibli, body main .seccion-kaiosamas-ghibli {
+    font-size: 1.17rem;
+  }
   body main .seccion-peliculas .contenedor-peliculas .carousel-peliculas {
     max-width: 90%;
   }
