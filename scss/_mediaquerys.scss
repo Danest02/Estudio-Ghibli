@@ -4,10 +4,9 @@
 // 375px	iPhone 6 to X
 // 414px	iPhone 8 Plus
 
-
 @include min-width(360px) {
     body {
-        font-size: 1.1rem;
+        font-size: 1.15rem;
 
         main {
             .seccion-peliculas {
@@ -24,6 +23,7 @@
 
             .seccion-galeria {
                 .galeria {
+                    max-width: 94%;
                     .imagenes-galeria {
                         min-height: 410px;
                         height: 410px;
@@ -42,75 +42,23 @@
             }
 
             .seccion-historia {
-                .contenedor-texto-historia {
-                    min-height: 540px;
-                    max-height: 1900px;
+                margin: 0 3%;
 
+                #parrafo-historia {
+                    max-height: 590px;
                 }
             }
+
         }
     }
 
-    @include min-width(390px) {
-        body {
-            font-size: 1.2rem;
-
-            main {
-                .seccion-historia {
-                    .contenedor-texto-historia {
-                        font-size: 1em;
-                        min-height: 600px;
-                        max-height: 2110px;
-                    }
-                }
-            }
-        }
-    }
 }
+
 
 @include min-width(410px) {
     body {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
 
-        main {
-            .seccion-historia {
-                .contenedor-texto-historia {
-                    max-height: 2180px;
-                }
-            }
-        }
-    }
-}
-
-@include min-width(430px) {
-    body {
-        main {
-            .seccion-kaiosamas-ghibli {
-                .contenedor-kaiosamas-ghibli {
-                    .kaiosamas {
-                        width: 90%;
-                    }
-                }
-            }
-
-            .seccion-historia {
-                .contenedor-texto-historia {
-                    min-height: 550px;
-
-                    max-height: 2010px;
-                }
-
-                .contenedor-texto-historia-active {
-                    height: 2020px;
-                }
-
-            }
-        }
-    }
-}
-
-@include min-width(450px) {
-    body {
         main {
             .seccion-kaiosamas-ghibli {
                 .contenedor-kaiosamas-ghibli {
@@ -123,33 +71,6 @@
     }
 }
 
-@include min-width(485px) {
-    body {
-        main {
-            .seccion-kaiosamas-ghibli {
-                .contenedor-kaiosamas-ghibli {
-                    .kaiosamas {
-                        width: 80%;
-                    }
-                }
-            }
-
-            .seccion-historia {
-                .contenedor-texto-historia {
-                    min-height: 525px;
-                    height: 525px;
-                    max-height: 1900px;
-                }
-
-                .contenedor-texto-historia-active {
-                    height: 2020px;
-                }
-
-            }
-        }
-    }
-}
-
 // TODO:STUB MOBILE LANDSCAPE
 
 // 568px	iPhone SE
@@ -157,10 +78,7 @@
 // 736px	iPhone 8 Plus
 // 812px	iPhone X
 
-
-
-
-@media (orientation: landscape){
+@media (orientation: landscape) {
     body {
         header {
             background: #070808 url(../../galeria/ghibli1.png);
@@ -168,9 +86,11 @@
             background-size: cover;
             background-position: center;
             height: 99vh;
-            .textos-header{
+
+            .textos-header {
                 top: 35%;
-                .titulo-textos-header{
+
+                .titulo-textos-header {
                     font-size: 2.2rem;
                     margin: .5rem;
                 }
@@ -179,23 +99,26 @@
         }
     }
 }
-@media (orientation: landscape) and (max-height: 450px){
-    body{
-        header{
-            .menu{
-                .enlaces{
+
+@media (orientation: landscape) and (max-height: 450px) {
+    body {
+        header {
+            .menu {
+                .enlaces {
                     padding: 4rem 0 2rem;
 
                 }
             }
         }
-        main{
-            .seccion-galeria{
-                .overlay{
-                    .contenedor-img{
+
+        main {
+            .seccion-galeria {
+                .overlay {
+                    .contenedor-img {
                         max-width: 70%;
                     }
-                    .descripcion{
+
+                    .descripcion {
                         max-width: 70%;
                     }
                 }
@@ -203,27 +126,32 @@
         }
     }
 }
-@media (orientation: landscape) and (min-width: 767px){
-    header{
-        min-height: 99vh;
-        .menu{
-            .enlaces{
-                padding: 0;
 
+@media (orientation: landscape) and (min-width: 767px) {
+    header {
+        min-height: 99vh;
+
+        .menu {
+            .enlaces {
+                padding: 0;
             }
         }
     }
 
 }
-@media (max-height: 500px) and (min-width: 800px){
-    body{
-        main{
-             .seccion-sobre-ghibli, .seccion-kaiosamas-ghibli{
-                 font-size: 1.17rem;
-             }
-            .seccion-peliculas{
-                .contenedor-peliculas{
-                    .carousel-peliculas{
+
+@media (max-height: 500px) and (min-width: 800px) {
+    body {
+        main {
+
+            .seccion-sobre-ghibli,
+            .seccion-kaiosamas-ghibli {
+                font-size: 1.17rem;
+            }
+
+            .seccion-peliculas {
+                .contenedor-peliculas {
+                    .carousel-peliculas {
                         max-width: 90%;
                     }
                 }
@@ -233,15 +161,7 @@
 }
 
 
-
-@include min-width(500px) {
-    body {
-        font-size: 1rem;
-    }
-
-}
-
-@include min-width(500px) {
+@include min-width(550px) {
     body {
         main {
             .seccion-sobre-ghibli {
@@ -259,15 +179,15 @@
                                 .texto-sobre-ghibli-2,
                                 .texto-sobre-ghibli-3 {
                                     .contenedor-parrafo-sobre-ghibli-1 {
-                                        max-height: 100px;
+                                        max-height: 130px;
                                     }
 
                                     .contenedor-parrafo-sobre-ghibli-2 {
-                                        max-height: 140px;
+                                        max-height: 170px;
                                     }
 
                                     .contenedor-parrafo-sobre-ghibli-3 {
-                                        max-height: 250px;
+                                        max-height: 350px;
 
                                     }
 
@@ -311,6 +231,26 @@
                         }
                     }
                 }
+            }
+            .seccion-peliculas {
+                .contenedor-peliculas {
+                    .carousel-peliculas {
+                        .arrows-peliculas {
+                            .flecha-derecha {
+                                right: 6%;
+                            }
+
+                            .flecha-izquierda {
+                                left: 6%;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .seccion-historia {
+                margin: 0 10%;
             }
 
             .seccion-kaiosamas-ghibli {
@@ -485,72 +425,10 @@
                     }
                 }
             }
-
-            .seccion-historia {
-                .contenedor-texto-historia {
-                    min-height: 380px;
-                    height: 380px;
-                    max-height: 1240px;
-                }
-
-                .contenedor-texto-historia-active {
-                    height: 1250px;
-                }
-
-            }
-
         }
     }
 }
 
-@include min-width(550px) {
-    body {
-        main {
-            .seccion-peliculas {
-                .contenedor-peliculas {
-                    .carousel-peliculas {
-                        .arrows-peliculas {
-                            .flecha-derecha {
-                                right: 6%;
-                            }
-
-                            .flecha-izquierda {
-                                left: 6%;
-                            }
-                        }
-                    }
-                }
-
-            }
-
-            .seccion-historia {
-                margin: 0 5%;
-            }
-        }
-    }
-}
-
-@include min-width(575px) {
-    body {
-        main {
-            .seccion-historia {
-                margin: 0 6%;
-
-                .contenedor-texto-historia {
-                    min-height: 360px;
-                    height: 360px;
-                    max-height: 1180px;
-                }
-
-                .contenedor-texto-historia-active {
-                    height: 1200px;
-                }
-
-            }
-
-        }
-    }
-}
 
 @include min-width(600px) {
     body {
@@ -604,31 +482,14 @@
     }
 }
 
-@include min-width(670px) {
-    body {
-        main {
-            .seccion-historia {
-                margin: 0 8%;
-
-                .contenedor-texto-historia {
-                    min-height: 340px;
-                    height: 340px;
-                    max-height: 1100px;
-                }
-
-                .contenedor-texto-historia-active {
-                    height: 1110px;
-                }
-
-            }
-
-        }
-    }
-}
-
 @include min-height-min-width(500px, 700px) {
     body {
+
         main {
+            .contenedor {
+                max-width: 85%;
+            }
+
             .seccion-peliculas {
                 .contenedor-peliculas {
                     .carousel-peliculas {
@@ -646,51 +507,6 @@
     }
 }
 
-@include min-width(700px) {
-    body {
-        font-size: 1.1rem;
-
-        main {
-            .contenedor {
-                max-width: 90%;
-            }
-
-            .seccion-galeria {
-                .galeria {
-                    .imagenes-galeria {
-                        grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-
-                        .imagen-galeria {
-                            height: 200px;
-                            min-width: 100%;
-
-                            img {
-                                min-width: 210px;
-                                display: block;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .seccion-historia {
-
-                .contenedor-texto-historia {
-                    min-height: 390px;
-                    height: 390px;
-                    max-height: 1290px;
-                }
-
-                .contenedor-texto-historia-active {
-                    height: 1290px;
-                }
-
-            }
-
-        }
-    }
-
-}
 
 
 // TODO:STUB TABLET
@@ -700,6 +516,7 @@
 
 @include min-width(767px) {
     body {
+        font-size: 1.17rem;
         header {
             background: #070808 url(../../galeria/ghibli1.png);
             background: linear-gradient(to right, rgba(72, 173, 240, 0.1), rgba(53, 127, 176, 0.2)), url(../../galeria/ghibli1.png);
@@ -752,6 +569,9 @@
                 transition: transform ease-in-out 0.5s;
 
                 .enlaces {
+                    font-size: 1.1rem;
+
+
                     .enlace {
                         color: #444;
                     }
@@ -801,70 +621,34 @@
                 }
             }
 
-            .seccion-historia {
+            .seccion-galeria {
+                .galeria {
+                    .imagenes-galeria {
+                        grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
 
-                .contenedor-texto-historia {
-                    min-height: 385px;
-                    height: 385px;
-                    max-height: 1250px;
+                        .imagen-galeria {
+                            height: 200px;
+                            min-width: 100%;
+
+                            img {
+                                min-width: 210px;
+                                display: block;
+                            }
+                        }
+                    }
                 }
-
-                .contenedor-texto-historia-active {
-                    height: 1250px;
-                }
-
             }
+
 
         }
     }
 }
 
-@include min-width(820px) {
-    body {
-        main {
-            font-size: 1.2rem;
 
-            .seccion-historia {
-
-                .contenedor-texto-historia {
-                    min-height: 475px;
-                    height: 475px;
-                    max-height: 1220px;
-                }
-
-                .contenedor-texto-historia-active {
-                    height: 1220px;
-                }
-
-            }
-
-        }
-    }
-}
-
-@include min-width(820px) {
-    body {
-        main {
-            .seccion-historia {
-
-                .contenedor-texto-historia {
-                    min-height: 415px;
-                    height: 415px;
-                    max-height: 1350px;
-                }
-
-                .contenedor-texto-historia-active {
-                    height: 1350px;
-                }
-
-            }
-
-        }
-    }
-}
 
 @include min-width(1020px) {
     body {
+        font-size: 1.2rem;
         main {
             .seccion-kaiosamas-ghibli {
                 background: url(../../galeria/fondo2.png);
@@ -967,21 +751,6 @@
                     }
                 }
             }
-
-            .seccion-historia {
-
-                .contenedor-texto-historia {
-                    min-height: 475px;
-                    height: 475px;
-                    max-height: 1180px;
-                }
-
-                .contenedor-texto-historia-active {
-                    height: 1180px;
-                }
-
-            }
-
 
         }
     }
