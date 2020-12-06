@@ -26,7 +26,7 @@ block body
                     .sobre-ghibli
                         .sobre-ghibli-1#sobre-ghibli-1
                             .contenedor-imagen-sobre-ghibli
-                                img(src="galeria/ghibli2.1.jpg" class="imagen-sobre-ghibli-1" id="imagen-sobre-ghibli-1" alt="logo del estudio ghibli")
+                                img(src="galeria/ghibli2.1.jpg" class="imagen-sobre-ghibli-1 imagen-sobre-ghibli" id="imagen-sobre-ghibli-1" alt="logo del estudio ghibli")
                             .contenido-textos-sobre-ghibli
                                 .texto-sobre-ghibli.texto-sobre-ghibli-1.texto-sobre-ghibli-visible
                                     .contenedor-h3-sobre-ghibli
@@ -40,7 +40,7 @@ block body
                                         p.parrafo-sobre-ghibli El nombre Ghibli fue elegido por Hayao Miyazaki y deriva de la palabra italiana «ghibli», basada en el nombre del viento cálido del desierto que sopla en Libia.También hace referencia a un avión italiano, el Caproni Ca.309 Ghibli. Aunque la palabra en italiano se translitera ギブリ (Giburi), el nombre en japonés del estudio es ジブリ (Jiburi). 
                         .sobre-ghibli-2#sobre-ghibli-2
                             .contenedor-imagen-sobre-ghibli
-                                img(src="galeria/ghibli2.2.svg" class="imagen-sobre-ghibli-2" id="imagen-sobre-ghibli-2" alt="logo del estudio ghibli")
+                                img(src="galeria/ghibli2.2.svg" class="imagen-sobre-ghibli-2 imagen-sobre-ghibli" id="imagen-sobre-ghibli-2" alt="logo del estudio ghibli")
                             .contenido-textos-sobre-ghibli
                                 .texto-sobre-ghibli.texto-sobre-ghibli-3
                                     .contenedor-h3-sobre-ghibli
@@ -486,62 +486,63 @@ block body
                                 .contenedor-enlace-ver-peli
                                     a(href="#" class="enlace-ver-peli mybtn") El recuerdo de Marnie
             section.seccion-historia#historia
-                .contenedor-texto-historia.contenedor#parrafo-historia
-                    .texto-historia
-                     h2.titulo.titulo-historia Historia
-                     .contenedor-parrafo-historia  
-                        p.parrafo-historia
-                            |Fundado en 1985, el estudio está dirigido por el galardonado director Hayao Miyazaki, y
-                            |hasta
-                            |2018 estuvo dirigido por Miyazaki junto a su amigo y mentor, Isao Takahata, fallecido en ese
-                            |año. Sus orígenes datan de 1983, con la película Nausicäa del Valle del Viento, la cual
-                            |comenzó
-                            |como un manga en una publicación de la revista Tokuma Shoten. Tokuma era la compañía "madre"
-                            |de
-                            |Ghibli, y cedió a Disney los derechos de video y distribución de varias películas; entre
-                            |ellas
-                            |La princesa Mononoke y El viaje de Chihiro. El compositor Joe Hisaishi ha creado la banda
-                            |sonora
-                            |para muchas de las películas del Studio Ghibli.
-                            |<br><br>
-                            |Debido a la fama de los estudios se abrió en las afueras de Tokio el Museo Ghibli. El 1 de
-                            |septiembre de 2013, el director de cine y cofundador de la compañía, Hayao Miyazaki, anunció
-                            |su
-                            |retirada a través de un comunicado oficial.
-                            |<br><br>
-                            |El 3 de agosto de 2014, Toshio Suzuki, productor del estudio y uno de los fundadores del
-                            |estudio, anunciaba que clausuraban su sección de producción de largometrajes. Uno de los
-                            |factores que provocaron esta decisión fue la retirada del director de cine Hayao Miyazaki,
-                            |otro
-                            |de los fundadores del estudio, que según las declaraciones, su salida supuso un duro golpe;
-                            |junto con la jubilación del cineasta, se cree que la regular recepción de taquilla de El
-                            |cuento
-                            |de la princesa Kaguya, la última obra dirigida por Isao Takahata, fue también un motivo. El
-                            |Studio Ghibli siguió con sus licencias hasta acabar un proceso de reestructuración.
-                            |<br><br>
-                            |El 10 de agosto de 2017, el estudio reabrió sus puertas.
-                            |<br><br>
-                            |Cabe destacar que las películas de dicho estudio han adquirido muchos premios, entre ellas
-                            |cinco
-                            |de sus películas fueron nominadas al Óscar a la producción cinematográfica de animación más
-                            |destacada; las cintas nominadas fueron: El viaje de Chihiro (2001), El castillo ambulante
-                            |(2004), El recuerdo de Marnie (2014), El viento se levanta (2013) y El cuento de la princesa
-                            |Kaguya (2013). A pesar de estas numerosas nominaciones, tan solo El viaje de Chihiro fue
-                            |galardonada con el Óscar.
-                            |<br><br>
-                            |Además de las películas ya mencionadas, muchas otras contaron con un gran éxito en los
-                            |cines,
-                            |como puede ser el caso de El castillo ambulante y Ponyo en el acantilado. A lo largo de
-                            |todas
-                            |sus películas han contado con grandes voces para el doblaje en inglés, como por ejemplo
-                            |Patrick
-                            |Stewart, Anne Hathaway, Elle Fanning, Liam Neeson, Matt Damon, entre otros.
-                            |<br><br>
-                            |El 3 de junio de 2020, se anunció oficialmente el lanzamiento de Earwig y la bruja, la
-                            |primera
-                            |película en animación del estudio hecha por ordenador
-                .contenedor-boton-historia
-                    buttom.boton-historia.mybtn#boton-historia Leer mas
+                .contenedor-historia.contenedor
+                    .contenedor-texto-historia#parrafo-historia
+                        .texto-historia
+                            h2.titulo.titulo-historia Historia
+                            .contenedor-parrafo-historia
+                                p.parrafo-historia
+                                    |Fundado en 1985, el estudio está dirigido por el galardonado director Hayao Miyazaki, y
+                                    |hasta
+                                    |2018 estuvo dirigido por Miyazaki junto a su amigo y mentor, Isao Takahata, fallecido en ese
+                                    |año. Sus orígenes datan de 1983, con la película Nausicäa del Valle del Viento, la cual
+                                    |comenzó
+                                    |como un manga en una publicación de la revista Tokuma Shoten. Tokuma era la compañía "madre"
+                                    |de
+                                    |Ghibli, y cedió a Disney los derechos de video y distribución de varias películas; entre
+                                    |ellas
+                                    |La princesa Mononoke y El viaje de Chihiro. El compositor Joe Hisaishi ha creado la banda
+                                    |sonora
+                                    |para muchas de las películas del Studio Ghibli.
+                                    |<br><br>
+                                    |Debido a la fama de los estudios se abrió en las afueras de Tokio el Museo Ghibli. El 1 de
+                                    |septiembre de 2013, el director de cine y cofundador de la compañía, Hayao Miyazaki, anunció
+                                    |su
+                                    |retirada a través de un comunicado oficial.
+                                    |<br><br>
+                                    |El 3 de agosto de 2014, Toshio Suzuki, productor del estudio y uno de los fundadores del
+                                    |estudio, anunciaba que clausuraban su sección de producción de largometrajes. Uno de los
+                                    |factores que provocaron esta decisión fue la retirada del director de cine Hayao Miyazaki,
+                                    |otro
+                                    |de los fundadores del estudio, que según las declaraciones, su salida supuso un duro golpe;
+                                    |junto con la jubilación del cineasta, se cree que la regular recepción de taquilla de El
+                                    |cuento
+                                    |de la princesa Kaguya, la última obra dirigida por Isao Takahata, fue también un motivo. El
+                                    |Studio Ghibli siguió con sus licencias hasta acabar un proceso de reestructuración.
+                                    |<br><br>
+                                    |El 10 de agosto de 2017, el estudio reabrió sus puertas.
+                                    |<br><br>
+                                    |Cabe destacar que las películas de dicho estudio han adquirido muchos premios, entre ellas
+                                    |cinco
+                                    |de sus películas fueron nominadas al Óscar a la producción cinematográfica de animación más
+                                    |destacada; las cintas nominadas fueron: El viaje de Chihiro (2001), El castillo ambulante
+                                    |(2004), El recuerdo de Marnie (2014), El viento se levanta (2013) y El cuento de la princesa
+                                    |Kaguya (2013). A pesar de estas numerosas nominaciones, tan solo El viaje de Chihiro fue
+                                    |galardonada con el Óscar.
+                                    |<br><br>
+                                    |Además de las películas ya mencionadas, muchas otras contaron con un gran éxito en los
+                                    |cines,
+                                    |como puede ser el caso de El castillo ambulante y Ponyo en el acantilado. A lo largo de
+                                    |todas
+                                    |sus películas han contado con grandes voces para el doblaje en inglés, como por ejemplo
+                                    |Patrick
+                                    |Stewart, Anne Hathaway, Elle Fanning, Liam Neeson, Matt Damon, entre otros.
+                                    |<br><br>
+                                    |El 3 de junio de 2020, se anunció oficialmente el lanzamiento de Earwig y la bruja, la
+                                    |primera
+                                    |película en animación del estudio hecha por ordenador
+                    .contenedor-boton-historia
+                        buttom.boton-historia.mybtn#boton-historia Leer mas
             section.seccion-adios
                 .contenedor-video
                     video(autoplay loop muted)

@@ -148,6 +148,7 @@ body {
         .contenedor {
             max-width: 95%;
             margin: auto;
+            padding: 1rem 0 2rem;
             overflow: hidden;
         }
 
@@ -161,19 +162,16 @@ body {
         // TODO:STUB SOBRE GHIBLI
 
         .seccion-sobre-ghibli {
-            margin-bottom: 3.5rem;
 
             .contenedor-sobre-ghibli {
                 .sobre-ghibli {
-                    @extend .center-flex,
+                    @extend 
                     .flex-column;
-                    overflow: hidden;
 
                     .sobre-ghibli-1,
                     .sobre-ghibli-2 {
                         @extend .center-flex,
                         .wrap;
-                        overflow: hidden;
                         min-width: 100%;
 
                         .contenedor-imagen-sobre-ghibli {
@@ -279,7 +277,6 @@ body {
             .contenedor-peliculas {
                 @extend .flex-column,
                 .space-around;
-                margin-bottom: 1rem;
                 align-items: center;
                 position: relative;
 
@@ -364,10 +361,6 @@ body {
                         height: calc(458px / var(--scalar) + 140px);
                         overflow-y: visible;
                         display: flex;
-
-
-
-
 
                         .pelicula {
                             --scalar: 1.6;
@@ -498,7 +491,6 @@ body {
                     }
 
                     .barra-busqueda {
-                        // padding-right: 10%;
                         width: 50%;
                         height: 40px;
                         background-color: #fff;
@@ -534,7 +526,6 @@ body {
 
                     .categoria-galeria {
                         color: #9B9B9B;
-                        // margin: 0 20px;
                         padding: 0 7px;
                         font-size: 1em;
                         line-height: 2em;
@@ -673,12 +664,10 @@ body {
 
                 .contenedor-titulo-kaiosamas {
                     position: relative;
-                    margin-top: 3.5rem;
                 }
 
                 .kaiosamas {
                     position: relative;
-                    // @extend .center-flex, .flex-column;
                     display: grid;
                     width: 95%;
                     grid-template-areas:
@@ -808,6 +797,7 @@ body {
         .seccion-frases {
             .contenedor-carousel-frases {
                 min-width: 100%;
+                padding-bottom: 0;
 
                 .carousel-frases {
                     @extend .center-flex;
@@ -934,7 +924,7 @@ body {
 
             .ver-pelis {
                 .titulo-ver-pelis {
-                    margin-top: 7rem;
+                    margin-top: 5rem;
                     margin-bottom: 1rem;
                 }
 
@@ -1047,39 +1037,41 @@ body {
         // TODO:STUB HISTORIA
         .seccion-historia {
 
+            .contenedor-historia{
+                #parrafo-historia {
+                    transition: height 1.5s ease-in-out, max-height 1.5s;
+                    height: auto;
+                    max-height: 550px;
+                    margin: 3.5rem auto 2rem;
+                    width: 90%;
+                    background-color: #fff;
+                    overflow: hidden;
+    
+                    .texto-historia {
+                        height: inherit;
+    
+                        .contenedor-parrafo-historia {
+                            .parrafo-historia {
 
-            #parrafo-historia {
-                transition: height 1.5s ease-in-out, max-height 1.5s;
-                height: 1000px;
-                max-height: 550px;
-                margin: 3.5rem auto 2rem;
-                width: 90%;
-                background-color: #fff;
-
-                .texto-historia {
-                    height: inherit;
-
-                    .contenedor-parrafo-historia {
-                        .parrafo-historia {
-
-                            text-align: center;
-                            font-size: 1.1em;
+                                text-align: center;
+                                font-size: 1.1em;
+                            }
+    
                         }
-
                     }
                 }
-            }
-
-
-            .contenedor-boton-historia {
-                display: flex;
-                justify-content: center;
-                margin-bottom: 3.5rem;
-
-                .boton-historia {
-                    margin: 0 auto;
-
+    
+    
+                .contenedor-boton-historia {
+                    display: flex;
+                    justify-content: center;
+    
+                    .boton-historia {
+                        margin: 0 auto;
+    
+                    }
                 }
+    
             }
 
         }

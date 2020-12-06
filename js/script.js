@@ -322,6 +322,25 @@ document.querySelector("#btn-cerrar-popup").addEventListener("click", () => {
   }, 600);
 });
 
+// TODO:STUB ANIMACION SOBRE GHIBLI
+botonSiguiente = document.getElementById("boton-siguiente-sobre-ghibli");
+contenedorSobreGhibli1 = document.getElementById("sobre-ghibli-1");
+contenedorSobreGhibli2 = document.getElementById("sobre-ghibli-2");
+// let semaforo = true;
+botonSiguiente.addEventListener("click", (evento) => {
+  contenedorSobreGhibli1.classList.toggle("translate-sobre-ghibli-1");
+  contenedorSobreGhibli2.classList.toggle("translate-sobre-ghibli-2");
+  botonSiguiente.parentElement.classList.toggle("translate-boton-sobre-ghibli");
+  // botonSiguiente.innerHTML = "Siguiente";
+  if (botonSiguiente.innerHTML == "Siguiente") {
+    botonSiguiente.innerHTML = "Anterior";
+    // semaforo = false;
+  } else {
+    botonSiguiente.innerHTML = "Siguiente";
+  }
+});
+
+
 
 
 
