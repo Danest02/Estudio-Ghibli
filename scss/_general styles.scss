@@ -230,14 +230,10 @@ body {
                                     background-color: #48adf041;
                                     border-radius: 10px;
                                     @extend .center-flex;
-                                    position: relative;
 
                                     .h3-sobre-ghibli {
                                         position: relative;
                                         color: $color1;
-                                        width: 100%;
-                                        @extend .position-absolute;
-                                        margin: auto;
 
                                         i {
                                             display: none;
@@ -279,11 +275,11 @@ body {
                 .space-around;
                 align-items: center;
                 position: relative;
-
+                
                 .swiper-pagination-bullet {
                     display: none;
                 }
-
+                
                 .carousel-peliculas {
                     width: 100%;
                     @extend .flex-column;
@@ -356,25 +352,25 @@ body {
                     }
 
                     .peliculas {
+                        
                         --scalar: 1.6;
                         max-width: 100%;
                         height: calc(458px / var(--scalar) + 140px);
                         overflow-y: visible;
                         display: flex;
-
+                        
                         .pelicula {
                             --scalar: 1.6;
                             box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, .7);
                             height: calc(408px / var(--scalar));
                             width: calc(288px / var(--scalar));
-
                             .portada {
                                 .img-pelicula {
                                     object-fit: cover;
                                     @extend .height-width;
                                 }
                             }
-
+                            
                             .informacion {
                                 .contenedor-nombre-ver-pelis {
                                     display: none;
@@ -385,15 +381,17 @@ body {
                                 .ver-peliculas {
                                     display: none;
                                     margin: 1rem 2.5rem;
+                                    background-color: $color2;
+                                    color: #fff;
                                 }
-
+                                
                                 .sipnosis {
                                     display: none;
                                 }
-
+                                
                             }
                         }
-
+                        
                         .pelicula-active {
                             .informacion {
                                 
@@ -557,8 +555,8 @@ body {
 
                     .imagen-galeria {
                         height: 130px;
-                        box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
                         border-radius: 15px;
+                        box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
                         overflow: hidden;
 
                         img {
@@ -987,6 +985,7 @@ body {
                             height: 150px;
                             width: 150px;
                             transition: transform .7s;
+                            z-index: 100;
 
                             .imagen-ver-pelis {
                                 @extend .height-width;
@@ -1020,8 +1019,6 @@ body {
                         }
 
                         .enlaces-ver-pelis-hover {
-                            transition: all .8s ease-in-out;
-                            opacity: 1;
                             height: 1200px;
                             margin: 0;
                             // visibility: visible;

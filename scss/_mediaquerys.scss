@@ -198,7 +198,6 @@
                                         height: 100%;
                                         border-radius: 0;
                                         padding: 0 1rem;
-                                        position: relative;
                                         border-bottom: 2px solid $color2;
 
                                         .h3-sobre-ghibli {
@@ -287,7 +286,7 @@
                                 transition: padding 1s;
 
                                 .h3-kaiosama {
-                                    margin-bottom: .3rem;
+                                    // margin-bottom: .3rem;
                                     position: relative;
                                     top: 0;
                                     transition: transform 1s, opacity .5s ease-in, margin 1s;
@@ -442,7 +441,7 @@
 
                             .flecha-derecha,
                             .flecha-izquierda {
-                                transform: translateY(-1rem);
+                                top: calc(50% - 1.5rem);
                                 margin: 0 .3rem;
                                 background-color: transparent;
                                 color: $color2;
@@ -496,10 +495,10 @@
                 .contenedor-peliculas {
                     .carousel-peliculas {
                         .peliculas {
-                            --scalar: 1;
+                            --scalar: 1.1;
 
                             .pelicula {
-                                --scalar: 1;
+                                --scalar: 1.1;
                             }
                         }
                     }
@@ -525,6 +524,8 @@
             background: linear-gradient(to right, rgba(72, 173, 240, 0.1), rgba(53, 127, 176, 0.2)), url(../../galeria/ghibli1.png);
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
+
             height: 45vh;
 
             &:before {
@@ -575,6 +576,10 @@
                 .enlaces {
                     .enlace {
                         color: #444;
+
+                        &:after {
+                            background-color: $color3;
+                        }
                     }
 
                     .foco {
@@ -654,6 +659,9 @@
         main {
             .seccion-kaiosamas-ghibli {
                 background: url(../../galeria/fondo2.png);
+                background-attachment: fixed;
+
+
 
                 &:before {
                     background-color: rgba(255, 255, 255, .8);
@@ -787,23 +795,25 @@
 
             .seccion-sobre-ghibli {
                 margin: 0;
+
                 .contenedor-sobre-ghibli {
                     position: relative;
+
                     .contenedor-boton-sobre-ghibli {
                         display: block;
                         transition: .9s .1s transform ease-in-out;
                         transform: translateY(-5%);
                         transform: translateX(90%);
-    
+
                         .boton-sobre-ghibli {
                             color: $color1;
                             outline: none;
                         }
                     }
-    
+
                     .translate-boton-sobre-ghibli {
                         transform: translateX(0);
-    
+
                     }
 
                     .sobre-ghibli {
@@ -815,7 +825,6 @@
                             display: flex;
                             justify-content: space-between;
                             overflow: hidden;
-                            // background-color: red;
 
                             .contenedor-imagen-sobre-ghibli {
                                 max-width: 55%;
@@ -835,28 +844,38 @@
                             }
 
                             .contenido-textos-sobre-ghibli {
-                                // background-color: blue;
                                 flex-direction: column;
                                 width: 35%;
                                 margin: 0;
 
                                 .texto-sobre-ghibli {
                                     transition: 1s all ease-out;
+                                    align-items: flex-start;
 
                                     .contenedor-parrafo-sobre-ghibli {
                                         max-height: auto;
                                         height: 100%;
+                                        padding-left: .7rem;
                                     }
-                                    .contenedor-h3-sobre-ghibli{
+
+                                    .contenedor-parrafo-sobre-ghibli-1 {
+                                        margin-bottom: 1.5rem;
+
+                                    }
+
+                                    .contenedor-h3-sobre-ghibli {
                                         border-bottom: none;
-                                        .h3-sobre-ghibli{
-                                            text-align: start;
+                                        padding: 0;
+
+                                        .h3-sobre-ghibli {
                                             color: #000;
-                                            i{
+
+                                            i {
                                                 display: inline-block;
                                                 color: $color2;
                                             }
-                                            &:after{
+
+                                            &:after {
                                                 display: none;
                                             }
                                         }
@@ -867,7 +886,6 @@
                         }
 
                         .sobre-ghibli-2 {
-                            justify-content: space-evenly;
                             transition: 1s transform ease-out, opacity 1s;
                             position: absolute;
                             transform: translateX(100%);
@@ -876,6 +894,7 @@
                             bottom: 0;
 
                             .contenido-textos-sobre-ghibli {
+                                width: 40%;
 
                                 .texto-sobre-ghibli-3 {
                                     transition: transform.7s .6s ease-out;
@@ -928,6 +947,384 @@
 
 
 
+                }
+            }
+
+            .seccion-peliculas {
+                .contenedor-peliculas {
+                    .swiper-pagination-bullet {
+                        display: inline-block;
+                        width: 25px;
+                        height: 25px;
+                        text-align: center;
+                        line-height: 25px;
+                        font-size: 12px;
+                        color: rgb(61, 61, 61);
+                        opacity: 1;
+                        // box-shadow: 0 0 9px 0 rgba(0,0,0,.5);
+                        background: white;
+                    }
+
+                    .swiper-pagination-bullet-active {
+                        color: #fff;
+                        background: $color2;
+                    }
+
+                    .carousel-peliculas {
+                        .arrows-peliculas {
+
+                            .flecha-derecha,
+                            .flecha-izquierda {
+                                top: calc(50% + 2rem);
+                            }
+
+                            .flecha-izquierda {
+                                left: 10%;
+                            }
+
+                            .flecha-derecha {
+                                right: 10%;
+                            }
+
+                        }
+
+                        .peliculas {
+                            height: calc(458px / var(--scalar) + 2rem);
+                            max-width: 73%;
+
+                            .pelicula {
+                                position: relative;
+                                overflow: hidden;
+
+                                .informacion {
+                                    transition: top .5s ease;
+                                    position: absolute;
+                                    top: 320px;
+                                    bottom: 0;
+                                    left: 0;
+                                    right: 0;
+                                    color: #fff;
+                                    animation: none;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    background-color: #357fb0;
+
+
+                                    &:hover {
+                                        top: 0;
+
+                                        .contenedor-nombre-ver-pelis {
+                                            margin-top: 2rem;
+                                            font-size: 1rem;
+                                        }
+
+                                        .sipnosis {
+                                            opacity: 1;
+                                        }
+                                    }
+
+                                    .contenedor-nombre-ver-pelis {
+                                        transition: margin .5s ease;
+                                        display: inline-block;
+                                        font-size: .9rem;
+                                        padding: 0 1rem;
+
+
+                                    }
+
+                                    .sipnosis {
+                                        transition: opacity 2s;
+                                        display: inline-block;
+                                        text-align: center;
+                                        padding: 1rem;
+                                        height: 65%;
+                                        overflow: auto;
+                                        opacity: 0;
+                                        scrollbar-width: none;
+
+                                        &::-webkit-scrollbar {
+                                            display: none;
+                                        }
+
+                                        &::-webkit-scrollbar-track {
+                                            display: none;
+                                        }
+
+                                        &::-webkit-scrollbar-thumb {
+                                            display: none;
+
+                                        }
+
+                                    }
+
+                                    .ver-peliculas {
+                                        display: block;
+                                        background-color: #fff;
+                                        color: $color2;
+                                        font-size: 1rem;
+                                        margin: 1rem 0;
+                                        width: 30%;
+                                    }
+
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .seccion-galeria {
+                .galeria {
+                    .imagenes-galeria {
+                        grid-template-columns: repeat(auto-fill, minmax(240px, 240px));
+                        grid-gap: 1rem;
+                        min-height: calc(422px + 8px);
+                        padding-top: 8px;
+
+
+                        .imagen-galeria {
+                            position: relative;
+                            box-shadow: 0 0 8px 0px rgba(0, 0, 0, .5);
+                            cursor: pointer;
+
+                            img {
+                                transition: filter .5s, transform .5s;
+                            }
+
+                            &:before {
+                                content: url("../../galeria/icono1.png");
+                                color: #fff;
+                                background: rgba(72, 173, 240, 0.5);
+                                position: absolute;
+                                top: -35%;
+                                right: -22%;
+                                bottom: -35%;
+                                left: -22%;
+                                transform: scale(0);
+                                opacity: 1;
+                                border-radius: 50%;
+                                transition: transform .7s, opacity .5s;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                flex-direction: column;
+                            }
+
+                            &:hover {
+                                img {
+                                    filter: blur(2px);
+                                    transform: scale(1.1);
+                                    z-index: 1;
+                                }
+
+                                &:before {
+                                    transform: scale(1);
+                                    opacity: 1;
+                                    z-index: 2;
+                                }
+
+                            }
+                        }
+
+                    }
+                }
+
+                .overlay {
+
+                    .contenedor-img,
+                    .descripcion {
+                        max-width: 50%;
+                    }
+                }
+            }
+
+            .seccion-kaiosamas-ghibli {
+                .contenedor-kaiosamas-ghibli {
+                    .kaiosamas {
+                        grid-template-columns: 1.5fr 2fr 1.5fr;
+
+                        .kaiosama {
+                            max-height: 10em;
+                            overflow: visible;
+
+                            .contenedor-imagen-kaiosama {
+                                min-height: 10em;
+                                max-width: 9em;
+
+                                .imagen-kaiosama {
+                                    transition: transform .5s;
+                                    width: 9em;
+
+                                    &:hover {
+                                        transform: scale(1.2);
+                                    }
+                                }
+                            }
+
+                            .contenido-textos-kaiosama {
+                                overflow: hidden;
+                                line-height: 1.1em;
+                                padding: 1.5rem 2rem .5rem;
+                                height: 100%;
+
+                                .h3-kaiosama {
+                                    margin-bottom: 1rem;
+
+                                }
+                            }
+                        }
+
+                        .active-boton-leer-mas {
+                            .contenido-textos-kaiosama {
+                                padding: .0em 2em .4em;
+
+                                .h3-kaiosama {
+                                    margin-bottom: .45Grem;
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .seccion-ver-pelis {
+                .ver-pelis {
+                    .titulo-ver-pelis{
+                        margin: 3rem 0 5rem;
+                    }
+                    .pelis-cont {
+                        flex-direction: row;
+
+                        .peli {
+                            height: 400px;
+                            width: 28%;
+                            background-color: #fff;
+                            box-shadow: 0 0 9px 0 rgba(0, 0, 0, .5);
+                            min-width: 250px;
+                            border-radius: 15px;
+                            margin: 0;
+                            padding: 0;
+                            overflow: hidden;
+                            justify-content: start;
+
+                            .contenedor-textos-ver-pelis {
+                                background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, 0.5)), url(../../galeria/fondo4.png);
+                                background-size: cover;
+                                height: 100%;
+                                width: 100%;
+                                border-radius: 15px 15px 0 0;
+                                background-position: 60%;
+                                justify-content: start;
+
+                                .textos-ver-pelis {
+                                    color: #fff;
+                                    top: 27%;
+                                    
+                                    p {
+                                        font-size: 1rem;
+                                        width: 70%;
+                                    }
+                                }
+
+                                .cursor-hover-ver-pelis {
+                                    display: inline;
+                                    transition: .5s, transform .3s;
+                                    position: absolute;
+                                    top: 100%;
+                                    left: 45%;
+                                    opacity: 1;
+                                    z-index: 500;
+
+                                    i {
+                                        color: white;
+                                        font-size: 2rem;
+                                    }
+
+                                    p {
+                                        background-color: white;
+                                        color: $color1;
+                                        line-height: 2rem;
+                                        font-size: 1rem;
+                                    }
+                                }
+
+                                &:hover .cursor-hover-ver-pelis {
+                                    top: 85%;
+                                }
+                            }
+
+                            .contenedor-textos-ver-pelis-hover {
+                                background: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.8)), url(../../galeria/fondo4.png);
+                                background-size: cover;
+                                background-position: top;
+                                min-height: 20%;
+
+
+                                .textos-ver-pelis {
+                                    transition: all .5s;
+                                    opacity: 0;
+                                    transform: translateY(100px);
+                                }
+
+                                .cursor-hover-ver-pelis {
+                                    transform: scale(.1);
+                                    opacity: 0;
+                                }
+
+                            }
+
+                            .contenedor-imagen-ver-pelis {
+                                bottom: -60px;
+                                top: calc(100% - 240px);
+                                transition: all .5s ease-in-out;
+                            }
+
+                            .contenedor-imagen-ver-pelis-hover {
+                                top: calc(-100% + 100px);
+                                transform: scale(.6);
+                            }
+
+                            .enlaces-ver-pelis {
+                                width: 100%;
+                                visibility: hidden;
+                                opacity: 0;
+                                overflow: auto;
+                                justify-content: start;
+                                transition: all .5s;
+
+
+
+                                &::-webkit-scrollbar {
+                                    display: none;
+                                }
+
+
+                                .enlace-ver-peli {
+                                    line-height: 1rem;
+                                    font-size: .9rem;
+                                    margin: .2rem;
+                                }
+
+                            }
+
+                            .enlaces-ver-pelis-hover {
+                                visibility: visible;
+                                opacity: 1;
+                                // padding-top: 46px;
+                                margin: 46px 0 .5rem;
+                                transition: all .6s ease-in-out;
+
+                                
+
+
+                            }
+
+
+                        }
+                    }
                 }
             }
         }

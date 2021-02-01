@@ -52,6 +52,27 @@
         transform: scale(.85);
     }
 }
+.mybtn-zoon {
+    background: #fff;
+    display: inline-block;
+    line-height: 2.5em;
+    padding: 0 1.25em;
+    color: $color2;
+    text-decoration: none;
+    border-radius: 1.25em;
+    cursor: pointer;
+    transition: all 0.4s linear;
+    
+    &:hover {
+        transition: all 0.4s linear;
+        transform: scale(1.1);
+    }
+
+    &:active {
+        transform: scale(.95);
+    }
+}
+
 
 .mybtn-borde {
     background: #fff;
@@ -76,29 +97,11 @@
     }
 }
 
-.mybtn-zoon {
-    background: #fff;
-    display: inline-block;
-    line-height: 2.5em;
-    padding: 0 1.25em;
-    color: $color2;
-    text-decoration: none;
-    border-radius: 1.25em;
-    cursor: pointer;
-    transition: all 0.4s linear;
-
-    &:hover {
-        transform: scale(1.1);
-    }
-
-    &:active {
-        transform: scale(.95);
-    }
-}
 
 // TODO:STUB BORDES ANIMADOS
 
 .borde-animado-centro {
+    cursor: pointer;
     &:after {
         content: "";
         margin-top: 3px;

@@ -353,7 +353,7 @@ $(function () {
   let height = $(".imagenes-galeria").css("height");
   let gap = parseInt($(".imagenes-galeria").css("grid-gap"));
   let min = parseInt($(".imagenes-galeria").css("min-height"));
-  let adicion = min + gap / 2 - 2
+  let adicion = min + gap / 2 - 7
   let adicionContador = adicion
   $(".boton-ver-mas").on("click", function (evt) {
     console.log(adicion)
