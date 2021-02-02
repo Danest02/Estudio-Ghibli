@@ -1146,16 +1146,12 @@
                         grid-template-columns: 1.5fr 2fr 1.5fr;
 
                         .kaiosama {
-                            max-height: 10em;
                             overflow: visible;
-
-                            .contenedor-imagen-kaiosama {
-                                min-height: 10em;
-                                max-width: 9em;
-
+                            .contenedor-imagen-kaiosama {    
                                 .imagen-kaiosama {
                                     transition: transform .5s;
-                                    width: 9em;
+                                    // * Solucionar error scalar
+                                    -webkit-mask-image: -webkit-radial-gradient(white, black) ; 
 
                                     &:hover {
                                         transform: scale(1.2);
@@ -1178,10 +1174,10 @@
 
                         .active-boton-leer-mas {
                             .contenido-textos-kaiosama {
-                                padding: .0em 2em .4em;
+                                padding: .0em 2em .38em;
 
                                 .h3-kaiosama {
-                                    margin-bottom: .45Grem;
+                                    margin-bottom: .45rem;
 
                                 }
                             }

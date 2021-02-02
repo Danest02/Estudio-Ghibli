@@ -2852,19 +2852,14 @@ body main .seccion-adios .contenedor-video .contenedor-texto-adios .texto-adios 
         grid-template-columns: 1.5fr 2fr 1.5fr;
   }
   body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama {
-    max-height: 10em;
     overflow: visible;
-  }
-  body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama .contenedor-imagen-kaiosama {
-    min-height: 10em;
-    max-width: 9em;
   }
   body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama .contenedor-imagen-kaiosama .imagen-kaiosama {
     -webkit-transition: -webkit-transform .5s;
     transition: -webkit-transform .5s;
     transition: transform .5s;
     transition: transform .5s, -webkit-transform .5s;
-    width: 9em;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
   }
   body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .kaiosama .contenedor-imagen-kaiosama .imagen-kaiosama:hover {
     -webkit-transform: scale(1.2);
@@ -2880,10 +2875,10 @@ body main .seccion-adios .contenedor-video .contenedor-texto-adios .texto-adios 
     margin-bottom: 1rem;
   }
   body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .active-boton-leer-mas .contenido-textos-kaiosama {
-    padding: .0em 2em .4em;
+    padding: .0em 2em .38em;
   }
   body main .seccion-kaiosamas-ghibli .contenedor-kaiosamas-ghibli .kaiosamas .active-boton-leer-mas .contenido-textos-kaiosama .h3-kaiosama {
-    margin-bottom: .45Grem;
+    margin-bottom: .45rem;
   }
   body main .seccion-ver-pelis .ver-pelis .titulo-ver-pelis {
     margin: 3rem 0 5rem;
